@@ -1,0 +1,16 @@
+---
+title: "Works Cited Page"
+author: "Dustin Smith"
+date: "2025-06-05"
+output: pdf_document
+---
+
+
+### This definetly needs a lot of work 
+
+
+
+
+
+### Data sources. 
+Meredith lake -- "https://waterdatafortexas.org/reservoirs/individual/meredith"
