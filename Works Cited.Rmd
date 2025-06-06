@@ -9,8 +9,16 @@ output: pdf_document
 ### This definetly needs a lot of work 
 
 
+## GIS Mapping Software
+https://experience.arcgis.com/experience/fbd266a3fbce4adc83e890480ac7b135
 
 
 
 ### Data sources. 
-Meredith lake -- "https://waterdatafortexas.org/reservoirs/individual/meredith"
+Lake Resiviour data -- "https://waterdatafortexas.org/reservoirs/individual/meredith"
+
+
+Climate Data NOAA -- "https://www.ncei.noaa.gov/cdo-web/datasets/GHCND/stations/GHCND:USW00012921/detail"
+
+Well Data -- 
+"https://www.twdb.texas.gov/groundwater/data/gwdbrpt.asp"
