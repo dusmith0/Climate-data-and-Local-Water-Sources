@@ -1,0 +1,629 @@
+﻿Disclaimer
+"""GWDB DISCLAIMER:  Except where noted, all of the information provided in the Texas Water Development Board (TWDB) Groundwater Database (https://www.twdb.texas.gov/groundwater/data/gwdbrpt.asp) is believed to be accurate and reliable; however, the TWDB assumes no responsibility for any errors appearing in rules or otherwise. Further, TWDB assumes no responsibility for the use of the information provided. PLEASE NOTE that users of these data are responsible for checking the accuracy, completeness, currency and/or suitability of all information themselves. TWDB makes no guarantees or warranties as to the accuracy, completeness, currency, or suitability of the information provided via the Groundwater Database (GWDB). TWDB specifically disclaims any and all liability for any claims or damages that may result from providing GWDB data or the information it contains. For additional information or answers to questions concerning the TWDB GWDB, contact the Groundwater Data Team at GroundwaterData@twdb.texas.gov."""
+
+StateWellNumber,LatitudeDD,LongitudeDD,County,AquiferCode,Owner,WellTypeCode,DrillingEndDate,WellDepth,CasingId,Diameter,TopDepth,BottomDepth,LandSurfaceElevation,WaterLevelsAvailable,WaterQualityAvailable,Pump,WellUse,Remarks
+5764604,30.048056,-98.012501,Hays,218CCRK,Thomas Bowman ,W,12/20/2013,850,10,5,-3,810,1029,Yes,Yes,Submersible,Domestic,"Well Report Tracking Number: 353577. Pumping 12 gal/min. 4/8/2015 Est.(jetted) 50+ gal/min 12/20/2013 Packers @ 50',550',790', and 810'. Sulphur smell. 4 inch surface csg. Pumping level 340.1, drawndown 18.7 Specific capacity 0.641 GPM/ft."
+5764604,30.048056,-98.012501,Hays,218CCRK,Thomas Bowman ,W,12/20/2013,850,11,5,810,850,1029,Yes,Yes,Submersible,Domestic,"Well Report Tracking Number: 353577. Pumping 12 gal/min. 4/8/2015 Est.(jetted) 50+ gal/min 12/20/2013 Packers @ 50',550',790', and 810'. Sulphur smell. 4 inch surface csg. Pumping level 340.1, drawndown 18.7 Specific capacity 0.641 GPM/ft."
+5764605,30.0497222,-98.0266667,Hays,218CCRK,Bob Ochoa,W,3/27/2002,810,10,5,-2,810,1076,Yes,Yes,Submersible,Domestic,"Packers @ 50, 60, 690, 710 feet. Static 298.5', Pumping 333.0 Drawdown 34.5' Specific Capacity 0.289 GPM/ft. Pump rate 50-60 GPM 3/27/2002 Production Rate 10 GPM 4/8/2015"
+5764606,30.0558611,-98.0112361,Hays,218GLRSU,Andy Gluesenkamp,W,,195,,,,,1007,Yes,Yes,Submersible,Domestic,"Pumping level: -99.0' Drawdown: 7.3' Specific capacity: 1.01 GPM/ft. Production rate: 7.5 GPM Surface csg: 8"" ceramic. M.P.= 0.5'."
+5764620,30.0574722,-98.0334722,Hays,,David Robertson,W,6/17/2021,840,10,4.5,-2,698,1194,No,No,Submersible,Domestic,Well Report Tracking Number: 581676. 
+5764620,30.0574722,-98.0334722,Hays,,David Robertson,W,6/17/2021,840,11,4.5,698,718,1194,No,No,Submersible,Domestic,Well Report Tracking Number: 581676. 
+5764620,30.0574722,-98.0334722,Hays,,David Robertson,W,6/17/2021,840,10,4.5,718,778,1194,No,No,Submersible,Domestic,Well Report Tracking Number: 581676. 
+5764620,30.0574722,-98.0334722,Hays,,David Robertson,W,6/17/2021,840,11,4.5,778,798,1194,No,No,Submersible,Domestic,Well Report Tracking Number: 581676. 
+5764621,30.0698056,-98.0097222,Hays,,Amelia and Robert Verdin,W,12/28/2020,700,10,4.5,-2,638,1007,No,No,Submersible,Domestic,Well Report Tracking Number: 570425. 
+5764621,30.0698056,-98.0097222,Hays,,Amelia and Robert Verdin,W,12/28/2020,700,11,4.5,638,658,1007,No,No,Submersible,Domestic,Well Report Tracking Number: 570425. 
+5764907,30.04,-98.0333333,Hays,218GRCCU,Donald and Jill Wood,W,10/8/2010,790,10,5,-3,710,1068,Yes,Yes,Submersible,Domestic,Well Report Tracking Number: 233129. Specific capacity: 1.27 GPM/ft
+5764907,30.04,-98.0333333,Hays,218GRCCU,Donald and Jill Wood,W,10/8/2010,790,12,5,710,790,1068,Yes,Yes,Submersible,Domestic,Well Report Tracking Number: 233129. Specific capacity: 1.27 GPM/ft
+5849708,30.128889,-97.967778,Hays,218EBFZA,Mike Personett,W,,310,,,,,1055,Yes,Yes,Submersible,Domestic,
+5849801,30.1597222,-97.9230556,Hays,218EBFZA,Clara Calhoun,W,,100,,,,,856,Yes,Yes,Submersible,Stock,
+5849802,30.128055,-97.926667,Hays,218EBFZA,Bliss Spillar ,W,,,,,,,930,Yes,No,Piston,Stock,
+5849803,30.150834,-97.933889,Hays,218EBFZA,Clara Calhoun ,W,9/30/1954,135,,,,,920,Yes,No,Piston,Stock,
+5849805,30.1425,-97.950278,Hays,218EBFZA,Mike Rutherford ,W,,315,,,,,1055,Yes,No,Piston,Stock,
+5849806,30.1275,-97.933889,Hays,218EBFZA,Mike Rutherford ,W,,200,,,,,935,Yes,No,Piston,Stock,
+5849812,30.152501,-97.942778,Hays,218CCRK,Kelly Guillory,W,7/20/2015,880,10,5,-2,740,1000,Yes,Yes,Submersible,Domestic,"Well Report Tracking Number: 401722. Shale packers @ 650,655, and 658 ft Est. yield: 30-50 GPM pump set @ 520 ft."
+5849812,30.152501,-97.942778,Hays,218CCRK,Kelly Guillory,W,7/20/2015,880,11,5,740,840,1000,Yes,Yes,Submersible,Domestic,"Well Report Tracking Number: 401722. Shale packers @ 650,655, and 658 ft Est. yield: 30-50 GPM pump set @ 520 ft."
+5849814,30.1334167,-97.9335583,Hays,,Joey Schonefeld,W,2/17/2022,855,10,10,0,18,1010,No,No,Submersible,Domestic,Well Report Tracking Number: 598382. Owner Well Number: Daughter's Well. 
+5849814,30.1334167,-97.9335583,Hays,,Joey Schonefeld,W,2/17/2022,855,10,4.5,2,755,1010,No,No,Submersible,Domestic,Well Report Tracking Number: 598382. Owner Well Number: Daughter's Well. 
+5849814,30.1334167,-97.9335583,Hays,,Joey Schonefeld,W,2/17/2022,855,12,4.5,755,855,1010,No,No,Submersible,Domestic,Well Report Tracking Number: 598382. Owner Well Number: Daughter's Well. 
+5849901,30.138611,-97.8825,Hays,218EBFZA,P Brewington,W,5/29/1972,400,,,,,790,Yes,No,Submersible,Domestic,
+5849902,30.155001,-97.907778,Hays,218EBFZA,Bliss Spillar ,W,,,,,,,865,Yes,No,Piston,Stock,
+5849903,30.146945,-97.915001,Hays,218EBFZA,Bliss Spillar ,W,,200,,,,,888,No,Yes,Centrifugal Pump,Stock,
+5849904,30.133611,-97.878055,Hays,218EBFZA,Jack Sprott ,W,4/0/1980,380,,,,,730,Yes,No,,Domestic,
+5849905,30.1436667,-97.8915,Hays,,Butch & Diane Hayes,W,7/16/2020,450,10,4.5,-2,398,751,No,No,Submersible,Domestic,Well Report Tracking Number: 550069. 
+5849905,30.1436667,-97.8915,Hays,,Butch & Diane Hayes,W,7/16/2020,450,11,4.5,398,418,751,No,No,Submersible,Domestic,Well Report Tracking Number: 550069. 
+5849910,30.133055,-97.889722,Hays,218EDRDA,Chaparral Water Co.  Well #1 ,W,6/7/1974,750,10,6,0,220,831,Yes,Yes,Submersible,Public Supply,TCEQ Source ID: G1050029A. Well #1. Plugged back from 910 ft.
+5849910,30.133055,-97.889722,Hays,218EDRDA,Chaparral Water Co.  Well #1 ,W,6/7/1974,750,101,6,220,750,831,Yes,Yes,Submersible,Public Supply,TCEQ Source ID: G1050029A. Well #1. Plugged back from 910 ft.
+5849911,30.133055,-97.889722,Hays,218EDRDA,Chaparral Water Co.  Well #2 ,W,3/10/1975,440,10,6,0,220,834,Yes,Yes,Submersible,Public Supply,TCEQ Source ID: G1050029B. Well #2.
+5849911,30.133055,-97.889722,Hays,218EDRDA,Chaparral Water Co.  Well #2 ,W,3/10/1975,440,101,6,220,440,834,Yes,Yes,Submersible,Public Supply,TCEQ Source ID: G1050029B. Well #2.
+5849915,30.1377778,-97.8925,Hays,218EDRDA,Chaparral Water Co.  Well #4,W,0/0/1977,400,10,6,0,200,789,No,Yes,Submersible,Public Supply,TCEQ Source ID: G1050029F. Well #4.
+5849916,30.138611,-97.885,Hays,218EDRDA,Chaparral Water Co.  Well #10,W,7/16/1987,420,10,9,0,220,790,Yes,No,Submersible,Public Supply,TCEQ Source ID: G1050029J. Well #10.
+5849916,30.138611,-97.885,Hays,218EDRDA,Chaparral Water Co.  Well #10,W,7/16/1987,420,10,5,0,220,790,Yes,No,Submersible,Public Supply,TCEQ Source ID: G1050029J. Well #10.
+5849916,30.138611,-97.885,Hays,218EDRDA,Chaparral Water Co.  Well #10,W,7/16/1987,420,11,5,220,420,790,Yes,No,Submersible,Public Supply,TCEQ Source ID: G1050029J. Well #10.
+5849917,30.138889,-97.885,Hays,218EDRDA,Chaparral Water Co.  Well #11,W,7/18/1986,420,10,8,0,220,787,Yes,Yes,Submersible,Public Supply,TCEQ Source ID: G1050029K. Well #11.
+5849917,30.138889,-97.885,Hays,218EDRDA,Chaparral Water Co.  Well #11,W,7/18/1986,420,10,5,0,220,787,Yes,Yes,Submersible,Public Supply,TCEQ Source ID: G1050029K. Well #11.
+5849917,30.138889,-97.885,Hays,218EDRDA,Chaparral Water Co.  Well #11,W,7/18/1986,420,11,5,220,420,787,Yes,Yes,Submersible,Public Supply,TCEQ Source ID: G1050029K. Well #11.
+5849918,30.138889,-97.885278,Hays,218EDRDA,Chaparral Water Co.  Well #3 ,W,0/0/1979,500,10,7,0,200,765,Yes,No,Submersible,Public Supply,TCEQ Source ID: G1050029I. Well #3.
+5849918,30.138889,-97.885278,Hays,218EDRDA,Chaparral Water Co.  Well #3 ,W,0/0/1979,500,101,,200,500,765,Yes,No,Submersible,Public Supply,TCEQ Source ID: G1050029I. Well #3.
+5849919,30.138056,-97.892778,Hays,218EDRDA,Chaparral Water Co.  Well #8 ,W,7/14/1986,420,10,8,0,200,760,Yes,No,Submersible,Public Supply,TCEQ Source ID: G1050029G. Well #8.
+5849919,30.138056,-97.892778,Hays,218EDRDA,Chaparral Water Co.  Well #8 ,W,7/14/1986,420,10,5,0,200,760,Yes,No,Submersible,Public Supply,TCEQ Source ID: G1050029G. Well #8.
+5849919,30.138056,-97.892778,Hays,218EDRDA,Chaparral Water Co.  Well #8 ,W,7/14/1986,420,11,,200,420,760,Yes,No,Submersible,Public Supply,TCEQ Source ID: G1050029G. Well #8.
+5849920,30.137778,-97.892778,Hays,218EDRDA,Chaparral Water Co.  Well #9 ,W,7/15/1986,420,10,8,0,240,763,No,No,Submersible,Public Supply,TCEQ Source ID: G1050029H. Well #9.
+5849920,30.137778,-97.892778,Hays,218EDRDA,Chaparral Water Co.  Well #9 ,W,7/15/1986,420,10,5,0,240,763,No,No,Submersible,Public Supply,TCEQ Source ID: G1050029H. Well #9.
+5849920,30.137778,-97.892778,Hays,218EDRDA,Chaparral Water Co.  Well #9 ,W,7/15/1986,420,11,,240,420,763,No,No,Submersible,Public Supply,TCEQ Source ID: G1050029H. Well #9.
+5849921,30.142778,-97.880833,Hays,218EDRDA,Copper Hills Water System Well #1,W,5/10/1984,420,10,8,0,200,752,Yes,Yes,Submersible,Public Supply,TCEQ Source ID: G1050082A. Well #1.
+5849921,30.142778,-97.880833,Hays,218EDRDA,Copper Hills Water System Well #1,W,5/10/1984,420,101,8,200,420,752,Yes,Yes,Submersible,Public Supply,TCEQ Source ID: G1050082A. Well #1.
+5849922,30.1425,-97.880555,Hays,218EDRDA,Copper Hills Water System Well #2,W,5/15/1984,420,10,8,0,200,752,Yes,Yes,Submersible,Public Supply,TCEQ Source ID: G1050082B. Well #2.
+5849922,30.1425,-97.880555,Hays,218EDRDA,Copper Hills Water System Well #2,W,5/15/1984,420,101,8,200,420,752,Yes,Yes,Submersible,Public Supply,TCEQ Source ID: G1050082B. Well #2.
+5849923,30.1425,-97.881111,Hays,218EDRDA,Copper Hills Water System Well #3,W,9/25/1984,420,10,8,0,200,752,Yes,Yes,Submersible,Public Supply,Owner Well Number: 3 - COPPERLEAF. TCEQ Source ID: G1050082C. Well #3.
+5849923,30.1425,-97.881111,Hays,218EDRDA,Copper Hills Water System Well #3,W,9/25/1984,420,101,8,200,420,752,Yes,Yes,Submersible,Public Supply,Owner Well Number: 3 - COPPERLEAF. TCEQ Source ID: G1050082C. Well #3.
+5849924,30.1425,-97.880833,Hays,218EDRDA,Copper Hills Water System Well #4,W,9/30/1984,420,10,8,0,200,752,Yes,Yes,Submersible,Public Supply,Owner Well Number: 4. TCEQ Source ID: G1050082D. Well #4.
+5849924,30.1425,-97.880833,Hays,218EDRDA,Copper Hills Water System Well #4,W,9/30/1984,420,101,8,200,420,752,Yes,Yes,Submersible,Public Supply,Owner Well Number: 4. TCEQ Source ID: G1050082D. Well #4.
+5849925,30.1258333,-97.9038889,Hays,218EDDT,City of Austin,W,6/17/1985,1000,10,11,0,200,789,Yes,No,Submersible,Industrial,GCD Well Number: Borheim Trinity. Barton Springs Edwards Aquifer CD recorder well.
+5849925,30.1258333,-97.9038889,Hays,218EDDT,City of Austin,W,6/17/1985,1000,101,10,200,1000,789,Yes,No,Submersible,Industrial,GCD Well Number: Borheim Trinity. Barton Springs Edwards Aquifer CD recorder well.
+5849926,30.125278,-97.905278,Hays,218EDRDA,City of Austin Borheim EdwardsTrinity,W,6/1/1985,609,,,,,804,Yes,No,Submersible,Industrial,Reported yield 280 GPM with 399 feet drawdown after pumping 72 hours in 1985. Cemented from 0 to 200 feet. Specific capacity 0.7. Barton Springs Edwards Aquifer CD observation well.
+5849927,30.145278,-97.879722,Hays,218EDRDA,Southwest Territory  Well #1 ,W,6/6/1978,500,,,,,735,No,Yes,Submersible,Public Supply,TCEQ Source ID: G1050058A. 
+5849929,30.145278,-97.879722,Hays,218EDRDA,Southwest Territory  Well #3 ,W,,350,,,,,735,No,No,Submersible,Public Supply,TCEQ Source ID: G1050058C. 
+5849930,30.161667,-97.906389,Hays,218EBFZA,Bliss Sillar,W,,,,,,,835,No,Yes,Submersible,Domestic,
+5849931,30.145,-97.88,Hays,218EDRDA,Southwest Territory  Well #4 ,W,4/11/1990,400,10,5,2,300,735,Yes,No,Submersible,Public Supply,TCEQ Source ID: G1050058D. Owner's well #4. Estimated yield 15 GPM in 1990. Cemented from 0 to 200 feet.
+5849931,30.145,-97.88,Hays,218EDRDA,Southwest Territory  Well #4 ,W,4/11/1990,400,11,5,300,400,735,Yes,No,Submersible,Public Supply,TCEQ Source ID: G1050058D. Owner's well #4. Estimated yield 15 GPM in 1990. Cemented from 0 to 200 feet.
+5849932,30.145,-97.88,Hays,218EDRDA,Southwest Territory  Well #5 ,W,4/13/1990,400,10,5,2,300,735,No,No,Submersible,Public Supply,TCEQ Source ID: G1050058E. Owner's well #5. Estimated yield 15 GPM in 1990. Cemented from 0 to 200 feet.
+5849932,30.145,-97.88,Hays,218EDRDA,Southwest Territory  Well #5 ,W,4/13/1990,400,11,5,300,400,735,No,No,Submersible,Public Supply,TCEQ Source ID: G1050058E. Owner's well #5. Estimated yield 15 GPM in 1990. Cemented from 0 to 200 feet.
+5849933,30.145,-97.88,Hays,218EDRDA,Southwest Territory  Well #6 ,W,4/17/1990,400,10,5,2,300,735,Yes,No,Submersible,Public Supply,TCEQ Source ID: G1050058F. Owner's well #6. Estimated yield 15 GPM in 1990. Cemented from 0 to 200 feet.
+5849933,30.145,-97.88,Hays,218EDRDA,Southwest Territory  Well #6 ,W,4/17/1990,400,11,5,300,400,735,Yes,No,Submersible,Public Supply,TCEQ Source ID: G1050058F. Owner's well #6. Estimated yield 15 GPM in 1990. Cemented from 0 to 200 feet.
+5849935,30.145,-97.887222,Hays,218EDRDA,Bob Manning ,W,12/18/1992,460,10,5,0,360,750,Yes,Yes,Submersible,Domestic,Yield 20 GPM.  MP= +1.90 feet
+5849935,30.145,-97.887222,Hays,218EDRDA,Bob Manning ,W,12/18/1992,460,11,5,360,460,750,Yes,Yes,Submersible,Domestic,Yield 20 GPM.  MP= +1.90 feet
+5849936,30.1581778,-97.9149306,Hays,218EDRDA,Spillar Ranch Spring,S,,,,,,,857,No,Yes,,,Spillar Ranch Spring is located on City of Austin Water Quality Protection Lands.
+5849938,30.1255556,-97.9036111,Hays,218EDRDA,Barton Springs Edwards Aquifer Conservation District,O,10/2/2003,180,10,8,-2,10,783,Yes,Yes,None,Monitor,Well Report Tracking Number: 27461. GCD Well Number: Borheim Edwards. 
+5849939,30.147222,-97.896945,Hays,218EDRDA,City of Austin Prop 2 Lands,W,,82,10,5,0,,832,Yes,Yes,None,Unused,MP= +1.80 feet
+5849941,30.133334,-97.884445,Hays,,William Baker ,W,2/15/2013,350,10,5,3,280,767,Yes,Yes,Submersible,Domestic,Well Report Tracking Number: 315555. 
+5849941,30.133334,-97.884445,Hays,,William Baker ,W,2/15/2013,350,11,5,280,340,767,Yes,Yes,Submersible,Domestic,Well Report Tracking Number: 315555. 
+5849944,30.1380556,-97.8825,Hays,,Melissa Rector,W,4/19/2017,400,10,4.5,2,300,793,No,No,,Domestic,Well Report Tracking Number: 452228. 
+5849944,30.1380556,-97.8825,Hays,,Melissa Rector,W,4/19/2017,400,11,4.5,300,320,793,No,No,,Domestic,Well Report Tracking Number: 452228. 
+5849944,30.1380556,-97.8825,Hays,,Melissa Rector,W,4/19/2017,400,10,4.5,320,340,793,No,No,,Domestic,Well Report Tracking Number: 452228. 
+5849944,30.1380556,-97.8825,Hays,,Melissa Rector,W,4/19/2017,400,11,4.5,340,360,793,No,No,,Domestic,Well Report Tracking Number: 452228. 
+5849944,30.1380556,-97.8825,Hays,,Melissa Rector,W,4/19/2017,400,10,4.5,360,380,793,No,No,,Domestic,Well Report Tracking Number: 452228. 
+5849944,30.1380556,-97.8825,Hays,,Melissa Rector,W,4/19/2017,400,11,4.5,380,400,793,No,No,,Domestic,Well Report Tracking Number: 452228. 
+5849945,30.1302778,-97.8813889,Hays,,"iON Constructors, LLC",W,9/28/2017,400,10,5,2,160,757,No,No,,Domestic,Well Report Tracking Number: 463919. Owner Well Number: 2. Other Well Number: Jumping Jack Dog Ranch. 
+5849946,30.1342694,-97.9008,Hays,218EDRDA,Darrell Patterson,W,3/22/2018,400,10,4.5,-2,338,796,Yes,Yes,Submersible,Domestic,Well Report Tracking Number: 475946. 
+5849946,30.1342694,-97.9008,Hays,218EDRDA,Darrell Patterson,W,3/22/2018,400,11,4.5,338,358,796,Yes,Yes,Submersible,Domestic,Well Report Tracking Number: 475946. 
+5849949,30.15505,-97.8940167,Hays,,Geoff Weisbart,W,6/10/2021,460,10,4.5,-2,138,807,No,No,Submersible,Domestic,Well Report Tracking Number: 583349. Owner Well Number: 2. 
+5849949,30.15505,-97.8940167,Hays,,Geoff Weisbart,W,6/10/2021,460,11,4.5,138,158,807,No,No,Submersible,Domestic,Well Report Tracking Number: 583349. Owner Well Number: 2. 
+5857201,30.1031944,-97.93725,Hays,218EBFZA,City of Austin Little Bear Ranch,W,0/0/1945,320,10,6,,,927,Yes,Yes,Submersible,Fire,Water pumped into storage tank for use for fire protection.
+5857202,30.111112,-97.953056,Hays,218EBFZA,Mr. Greenhaw,W,,200,,,,,905,Yes,Yes,Submersible,Stock,
+5857203,30.105834,-97.923055,Hays,218EDRDA,Jack Dahlstrom,W,5/3/1970,225,,,,,835,Yes,No,Piston,Stock,
+5857204,30.083889,-97.918611,Hays,218EDRDA,Cecil Ruby,W,12/0/1950,245,,,,,800,Yes,No,Submersible,Stock,
+5857205,30.110834,-97.918611,Hays,218EDRDA,Donald West ,W,3/1/1983,360,10,5,0,300,829,No,No,Submersible,Unused,
+5857205,30.110834,-97.918611,Hays,218EDRDA,Donald West ,W,3/1/1983,360,11,5,300,360,829,No,No,Submersible,Unused,
+5857206,30.123611,-97.921667,Hays,218EDRDA,Donald L. West,W,2/28/1983,400,10,5,0,340,940,Yes,Yes,Submersible,Domestic,
+5857206,30.123611,-97.921667,Hays,218EDRDA,Donald L. West,W,2/28/1983,400,11,5,340,400,940,Yes,Yes,Submersible,Domestic,
+5857208,30.109723,-97.928055,Hays,218EDRDA,Donald L. West,W,2/28/1983,375,10,5,0,315,880,No,Yes,Submersible,Unused,
+5857208,30.109723,-97.928055,Hays,218EDRDA,Donald L. West,W,2/28/1983,375,11,5,315,375,880,No,Yes,Submersible,Unused,
+5857210,30.086667,-97.918333,Hays,218EBFZA,Ruby Ranch,W,4/25/1995,300,10,5,0,120,800,Yes,No,Submersible,Public Supply,Measured yield 40 GPM with 110 feet drawdown after pumping .75 hour in 1995. Specific capacity 0.37.
+5857210,30.086667,-97.918333,Hays,218EBFZA,Ruby Ranch,W,4/25/1995,300,11,5,120,200,800,Yes,No,Submersible,Public Supply,Measured yield 40 GPM with 110 feet drawdown after pumping .75 hour in 1995. Specific capacity 0.37.
+5857210,30.086667,-97.918333,Hays,218EBFZA,Ruby Ranch,W,4/25/1995,300,10,5,200,220,800,Yes,No,Submersible,Public Supply,Measured yield 40 GPM with 110 feet drawdown after pumping .75 hour in 1995. Specific capacity 0.37.
+5857210,30.086667,-97.918333,Hays,218EBFZA,Ruby Ranch,W,4/25/1995,300,11,5,220,240,800,Yes,No,Submersible,Public Supply,Measured yield 40 GPM with 110 feet drawdown after pumping .75 hour in 1995. Specific capacity 0.37.
+5857210,30.086667,-97.918333,Hays,218EBFZA,Ruby Ranch,W,4/25/1995,300,10,5,240,260,800,Yes,No,Submersible,Public Supply,Measured yield 40 GPM with 110 feet drawdown after pumping .75 hour in 1995. Specific capacity 0.37.
+5857210,30.086667,-97.918333,Hays,218EBFZA,Ruby Ranch,W,4/25/1995,300,11,5,260,280,800,Yes,No,Submersible,Public Supply,Measured yield 40 GPM with 110 feet drawdown after pumping .75 hour in 1995. Specific capacity 0.37.
+5857210,30.086667,-97.918333,Hays,218EBFZA,Ruby Ranch,W,4/25/1995,300,10,5,280,300,800,Yes,No,Submersible,Public Supply,Measured yield 40 GPM with 110 feet drawdown after pumping .75 hour in 1995. Specific capacity 0.37.
+5857212,30.090834,-97.916944,Hays,218EDGRU,Ken/Paige Str,W,6/7/1998,400,,,,,806,No,No,,Domestic,
+5857213,30.0908,-97.9183,Hays,,Nancy Acosta,,9/22/2019,395,10,4.5,-3,295,832,No,No,Submersible,Domestic,Well Report Tracking Number: 524998. 
+5857213,30.0908,-97.9183,Hays,,Nancy Acosta,,9/22/2019,395,11,4.5,295,395,832,No,No,Submersible,Domestic,Well Report Tracking Number: 524998. 
+5857301,30.09375,-97.8920556,Hays,218EBFZA,Phillip & Laura Ashley,W,11/0/1937,312,10,6,0,83,885,Yes,Yes,Submersible,Stock,
+5857301,30.09375,-97.8920556,Hays,218EBFZA,Phillip & Laura Ashley,W,11/0/1937,312,101,,83,312,885,Yes,Yes,Submersible,Stock,
+5857302,30.096111,-97.876667,Hays,218EBFZA,J D Beffort ,W,8/6/1979,285,10,5,0,150,765,Yes,Yes,Submersible,Domestic,
+5857302,30.096111,-97.876667,Hays,218EBFZA,J D Beffort ,W,8/6/1979,285,101,6,150,280,765,Yes,Yes,Submersible,Domestic,
+5857303,30.113056,-97.8925,Hays,218EBFZA,W. D. Turner,W,5/10/1973,315,10,7,0,265,870,Yes,Yes,Submersible,Domestic,Cemented to 50 feet. Specific capacity 0.4.
+5857303,30.113056,-97.8925,Hays,218EBFZA,W. D. Turner,W,5/10/1973,315,11,7,265,284,870,Yes,Yes,Submersible,Domestic,Cemented to 50 feet. Specific capacity 0.4.
+5857304,30.115556,-97.882222,Hays,218EBFZA,Hodge Phillips,W,0/0/1978,380,,,,,780,No,Yes,,Domestic,
+5857305,30.099722,-97.893334,Hays,218EBFZA,Jack Dahlstrom,W,5/20/1973,415,,,,,809,Yes,No,None,Unused,
+5857306,30.115278,-97.893334,Hays,218EBFZA,Zach Dean ,W,11/0/1979,372,,,,,865,Yes,No,None,Unused,
+5857307,30.100556,-97.882222,Hays,218EDRDA,Dahlstrom Middle School,W,1/15/1985,470,10,7,0,470,802,Yes,Yes,Submersible,Public Supply,TCEQ Source ID: G1050012D. PROBABLY SLOTTED OR PERFORATED BELO W 85 FEET
+5857308,30.110001,-97.878611,Hays,218EDRDA,Huntington Estates,W,4/15/1985,405,10,6,0,255,811,Yes,Yes,Submersible,Public Supply,Site 43 in BSEACD Report 2010-0701. Reported yield 104 GPM with 60 feet drawdown after 22.5 hours in 1996. Specific capacity 1.73 GPM/ft. Aquifer test data and results in TWDB files.
+5857308,30.110001,-97.878611,Hays,218EDRDA,Huntington Estates,W,4/15/1985,405,101,8,255,405,811,Yes,Yes,Submersible,Public Supply,Site 43 in BSEACD Report 2010-0701. Reported yield 104 GPM with 60 feet drawdown after 22.5 hours in 1996. Specific capacity 1.73 GPM/ft. Aquifer test data and results in TWDB files.
+5857309,30.113889,-97.884445,Hays,218EDRDA,Larry Ham ,W,5/10/1988,360,10,5,0,220,809,Yes,No,Submersible,Domestic,
+5857309,30.113889,-97.884445,Hays,218EDRDA,Larry Ham ,W,5/10/1988,360,11,5,220,337,809,Yes,No,Submersible,Domestic,
+5857310,30.114723,-97.882222,Hays,218EDRDA,Joe Rocha ,W,11/28/1988,400,10,5,0,300,793,No,No,Submersible,Domestic,
+5857310,30.114723,-97.882222,Hays,218EDRDA,Joe Rocha ,W,11/28/1988,400,11,5,300,400,793,No,No,Submersible,Domestic,
+5857311,30.113056,-97.8925,Hays,218EBFZA,Charlie Wolff ,W,0/0/1990,,,,,,870,Yes,Yes,Submersible,Domestic,Historical observation well.
+5857312,30.105834,-97.904167,Hays,218EBFZA,Oak Forest Edwards #2,W,,,10,,,,868,Yes,Yes,Submersible,Public Supply,TCEQ Source ID: G1050128A. Elevation from Goggle Earth. 155 gpm no drawdown data.
+5857312,30.105834,-97.904167,Hays,218EBFZA,Oak Forest Edwards #2,W,,,10,,,,868,Yes,Yes,Submersible,Public Supply,TCEQ Source ID: G1050128A. Elevation from Goggle Earth. 155 gpm no drawdown data.
+5857313,30.1133333,-97.8833333,Hays,218EBFZA,David Clinton,W,,,,,,,805,Yes,No,,,Owner Well Number: 1. 
+5857314,30.115834,-97.895,Hays,218EBFZA,Elliot Ranch Well #1,W,10/26/1999,403,10,10,0,244,892,Yes,Yes,Submersible,Public Supply,TCEQ Source ID: G1050132A. Site 45 in BSEACD Report 2010-0701. Originally drilled to 655 and plug- ged back to 403 feet. Geophysical log to 355 feet. Reported yield 194 GPM with 10.3 feet drawdown after 24 hours in 1999. Specific capacity 18.7 GPM/ft. Aquifer test data and results in TWDB files.
+5857314,30.115834,-97.895,Hays,218EBFZA,Elliot Ranch Well #1,W,10/26/1999,403,10,8,0,250,892,Yes,Yes,Submersible,Public Supply,TCEQ Source ID: G1050132A. Site 45 in BSEACD Report 2010-0701. Originally drilled to 655 and plug- ged back to 403 feet. Geophysical log to 355 feet. Reported yield 194 GPM with 10.3 feet drawdown after 24 hours in 1999. Specific capacity 18.7 GPM/ft. Aquifer test data and results in TWDB files.
+5857314,30.115834,-97.895,Hays,218EBFZA,Elliot Ranch Well #1,W,10/26/1999,403,11,8,250,403,892,Yes,Yes,Submersible,Public Supply,TCEQ Source ID: G1050132A. Site 45 in BSEACD Report 2010-0701. Originally drilled to 655 and plug- ged back to 403 feet. Geophysical log to 355 feet. Reported yield 194 GPM with 10.3 feet drawdown after 24 hours in 1999. Specific capacity 18.7 GPM/ft. Aquifer test data and results in TWDB files.
+5857315,30.0977778,-97.885,Hays,218EBFZA,Southern Hills Church of Christ,W,7/9/2002,400,10,5,0,280,814,Yes,Yes,Submersible,Public Supply,Well Report Tracking Number: 11319. Reported yield 50 GPM in 2002. MP= +2.50 feet
+5857315,30.0977778,-97.885,Hays,218EBFZA,Southern Hills Church of Christ,W,7/9/2002,400,11,5,280,380,814,Yes,Yes,Submersible,Public Supply,Well Report Tracking Number: 11319. Reported yield 50 GPM in 2002. MP= +2.50 feet
+5857315,30.0977778,-97.885,Hays,218EBFZA,Southern Hills Church of Christ,W,7/9/2002,400,10,5,380,400,814,Yes,Yes,Submersible,Public Supply,Well Report Tracking Number: 11319. Reported yield 50 GPM in 2002. MP= +2.50 feet
+5857316,30.121667,-97.912223,Hays,218EBFZA,Steve Huibregtse,W,,300,,,,,854,No,No,,,
+5857317,30.1172222,-97.9086111,Hays,218EDRDA,USGS,O,,134,10,6,0,20,802,Yes,No,None,Monitor,USGS Site Number: 300702097543101. 
+5857317,30.1172222,-97.9086111,Hays,218EDRDA,USGS,O,,134,10,3,0,73,802,Yes,No,None,Monitor,USGS Site Number: 300702097543101. 
+5857317,30.1172222,-97.9086111,Hays,218EDRDA,USGS,O,,134,11,3,73,133,802,Yes,No,None,Monitor,USGS Site Number: 300702097543101. 
+5857318,30.123889,-97.907778,Hays,218EDGRU,Rick Castillo ,W,11/26/1996,420,,,,,800,Yes,Yes,Submersible,Domestic,
+5857319,30.0888889,-97.9152778,Hays,218EDRDA,USGS,W,,179,10,7,0,20,805,Yes,Yes,None,Unused,USGS Site Number: 301336097484601. 
+5857319,30.0888889,-97.9152778,Hays,218EDRDA,USGS,W,,179,10,3,0,100,805,Yes,Yes,None,Unused,USGS Site Number: 301336097484601. 
+5857319,30.0888889,-97.9152778,Hays,218EDRDA,USGS,W,,179,11,3,100,179,805,Yes,Yes,None,Unused,USGS Site Number: 301336097484601. 
+5857320,30.0975,-97.886945,Hays,218EDRDA,"Gary Callon  Buda, Texas ",W,,400,,,,,824,Yes,Yes,Submersible,Domestic,
+5857321,30.1130556,-97.8838889,Hays,218EDRDA,USGS,O,,402,10,4,,,805,Yes,No,,Unused,
+5857323,30.116667,-97.893611,Hays,218EBFZA,Elliott Ranch  Well #2 ,W,1/0/2000,380,10,10,0,180,872,Yes,Yes,Submersible,Public Supply,Site 47 in BSEACD Report 2010-701. Reported yield 205 GPM with 10.4 feet drawdown after 24 hours in 20- 00. Specific capacity 19.7 GPM/ft. Aquifer test data and results in TWDB files.
+5857323,30.116667,-97.893611,Hays,218EBFZA,Elliott Ranch  Well #2 ,W,1/0/2000,380,11,10,180,380,872,Yes,Yes,Submersible,Public Supply,Site 47 in BSEACD Report 2010-701. Reported yield 205 GPM with 10.4 feet drawdown after 24 hours in 20- 00. Specific capacity 19.7 GPM/ft. Aquifer test data and results in TWDB files.
+5857324,30.107501,-97.905834,Hays,218EBFZA,Brent Freitag,W,3/28/1996,400,,,,,850,No,No,,Domestic,
+5857325,30.111667,-97.881667,Hays,218EBFZA,Eric and Carol Swanson,W,2/22/1996,480,,,,,818,No,No,,Domestic,
+5857326,30.118333,-97.89,Hays,218EBFZA,Kevin Crumley,W,1/6/1995,397,10,5,2,340,855,Yes,No,,Domestic,
+5857326,30.118333,-97.89,Hays,218EBFZA,Kevin Crumley,W,1/6/1995,397,11,5,340,380,855,Yes,No,,Domestic,
+5857327,30.1227778,-97.9086111,Hays,218EDGRU,Andy & Linda Hastings,W,10/7/2011,380,10,5,2,340,818,Yes,Yes,Submersible,Domestic,Well Report Tracking Number: 270797. 7 GPM. Pump set @ 320ft. Water strata intervals: 150-190 and 270-320 ft.
+5857327,30.1227778,-97.9086111,Hays,218EDGRU,Andy & Linda Hastings,W,10/7/2011,380,11,5,340,380,818,Yes,Yes,Submersible,Domestic,Well Report Tracking Number: 270797. 7 GPM. Pump set @ 320ft. Water strata intervals: 150-190 and 270-320 ft.
+5857328,30.111112,-97.886945,Hays,218EBFZA,Nolan Kunkel,W,0/0/1994,400,,,,,805,Yes,Yes,Submersible,Domestic,
+5857329,30.0936111,-97.8855556,Hays,218EBFZA,James Stanislaw  Shannon Stanislaw,W,10/29/2012,420,10,5,0,380,795,Yes,Yes,Submersible,Domestic,Well Report Tracking Number: 303853. Yeild: 20 GPM. Open hole 380-420 ft.
+5857330,30.1173889,-97.9081389,Hays,218EBFZA,Donna Cox,W,2/4/1995,450,10,8,0,100,804,Yes,No,Submersible,Domestic,
+5857330,30.1173889,-97.9081389,Hays,218EBFZA,Donna Cox,W,2/4/1995,450,10,5,0,450,804,Yes,No,Submersible,Domestic,
+5857331,30.121667,-97.910278,Hays,218EBFZA,Ray Quezada ,W,4/11/2014,300,10,5,0,260,826,Yes,Yes,Submersible,Domestic,Well Report Tracking Number: 359831. Estimated yield: 7-8 GPM.
+5857332,30.106061,-97.886757,Hays,218EDRDA,Cody Brown,W,8/1/2016,370,10,5,-2,198,785,Yes,No,Submersible,Domestic,Well Report Tracking Number: 429440. 
+5857334,30.0926944,-97.8863333,Hays,218EBFZA,Camill Banda,W,3/15/2017,400,10,4.5,-2,338,805,No,No,,Domestic,Well Report Tracking Number: 444985. 
+5857334,30.0926944,-97.8863333,Hays,218EBFZA,Camill Banda,W,3/15/2017,400,11,4.5,338,358,805,No,No,,Domestic,Well Report Tracking Number: 444985. 
+5857336,30.0930556,-97.8761111,Hays,218EBFZA,Jose Primental,W,11/21/2015,400,10,4.5,0,340,765,No,Yes,Submersible,Domestic,Well Report Tracking Number: 413065. 
+5857336,30.0930556,-97.8761111,Hays,218EBFZA,Jose Primental,W,11/21/2015,400,11,4.5,340,400,765,No,Yes,Submersible,Domestic,Well Report Tracking Number: 413065. 
+5857337,30.0997833,-97.8845333,Hays,218EBFZA,Tito Diaz,W,10/11/2018,400,10,5,-2,280,829,Yes,No,Submersible,Domestic,Well Report Tracking Number: 494731. 
+5857337,30.0997833,-97.8845333,Hays,218EBFZA,Tito Diaz,W,10/11/2018,400,12,5,280,380,829,Yes,No,Submersible,Domestic,Well Report Tracking Number: 494731. 
+5857337,30.0997833,-97.8845333,Hays,218EBFZA,Tito Diaz,W,10/11/2018,400,10,5,380,400,829,Yes,No,Submersible,Domestic,Well Report Tracking Number: 494731. 
+5857338,30.1105278,-97.8800556,Hays,,Eileen Conley,W,11/10/2018,400,10,4.5,-2,358,826,No,Yes,Submersible,Domestic,Well Report Tracking Number: 496323. Owner Well Number: 2. 
+5857338,30.1105278,-97.8800556,Hays,,Eileen Conley,W,11/10/2018,400,11,4.5,358,378,826,No,Yes,Submersible,Domestic,Well Report Tracking Number: 496323. Owner Well Number: 2. 
+5857339,30.0926389,-97.8872778,Hays,,Zuleyma P and Estanislao Rodriguez,W,10/26/2018,430,10,4.5,-2,378,812,No,Yes,,Domestic,Well Report Tracking Number: 495778. 
+5857339,30.0926389,-97.8872778,Hays,,Zuleyma P and Estanislao Rodriguez,W,10/26/2018,430,11,4.5,378,398,812,No,Yes,,Domestic,Well Report Tracking Number: 495778. 
+5857340,30.1081111,-97.8910833,Hays,,Chad Bartling,W,3/7/2022,400,10,4.5,-2,338,829,No,No,Submersible,Domestic,Well Report Tracking Number: 603095. 
+5857340,30.1081111,-97.8910833,Hays,,Chad Bartling,W,3/7/2022,400,11,4.5,338,358,829,No,No,Submersible,Domestic,Well Report Tracking Number: 603095. 
+5857402,30.054723,-97.986389,Hays,218EBFZA,Tom Fairey,W,3/1/1976,380,,,,,880,Yes,Yes,Submersible,Domestic,
+5857403,30.066389,-97.966667,Hays,218EBFZA,Pat Rutherford Jr.,W,0/0/1952,350,,,,,982,Yes,Yes,Submersible,Domestic,
+5857405,30.043334,-97.961112,Hays,218EBFZA,Arturo Ruiz ,W,10/4/2002,405,10,5,0,405,915,No,Yes,Submersible,Domestic,Well Report Tracking Number: 14087. 
+5857410,30.048889,-97.958612,Hays,218EDRDA,Lawrence Salas,W,6/11/2015,290,10,5,0,260,884,Yes,No,Submersible,Domestic,Well Report Tracking Number: 399078. Drilled to 340'plugged back to 290'
+5857410,30.048889,-97.958612,Hays,218EDRDA,Lawrence Salas,W,6/11/2015,290,11,5,260,290,884,Yes,No,Submersible,Domestic,Well Report Tracking Number: 399078. Drilled to 340'plugged back to 290'
+5857411,30.043611,-97.962223,Hays,218EDRDA,Gillson Property 101 Pintail Street,W,6/9/2015,340,10,5,0,320,921,Yes,No,Submersible,Domestic,Well Report Tracking Number: 397434. 
+5857414,30.05055,-97.9826944,Hays,,Lee Howard,W,8/20/2018,535,10,14.75,0,20,939,No,Yes,Submersible,Domestic,Well Report Tracking Number: 490623. 
+5857414,30.05055,-97.9826944,Hays,,Lee Howard,W,8/20/2018,535,10,5,2,435,939,No,Yes,Submersible,Domestic,Well Report Tracking Number: 490623. 
+5857414,30.05055,-97.9826944,Hays,,Lee Howard,W,8/20/2018,535,12,5,435,535,939,No,Yes,Submersible,Domestic,Well Report Tracking Number: 490623. 
+5857501,30.048056,-97.957778,Hays,218EDRDA,Jim Ruby,W,10/2/1972,405,10,8,0,190,865,No,No,Submersible,Domestic,
+5857501,30.048056,-97.957778,Hays,218EDRDA,Jim Ruby,W,10/2/1972,405,101,7,190,405,865,No,No,Submersible,Domestic,
+5857502,30.0663611,-97.9444722,Hays,218EBFZA,Hoskins House City of Austin,W,0/0/1938,385,,,,,895,Yes,Yes,None,Unused,
+5857503,30.065001,-97.928333,Hays,218EDRDA,Michaelis Ranch ,W,,180,,,,,812,Yes,No,Piston,Stock,
+5857504,30.061945,-97.920278,Hays,218EDRDA,Cecil Ruby,W,,,,,,,821,Yes,No,Piston,Stock,
+5857505,30.051389,-97.920833,Hays,218EDRDA,Cecil Ruby,W,,,,,,,854,Yes,No,Piston,Stock,
+5857506,30.045,-97.961667,Hays,218EDRDA,Leroy Grote,W,8/5/1990,450,,,,,900,Yes,Yes,Submersible,Domestic,50 gpm
+5857508,30.043334,-97.955556,Hays,218EDRDA,Michael Pettit,W,,510,,,,,880,Yes,Yes,Submersible,Domestic,MP= +1.7
+5857509,30.0725,-97.920278,Hays,218EDRDA,Madalyn Uristi Onion Creek Lodge ,W,7/25/1988,258,10,5,0,258,781,Yes,Yes,Submersible,Domestic,Reported yield 15 GPM with 121 feet drawdown after pumping 0.5 hours in 1988.   MP= +0.60 feet
+5857510,30.0638889,-97.9422222,Hays,218EDRDA,USGS,W,,197,10,7,0,20,862,Yes,No,None,Unused,USGS Site Number: 300350097563201. 
+5857510,30.0638889,-97.9422222,Hays,218EDRDA,USGS,W,,197,10,3,0,137,862,Yes,No,None,Unused,USGS Site Number: 300350097563201. 
+5857510,30.0638889,-97.9422222,Hays,218EDRDA,USGS,W,,197,11,3,137,197,862,Yes,No,None,Unused,USGS Site Number: 300350097563201. 
+5857511,30.049445,-97.935556,Hays,218EBFZA,Inn Above Onion Creek ,W,3/30/1994,450,,,,,900,Yes,Yes,Submersible,Domestic,
+5857512,30.0586111,-97.9211111,Hays,218EDGRU,TWC Enterprises  Ruby Ranch South #4,W,12/22/2000,405,10,9,0,182,830,Yes,Yes,,Public Supply,USGS Site Number: 300331097551601. Well #4. Reported yield 94 GPM with 177 feet drawdown after 45 hours in 2001. Specific capacity 0.53 GPM/- ft. Site #18 in BSEACD Report 2010- 0701. Aquifer test data and resuslt in TWDB files.
+5857512,30.0586111,-97.9211111,Hays,218EDGRU,TWC Enterprises  Ruby Ranch South #4,W,12/22/2000,405,101,8,182,405,830,Yes,Yes,,Public Supply,USGS Site Number: 300331097551601. Well #4. Reported yield 94 GPM with 177 feet drawdown after 45 hours in 2001. Specific capacity 0.53 GPM/- ft. Site #18 in BSEACD Report 2010- 0701. Aquifer test data and resuslt in TWDB files.
+5857514,30.076111,-97.954167,Hays,218EBFZA,City of Austin Rutherford Dog House,W,,400,,,,,965,Yes,Yes,Submersible,Stock,
+5857516,30.044445,-97.936111,Hays,218EDRDA,Jared Ralston,W,9/11/2012,380,10,5,0,340,894,Yes,Yes,Submersible,Domestic,Well Report Tracking Number: 299465. GCD Well Number: 58575JR1. Screen packer at 209 ft. Rubber packer at 211 ft.
+5857517,30.044445,-97.955834,Hays,218EDRDA,Oswaldo Guerrero,W,5/3/2012,340,10,5,0,300,878,Yes,Yes,Submersible,Domestic,Well Report Tracking Number: 285896. GCD Well Number: 58575OG. Screen packer at 155 ft. Rubber packer at 170 ft.
+5857518,30.083055,-97.9275,Hays,218EBFZA,"KBDJ LP  Industrial Asphalt, LP",O,3/9/2007,208,10,6,0,80,849,Yes,No,Submersible,Unused,"Well Report Tracking Number: 107836. Originally drilled to 230 ft., plugged back to 208 ft. 2 burlap, pvc, rubber packers at 80 and 20 feet. This well was sampled by BSEACD on 2/27/14 (WQ field data sheet in scanned images) but we have not received any results."
+5857519,30.0464806,-97.95583,Hays,218EDRDA,Gus Rangel,W,9/26/2014,320,10,5,0,300,887,Yes,No,Submersible,Domestic,Well Report Tracking Number: 378644. 
+5857520,30.0480556,-97.9530556,Hays,218EDRDA,Wayne Eaves,W,8/5/2015,340,10,5,0,320,867,No,No,Submersible,Domestic,Well Report Tracking Number: 399090. Yield est. 10+ GPM. WL (-152.00) by driller. No date.
+5857522,30.0487778,-97.9560556,Hays,218EBFZA,Edward Saldana,W,3/29/2017,360,10,4.5,0,300,886,No,Yes,Submersible,Domestic,Well Report Tracking Number: 446940. 
+5857522,30.0487778,-97.9560556,Hays,218EBFZA,Edward Saldana,W,3/29/2017,360,11,4.5,300,340,886,No,Yes,Submersible,Domestic,Well Report Tracking Number: 446940. 
+5857524,30.0432639,-97.928975,Hays,218EBFZA,Roberto Garza,W,2/1/2016,370,10,5,-2,338,876,No,Yes,,Domestic,Well Report Tracking Number: 414412. 
+5857525,30.0454167,-97.9575278,Hays,218EBFZA,Daren Roche,W,3/26/2018,360,10,4.5,-2,298,889,Yes,No,,Domestic,Well Report Tracking Number: 475977. 
+5857525,30.0454167,-97.9575278,Hays,218EBFZA,Daren Roche,W,3/26/2018,360,11,4.5,298,318,889,Yes,No,,Domestic,Well Report Tracking Number: 475977. 
+5857526,30.0440556,-97.9578056,Hays,218EBFZA,Lynette Petrie,W,6/22/2018,384,10,4.5,0,320,888,Yes,No,Submersible,Domestic,Well Report Tracking Number: 486258. 
+5857526,30.0440556,-97.9578056,Hays,218EBFZA,Lynette Petrie,W,6/22/2018,384,11,4.5,320,380,888,Yes,No,Submersible,Domestic,Well Report Tracking Number: 486258. 
+5857527,30.0495556,-97.95525,Hays,,Scott Wetstone,W,9/14/2018,340,,4.5,0,280,878,No,Yes,Submersible,Domestic,Well Report Tracking Number: 492197. 
+5857527,30.0495556,-97.95525,Hays,,Scott Wetstone,W,9/14/2018,340,,4.5,280,300,878,No,Yes,Submersible,Domestic,Well Report Tracking Number: 492197. 
+5857528,30.0480278,-97.9553889,Hays,,Jose and Karrie Cerda,W,2/21/2019,340,10,4.5,-2,278,884,No,Yes,,Domestic,Well Report Tracking Number: 504318. 
+5857528,30.0480278,-97.9553889,Hays,,Jose and Karrie Cerda,W,2/21/2019,340,11,4.5,278,298,884,No,Yes,,Domestic,Well Report Tracking Number: 504318. 
+5857529,30.0462833,-97.95545,Hays,,Javier Ortiz,W,7/25/2019,320,10,4.5,3,260,883,No,No,Submersible,Domestic,Well Report Tracking Number: 518522. 
+5857529,30.0462833,-97.95545,Hays,,Javier Ortiz,W,7/25/2019,320,1,4.5,260,320,883,No,No,Submersible,Domestic,Well Report Tracking Number: 518522. 
+5857530,30.0490556,-97.95625,Hays,,Gus and Dora Rangel,W,7/9/2019,400,10,4.5,-2,338,885,No,No,Submersible,Domestic,Well Report Tracking Number: 516866. 
+5857530,30.0490556,-97.95625,Hays,,Gus and Dora Rangel,W,7/9/2019,400,11,4.5,338,358,885,No,No,Submersible,Domestic,Well Report Tracking Number: 516866. 
+5857531,30.0477778,-97.9544444,Hays,,Jose Cerda,W,12/29/2021,380,10,4.5,0,200,880,No,No,Submersible,Domestic,Well Report Tracking Number: 597804. 
+5857531,30.0477778,-97.9544444,Hays,,Jose Cerda,W,12/29/2021,380,12,4.5,200,380,880,No,No,Submersible,Domestic,Well Report Tracking Number: 597804. 
+5857533,30.0445861,-97.9541083,Hays,,Kristina Castro,W,3/4/2020,340,10,4.5,-2,298,869,No,No,Submersible,Domestic,Well Report Tracking Number: 538358. 
+5857533,30.0445861,-97.9541083,Hays,,Kristina Castro,W,3/4/2020,340,11,4.5,298,318,869,No,No,Submersible,Domestic,Well Report Tracking Number: 538358. 
+5857601,30.079167,-97.89,Hays,218EDRDA,Cecil Ruby,W,10/26/1971,390,10,8,0,160,792,No,No,Submersible,Irrigation,Gate locked 2/99.
+5857601,30.079167,-97.89,Hays,218EDRDA,Cecil Ruby,W,10/26/1971,390,101,9,160,390,792,No,No,Submersible,Irrigation,Gate locked 2/99.
+5857602,30.074167,-97.915834,Hays,218EBFZA,Ruby Ranch,W,,208,10,5,,,792,Yes,No,Submersible,Plugged or Destroyed,Historical observation well. Dest- royed. Observation well for test of 512 in 2001. Test data in TWDB fil- es.
+5857603,30.066389,-97.892222,Hays,218EDRDA,Cecil Ruby,W,,,,,,,777,No,No,Piston,Stock,
+5857604,30.080278,-97.898889,Hays,218EDRDA,Cecil Ruby,W,,,,,,,802,No,No,Piston,Stock,
+5857605,30.057501,-97.907223,Hays,218EDRD,Cecil Ruby Y O Ranch ,W,,,,,,,800,Yes,No,Piston,Stock,
+5857606,30.047778,-97.883611,Hays,218EDRDA,Cindy and Jeff Barton ,W,,360,10,6,0,320,822,Yes,Yes,Submersible,Domestic,MP= +0.60 feet   Badge # 89225613
+5857607,30.045,-97.884445,Hays,218EDRDA,Buda/Kyle Church of  Christ,W,2/16/1987,320,10,5,0,240,826,Yes,Yes,Submersible,Public Supply,TCEQ Source ID: G1050097A. 
+5857607,30.045,-97.884445,Hays,218EDRDA,Buda/Kyle Church of  Christ,W,2/16/1987,320,11,5,240,300,826,Yes,Yes,Submersible,Public Supply,TCEQ Source ID: G1050097A. 
+5857607,30.045,-97.884445,Hays,218EDRDA,Buda/Kyle Church of  Christ,W,2/16/1987,320,101,6,300,320,826,Yes,Yes,Submersible,Public Supply,TCEQ Source ID: G1050097A. 
+5857608,30.080278,-97.916667,Hays,218EBFZA,Ruby Ranch Phase II  Eco Resources PWS ,W,,,,,,,787,Yes,Yes,Submersible,Public Supply,
+5857609,30.08,-97.917222,Hays,218EBFZA,Ruby Ranch Subd. #1 well ,W,3/6/1998,403,10,6,0,320,765,Yes,No,Submersible,Public Supply,TCEQ Source ID: G1050122A. Owner's #1 well. Measured yield 29 GPM in 1998. Gravel packed from 300 to 403 feet. Cemented from 0 to 300 feet. Pump set at 380 feet.
+5857609,30.08,-97.917222,Hays,218EBFZA,Ruby Ranch Subd. #1 well ,W,3/6/1998,403,11,6,320,380,765,Yes,No,Submersible,Public Supply,TCEQ Source ID: G1050122A. Owner's #1 well. Measured yield 29 GPM in 1998. Gravel packed from 300 to 403 feet. Cemented from 0 to 300 feet. Pump set at 380 feet.
+5857609,30.08,-97.917222,Hays,218EBFZA,Ruby Ranch Subd. #1 well ,W,3/6/1998,403,10,6,380,392,765,Yes,No,Submersible,Public Supply,TCEQ Source ID: G1050122A. Owner's #1 well. Measured yield 29 GPM in 1998. Gravel packed from 300 to 403 feet. Cemented from 0 to 300 feet. Pump set at 380 feet.
+5857609,30.08,-97.917222,Hays,218EBFZA,Ruby Ranch Subd. #1 well ,W,3/6/1998,403,101,10,392,403,765,Yes,No,Submersible,Public Supply,TCEQ Source ID: G1050122A. Owner's #1 well. Measured yield 29 GPM in 1998. Gravel packed from 300 to 403 feet. Cemented from 0 to 300 feet. Pump set at 380 feet.
+5857610,30.045556,-97.881944,Hays,218EBFZA,Ray Holt,W,7/10/1996,300,10,5,0,200,826,Yes,Yes,Submersible,Domestic,MP= +2.35 feet
+5857610,30.045556,-97.881944,Hays,218EBFZA,Ray Holt,W,7/10/1996,300,11,5,200,300,826,Yes,Yes,Submersible,Domestic,MP= +2.35 feet
+5857611,30.072222,-97.916112,Hays,218EDDT,Ruby Ranch WSC Well #3,W,2/19/2000,410,,,,,796,Yes,Yes,Unknown,Public Supply,TCEQ Source ID: G1050122C. Site 25 in BSEACD Report 2010-0701. Reported average yield 46 GPM with 242 feet drawdown after 102 hours in 2007. Specific capacity 0.19 GPM/ft. Aquifer test data and results in TWDB files.
+5857701,30.040278,-97.964445,Hays,218EDRDA,GE Ranch,W,,,,,,,931,Yes,No,Piston,Stock,
+5857702,30.038889,-97.979444,Hays,218EDRDA,GF Ranch,W,,,,,,,942,No,No,Submersible,Stock,
+5857801,30.039722,-97.943611,Hays,218EDRDA,J C Ruby,W,,365,,,,,938,Yes,Yes,Submersible,Domestic,Deepened by Kutscher fromm 300 feet in 1969.
+5857802,30.026944,-97.928055,Hays,218EBFZA,Tom Johnson  Halifax Ranch Office,W,,242,,,,,838,Yes,Yes,Centrifugal Pump,Stock,
+5857803,30.023333,-97.919722,Hays,218EDRDA,C M Decker,W,,325,,,,,880,No,No,Piston,Domestic,
+5857804,30.029444,-97.923889,Hays,218EDRDA,Max Michaelis ,W,,300,,,,,818,Yes,No,None,Unused,
+5857805,30.029722,-97.923889,Hays,218EBFZA,Max Michaelis ,W,,300,,,,,818,No,Yes,Submersible,Domestic,
+5857806,30.003334,-97.923889,Hays,218EDRDA,Ky-Tex Properties ,W,,400,,,,,760,Yes,No,Submersible,Stock,
+5857807,30.019722,-97.952223,Hays,218EDRDA,Halifax Ranch ,W,,,,,,,887,Yes,No,Submersible,Stock,
+5857808,30.0116667,-97.9444444,Hays,218EDRDA,Halifax Ranch  J. M. Johnson,W,3/1/1979,220,10,6,0,161,738,Yes,Yes,Submersible,Domestic,USGS Site Number: 300041097563901. Reported yield 45 GPM with 20 feet drawdown after pumping 1/2 hour in 1979. Cemented from 0 to 160 feet. Specific capacity 2.25.
+5857808,30.0116667,-97.9444444,Hays,218EDRDA,Halifax Ranch  J. M. Johnson,W,3/1/1979,220,101,,161,220,738,Yes,Yes,Submersible,Domestic,USGS Site Number: 300041097563901. Reported yield 45 GPM with 20 feet drawdown after pumping 1/2 hour in 1979. Cemented from 0 to 160 feet. Specific capacity 2.25.
+5857809,30.010278,-97.945,Hays,218EDRDA,Halifax Ranch ,W,5/0/1984,240,10,6,0,181,800,Yes,Yes,Submersible,Domestic,
+5857809,30.010278,-97.945,Hays,218EDRDA,Halifax Ranch ,W,5/0/1984,240,11,6,181,240,800,Yes,Yes,Submersible,Domestic,
+5857810,30.040834,-97.920555,Hays,218EDRDA,Y. O. Ranch ,W,,,,,,,810,Yes,No,Piston,Stock,
+5857811,30.045,-97.961667,Hays,218EBFZA,Leroy W. Grote,W,8/6/1990,450,,,,,930,No,No,Submersible,Domestic,
+5857814,30.0413056,-97.9295278,Hays,218EBFZA,Chuck Misenheimer,W,10/13/2015,370,10,4.5,0,340,907,Yes,No,Submersible,Domestic,Well Report Tracking Number: 406816. 
+5857815,30.0379722,-97.93175,Hays,,John and Ann Rader,W,6/19/2019,360,10,4.5,-2,298,892,No,No,Submersible,Domestic,Well Report Tracking Number: 516867. 
+5857815,30.0379722,-97.93175,Hays,,John and Ann Rader,W,6/19/2019,360,11,4.5,298,318,892,No,No,Submersible,Domestic,Well Report Tracking Number: 516867. 
+5857816,30.032,-97.9187306,Hays,,Sharon Michealis,W,2/28/2022,400,10,4.5,-2,338,826,No,No,,Domestic,Well Report Tracking Number: 603042. Owner Well Number: BS-2022. 
+5857816,30.032,-97.9187306,Hays,,Sharon Michealis,W,2/28/2022,400,11,4.5,338,358,826,No,No,,Domestic,Well Report Tracking Number: 603042. Owner Well Number: BS-2022. 
+5857817,30.0345,-97.9363889,Hays,,David Crowell,W,7/23/2021,400,10,4.5,-2,338,822,No,No,Submersible,Domestic,Well Report Tracking Number: 585918. 
+5857817,30.0345,-97.9363889,Hays,,David Crowell,W,7/23/2021,400,11,4.5,338,358,822,No,No,Submersible,Domestic,Well Report Tracking Number: 585918. 
+5857901,30.0325,-97.890278,Hays,218EBFZA,Hays Consolidated ISD ,W,7/0/1968,575,10,10,0,235,835,Yes,Yes,Submersible,Public Supply,TCEQ Source ID: G1050051A. Reported yield 104 GPM with 290 feet drawdown after pumping 36 hours in 1968. Cemented from 0 to 235 feet. Specific capacity 0.36.
+5857901,30.0325,-97.890278,Hays,218EBFZA,Hays Consolidated ISD ,W,7/0/1968,575,101,10,235,575,835,Yes,Yes,Submersible,Public Supply,TCEQ Source ID: G1050051A. Reported yield 104 GPM with 290 feet drawdown after pumping 36 hours in 1968. Cemented from 0 to 235 feet. Specific capacity 0.36.
+5857902,30.0088889,-97.8952778,Hays,218EBFZA,Robin Robinson,W,,263,10,6,,,919,Yes,No,Piston,Unused,BSEACD observation well.
+5857903,30.0383333,-97.8863889,Hays,218EBFZA,Mountain City Ranch,W,,400,,,,,825,Yes,Yes,Piston,Stock,
+5857904,30.013612,-97.8925,Hays,218EBFZA,Perdernales Electric Coop,W,3/11/1975,428,10,5,0,290,825,Yes,Yes,Submersible,Commercial,Reported yield 35 GPM with 410 feet drawdown in 1975. Cemented from 0 to 250 feet. Capacity capacity 0.08
+5857904,30.013612,-97.8925,Hays,218EBFZA,Perdernales Electric Coop,W,3/11/1975,428,101,6,290,428,825,Yes,Yes,Submersible,Commercial,Reported yield 35 GPM with 410 feet drawdown in 1975. Cemented from 0 to 250 feet. Capacity capacity 0.08
+5857905,30.026944,-97.903889,Hays,218EBFZA,Max Michaelis ,W,,,,,,,870,Yes,No,Piston,Stock,
+5857906,30.024167,-97.910001,Hays,218EBFZA,Bill Decker ,W,10/6/1980,360,10,6,0,265,880,Yes,No,Submersible,Domestic,Reported yield 15 GPM with 265 feet drawdown after pumping 1/2 hour in 1980. Cemented from 0 to 10 feet and 245 to 265 feet. Spec.Cap. 0.06
+5857906,30.024167,-97.910001,Hays,218EBFZA,Bill Decker ,W,10/6/1980,360,101,6,265,360,880,Yes,No,Submersible,Domestic,Reported yield 15 GPM with 265 feet drawdown after pumping 1/2 hour in 1980. Cemented from 0 to 10 feet and 245 to 265 feet. Spec.Cap. 0.06
+5857907,30.019444,-97.915556,Hays,218EBFZA,C.M. Decker ,W,,325,,,,,850,Yes,No,Piston,Unused,
+5857908,30.0094444,-97.8966667,Hays,218EBFZA,Robin Robinson,W,11/10/1983,425,10,5,0,340,830,Yes,Yes,Submersible,Unused,
+5857908,30.0094444,-97.8966667,Hays,218EBFZA,Robin Robinson,W,11/10/1983,425,11,5,340,400,830,Yes,Yes,Submersible,Unused,
+5857909,30.0094444,-97.8965,Hays,218EDDT,Robin Robinson,W,,850,,,,,838,Yes,Yes,Submersible,Domestic,Tape hangs at 26'.
+5857910,30.035,-97.899167,Hays,218EDRDA,Mountain City Oaks Water System,W,11/3/1977,405,10,8,0,247,851,No,Yes,Submersible,Public Supply,TCEQ Source ID: G1050062A. 
+5857910,30.035,-97.899167,Hays,218EDRDA,Mountain City Oaks Water System,W,11/3/1977,405,101,8,247,405,851,No,Yes,Submersible,Public Supply,TCEQ Source ID: G1050062A. 
+5857911,30.013056,-97.889445,Hays,218EDRD,Mountain City Ranch  James Kohler,W,1/0/1950,450,10,5,0,300,833,Yes,Yes,Submersible,Domestic,
+5857911,30.013056,-97.889445,Hays,218EDRD,Mountain City Ranch  James Kohler,W,1/0/1950,450,11,5,300,420,833,Yes,Yes,Submersible,Domestic,
+5857911,30.013056,-97.889445,Hays,218EDRD,Mountain City Ranch  James Kohler,W,1/0/1950,450,10,5,420,450,833,Yes,Yes,Submersible,Domestic,
+5857912,30.003334,-97.881667,Hays,218EDRD,County Line WSC ,W,8/27/1984,600,,,,,750,No,No,Submersible,Public Supply,TCEQ Source ID: G1050038A. Owner's #1 well.
+5857913,30.033889,-97.891111,Hays,218EBFZA,Hays Consolidated  Schools / Well #2 ,W,6/12/1994,610,10,9,0,320,847,No,Yes,Submersible,Public Supply,Owner's #2 well. Estimated yield 150 GPM in 1994. Cemented from 0 to 320 feet.
+5857913,30.033889,-97.891111,Hays,218EBFZA,Hays Consolidated  Schools / Well #2 ,W,6/12/1994,610,101,8,320,610,847,No,Yes,Submersible,Public Supply,Owner's #2 well. Estimated yield 150 GPM in 1994. Cemented from 0 to 320 feet.
+5857914,30.003334,-97.881667,Hays,218EBFZA,County Line WSC ,W,3/11/1995,600,10,11,0,315,750,No,Yes,Submersible,Public Supply,TCEQ Source ID: G1050038B. Owner's #2 well. Estimated yield 800 GPM in 1995. Cemented from 0 to 315 feet.
+5857914,30.003334,-97.881667,Hays,218EBFZA,County Line WSC ,W,3/11/1995,600,101,10,315,600,750,No,Yes,Submersible,Public Supply,TCEQ Source ID: G1050038B. Owner's #2 well. Estimated yield 800 GPM in 1995. Cemented from 0 to 315 feet.
+5857915,30.019722,-97.901112,Hays,218EBFZA,Quail Meadows ,W,4/10/1996,408,10,9,0,265,845,Yes,No,Submersible,Public Supply,TCEQ Source ID: G1050077C. Cemented from 0 to 240 feet. Pump set at 315 feet.
+5857915,30.019722,-97.901112,Hays,218EBFZA,Quail Meadows ,W,4/10/1996,408,11,9,265,323,845,Yes,No,Submersible,Public Supply,TCEQ Source ID: G1050077C. Cemented from 0 to 240 feet. Pump set at 315 feet.
+5857915,30.019722,-97.901112,Hays,218EBFZA,Quail Meadows ,W,4/10/1996,408,101,8,323,408,845,Yes,No,Submersible,Public Supply,TCEQ Source ID: G1050077C. Cemented from 0 to 240 feet. Pump set at 315 feet.
+5857916,30.029167,-97.879167,Hays,218EBFZA,City of Kyle Kholer's Crossing ,W,8/11/1997,740,10,13,0,345,800,Yes,Yes,Turbine,Public Supply,Well 10 in BSEACD Report 2010-0701. Reported yield 850 GPM with 147 feet drawdown after 24 hours in 19- 97. Specific capacity 6.3 GPM/ft. Reported yield 920 GPM with 99 feet drawdown after 57 hours in 2008. Specific capacity 9.3 GPM/ft. Data and results from two aquifer tests in TWDB files.
+5857916,30.029167,-97.879167,Hays,218EBFZA,City of Kyle Kholer's Crossing ,W,8/11/1997,740,101,12,345,740,800,Yes,Yes,Turbine,Public Supply,Well 10 in BSEACD Report 2010-0701. Reported yield 850 GPM with 147 feet drawdown after 24 hours in 19- 97. Specific capacity 6.3 GPM/ft. Reported yield 920 GPM with 99 feet drawdown after 57 hours in 2008. Specific capacity 9.3 GPM/ft. Data and results from two aquifer tests in TWDB files.
+5857917,30.02,-97.898611,Hays,218EDRD,Aquasource 2-Sunflower Drive well,W,5/8/1984,387,,,,,840,Yes,Yes,Submersible,Public Supply,Well tested 280 GPM 5/8/1984.
+5858101,30.083611,-97.8425,Hays,218EBFZA,Neil Franklin ,W,0/0/1907,244,10,5,0,230,707,Yes,Yes,None,Unused,Historical observation well.
+5858101,30.083611,-97.8425,Hays,218EBFZA,Neil Franklin ,W,0/0/1907,244,101,,230,243,707,Yes,Yes,None,Unused,Historical observation well.
+5858102,30.106667,-97.854445,Hays,218EDRDA,Cimarron Park Water Co Well #2 ,W,0/0/1957,400,10,10,0,300,748,Yes,Yes,Turbine,Public Supply,TCEQ Source ID: G1050059B. Site 41 in BSEACD Report 2010-0701. Reported yield 596 GPM with 33 feet drawdown after 9 hours in 1996. Specific capacity 18.8 GPM/ft. Aquifer test data and results in TWDB files.
+5858102,30.106667,-97.854445,Hays,218EDRDA,Cimarron Park Water Co Well #2 ,W,0/0/1957,400,101,10,300,400,748,Yes,Yes,Turbine,Public Supply,TCEQ Source ID: G1050059B. Site 41 in BSEACD Report 2010-0701. Reported yield 596 GPM with 33 feet drawdown after 9 hours in 1996. Specific capacity 18.8 GPM/ft. Aquifer test data and results in TWDB files.
+5858103,30.100278,-97.841945,Hays,218EDRDA,Robert Guinn,W,0/0/1957,440,,,,,712,No,No,Turbine,Irrigation,
+5858104,30.104445,-97.848889,Hays,218EBFZA,Henry Armbruster,W,12/0/1937,248,,,,,730,Yes,No,None,Unused,Historical observation well. Owner does not want well measured.
+5858105,30.111389,-97.855834,Hays,218EBFZA,Joe Lawke ,W,1/6/1978,480,,,,,750,Yes,Yes,None,Unused,
+5858106,30.084167,-97.841111,Hays,218EBFZA,City of Buda Well #2.,W,6/23/1977,380,10,10,0,195,712,Yes,Yes,Submersible,Public Supply,TCEQ Source ID: G1050012B. Site 30 in BSEACD Report 2010-0701. Reported yield 315 GPM with 170 feet drawdown after 48 hours in 20- 01. Specific capacity 1.85 GPM/ft. Aquifer test data and results in TWDB files.
+5858106,30.084167,-97.841111,Hays,218EBFZA,City of Buda Well #2.,W,6/23/1977,380,101,,195,380,712,Yes,Yes,Submersible,Public Supply,TCEQ Source ID: G1050012B. Site 30 in BSEACD Report 2010-0701. Reported yield 315 GPM with 170 feet drawdown after 48 hours in 20- 01. Specific capacity 1.85 GPM/ft. Aquifer test data and results in TWDB files.
+5858107,30.110834,-97.866112,Hays,218EDRDA,Leisurewoods Water Co.,W,8/8/1970,400,10,8,0,200,791,No,Yes,Submersible,Public Supply,TCEQ Source ID: G1050043A. 
+5858107,30.110834,-97.866112,Hays,218EDRDA,Leisurewoods Water Co.,W,8/8/1970,400,101,10,200,400,791,No,Yes,Submersible,Public Supply,TCEQ Source ID: G1050043A. 
+5858108,30.105556,-97.862223,Hays,218EDRDA,Leisurewood Water Co. ,W,5/17/1971,548,11,10,0,217,758,No,Yes,Submersible,Public Supply,TCEQ Source ID: G1050043F. Site 39 in BSEACD Report 2010-0701. Reported yield 450 GPM with 0.4 feet drawdown after 4 hours in 19- 92. Aquifer test results in TWDB files.
+5858108,30.105556,-97.862223,Hays,218EDRDA,Leisurewood Water Co. ,W,5/17/1971,548,101,8,217,548,758,No,Yes,Submersible,Public Supply,TCEQ Source ID: G1050043F. Site 39 in BSEACD Report 2010-0701. Reported yield 450 GPM with 0.4 feet drawdown after 4 hours in 19- 92. Aquifer test results in TWDB files.
+5858109,30.099722,-97.873333,Hays,218EDRDA,Jack Giberson ,W,1/3/1971,270,10,7,0,215,755,No,No,Submersible,Domestic,
+5858110,30.085834,-97.855001,Hays,218EDRDA,Julius Eddleman ,W,4/14/1976,280,10,4,0,200,745,No,No,Submersible,Domestic,
+5858111,30.1233333,-97.8725,Hays,218EDRDA,Estate Utilities Water Supply Corp.,W,,303,11,7,0,,729,Yes,Yes,Submersible,Public Supply,USGS Site Number: 300723097522001. TCEQ Source ID: G1050004A. 
+5858113,30.114167,-97.855834,Hays,218EDRDA,Ken Edwards ,W,8/4/1984,505,10,5,0,440,750,No,No,Submersible,Domestic,
+5858113,30.114167,-97.855834,Hays,218EDRDA,Ken Edwards ,W,8/4/1984,505,11,5,440,500,750,No,No,Submersible,Domestic,
+5858114,30.116112,-97.863056,Hays,218EDRDA,Cimarron Park #1,W,1/1/1979,490,10,9,0,192,815,No,Yes,Submersible,Public Supply,TCEQ Source ID: G1050059A. 
+5858114,30.116112,-97.863056,Hays,218EDRDA,Cimarron Park #1,W,1/1/1979,490,11,7,180,490,815,No,Yes,Submersible,Public Supply,TCEQ Source ID: G1050059A. 
+5858115,30.124444,-97.873611,Hays,218EDRDA,Estate Utilities Water Supply Corp.,W,10/23/1979,325,10,11,0,100,740,Yes,No,Submersible,Public Supply,TCEQ Source ID: G1050004B. 
+5858115,30.124444,-97.873611,Hays,218EDRDA,Estate Utilities Water Supply Corp.,W,10/23/1979,325,101,10,100,325,740,Yes,No,Submersible,Public Supply,TCEQ Source ID: G1050004B. 
+5858116,30.093611,-97.839445,Hays,218EDRDA,Robert R. Guinn ,W,,440,10,10,0,400,675,No,No,Submersible,Unused,
+5858117,30.093611,-97.843889,Hays,218EDRDA,Twin Oaks Ranch Church Camp,W,12/7/1970,195,10,7,0,104,708,No,Yes,Submersible,Public Supply,
+5858117,30.093611,-97.843889,Hays,218EDRDA,Twin Oaks Ranch Church Camp,W,12/7/1970,195,101,8,104,195,708,No,Yes,Submersible,Public Supply,
+5858118,30.113612,-97.865001,Hays,218EDRDA,Leisurewoods Water Co. Well #2 ,W,10/16/1978,440,10,9,0,202,805,No,Yes,Submersible,Public Supply,TCEQ Source ID: G1050043B. 
+5858118,30.113612,-97.865001,Hays,218EDRDA,Leisurewoods Water Co. Well #2 ,W,10/16/1978,440,101,,202,440,805,No,Yes,Submersible,Public Supply,TCEQ Source ID: G1050043B. 
+5858119,30.115834,-97.868333,Hays,218EDRDA,Leisurewoods Water Co.,W,2/3/1983,440,10,8,0,334,763,No,Yes,Submersible,Public Supply,TCEQ Source ID: G1050043C. 
+5858119,30.115834,-97.868333,Hays,218EDRDA,Leisurewoods Water Co.,W,2/3/1983,440,101,8,335,440,763,No,Yes,Submersible,Public Supply,TCEQ Source ID: G1050043C. 
+5858120,30.115834,-97.861389,Hays,218EDRDA,Leisurewoods Water Co.,W,2/21/1983,406,10,9,0,262,775,No,Yes,Submersible,Public Supply,TCEQ Source ID: G1050043D. 
+5858120,30.115834,-97.861389,Hays,218EDRDA,Leisurewoods Water Co.,W,2/21/1983,406,101,8,262,406,775,No,Yes,Submersible,Public Supply,TCEQ Source ID: G1050043D. 
+5858121,30.1055556,-97.8622222,Hays,218EDRDA,Leisurewoods Water Co. Well #5 / Aquasource,W,10/2/1978,410,10,11,0,224,758,Yes,Yes,Submersible,Public Supply,TCEQ Source ID: G1050043E. Observation well for pump test of 58-58-108.
+5858121,30.1055556,-97.8622222,Hays,218EDRDA,Leisurewoods Water Co. Well #5 / Aquasource,W,10/2/1978,410,101,10,224,410,758,Yes,Yes,Submersible,Public Supply,TCEQ Source ID: G1050043E. Observation well for pump test of 58-58-108.
+5858122,30.093334,-97.843611,Hays,218EDRDA,Twin Oaks Ranch Church Camp,W,,450,10,8,0,,713,Yes,Yes,Submersible,Public Supply,TCEQ Source ID: G1050074A. MP= +0.90 feet
+5858123,30.109445,-97.841945,Hays,218EDRDA,Elizabeth B. Porter ,W,2/8/1985,510,10,9,0,230,711,Yes,Yes,Submersible,Unused,BS/EACD Continuous WL observation well Site 42 in BSEACD Report 2010-0701. Reported yield 400 GPM with 48.6 feet drawdown after 24 hours in 19- 85. Specific capacity 8.2 GPM/ft. Aquifer test results in TWDB files.
+5858123,30.109445,-97.841945,Hays,218EDRDA,Elizabeth B. Porter ,W,2/8/1985,510,101,8,230,510,711,Yes,Yes,Submersible,Unused,BS/EACD Continuous WL observation well Site 42 in BSEACD Report 2010-0701. Reported yield 400 GPM with 48.6 feet drawdown after 24 hours in 19- 85. Specific capacity 8.2 GPM/ft. Aquifer test results in TWDB files.
+5858124,30.1175,-97.841111,Hays,218EDRDA,Elizabeth B. Porter ,W,2/20/1985,510,10,9,0,200,720,Yes,No,Submersible,Unused,Site 48 in BSEACD Report 2010-0701. Reported yield 350 GPM with 23.7 feet drawdown after 24 hours in 19- 85. Specific capacity 14.6 GPM/ft.
+5858124,30.1175,-97.841111,Hays,218EDRDA,Elizabeth B. Porter ,W,2/20/1985,510,101,8,200,510,720,Yes,No,Submersible,Unused,Site 48 in BSEACD Report 2010-0701. Reported yield 350 GPM with 23.7 feet drawdown after 24 hours in 19- 85. Specific capacity 14.6 GPM/ft.
+5858125,30.083889,-97.874167,Hays,218EDRDA,E. Y. Sosebee ,W,,240,,,,,765,No,Yes,Submersible,Public Supply,
+5858126,30.103889,-97.870555,Hays,218EDRDA,Onion Creek Kennels ,W,,,10,5,,,775,No,No,Submersible,Commercial,
+5858127,30.1175,-97.873611,Hays,218EDRDA,Hays Hill Baptist  Church,W,5/8/1990,430,10,7,0,430,800,Yes,Yes,Submersible,Public Supply,TCEQ Source ID: G1050114A. Cemented from 0 to 130 feet. MP= +1.80 feet Aquifer test results in TWDB files.
+5858128,30.0875,-97.853889,Hays,218EDRDA,Ben Wright,W,1/1/1975,220,,,,,749,No,Yes,,Domestic,
+5858130,30.091111,-97.849167,Hays,218EBFZA,Brasswell,W,,280,,,,,735,No,No,,Domestic,
+5858131,30.093334,-97.844722,Hays,218EBFZA,Keith Marks,W,7/11/1998,350,10,5,0,250,716,No,No,Submersible,Domestic,Neoprene & grout packers at 20 ft and 210 ft.
+5858131,30.093334,-97.844722,Hays,218EBFZA,Keith Marks,W,7/11/1998,350,11,5,250,350,716,No,No,Submersible,Domestic,Neoprene & grout packers at 20 ft and 210 ft.
+5858132,30.089167,-97.852501,Hays,218EBFZA,Ms. Stone,W,1/18/1990,400,,,,,748,No,No,,Domestic,
+5858133,30.102778,-97.865001,Hays,218EDRDA,Richard & Karla  Sansbury,W,5/1/1974,280,10,5,0,180,762,Yes,Yes,Submersible,Domestic,
+5858134,30.087778,-97.8475,Hays,218EBFZA,DDC Creekside Villas,W,9/6/2005,355,10,5,0,255,682,Yes,No,Submersible,Domestic,"Well Report Tracking Number: 91223. Owner Well Number: 58581JT. Burlap packers at 100 & 160 ft. Reconditioned in 2010, see TDLR tracking #229779."
+5858134,30.087778,-97.8475,Hays,218EBFZA,DDC Creekside Villas,W,9/6/2005,355,11,5,255,355,682,Yes,No,Submersible,Domestic,"Well Report Tracking Number: 91223. Owner Well Number: 58581JT. Burlap packers at 100 & 160 ft. Reconditioned in 2010, see TDLR tracking #229779."
+5858135,30.115278,-97.873055,Hays,218EBFZA,Isaias Galan,W,5/6/2015,430,10,5,0,380,763,Yes,Yes,Submersible,Domestic,Well Report Tracking Number: 396454. Est. 8 GPM no other info.
+5858135,30.115278,-97.873055,Hays,218EBFZA,Isaias Galan,W,5/6/2015,430,101,9,380,430,763,Yes,Yes,Submersible,Domestic,Well Report Tracking Number: 396454. Est. 8 GPM no other info.
+5858136,30.106945,-97.872778,Hays,218EBFZA,Clark Johnson ,W,4/1/2015,450,10,5,-3,450,818,Yes,Yes,Submersible,Domestic,Well Report Tracking Number: 394765. Completion and depth interval is unknown. Est. 40+ GPM no other info.
+5858137,30.1030556,-97.8727778,Hays,218EBFZA,Phillip Shultz,W,10/9/2014,440,10,5,-2,360,768,Yes,Yes,Submersible,Domestic,Well Report Tracking Number: 380864. Slotted PVC 360-420 and open ended 420-440 feet. Est. 20+ GPM no other info.
+5858137,30.1030556,-97.8727778,Hays,218EBFZA,Phillip Shultz,W,10/9/2014,440,11,5,360,420,768,Yes,Yes,Submersible,Domestic,Well Report Tracking Number: 380864. Slotted PVC 360-420 and open ended 420-440 feet. Est. 20+ GPM no other info.
+5858137,30.1030556,-97.8727778,Hays,218EBFZA,Phillip Shultz,W,10/9/2014,440,101,9,420,440,768,Yes,Yes,Submersible,Domestic,Well Report Tracking Number: 380864. Slotted PVC 360-420 and open ended 420-440 feet. Est. 20+ GPM no other info.
+5858138,30.102501,-97.87,Hays,218EBFZA,Joel Villafranta,W,10/9/2014,440,10,5,-2,360,782,Yes,Yes,Submersible,Domestic,"Well Report Tracking Number: 380847. Slotted 4.5"" PVC 360 - 420 ft. 8.75"" open hole 420 - 440 ft. Jetted yield 20+ GPM no other data."
+5858138,30.102501,-97.87,Hays,218EBFZA,Joel Villafranta,W,10/9/2014,440,11,5,360,420,782,Yes,Yes,Submersible,Domestic,"Well Report Tracking Number: 380847. Slotted 4.5"" PVC 360 - 420 ft. 8.75"" open hole 420 - 440 ft. Jetted yield 20+ GPM no other data."
+5858138,30.102501,-97.87,Hays,218EBFZA,Joel Villafranta,W,10/9/2014,440,101,9,420,440,782,Yes,Yes,Submersible,Domestic,"Well Report Tracking Number: 380847. Slotted 4.5"" PVC 360 - 420 ft. 8.75"" open hole 420 - 440 ft. Jetted yield 20+ GPM no other data."
+5858139,30.1240694,-97.8629861,Hays,211BUDA,Little Hunt Spring,S,,,,,,,760,No,Yes,,,
+5858140,30.1144444,-97.8741667,Hays,218EBFZA,Eric Hoffman,W,8/25/2015,480,10,4.5,-2,420,767,Yes,No,Submersible,Domestic,Well Report Tracking Number: 404347. 
+5858140,30.1144444,-97.8741667,Hays,218EBFZA,Eric Hoffman,W,8/25/2015,480,12,4.5,420,480,767,Yes,No,Submersible,Domestic,Well Report Tracking Number: 404347. 
+5858206,30.102223,-97.8275,Hays,218EBFZA,Travis Materials,W,8/21/1971,415,10,12,0,190,680,No,Yes,Turbine,Industrial,
+5858210,30.090556,-97.8225,Hays,218EBFZA,Bradley Jones ,W,12/0/1979,855,,,,,690,Yes,Yes,None,Unused,
+5858211,30.086667,-97.830555,Hays,218EBFZA,Don Rylander,W,11/0/1979,462,,,,,710,Yes,No,None,Unused,
+5858212,30.087778,-97.817222,Hays,218EBFZA,Tim Dorsett ,W,6/12/1985,800,10,8,0,75,700,Yes,Yes,Submersible,Industrial,Casing cemented from 75 ft. to land surface.  Est. yield 100 GPM.
+5858212,30.087778,-97.817222,Hays,218EBFZA,Tim Dorsett ,W,6/12/1985,800,101,,75,800,700,Yes,Yes,Submersible,Industrial,Casing cemented from 75 ft. to land surface.  Est. yield 100 GPM.
+5858217,30.095278,-97.815834,Hays,218EDRDA,AAA Petroleum  Buda Auto Mart,W,6/24/1982,600,10,5,0,540,688,Yes,Yes,Submersible,Industrial,
+5858217,30.095278,-97.815834,Hays,218EDRDA,AAA Petroleum  Buda Auto Mart,W,6/24/1982,600,11,5,540,600,688,Yes,Yes,Submersible,Industrial,
+5858218,30.095,-97.815834,Hays,218EDRDA,AAA Petroleum ,W,2/6/1989,560,10,5,0,560,688,Yes,Yes,Submersible,Industrial,TCEQ Source ID: G1050102A. 
+5858219,30.091945,-97.817778,Hays,218EDRDA,Pool & Rogers  Materials ,W,4/7/1980,550,10,7,479,550,684,Yes,Yes,Submersible,Industrial,MP= +0.93 feet
+5858219,30.091945,-97.817778,Hays,218EDRDA,Pool & Rogers  Materials ,W,4/7/1980,550,101,7,479,550,684,Yes,Yes,Submersible,Industrial,MP= +0.93 feet
+5858220,30.093334,-97.814445,Hays,218EDRDA,Hunter Industries ,W,10/9/1989,700,10,9,0,460,693,Yes,Yes,Submersible,Industrial,Site 35 in BSEACD Report 2010-0701. Reported yield 200 GPM with 227 feet drawdown after 7 hours in 19- 89. Specific capacity 0.88 GPM/ft. Aquifer test data and results in TWDB files. Values vary.
+5858220,30.093334,-97.814445,Hays,218EDRDA,Hunter Industries ,W,10/9/1989,700,101,8,460,700,693,Yes,Yes,Submersible,Industrial,Site 35 in BSEACD Report 2010-0701. Reported yield 200 GPM with 227 feet drawdown after 7 hours in 19- 89. Specific capacity 0.88 GPM/ft. Aquifer test data and results in TWDB files. Values vary.
+5858403,30.081667,-97.842778,Hays,218EBFZA,City of Buda #1 ,W,12/0/1954,390,10,10,0,222,712,Yes,Yes,Turbine,Public Supply,USGS Site Number: 300453097503301. TCEQ Source ID: G1050012A. 
+5858403,30.081667,-97.842778,Hays,218EBFZA,City of Buda #1 ,W,12/0/1954,390,101,,222,390,712,Yes,Yes,Turbine,Public Supply,USGS Site Number: 300453097503301. TCEQ Source ID: G1050012A. 
+5858404,30.071389,-97.864167,Hays,218EDRDA,CenTex Materials,W,4/17/1962,540,10,10,0,127,721,Yes,No,Submersible,Industrial,Original schedule by USGS in 1962. Mis-numbered by TWDB as 415 in 19- 88. Reported to be 2000 foot test hole plugged back to 540 feet. Observation well for test of 405 in 1991. Test data in TWDB files. Site 16 in BSEACD Report 2010-0701.
+5858404,30.071389,-97.864167,Hays,218EDRDA,CenTex Materials,W,4/17/1962,540,11,10,127,540,721,Yes,No,Submersible,Industrial,Original schedule by USGS in 1962. Mis-numbered by TWDB as 415 in 19- 88. Reported to be 2000 foot test hole plugged back to 540 feet. Observation well for test of 405 in 1991. Test data in TWDB files. Site 16 in BSEACD Report 2010-0701.
+5858405,30.067778,-97.863056,Hays,218EDRDA,CenTex Materials,W,0/0/1961,797,10,12,0,376,752,Yes,No,Turbine,Industrial,Original schedule by USGS in 1961. Mis-numbered by TWDB as 414 in 19- 88. Reported average yield 1285 GPM in 1991. Aquifer test observed by wells 404 and 416. Test data in TWDB files. Site 21 in BSEACD Report 2010-0701.
+5858405,30.067778,-97.863056,Hays,218EDRDA,CenTex Materials,W,0/0/1961,797,101,,376,797,752,Yes,No,Turbine,Industrial,Original schedule by USGS in 1961. Mis-numbered by TWDB as 414 in 19- 88. Reported average yield 1285 GPM in 1991. Aquifer test observed by wells 404 and 416. Test data in TWDB files. Site 21 in BSEACD Report 2010-0701.
+5858406,30.0620278,-97.8560278,Hays,218EBFZA,AHI,W,8/25/1966,525,10,10,0,310,751,Yes,Yes,Submersible,Domestic,
+5858406,30.0620278,-97.8560278,Hays,218EBFZA,AHI,W,8/25/1966,525,101,,310,525,751,Yes,Yes,Submersible,Domestic,
+5858407,30.053612,-97.855278,Hays,218EBFZA,Texas-Lehigh Cement Co,W,0/0/1960,634,,,,,758,Yes,Yes,Submersible,Industrial,
+5858408,30.053612,-97.868611,Hays,218EDRDA,J R Howe,W,11/18/1966,565,,,,,746,No,No,Submersible,Domestic,
+5858409,30.076944,-97.834722,Hays,218EDRDA,Plum Creek Water Co.,W,5/20/1974,670,10,8,0,440,720,Yes,Yes,Submersible,Public Supply,TCEQ Source ID: G1050028A. 
+5858409,30.076944,-97.834722,Hays,218EDRDA,Plum Creek Water Co.,W,5/20/1974,670,101,,440,670,720,Yes,Yes,Submersible,Public Supply,TCEQ Source ID: G1050028A. 
+5858410,30.0663889,-97.8386111,Hays,218EDRDA,D J Simon,W,2/0/1973,584,,,,,762,Yes,No,None,Unused,USGS Site Number: 300359097501801. USGS water level measurements with 'method of meas' = 8 are estimated.
+5858411,30.0508333,-97.8405556,Hays,218EDRDA,W Dismukes,W,9/25/1971,510,,,,,735,Yes,No,Submersible,Domestic,
+5858412,30.076667,-97.834445,Hays,218EDRDA,Plum Creek Water Co  Well No. 1,W,11/4/1983,720,10,20,0,20,723,Yes,Yes,Submersible,Public Supply,TCEQ Source ID: G1050028B. Site 26 in BSEACD Report 2010-0701. Reported yield 279 GPM with 110 feet drawdown after 24 hours in 19- 98. Specific capacity 2.54 GPM/ft. Aquifer test data and results in TWDB files.
+5858412,30.076667,-97.834445,Hays,218EDRDA,Plum Creek Water Co  Well No. 1,W,11/4/1983,720,10,11,0,424,723,Yes,Yes,Submersible,Public Supply,TCEQ Source ID: G1050028B. Site 26 in BSEACD Report 2010-0701. Reported yield 279 GPM with 110 feet drawdown after 24 hours in 19- 98. Specific capacity 2.54 GPM/ft. Aquifer test data and results in TWDB files.
+5858412,30.076667,-97.834445,Hays,218EDRDA,Plum Creek Water Co  Well No. 1,W,11/4/1983,720,101,10,424,720,723,Yes,Yes,Submersible,Public Supply,TCEQ Source ID: G1050028B. Site 26 in BSEACD Report 2010-0701. Reported yield 279 GPM with 110 feet drawdown after 24 hours in 19- 98. Specific capacity 2.54 GPM/ft. Aquifer test data and results in TWDB files.
+5858413,30.070555,-97.833611,Hays,218EDRDA,City of Buda Well #3 ,W,2/20/1987,740,10,13,0,480,751,Yes,No,Submersible,Public Supply,TCEQ Source ID: G1050012C. Site 23 in BSEACD Report 2010-0701. Reported yield 260 GPM  with 107 feet drawdown after 48 hours in 20- 00. Specific capacity 2.4 GPM/ft. Aquifer test data and results in TWDB files.
+5858413,30.070555,-97.833611,Hays,218EDRDA,City of Buda Well #3 ,W,2/20/1987,740,101,10,480,740,751,Yes,No,Submersible,Public Supply,TCEQ Source ID: G1050012C. Site 23 in BSEACD Report 2010-0701. Reported yield 260 GPM  with 107 feet drawdown after 48 hours in 20- 00. Specific capacity 2.4 GPM/ft. Aquifer test data and results in TWDB files.
+5858416,30.051112,-97.859167,Hays,218EBFZA,"Comal Tackle Co., Inc.",W,8/3/1977,240,10,6,0,233,743,Yes,Yes,Submersible,Industrial,Owners well #2. Observation well for aquifer test of 405 in 1991. Aquifer test data in TWDB files.
+5858416,30.051112,-97.859167,Hays,218EBFZA,"Comal Tackle Co., Inc.",W,8/3/1977,240,101,,233,240,743,Yes,Yes,Submersible,Industrial,Owners well #2. Observation well for aquifer test of 405 in 1991. Aquifer test data in TWDB files.
+5858417,30.047222,-97.867778,Hays,218EDRDA,Hays County Youth  Athletic Association,W,3/27/1984,600,10,7,0,400,764,Yes,Yes,Submersible,Public Supply,TCEQ Source ID: G1050096A. 
+5858417,30.047222,-97.867778,Hays,218EDRDA,Hays County Youth  Athletic Association,W,3/27/1984,600,101,6,400,600,764,Yes,Yes,Submersible,Public Supply,TCEQ Source ID: G1050096A. 
+5858418,30.071111,-97.858334,Hays,218EDRDA,Texas-Lehigh Cement Co,W,,,,,,,724,No,Yes,Submersible,Commercial,
+5858419,30.042222,-97.852778,Hays,218EDRDA,Plum Creek Water Co.,T,4/25/1986,700,101,8,0,700,765,Yes,No,,Unused,Observation well for test of 708 in 2007. Aquifer test data and results in TWDB files.
+5858420,30.080555,-97.868333,Hays,218EDRDA,Onion Creek Learning Center,W,0/0/1977,,10,4,,,720,No,Yes,Submersible,Commercial,
+5858421,30.047778,-97.845,Hays,218EDRDA,Sunbelt Metals,W,,,10,4,,,728,No,No,Submersible,Commercial,
+5858422,30.066389,-97.838889,Hays,218EDRDA,W. Simon,W,,500,,,,,755,Yes,Yes,,Domestic,
+5858423,30.068333,-97.859167,Hays,218EDRDA,Comal Tackle,W,12/30/1996,245,10,6,0,224,745,Yes,Yes,Submersible,Industrial,50 GPM
+5858423,30.068333,-97.859167,Hays,218EDRDA,Comal Tackle,W,12/30/1996,245,101,6,224,245,745,Yes,Yes,Submersible,Industrial,50 GPM
+5858424,30.078889,-97.871944,Hays,218EDRDA,Lee Ortivez ,W,1/25/2000,350,,,,,744,No,Yes,,Domestic,
+5858425,30.047778,-97.867778,Hays,218EDRDA,Goforth WSC  Well #5 ,W,0/0/1997,750,10,14,0,430,750,Yes,Yes,Turbine,Public Supply,Measured yield 328 GPM with 59.2 feet drawdown after pumping 24 hours in 1999. Specific capacity 5.14 GPM/ft. Observation well for aquifer test of 708 in 2007. Test results in TWDB files. Aquifer test of 425 in 1999. Test data in TWDB files. Well was originally drilled as a test hole in 1997. The test hole total depth was 800 ft. The test hole was converted to Well #5 in May 1999 with a total depth of 750 ft. Driller's logs for both the test hole and well #5 are included in scanned images.
+5858425,30.047778,-97.867778,Hays,218EDRDA,Goforth WSC  Well #5 ,W,0/0/1997,750,101,12,430,750,750,Yes,Yes,Turbine,Public Supply,Measured yield 328 GPM with 59.2 feet drawdown after pumping 24 hours in 1999. Specific capacity 5.14 GPM/ft. Observation well for aquifer test of 708 in 2007. Test results in TWDB files. Aquifer test of 425 in 1999. Test data in TWDB files. Well was originally drilled as a test hole in 1997. The test hole total depth was 800 ft. The test hole was converted to Well #5 in May 1999 with a total depth of 750 ft. Driller's logs for both the test hole and well #5 are included in scanned images.
+5858426,30.08,-97.867222,Hays,218EBFZA,Bob Lowden,W,3/13/1995,280,10,5,0,180,721,Yes,Yes,Submersible,Public Supply,Reported yield 400 GPM in 1995. Pumping level 260 feet. MP= +1.95 feet
+5858426,30.08,-97.867222,Hays,218EBFZA,Bob Lowden,W,3/13/1995,280,11,5,180,280,721,Yes,Yes,Submersible,Public Supply,Reported yield 400 GPM in 1995. Pumping level 260 feet. MP= +1.95 feet
+5858427,30.077222,-97.861389,Hays,218EBFZA,David Dement,W,,,10,5,0,,707,Yes,Yes,Submersible,Domestic,MP= +1.75 feet
+5858428,30.0522222,-97.8333333,Hays,218EDRDA,Bill Swinney,W,9/1/1999,500,,,,,670,Yes,No,,,USGS water level measurements with 'method of meas' = 8 are estimated.
+5858429,30.045834,-97.851389,Hays,218EBFZA,Namasco Steel  Materials ,W,,758,,,,,752,Yes,No,,,Water levels for 2007 and 2008 done by Edwards Aquifer Authority.
+5858430,30.041667,-97.852223,Hays,218EDRDA,Monarch Utilities  Plum Creek WS #4,W,7/11/2005,800,10,16,0,455,765,Yes,Yes,Turbine,Public Supply,Well Report Tracking Number: 63912. TCEQ Source ID: G1050028D. Well 13 in BSEACD Report 2010-0701. Drilled at same site as testhole by Associated Drilling in 1986. Owner retained State Well Number. Reported yield 400 GPM with 468 feet drawdown after 120 hours in 2007. Specific capacity 0.85 GPM/ft. Aquifer test data and results in TWDB files.
+5858430,30.041667,-97.852223,Hays,218EDRDA,Monarch Utilities  Plum Creek WS #4,W,7/11/2005,800,11,12,455,780,765,Yes,Yes,Turbine,Public Supply,Well Report Tracking Number: 63912. TCEQ Source ID: G1050028D. Well 13 in BSEACD Report 2010-0701. Drilled at same site as testhole by Associated Drilling in 1986. Owner retained State Well Number. Reported yield 400 GPM with 468 feet drawdown after 120 hours in 2007. Specific capacity 0.85 GPM/ft. Aquifer test data and results in TWDB files.
+5858430,30.041667,-97.852223,Hays,218EDRDA,Monarch Utilities  Plum Creek WS #4,W,7/11/2005,800,10,12,780,800,765,Yes,Yes,Turbine,Public Supply,Well Report Tracking Number: 63912. TCEQ Source ID: G1050028D. Well 13 in BSEACD Report 2010-0701. Drilled at same site as testhole by Associated Drilling in 1986. Owner retained State Well Number. Reported yield 400 GPM with 468 feet drawdown after 120 hours in 2007. Specific capacity 0.85 GPM/ft. Aquifer test data and results in TWDB files.
+5858432,30.0602778,-97.8686111,Hays,218EBFZA,Centex,W,,206,,,,,735,Yes,No,,,
+5858433,30.082778,-97.872222,Hays,218EBFZA,PNC Bank,W,8/1/2012,322,10,5,0,262,759,Yes,No,Submersible,Domestic,Well Report Tracking Number: 299212. 
+5858433,30.082778,-97.872222,Hays,218EBFZA,PNC Bank,W,8/1/2012,322,11,5,262,322,759,Yes,No,Submersible,Domestic,Well Report Tracking Number: 299212. 
+5858435,30.0795278,-97.8697778,Hays,218EBFZA,Rigoberto Anaya,W,8/14/2018,400,10,4.5,-2,338,735,Yes,No,,Domestic,Well Report Tracking Number: 488960. 
+5858435,30.0795278,-97.8697778,Hays,218EBFZA,Rigoberto Anaya,W,8/14/2018,400,11,4.5,338,358,735,Yes,No,,Domestic,Well Report Tracking Number: 488960. 
+5858501,30.078333,-97.830555,Hays,218EDRD,Goforth WSC  Well #1 ,W,12/26/1970,649,,,,,721,No,Yes,Submersible,Public Supply,TCEQ Source ID: G1050019A. 
+5858502,30.051112,-97.807501,Hays,218EBFZA,D Simon ,W,1/0/1944,650,,,,,742,Yes,No,None,Unused,Logged to 164 feet in 1979.
+5858503,30.076667,-97.822222,Hays,218EBFZA,Paul Keller ,W,2/8/1966,540,,,,,745,Yes,No,None,Unused,
+5858504,30.069722,-97.818889,Hays,218EBFZA,Elmer Israel,W,4/9/1962,640,,,,,778,Yes,No,Submersible,Unused,
+5858505,30.068055,-97.819444,Hays,218EDRDA,George Bowen,W,11/5/1982,600,10,5,0,525,750,Yes,Yes,Submersible,Domestic,Pump setting 575 feet. MP= +1.00 feet
+5858505,30.068055,-97.819444,Hays,218EDRDA,George Bowen,W,11/5/1982,600,101,6,525,600,750,Yes,Yes,Submersible,Domestic,Pump setting 575 feet. MP= +1.00 feet
+5858506,30.078611,-97.830833,Hays,218EDRDA,Goforth WSC  Well #2 ,W,9/27/1977,600,10,9,0,500,716,No,No,Turbine,Public Supply,TCEQ Source ID: G1050019B. Site 27 in BSEACD Report 2010-0701. Aquifer test results in TWDB files.
+5858506,30.078611,-97.830833,Hays,218EDRDA,Goforth WSC  Well #2 ,W,9/27/1977,600,101,,500,600,716,No,No,Turbine,Public Supply,TCEQ Source ID: G1050019B. Site 27 in BSEACD Report 2010-0701. Aquifer test results in TWDB files.
+5858507,30.078611,-97.830833,Hays,218EDRDA,Goforth WSC ,W,11/13/1984,740,10,13,0,480,718,No,No,Submersible,Public Supply,TCEQ Source ID: G1050019C. 
+5858507,30.078611,-97.830833,Hays,218EDRDA,Goforth WSC ,W,11/13/1984,740,101,11,480,740,718,No,No,Submersible,Public Supply,TCEQ Source ID: G1050019C. 
+5858508,30.079167,-97.831111,Hays,218EDRDA,Goforth W.S.C. Well #4 ,W,11/14/1985,740,10,13,0,460,720,Yes,Yes,Submersible,Public Supply,TCEQ Source ID: G1050019D. Site 27 in BSEACD Report 2010-0701. Reported yield 1350 GPM with 101 feet drawdown after 10 hours in 19- 96. Specific capacity 19.3 GPM/ft. Aquifer test results in TWDB files.
+5858508,30.079167,-97.831111,Hays,218EDRDA,Goforth W.S.C. Well #4 ,W,11/14/1985,740,101,10,460,740,720,Yes,Yes,Submersible,Public Supply,TCEQ Source ID: G1050019D. Site 27 in BSEACD Report 2010-0701. Reported yield 1350 GPM with 101 feet drawdown after 10 hours in 19- 96. Specific capacity 19.3 GPM/ft. Aquifer test results in TWDB files.
+5858509,30.076111,-97.83,Hays,218EDRDA,Chatleff Controls ,W,7/19/1986,500,10,7,0,419,720,Yes,Yes,Submersible,Industrial,TCEQ Source ID: G1050101A. MP= +1.70 feet
+5858509,30.076111,-97.83,Hays,218EDRDA,Chatleff Controls ,W,7/19/1986,500,101,6,419,500,720,Yes,Yes,Submersible,Industrial,TCEQ Source ID: G1050101A. MP= +1.70 feet
+5858510,30.079167,-97.8275,Hays,218EDRDA,Don Lougheed Crestview RV Center ,W,,605,10,6,,,750,Yes,Yes,Submersible,Public Supply,TCEQ Source ID: G1050026A. MP= +1.00 feet
+5858511,30.0719444,-97.8283333,Hays,218EBFZA,Mark Taler,W,4/21/2000,525,10,6,,,733,Yes,No,,,USGS Site Number: 300419097494201. USGS water level measurements with 'method of meas' = 8 are estimated.
+5858512,30.0791389,-97.8311361,Hays,,Goforth Special Utility District,W,2/13/2017,460,10,16,0,460,692,No,No,Turbine,Public Supply,Well Report Tracking Number: 451938. Owner Well Number: 6. 
+5858701,30.036111,-97.840278,Hays,218EBFZA,D A Stacy ,W,0/0/1950,492,,,,,692,Yes,Yes,Submersible,Stock,
+5858702,30.034445,-97.844167,Hays,218EBFZA,Hornes Enterprises,W,0/0/1965,490,,,,,735,No,No,Submersible,Commercial,
+5858703,30.0280556,-97.8544444,Hays,218EBFZA,O. H. Cullen,W,0/0/1898,507,,,,,741,Yes,No,None,Unused,
+5858704,30.0276944,-97.8539167,Hays,218EBFZA,O. H. Cullen,W,12/20/1972,532,10,7,0,368,748,Yes,Yes,Submersible,Plugged or Destroyed,Plugging Report Tracking Number: 232500. USGS water level measurements with 'method of meas' = 8 are estimated.
+5858704,30.0276944,-97.8539167,Hays,218EBFZA,O. H. Cullen,W,12/20/1972,532,101,6,368,532,748,Yes,Yes,Submersible,Plugged or Destroyed,Plugging Report Tracking Number: 232500. USGS water level measurements with 'method of meas' = 8 are estimated.
+5858705,30.0233333,-97.8380556,Hays,218EBFZA,Ted Edwards,W,7/7/1964,667,,,,,725,Yes,No,Submersible,Domestic,
+5858706,30.007223,-97.866944,Hays,218EBFZA,Lex Word,W,3/0/1959,520,,,,,695,Yes,No,Submersible,,
+5858707,30.012501,-97.858334,Hays,218EBFZA,Leon Bauerle,W,6/27/1984,450,,,,,710,No,No,,Domestic,
+5858709,30.0386111,-97.8513889,Hays,218EDRDA,Tilson Custom Homes,W,,,10,6,,,762,Yes,No,Submersible,Domestic,Observation well for test of 708 in 2007. Aquifer test data and results in TWDB files.
+5858710,30.021667,-97.856389,Hays,218EBFZA,Kelly Plumbing Co.,W,12/5/1998,600,10,5,0,415,705,Yes,No,Submersible,Domestic,Measured yield 52 GPM with 102 feet drawdown after pumping 36 hours in 1998. Specific capacity .50 GPM/ft. Cemented from 0 to 410 feet. Pump set at 400 feet.
+5858710,30.021667,-97.856389,Hays,218EBFZA,Kelly Plumbing Co.,W,12/5/1998,600,11,5,415,575,705,Yes,No,Submersible,Domestic,Measured yield 52 GPM with 102 feet drawdown after pumping 36 hours in 1998. Specific capacity .50 GPM/ft. Cemented from 0 to 410 feet. Pump set at 400 feet.
+5858710,30.021667,-97.856389,Hays,218EBFZA,Kelly Plumbing Co.,W,12/5/1998,600,10,5,575,600,705,Yes,No,Submersible,Domestic,Measured yield 52 GPM with 102 feet drawdown after pumping 36 hours in 1998. Specific capacity .50 GPM/ft. Cemented from 0 to 410 feet. Pump set at 400 feet.
+5858711,30.016667,-97.859445,Hays,218EBFZA,Titan Custom Homes,W,,,10,6,0,,696,Yes,Yes,Submersible,Commercial,MP= +1.90 feet
+5858712,30.029167,-97.87,Hays,218EBFZA,April Lowe,W,,,10,6,0,,776,Yes,Yes,Submersible,Domestic,MP= +0.00 feet
+5858801,30.0336111,-97.8333333,Hays,218EDRDA,A Whitten,W,,502,,,,,712,Yes,No,Centrifugal Pump,Domestic,
+6701101,29.973889,-97.964723,Hays,218EBFZA,Hays Water Co.,W,9/3/1992,400,10,6,0,60,845,Yes,Yes,Submersible,Public Supply,Measured yield 70 GPM with 300 feet drawdown after pumping 37 hours in 1992. Cemented from 0 to 61 feet.
+6701101,29.973889,-97.964723,Hays,218EBFZA,Hays Water Co.,W,9/3/1992,400,101,7,60,400,845,Yes,Yes,Submersible,Public Supply,Measured yield 70 GPM with 300 feet drawdown after pumping 37 hours in 1992. Cemented from 0 to 61 feet.
+6701114,29.9796389,-97.9975,Hays,,Daniel and Julie Escamilla,W,8/13/2021,580,10,4.5,-2,518,918,No,No,Submersible,Domestic,Well Report Tracking Number: 586014. Owner Well Number: EAA200178 & BSEACD. 
+6701114,29.9796389,-97.9975,Hays,,Daniel and Julie Escamilla,W,8/13/2021,580,11,4.5,518,538,918,No,No,Submersible,Domestic,Well Report Tracking Number: 586014. Owner Well Number: EAA200178 & BSEACD. 
+6701115,29.96555,-97.9823083,Hays,,Brent & Audrey Jackson,W,,600,10,4.5,-2,538,913,No,No,,Domestic,Well Report Tracking Number: 564338. Owner Well Number: EAA200021 BS. 
+6701115,29.96555,-97.9823083,Hays,,Brent & Audrey Jackson,W,,600,11,4.5,538,558,913,No,No,,Domestic,Well Report Tracking Number: 564338. Owner Well Number: EAA200021 BS. 
+6701116,29.9716111,-97.9729722,Hays,,Camille Larrey,W,12/22/2021,600,10,4.5,-2,538,938,No,No,,Domestic,Well Report Tracking Number: 594771. Owner Well Number: EAA200267/BSEACD. 
+6701116,29.9716111,-97.9729722,Hays,,Camille Larrey,W,12/22/2021,600,11,4.5,538,558,938,No,No,,Domestic,Well Report Tracking Number: 594771. Owner Well Number: EAA200267/BSEACD. 
+6701201,29.981111,-97.920555,Hays,218EBFZA,David Allen ,W,8/19/1969,300,,,,,672,Yes,No,,Irrigation,
+6701202,29.962223,-97.937222,Hays,218EBFZA,Emmett McCoy,W,7/22/1969,300,,,,,788,No,No,Turbine,Stock,
+6701203,29.9621944,-97.9207778,Hays,218EBFZA,Robert Nance,W,0/0/1958,150,,,,,691,Yes,Yes,Piston,Stock,
+6701301,29.963612,-97.896945,Hays,218EDRDA,Kyle Cemetery,W,,336,,,,,689,Yes,Yes,Submersible,Irrigation,USGS #295749097534901. USGS water level measurements with 'method of meas' = 8 are estimated.
+6701302,29.987778,-97.881944,Hays,218EBFZA,City of Kyle,W,0/0/1956,360,,,,,748,No,Yes,Submersible,Public Supply,
+6701303,29.98975,-97.8754722,Hays,218EBFZA,City of Kyle Kyle North,W,0/0/1939,595,10,8,0,305,719,Yes,Yes,None,Unused,GCD Well Number: Kyle North. 
+6701304,29.984722,-97.876389,Hays,218EBFZA,"Raynaldo Selbera, Jr. ",W,0/0/1934,372,10,5,0,340,718,Yes,Yes,None,Unused,USGS water level measurements with 'method of meas' = 8 are estimated.
+6701304,29.984722,-97.876389,Hays,218EBFZA,"Raynaldo Selbera, Jr. ",W,0/0/1934,372,101,,340,372,718,Yes,Yes,None,Unused,USGS water level measurements with 'method of meas' = 8 are estimated.
+6701305,29.9678611,-97.8883611,Hays,218EBFZA,Ed Bullock,W,7/0/1959,500,10,8,0,310,711,Yes,No,Submersible,Domestic,
+6701305,29.9678611,-97.8883611,Hays,218EBFZA,Ed Bullock,W,7/0/1959,500,101,,310,500,711,Yes,No,Submersible,Domestic,
+6701306,29.975278,-97.913612,Hays,218EDRDA,Emmett McCoy,W,0/0/1956,,,,,,655,No,No,Turbine,Irrigation,
+6701307,29.967778,-97.887222,Hays,218EBFZA,A.A. Hall ,W,0/0/1912,290,,,,,697,Yes,No,Piston,Domestic,
+6701308,29.991389,-97.883611,Hays,218EBFZA,City of Kyle Well #1 ,W,10/0/1949,765,,,,,745,No,Yes,Turbine,Public Supply,TCEQ Source ID: G1050002A. 
+6701309,29.991389,-97.883611,Hays,218EBFZA,City of Kyle Well #2 ,W,5/25/1974,658,10,12,0,328,753,Yes,Yes,Turbine,Public Supply,TCEQ Source ID: G1050002B. Tested at 940 gpm with 89 ft draw- down pumping for 7 hours.
+6701309,29.991389,-97.883611,Hays,218EBFZA,City of Kyle Well #2 ,W,5/25/1974,658,101,11,328,658,753,Yes,Yes,Turbine,Public Supply,TCEQ Source ID: G1050002B. Tested at 940 gpm with 89 ft draw- down pumping for 7 hours.
+6701310,29.993611,-97.892778,Hays,218EBFZA,City of Kyle Well #3 ,W,12/7/1981,640,10,10,0,325,800,Yes,Yes,Turbine,Public Supply,Owner Well Number: 3 - 260 Old Stagecoach. TCEQ Source ID: G1050002C. 
+6701310,29.993611,-97.892778,Hays,218EBFZA,City of Kyle Well #3 ,W,12/7/1981,640,101,10,325,640,800,Yes,Yes,Turbine,Public Supply,Owner Well Number: 3 - 260 Old Stagecoach. TCEQ Source ID: G1050002C. 
+6701311,29.981389,-97.891389,Hays,218EBFZA,San Antonio Water Sys  Kyle Test Hole #1 ,O,12/4/1997,810,10,6,0,307,768,Yes,Yes,None,Unused,Owner Well Number: LR-67-01-3 Kyle 1. Kyle #1. Cemented to 307 feet. Recorder observation well.
+6701311,29.981389,-97.891389,Hays,218EBFZA,San Antonio Water Sys  Kyle Test Hole #1 ,O,12/4/1997,810,101,6,307,810,768,Yes,Yes,None,Unused,Owner Well Number: LR-67-01-3 Kyle 1. Kyle #1. Cemented to 307 feet. Recorder observation well.
+6701312,29.968333,-97.902501,Hays,218EDRDA,"Aqua Texas, Inc",W,2/14/2006,520,10,8,0,300,683,No,No,Submersible,Domestic,Well Report Tracking Number: 156470. USGS Site Number: 295806097540901. 
+6701314,29.9694444,-97.8880556,Hays,218EBFZA,Audrey Oswalt,W,,410,,,,,712,Yes,No,,Plugged or Destroyed,Plugging Report Tracking Number: 225603. 
+6701315,29.962501,-97.881389,Hays,218EBFZA,Francis Horne ,W,,395,,,,,707,Yes,No,,,
+6701401,29.950278,-97.964445,Hays,218EBFZA,Charles W Mueller ,W,,,,,,,806,Yes,No,None,Unused,
+6701402,29.920278,-97.968889,Hays,218EBFZA,Bennie Badgett,W,0/0/1970,,10,7,0,90,740,No,Yes,Submersible,Domestic,
+6701403,29.9208611,-97.9716389,Hays,218EDRDA,Freeman Ranch  Solar Well - TSU,W,,209,,,,,688,Yes,Yes,,Domestic,USGS Site Number: 295515097581801. GCD Well Number: EAA Solar. 
+6701501,29.923333,-97.947222,Hays,218EBFZA,Bert Nagle,W,,,,,,,685,Yes,No,Piston,Stock,Historical observation well.
+6701502,29.923333,-97.948611,Hays,218EBFZA,F. Hoffman,W,,126,,,,,680,Yes,Yes,,Domestic,
+6701503,29.925,-97.942222,Hays,218EBFZA,Chad & Janet Neff,W,1/28/2008,280,11,5,180,240,733,No,No,Submersible,Domestic,Well Report Tracking Number: 135695. USGS Site Number: 295530097563201. Rubber packers at 145 & 160 ft.
+6701504,29.951389,-97.935278,Hays,218EBFZA,Douglas Herber Mr. Washburn,W,3/20/2001,270,10,5,,,778,Yes,No,,Domestic,Screen wire packers at 160 and 180 ft
+6701508,29.946111,-97.935556,Hays,218EBFZA,Robert D'ntino,W,,280,,,,,761,Yes,No,,,3701 Lime Kiln Rd.
+6701510,29.945834,-97.952778,Hays,218EBFZA,William Ross King ,W,9/20/2007,300,10,4,0,210,803,Yes,No,Submersible,Domestic,Well Report Tracking Number: 123058. Rubber packers at 182 and 202 ft.
+6701510,29.945834,-97.952778,Hays,218EBFZA,William Ross King ,W,9/20/2007,300,11,4,210,218,803,Yes,No,Submersible,Domestic,Well Report Tracking Number: 123058. Rubber packers at 182 and 202 ft.
+6701601,29.92,-97.911389,Hays,218EBFZA,Hays County Gravel Co.,W,0/0/1956,300,,,,,710,Yes,No,Turbine,Industrial,
+6701604,29.9561111,-97.8825,Hays,218EBFZA,Aztec Village MHP,W,8/1/1979,205,,,,,675,Yes,Yes,Submersible,Public Supply,USGS Site Number: 295722097525701. 
+6701606,29.9363889,-97.9111111,Hays,218EBFZA,AJ Weber,W,,251,10,6,,,770,Yes,No,,,USGS Site Number: 295611097544101. USGS water level measurements with 'method of meas' = 8 are estimated. Other AJ Weber 607 well is meas. By EAA.
+6701607,29.936111,-97.911389,Hays,218EBFZA,AJ Weber,W,0/0/1937,121,10,6,,,671,Yes,Yes,Submersible,Stock,USGS water level measurements with 'method of meas' = 8 are estimated.
+6701609,29.9411111,-97.8916667,Hays,211ASTN,Chuck Nash,W,7/5/2013,230,,,,,631,No,Yes,Submersible,Irrigation,Well Report Tracking Number: 454549. 
+6701701,29.895834,-97.964167,Hays,218EBFZA,J. Weutherford,W,,,10,6,,,736,Yes,Yes,Submersible,Stock,
+6701702,29.896111,-97.965278,Hays,218EBFZA,E. Brooks ,W,0/0/1908,176,,,,,739,Yes,Yes,Piston,Domestic,
+6701703,29.899722,-97.977222,Hays,218EBFZA,Marvin Lee,W,,165,,,,,780,No,Yes,Submersible,Domestic,
+6701704,29.901112,-97.998611,Hays,218EBFZA,San Marcos Baptist Academy ,W,2/8/1982,300,,,,,810,No,Yes,Submersible,Irrigation,
+6701801,29.893889,-97.93,Hays,218EBFZA,San Marcos Springs Hotel springs ,S,,,,,,,574,No,Yes,None,Recreation,USGS Site Number: 295340097554801. 
+6701802,29.886667,-97.946945,Hays,218EBFZA,City of San Marcos Well #4 ,W,12/14/1966,200,10,12,0,165,766,Yes,Yes,Turbine,Public Supply,TCEQ Source ID: G1050001C. Owner's well #4. Tested at 443 gpm with no drawdown when drilled.
+6701802,29.886667,-97.946945,Hays,218EBFZA,City of San Marcos Well #4 ,W,12/14/1966,200,101,12,165,200,766,Yes,Yes,Turbine,Public Supply,TCEQ Source ID: G1050001C. Owner's well #4. Tested at 443 gpm with no drawdown when drilled.
+6701803,29.911389,-97.930833,Hays,218EBFZA,Charles Colgin,W,,35,,,,,604,Yes,No,Turbine,Irrigation,
+6701804,29.912223,-97.928333,Hays,218EBFZA,A Knispel ,W,,68,,,,,608,Yes,No,Turbine,Irrigation,
+6701805,29.886667,-97.946945,Hays,218EBFZA,City of San Marcos Well #5 ,W,1/12/1970,300,10,18,0,160,750,Yes,Yes,Turbine,Public Supply,Owner Well Number: 5. TCEQ Source ID: G1050001D. Owner's well #5. Tested at 2225 gpm with no drawdown when drilled.
+6701805,29.886667,-97.946945,Hays,218EBFZA,City of San Marcos Well #5 ,W,1/12/1970,300,101,16,160,300,750,Yes,Yes,Turbine,Public Supply,Owner Well Number: 5. TCEQ Source ID: G1050001D. Owner's well #5. Tested at 2225 gpm with no drawdown when drilled.
+6701806,29.891111,-97.935,Hays,218EBFZA,City of San Marcos,W,0/0/1954,128,,,,,668,No,Yes,Turbine,Public Supply,TCEQ Source ID: G1050001A. Well H-85 in B-6004. Reported yield 2700 gpm. #2
+6701807,29.901112,-97.919444,Hays,218EBFZA,H.W. Hageman,W,0/0/1914,77,,,,,607,Yes,Yes,Piston,Domestic,
+6701808,29.901667,-97.919722,Hays,218EBFZA,J.J. Smith,W,0/0/1932,105,,,,,615,Yes,No,None,Unused,
+6701809,29.9119444,-97.9288889,Hays,218EBFZA,A.F. Knispel,W,,34,,,,,610,Yes,No,None,Unused,USGS Site Number: 295443097554201. 
+6701810,29.89,-97.945,Hays,218EBFZA,Texas State University,W,7/7/1971,212,10,14,0,135,750,Yes,Yes,Turbine,Public Supply,TCEQ Source ID: G1050003B. 
+6701810,29.89,-97.945,Hays,218EBFZA,Texas State University,W,7/7/1971,212,101,12,135,212,750,Yes,Yes,Turbine,Public Supply,TCEQ Source ID: G1050003B. 
+6701811,29.896945,-97.945556,Hays,218EBFZA,D S Evans ,W,,265,,,,,773,Yes,No,Submersible,Domestic,
+6701812,29.8902778,-97.9283333,Hays,218EDRDA,Edwards Underground  Water District,O,7/0/1990,554,10,16,0,34,581,Yes,Yes,None,Unused,"Owner's San Marcos BWL ""B"" well. Plugged back from 891 feet. Cemented to 403 feet. coded P because measured by SAWS"
+6701812,29.8902778,-97.9283333,Hays,218EDRDA,Edwards Underground  Water District,O,7/0/1990,554,10,10,0,403,581,Yes,Yes,None,Unused,"Owner's San Marcos BWL ""B"" well. Plugged back from 891 feet. Cemented to 403 feet. coded P because measured by SAWS"
+6701812,29.8902778,-97.9283333,Hays,218EDRDA,Edwards Underground  Water District,O,7/0/1990,554,10,4,0,100,581,Yes,Yes,None,Unused,"Owner's San Marcos BWL ""B"" well. Plugged back from 891 feet. Cemented to 403 feet. coded P because measured by SAWS"
+6701812,29.8902778,-97.9283333,Hays,218EDRDA,Edwards Underground  Water District,O,7/0/1990,554,10,2,100,495,581,Yes,Yes,None,Unused,"Owner's San Marcos BWL ""B"" well. Plugged back from 891 feet. Cemented to 403 feet. coded P because measured by SAWS"
+6701812,29.8902778,-97.9283333,Hays,218EDRDA,Edwards Underground  Water District,O,7/0/1990,554,11,2,495,545,581,Yes,Yes,None,Unused,"Owner's San Marcos BWL ""B"" well. Plugged back from 891 feet. Cemented to 403 feet. coded P because measured by SAWS"
+6701813,29.891111,-97.929444,Hays,218EDRDA,Edwards Aquifer  Authority - south well,O,8/0/1990,564,10,4,0,100,581,Yes,Yes,None,Unused,"Gravel packed from 490 to 564 ft. Borehole originally drilled to 920 ft, but plugged back to 699 ft. Borehole contains 2 wells with different screened intervals. SWN 6701813 is the south ""shallow"" well and SWN 6701830 is the north ""deep"" well. Cemented between completion zones."
+6701813,29.891111,-97.929444,Hays,218EDRDA,Edwards Aquifer  Authority - south well,O,8/0/1990,564,10,2,100,505,581,Yes,Yes,None,Unused,"Gravel packed from 490 to 564 ft. Borehole originally drilled to 920 ft, but plugged back to 699 ft. Borehole contains 2 wells with different screened intervals. SWN 6701813 is the south ""shallow"" well and SWN 6701830 is the north ""deep"" well. Cemented between completion zones."
+6701813,29.891111,-97.929444,Hays,218EDRDA,Edwards Aquifer  Authority - south well,O,8/0/1990,564,11,2,503,553,581,Yes,Yes,None,Unused,"Gravel packed from 490 to 564 ft. Borehole originally drilled to 920 ft, but plugged back to 699 ft. Borehole contains 2 wells with different screened intervals. SWN 6701813 is the south ""shallow"" well and SWN 6701830 is the north ""deep"" well. Cemented between completion zones."
+6701814,29.891945,-97.930833,Hays,218EDRDA,Edwards Aquifer  Authority - east well ,O,3/0/1992,582,10,4,0,100,576,Yes,Yes,None,Unused,"Sand packed from 490 to 582 ft. Cemented between 582 and 656 ft. Borehole originally drilled to 775 ft, but plugged back to 742 ft. Borehole contains 2 wells with different screened intervals. SWN 6701814 is the east ""shallow"" well and SWN 6701831 is the west ""deep"" well. Also cemented between 460 and 480 ft."
+6701814,29.891945,-97.930833,Hays,218EDRDA,Edwards Aquifer  Authority - east well ,O,3/0/1992,582,10,2,100,506,576,Yes,Yes,None,Unused,"Sand packed from 490 to 582 ft. Cemented between 582 and 656 ft. Borehole originally drilled to 775 ft, but plugged back to 742 ft. Borehole contains 2 wells with different screened intervals. SWN 6701814 is the east ""shallow"" well and SWN 6701831 is the west ""deep"" well. Also cemented between 460 and 480 ft."
+6701814,29.891945,-97.930833,Hays,218EDRDA,Edwards Aquifer  Authority - east well ,O,3/0/1992,582,11,2,506,556,576,Yes,Yes,None,Unused,"Sand packed from 490 to 582 ft. Cemented between 582 and 656 ft. Borehole originally drilled to 775 ft, but plugged back to 742 ft. Borehole contains 2 wells with different screened intervals. SWN 6701814 is the east ""shallow"" well and SWN 6701831 is the west ""deep"" well. Also cemented between 460 and 480 ft."
+6701815,29.891111,-97.935,Hays,218EBFZA,City of San Marcos,W,0/0/1914,85,,,,,668,No,Yes,Turbine,Public Supply,USGS W-SP 1070 states well #1 lined with 6-in casing in 1941 and also lists well depth as 115 ft. Well 343 in M-114 and H-68 in B-6004.
+6701816,29.891111,-97.935,Hays,218EBFZA,GBRA Spring Lake ,W,0/0/1941,115,,,,,668,Yes,Yes,Turbine,Public Supply,"USGS Site Number: 295327097560401. TCEQ Source ID: G1050001B. Other Well Number: H-67 in B-6004, #2 in WSP 1070. Well H-67 in B-6004. Well #2 in WSP 1070. Cased with 77 ft of 13-in slotted pipe and 32 ft of 10-in liner. Measured yield 2700 gpm."
+6701817,29.890556,-97.947778,Hays,218EBFZA,City of San Marcos,W,5/14/1990,121,10,20,0,79,692,Yes,No,None,Unused,Proposed public supply well. Measured yield 1100 GPM with 44 feet drawdown after pumping 1 hour in 1990. Cemented from 0 to 79 feet.
+6701817,29.890556,-97.947778,Hays,218EBFZA,City of San Marcos,W,5/14/1990,121,101,18,79,107,692,Yes,No,None,Unused,Proposed public supply well. Measured yield 1100 GPM with 44 feet drawdown after pumping 1 hour in 1990. Cemented from 0 to 79 feet.
+6701818,29.9016667,-97.92,Hays,218EDRDA,Jay Horton,W,,80,,,,,610,Yes,Yes,Submersible,Domestic,USGS Site Number: 295406097551201. 
+6701819,29.889722,-97.936389,Hays,218EBFZA,San Marcos Springs Deep Spring ,S,,,,,,,600,No,Yes,,Recreation,USGS Site Number: 295322097561000. USGS NAWQA sample ED97-34.
+6701820,29.8936111,-97.9302778,Hays,218EBFZA,San Marcos Springs Weismuller Spring,S,,,,,,,600,No,Yes,,Recreation,USGS Site Number: 295322097561002. USGS NAWQA sample ED97-35.
+6701826,29.8872222,-97.9491667,Hays,218EDRDA,,O,,,,,,,751,Yes,No,None,Unused,USGS Site Number: 295314097565701. 
+6701827,29.890278,-97.945278,Hays,218EDRDA,Jackson 1 - TSU ,W,,200,,,,,740,No,No,,,USGS Site Number: 295325097564301. 
+6701828,29.889445,-97.936389,Hays,218EDRDA,Artesian Well - TSU ,W,,600,,,,,577,No,No,,,USGS Site Number: 295323097561101. 
+6701829,29.8861111,-97.9402778,Hays,218EDRDA,Sterry,W,0/0/1900,23,,,,,570,Yes,No,,Unused,USGS Site Number: 295310097562501. 
+6701830,29.891111,-97.929444,Hays,218EDRDA,Edwards Aquifer  Authority - north well,O,8/0/1990,699,10,4,0,100,581,Yes,Yes,None,Unused,"Gravel packed from 630 to 699 ft. Borehole originally drilled to 920 ft, but plugged back to 699 ft. Borehole contains 2 wells with different screened intervals. SWN 6701813 is the south ""shallow"" well and SWN 6701830 is the north ""deep"" well.  Cemented between completion zones."
+6701830,29.891111,-97.929444,Hays,218EDRDA,Edwards Aquifer  Authority - north well,O,8/0/1990,699,10,2,100,639,581,Yes,Yes,None,Unused,"Gravel packed from 630 to 699 ft. Borehole originally drilled to 920 ft, but plugged back to 699 ft. Borehole contains 2 wells with different screened intervals. SWN 6701813 is the south ""shallow"" well and SWN 6701830 is the north ""deep"" well.  Cemented between completion zones."
+6701830,29.891111,-97.929444,Hays,218EDRDA,Edwards Aquifer  Authority - north well,O,8/0/1990,699,11,2,639,689,581,Yes,Yes,None,Unused,"Gravel packed from 630 to 699 ft. Borehole originally drilled to 920 ft, but plugged back to 699 ft. Borehole contains 2 wells with different screened intervals. SWN 6701813 is the south ""shallow"" well and SWN 6701830 is the north ""deep"" well.  Cemented between completion zones."
+6701831,29.891945,-97.930833,Hays,218EDRDA,Edwards Aquifer  Authority - west well ,O,3/0/1992,742,10,4,0,100,576,No,Yes,None,Unused,"Sand packed from 666 to 742 ft. Cemented between 582 and 656 ft. Borehole originally drilled to 775 ft, but plugged back to 742 ft. Borehole contains 2 wells with different screened intervals. SWN 6701814 is the east ""shallow"" well and SWN 6701831 is the west ""deep"" well. Also cemented between 460 and 480 ft."
+6701831,29.891945,-97.930833,Hays,218EDRDA,Edwards Aquifer  Authority - west well ,O,3/0/1992,742,10,2,100,676,576,No,Yes,None,Unused,"Sand packed from 666 to 742 ft. Cemented between 582 and 656 ft. Borehole originally drilled to 775 ft, but plugged back to 742 ft. Borehole contains 2 wells with different screened intervals. SWN 6701814 is the east ""shallow"" well and SWN 6701831 is the west ""deep"" well. Also cemented between 460 and 480 ft."
+6701831,29.891945,-97.930833,Hays,218EDRDA,Edwards Aquifer  Authority - west well ,O,3/0/1992,742,11,2,676,726,576,No,Yes,None,Unused,"Sand packed from 666 to 742 ft. Cemented between 582 and 656 ft. Borehole originally drilled to 775 ft, but plugged back to 742 ft. Borehole contains 2 wells with different screened intervals. SWN 6701814 is the east ""shallow"" well and SWN 6701831 is the west ""deep"" well. Also cemented between 460 and 480 ft."
+6701901,29.916389,-97.913889,Hays,218EBFZA,Maxwell WSC  Well #3,W,7/13/1988,300,10,16,0,220,694,Yes,No,Turbine,Public Supply,Owner Well Number: 3. TCEQ Source ID: G0280003C. Measured yield 3500 GPM with 12 feet drawdown after pumping 32 hours in 1988. Pumping level 121 feet. Cemented from 0 to 220 feet.
+6701901,29.916389,-97.913889,Hays,218EBFZA,Maxwell WSC  Well #3,W,7/13/1988,300,101,15,220,300,694,Yes,No,Turbine,Public Supply,Owner Well Number: 3. TCEQ Source ID: G0280003C. Measured yield 3500 GPM with 12 feet drawdown after pumping 32 hours in 1988. Pumping level 121 feet. Cemented from 0 to 220 feet.
+6701902,29.913612,-97.916389,Hays,218EDRD,Ed Green,W,,,10,6,,,650,Yes,Yes,Submersible,Domestic,USGS water level measurements with 'method of meas' = 8 are estimated.
+6701903,29.9163889,-97.9138889,Hays,218EBFZA,Maxwell WSC  Well #1,W,3/15/1971,303,10,10,0,120,694,Yes,Yes,Submersible,Plugged or Destroyed,Plugging Report Tracking Number: 229565. Owner Well Number: 1. TCEQ Source ID: G0280003A. Measured yield 360 GPM with 0 feet drawdown after pumping 24 hours in 1971. Specific capacity 360 GPM/ft. Pumping level 113 feet. Cemented from 0 to 120 feet.
+6701903,29.9163889,-97.9138889,Hays,218EBFZA,Maxwell WSC  Well #1,W,3/15/1971,303,101,10,120,303,694,Yes,Yes,Submersible,Plugged or Destroyed,Plugging Report Tracking Number: 229565. Owner Well Number: 1. TCEQ Source ID: G0280003A. Measured yield 360 GPM with 0 feet drawdown after pumping 24 hours in 1971. Specific capacity 360 GPM/ft. Pumping level 113 feet. Cemented from 0 to 120 feet.
+6701904,29.916389,-97.913612,Hays,218EBFZA,Maxwell WSC  Well #2,W,11/5/1976,353,10,11,0,200,694,No,No,Submersible,Public Supply,Owner Well Number: 2. TCEQ Source ID: G0280003B. Cemented from 0 to 200 feet.
+6701904,29.916389,-97.913612,Hays,218EBFZA,Maxwell WSC  Well #2,W,11/5/1976,353,101,10,200,298,694,No,No,Submersible,Public Supply,Owner Well Number: 2. TCEQ Source ID: G0280003B. Cemented from 0 to 200 feet.
+6701904,29.916389,-97.913612,Hays,218EBFZA,Maxwell WSC  Well #2,W,11/5/1976,353,101,8,298,353,694,No,No,Submersible,Public Supply,Owner Well Number: 2. TCEQ Source ID: G0280003B. Cemented from 0 to 200 feet.
+6702101,29.981667,-97.865278,Hays,218EBFZA,Four Seasons Farm ,W,,600,10,10,0,100,680,Yes,Yes,Submersible,Stock,
+6702101,29.981667,-97.865278,Hays,218EBFZA,Four Seasons Farm ,W,,600,101,,100,600,680,Yes,Yes,Submersible,Stock,
+6702103,29.989167,-97.872778,Hays,218EBFZA,TxDOT ,W,,376,,,,,710,Yes,No,None,Unused,
+6702104,29.9830556,-97.8716667,Hays,218EBFZA,SAWS Kyle TH #2,O,2/5/1998,975,10,6,0,427,680,Yes,No,None,Unused,"Owner Well Number: LR-67-02-1 KYLE 2. USGS Site Number: 295858097521801. Kyle #2. Cemented to 427 feet. Coded U bec. Meas'd. by USGS, thoug h owned by SAWS"
+6702104,29.9830556,-97.8716667,Hays,218EBFZA,SAWS Kyle TH #2,O,2/5/1998,975,101,6,427,975,680,Yes,No,None,Unused,"Owner Well Number: LR-67-02-1 KYLE 2. USGS Site Number: 295858097521801. Kyle #2. Cemented to 427 feet. Coded U bec. Meas'd. by USGS, thoug h owned by SAWS"
+6702105,29.958334,-97.842222,Hays,218EBFZA,SAWS Kyle Test Hole #4 ,O,4/25/1998,970,10,12,0,26,652,Yes,No,None,Unused,Kyle Test Hole #3. Recorder observation well. coded P bec. Measured by SAWS
+6702105,29.958334,-97.842222,Hays,218EBFZA,SAWS Kyle Test Hole #4 ,O,4/25/1998,970,10,6,0,562,652,Yes,No,None,Unused,Kyle Test Hole #3. Recorder observation well. coded P bec. Measured by SAWS
+6702105,29.958334,-97.842222,Hays,218EBFZA,SAWS Kyle Test Hole #4 ,O,4/25/1998,970,101,6,562,970,652,Yes,No,None,Unused,Kyle Test Hole #3. Recorder observation well. coded P bec. Measured by SAWS
+6702106,29.974722,-97.857223,Hays,218EBFZA,SAWS Kyle Test Hole #3,O,8/28/1998,1100,10,12,0,40,674,Yes,Yes,None,Unused,Owner Well Number: Kyle 3. Recorder observation well. Coded P because measured by SAWS
+6702106,29.974722,-97.857223,Hays,218EBFZA,SAWS Kyle Test Hole #3,O,8/28/1998,1100,10,7,0,600,674,Yes,Yes,None,Unused,Owner Well Number: Kyle 3. Recorder observation well. Coded P because measured by SAWS
+6702106,29.974722,-97.857223,Hays,218EBFZA,SAWS Kyle Test Hole #3,O,8/28/1998,1100,101,6,600,1100,674,Yes,Yes,None,Unused,Owner Well Number: Kyle 3. Recorder observation well. Coded P because measured by SAWS
+6709101,29.8555833,-97.9801778,Hays,218EBFZA,Crystal Clear Water Co Laurel Estates,W,3/25/1965,229,10,8,0,130,687,Yes,Yes,Submersible,Public Supply,Owner Well Number: Crystal Clear Water Sentinel. TCEQ Source ID: G0940015A. 
+6709101,29.8555833,-97.9801778,Hays,218EBFZA,Crystal Clear Water Co Laurel Estates,W,3/25/1965,229,101,,130,229,687,Yes,Yes,Submersible,Public Supply,Owner Well Number: Crystal Clear Water Sentinel. TCEQ Source ID: G0940015A. 
+6709102,29.851112,-97.976111,Hays,218EBFZA,Marvin Stehle ,W,0/0/1910,204,10,6,,,697,Yes,No,Piston,Unused,Historical observation well.
+6709103,29.847222,-97.9825,Hays,218EBFZA,Southwest Texas State  University,W,9/0/1959,255,,,,,727,Yes,No,Turbine,Irrigation,
+6709104,29.8365361,-97.9939417,Hays,218EBFZA,City of San Marcos,W,,265,,,,,728,No,No,Submersible,Irrigation,"Owner Well Number: Soyar. USGS Site Number: 295009097593401. TCEQ Source ID: G1050001L. GCD Well Number: W100-914. Other Well Number: H-119, H-103a. Previous Well Number: 6709115. 6709115 was a duplicate of this well."
+6709105,29.844445,-97.984445,Hays,218EBFZA,Bureau of Sports Fisheries & Wildlife,W,6/23/1970,330,10,14,0,128,699,Yes,Yes,Turbine,Air Conditioning,USGS Site Number: 295039097590301. 
+6709105,29.844445,-97.984445,Hays,218EBFZA,Bureau of Sports Fisheries & Wildlife,W,6/23/1970,330,101,,128,330,699,Yes,Yes,Turbine,Air Conditioning,USGS Site Number: 295039097590301. 
+6709106,29.852501,-97.987222,Hays,218EBFZA,Bureau of Sports Fisheries & Wildlife,W,6/12/1970,402,10,14,0,238,700,Yes,Yes,Turbine,Air Conditioning,USGS Site Number: 295108097591401. 
+6709106,29.852501,-97.987222,Hays,218EBFZA,Bureau of Sports Fisheries & Wildlife,W,6/12/1970,402,101,,238,402,700,Yes,Yes,Turbine,Air Conditioning,USGS Site Number: 295108097591401. 
+6709107,29.846111,-97.981944,Hays,218EBFZA,Southwest Texas State  University,W,,275,,,,,730,Yes,No,None,Unused,
+6709108,29.846389,-97.98,Hays,218EBFZA,Southwest Texas State  University,T,2/18/1970,50,,,,,694,No,No,None,Unused,
+6709109,29.844167,-97.981667,Hays,218EBFZA,Southwest Texas State  University,T,2/19/1970,52,,,,,685,No,No,None,Unused,
+6709110,29.8433333,-97.9822222,Hays,218EBFZA,SWT Farms  EAA,W,1/15/1973,646,10,7,0,142,693,Yes,No,None,Unused,Owner Well Number: SWT Farms. 
+6709110,29.8433333,-97.9822222,Hays,218EBFZA,SWT Farms  EAA,W,1/15/1973,646,101,,142,634,693,Yes,No,None,Unused,Owner Well Number: SWT Farms. 
+6709111,29.852778,-97.986667,Hays,218EBFZA,Crystal Clear Water Co McCarty Lane 2,W,2/28/1973,300,,,,,683,No,Yes,Turbine,Public Supply,TCEQ Source ID: G0940015C. 
+6709112,29.860556,-97.983055,Hays,218EBFZA,Crystal Clear Water  Corp. Willow Creek Est,W,2/29/1984,217,10,13,0,190,660,Yes,No,,Public Supply,TCEQ Source ID: G0940015F. Owners well #6. Cemented from 0 to 190 feet.
+6709113,29.839167,-97.991111,Hays,218EBFZA,SAWS Fish Hatchery #1,O,10/16/2000,280,,,,,710,Yes,No,None,Unused,Cemented from 0 to 21 feet. Recorder observation well. Coded P bec. Measured by SAWS
+6709114,29.8680556,-97.9669444,Hays,218EBFZA,Primers Fissure Cave EAA,S,,,,,,,601,No,No,,,USGS Site Number: 295205097580101. Known as Primer's Fissure Cave.
+6709115,29.8366667,-97.9938889,Hays,218EBFZA,USGS?,W,,150,,,,,738,No,No,,Unknown,EAA identified this as a duplicate of 6709104.
+6709116,29.873333,-97.959723,Hays,218EBFZA,Ezells Cave  EAA,Z,,,,,,,653,No,No,,,Known as Ezells Cave.
+6709401,29.8297222,-97.9627778,Hays,218EDRDA,SAWS Fish Hatchery No.2,T,1/26/2001,1030,10,10,0,42,640,Yes,No,,Plugged or Destroyed,Plugging Report Tracking Number: 179056. Owner Well Number: Fish Hatchery 2. Owners well Fish Hatchery No.2. Cemented from 0 to 42 feet. Measured yield 60 GPM with 5 feet drawdown after pumping 4 hours in 2001. Specific capacity 12 GPM/ft. Pumping level 85 feet.
+6709401,29.8297222,-97.9627778,Hays,218EDRDA,SAWS Fish Hatchery No.2,T,1/26/2001,1030,10,7,2,510,640,Yes,No,,Plugged or Destroyed,Plugging Report Tracking Number: 179056. Owner Well Number: Fish Hatchery 2. Owners well Fish Hatchery No.2. Cemented from 0 to 42 feet. Measured yield 60 GPM with 5 feet drawdown after pumping 4 hours in 2001. Specific capacity 12 GPM/ft. Pumping level 85 feet.
+6709401,29.8297222,-97.9627778,Hays,218EDRDA,SAWS Fish Hatchery No.2,T,1/26/2001,1030,101,7,510,1030,640,Yes,No,,Plugged or Destroyed,Plugging Report Tracking Number: 179056. Owner Well Number: Fish Hatchery 2. Owners well Fish Hatchery No.2. Cemented from 0 to 42 feet. Measured yield 60 GPM with 5 feet drawdown after pumping 4 hours in 2001. Specific capacity 12 GPM/ft. Pumping level 85 feet.
+6807603,29.931944,-98.129722,Hays,218EBFZA,Thomas Massey ,W,,142,,,,,1150,Yes,No,,,Water levels between 2006 and 2009 measured by Edwards Aquifer Authority.
+6808302,29.984167,-98.012778,Hays,218EBFZA,Kent Keith Fern Bank Springs ,S,,,,,,,770,No,Yes,None,Other,USGS Site Number: 295901098005001. Flows into the Blanco River.
+6808310,29.9858333,-98.004,Hays,,JERRY & ROBERTA HALLAM,W,11/23/2021,875,10,4.5,-2,818,923,No,No,Submersible,Domestic,Well Report Tracking Number: 592645. Owner Well Number: EAA C200227 BSEACD. 
+6808310,29.9858333,-98.004,Hays,,JERRY & ROBERTA HALLAM,W,11/23/2021,875,11,4.5,818,838,923,No,No,Submersible,Domestic,Well Report Tracking Number: 592645. Owner Well Number: EAA C200227 BSEACD. 
+6808601,29.946111,-98.028055,Hays,218EBFZA,McCoy Ranch West,W,,275,,,,,971,Yes,Yes,Piston,Stock,
+6808602,29.952223,-98.000834,Hays,218EDRDA,Freeman Ranch  Laguna - TSU,W,,,,,,,910,Yes,No,,,USGS ID 295709098000301.
+6808704,29.8929444,-98.0915,Hays,,Wendy Morgna,W,7/21/2020,580,10,4.5,-2,518,1017,No,No,Submersible,Domestic,Well Report Tracking Number: 549944. GCD Well Number: EAAC105739. 
+6808704,29.8929444,-98.0915,Hays,,Wendy Morgna,W,7/21/2020,580,11,4.5,518,538,1017,No,No,Submersible,Domestic,Well Report Tracking Number: 549944. GCD Well Number: EAAC105739. 
+6808801,29.895556,-98.059445,Hays,218GRCCU,Bridlewood Ranches Test Well No.1,T,2/25/2003,1100,10,5,0,1060,960,Yes,Yes,,Other,"Well #2, BSEAGCD Report 2010-0701. Reported yield 28.9 GPM with 0.75 feet drawdown after pumping 24 hours in 2003. Specific capacity 38.5 GPM/ft. Aquifer test results in TWDB files."
+6808801,29.895556,-98.059445,Hays,218GRCCU,Bridlewood Ranches Test Well No.1,T,2/25/2003,1100,11,5,1060,1100,960,Yes,Yes,,Other,"Well #2, BSEAGCD Report 2010-0701. Reported yield 28.9 GPM with 0.75 feet drawdown after pumping 24 hours in 2003. Specific capacity 38.5 GPM/ft. Aquifer test results in TWDB files."
+6808802,29.902223,-98.074167,Hays,218EBFZA,Bridlewood Ranches West windmill ,W,,310,10,4,,,1004,Yes,Yes,Submersible,Stock,"Well #3, BSEAGCD Report 2010-0701. Reported yield 3 GPM with 19 feet drawdown after pumping 24 hours in 2003. Specific capacity 0.16 GPM/- ft. Aquifer test results in TWDB files."
+6808816,29.9125278,-98.0746389,Hays,,Lisa and Mathew Wells,W,10/21/2020,960,10,4.5,-2,898,996,No,No,Submersible,Domestic,Well Report Tracking Number: 564346. GCD Well Number: EAA200-026. 
+6808816,29.9125278,-98.0746389,Hays,,Lisa and Mathew Wells,W,10/21/2020,960,11,4.5,898,918,996,No,No,Submersible,Domestic,Well Report Tracking Number: 564346. GCD Well Number: EAA200-026. 
+6808817,29.8866389,-98.0465833,Hays,,Kevin and Catherine Lyman,W,11/5/2020,1050,10,4.5,-2,978,879,No,No,Submersible,Domestic,Well Report Tracking Number: 563531. Owner Well Number: EAAC200007 BS. 
+6808817,29.8866389,-98.0465833,Hays,,Kevin and Catherine Lyman,W,11/5/2020,1050,11,4.5,978,998,879,No,No,Submersible,Domestic,Well Report Tracking Number: 563531. Owner Well Number: EAAC200007 BS. 
+6808818,29.91125,-98.0704167,Hays,,Jamie and Chase Fuller,W,10/16/2020,935,10,4.5,-2,878,945,No,No,Submersible,Domestic,Well Report Tracking Number: 560644. Owner Well Number: EAAC105767BS. 
+6808818,29.91125,-98.0704167,Hays,,Jamie and Chase Fuller,W,10/16/2020,935,11,4.5,878,897,945,No,No,Submersible,Domestic,Well Report Tracking Number: 560644. Owner Well Number: EAAC105767BS. 
+6808902,29.8963889,-98.0027778,Hays,218EDRDA,San Marcos Baptist Academy - Well #1,W,10/14/1980,335,10,8.625,0,200,777,Yes,Yes,Submersible,Public Supply,Owner Well Number: 1. TCEQ Source ID: G1050009A. Bailer yield: 30 gpm with 195 ft drawdown after 0.5 hours in 1980.
+6808902,29.8963889,-98.0027778,Hays,218EDRDA,San Marcos Baptist Academy - Well #1,W,10/14/1980,335,101,10,200,335,777,Yes,Yes,Submersible,Public Supply,Owner Well Number: 1. TCEQ Source ID: G1050009A. Bailer yield: 30 gpm with 195 ft drawdown after 0.5 hours in 1980.
+6808903,29.8930556,-98.0013889,Hays,218EBFZA,San Marcos Baptist Aca EAA,W,,343,,,,,757,No,No,,,
+6816301,29.871667,-98.021667,Hays,218EBFZA,Ed Posey,W,,234,,,,,825,Yes,Yes,Piston,Stock,
+6816302,29.841111,-98.024722,Hays,218EBFZA,Diamond Pure WSC,W,3/19/1986,390,,,,,882,No,Yes,Submersible,Public Supply,
+6816305,29.857778,-98.036945,Hays,218EBFZA,Wilford Wootan,W,,362,,,,,930,Yes,No,,,
+6816601,29.829722,-98.001667,Hays,218EBFZA,E Jackson ,W,0/0/1913,200,,,,,760,Yes,Yes,Submersible,Domestic,
+6816603,29.8128611,-98.0160278,Hays,218EBFZA,GBRA Oak Ridge,W,9/0/1968,230,,,,,664,Yes,Yes,Submersible,Public Supply,Owner Well Number: Oak Ridge #1. TCEQ Source ID: G1050001J. 
+6816605,29.829167,-98.004445,Hays,218EBFZA,E B Kutscher,W,0/0/1898,187,,,,,711,Yes,Yes,Piston,Domestic,
+6816606,29.819722,-98.019444,Hays,218EBFZA,Hill Country Feeders,W,12/0/1969,405,,,,,710,No,No,Submersible,Stock,
+
+LookupAquiferCode,LookupAquiferCodeDescription
+211ASTN,Austin Chalk
+211BUDA,Buda Limestone
+218CCRK,Cow Creek Limestone
+218EBFZA,Edwards and Associated Limestones - (Balcones Fault Zone Aquifer)
+218EDDT,Edwards and Associated Limestones and Trinity Group
+218EDGRU,Edwards and Associated Limestones and Upper Mbr of Glen Rose Limestone
+218EDRD,Edwards Limestone
+218EDRDA,Edwards and Associated Limestones
+218GLRSU,"Glen Rose Limestone, Upper Member"
+218GRCCU,Lower Glen Rose and Cow Creek Limestones
+
+LookupWellTypeCode,LookupWellTypeDescription
+O,Observation
+S,Spring
+T,Test Hole
+W,Withdrawal of Water
+Z,Other (see remarks)
+
+LookupCasingId,LookupCasingTypeDescription
+1,Other
+10,Blank
+11,Screen
+12,Perforated or Slotted
+101,Open Hole
+

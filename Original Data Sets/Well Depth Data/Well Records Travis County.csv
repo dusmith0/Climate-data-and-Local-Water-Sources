@@ -1,0 +1,656 @@
+﻿Disclaimer
+"""GWDB DISCLAIMER:  Except where noted, all of the information provided in the Texas Water Development Board (TWDB) Groundwater Database (https://www.twdb.texas.gov/groundwater/data/gwdbrpt.asp) is believed to be accurate and reliable; however, the TWDB assumes no responsibility for any errors appearing in rules or otherwise. Further, TWDB assumes no responsibility for the use of the information provided. PLEASE NOTE that users of these data are responsible for checking the accuracy, completeness, currency and/or suitability of all information themselves. TWDB makes no guarantees or warranties as to the accuracy, completeness, currency, or suitability of the information provided via the Groundwater Database (GWDB). TWDB specifically disclaims any and all liability for any claims or damages that may result from providing GWDB data or the information it contains. For additional information or answers to questions concerning the TWDB GWDB, contact the Groundwater Data Team at GroundwaterData@twdb.texas.gov."""
+
+StateWellNumber,LatitudeDD,LongitudeDD,County,AquiferCode,Owner,WellTypeCode,DrillingEndDate,WellDepth,CasingId,Diameter,TopDepth,BottomDepth,LandSurfaceElevation,WaterLevelsAvailable,WaterQualityAvailable,Pump,WellUse,Remarks
+5825601,30.564167,-97.911945,Travis,218EDRDA,Williamson Apple Spring,S,,,,,,,1065,No,No,None,Stock,Owner Well Number: Apple Spring. USGS Site Number: 303352097544401. Apple Spring. Estimated discharge 10 GPM on 9/6/72.
+5825701,30.537222,-97.991945,Travis,218EDRDA,Mary Biggar  Hanging Rock Spring ,S,,,,,,,1180,No,Yes,None,Stock,Owner Well Number: Hanging Rock Spring. USGS Site Number: 303215097593201. Hanging Rock Spring. Estimated discharge 5 GPM on 9/6/72.
+5834102,30.463056,-97.847778,Travis,218EBFZA,Jack Dies  Big Spring,S,,,,,,,891,No,Yes,None,Stock,"Owner Well Number: Big Spring. USGS Site Number: 302748097505301. Other Well Number: C-12 in B-5708. Big Spring. Reported flow 10 gal/ min on Oct. 3,1972.  Well C-12 in TBWE B-5708. Estimated discharge 50 GPM on 11/1/40."
+5834103,30.460278,-97.850556,Travis,218EDRDA,Jack Dies  House Spring,S,,,,,,,847,No,Yes,None,Domestic,"Owner Well Number: House Spring. USGS Site Number: 302738097510301. Other Well Number: C-13 in B-5708. House Spring. Reported flow 20 gal/ min on Nov. 1,1940, and estimated flow 5 gal/min on Oct.3,1972. Well C-13 in TBWE B-5708. Reported dis- charge 20 GPM from limestone on 11/1/40."
+5834104,30.458889,-97.851667,Travis,218EDRDA,Jack Dies  Swimming Pool Spring,S,,,,,,,917,No,Yes,None,Domestic,"USGS Site Number: 302733097510701. Swimming Pool Spring. Reported flow 40 gal/min on Nov. 1,1940, and estimated flow 10 gal/min on Oct.3, 1972.  Well C-14 in TBWE B-5708. County report."
+5834411,30.457778,-97.838611,Travis,218EDRDA,K.C. Miller ,S,,,,,,,863,No,Yes,None,Stock,"USGS Site Number: 302730097501701. Reported flow 75 gal/min on Nov.1, 1940, and estimated flow 20 gal/min on Oct.3,1972.  Well C-15 in TBWE B-5708."
+5834412,30.457778,-97.84,Travis,218EDRDA,K.C. Miller  Kelly Hollow Spring ,S,,,,,,,849,No,Yes,None,Stock,"USGS Site Number: 302727097502301. Kelly Hollow Springs.  Reported flow 40 gal/min on Nov. 1,1940, and estimated flow 5 gal/min on Oct.2, 1972.  Well C-16 in TBWE B-5708. County report."
+5834414,30.421667,-97.835278,Travis,218EDRDA,Schlumberger Corp.,S,,,,,,,907,No,Yes,,,USGS Site Number: 302554097494701. Schlumberger Spring.
+5834417,30.4475,-97.868611,Travis,218EDRDA,The Crossings  Well #1 ,W,2/21/2003,705,10,10,0,20,974,Yes,Yes,Submersible,Public Supply,Owner Well Number: 1. TCEQ Source ID: G2270356A. Owners well #1. PWS ID #2270356A. Reported yield 43 GPM with 170 feet drawdown after pumping 36 hours in 2003. Specific capacity 0.25 GPM/ft. Pumping level 485 feet. Pump set at 609 feet. Cemented from 0 to 630 feet. Test hole completed 5/21/01. Test hole finished as water well 4/1/03.
+5834417,30.4475,-97.868611,Travis,218EDRDA,The Crossings  Well #1 ,W,2/21/2003,705,10,6,0,630,974,Yes,Yes,Submersible,Public Supply,Owner Well Number: 1. TCEQ Source ID: G2270356A. Owners well #1. PWS ID #2270356A. Reported yield 43 GPM with 170 feet drawdown after pumping 36 hours in 2003. Specific capacity 0.25 GPM/ft. Pumping level 485 feet. Pump set at 609 feet. Cemented from 0 to 630 feet. Test hole completed 5/21/01. Test hole finished as water well 4/1/03.
+5834417,30.4475,-97.868611,Travis,218EDRDA,The Crossings  Well #1 ,W,2/21/2003,705,101,6,630,705,974,Yes,Yes,Submersible,Public Supply,Owner Well Number: 1. TCEQ Source ID: G2270356A. Owners well #1. PWS ID #2270356A. Reported yield 43 GPM with 170 feet drawdown after pumping 36 hours in 2003. Specific capacity 0.25 GPM/ft. Pumping level 485 feet. Pump set at 609 feet. Cemented from 0 to 630 feet. Test hole completed 5/21/01. Test hole finished as water well 4/1/03.
+5834501,30.457778,-97.833055,Travis,218EDRDA,Roy Renick Dripping Vat Springs,S,,,,,,,958,No,Yes,None,Stock,"USGS Site Number: 302729097500001. Dripping Vat Springs.  Reported flow 3 gal/min on Nov.1,1940, and measured flow 3 gal/min on Oct 3, 1972.  Well D-1 in TBWE B-5708. County report."
+5834513,30.4377778,-97.8236111,Travis,218EDRDA,USGS,O,9/1/2005,74,10,,0,54,940,Yes,No,,Unused,USGS Site Number: 302616097492501. 
+5834513,30.4377778,-97.8236111,Travis,218EDRDA,USGS,O,9/1/2005,74,11,,54,74,940,Yes,No,,Unused,USGS Site Number: 302616097492501. 
+5834601,30.430833,-97.765001,Travis,218EDRDA,J.R. McElroy,W,0/0/1935,85,10,6,0,30,950,Yes,Yes,None,Plugged or Destroyed,Historical observation well. Well destroyed.
+5834601,30.430833,-97.765001,Travis,218EDRDA,J.R. McElroy,W,0/0/1935,85,101,,30,85,950,Yes,Yes,None,Plugged or Destroyed,Historical observation well. Well destroyed.
+5834609,30.423055,-97.784167,Travis,218EDRDA,Schelhardt,S,,,,,,,893,No,Yes,None,Unused,USGS Site Number: 302524097470401. Formerly supplied 2 families and Oak Grove School.  No flow on Oct.3 1972.  Well D-8 in TBWE B-5808.
+5834613,30.433055,-97.778889,Travis,218EDRDA,Dr. Mitchell Wong ,W,0/0/1945,175,,,,,920,Yes,Yes,None,Unused,
+5834614,30.431111,-97.786111,Travis,218EDRDA,Oliver Howland,W,0/0/1900,100,,,,,860,Yes,No,Piston,Unused,
+5834615,30.431111,-97.786111,Travis,218EDRDA,Oliver Howland,W,0/0/1950,150,,,,,865,No,Yes,Jet,Industrial,
+5834617,30.431111,-97.782222,Travis,218EDRDA,City of Austin Tanglewood Spring ,S,,,,,,,916,No,Yes,None,Stock,USGS Site Number: 302551097465501. Tanglewood spring.
+5834618,30.432222,-97.7675,Travis,218EDRDA,S R Amescua ,W,,84,,,,,950,Yes,Yes,Submersible,Plugged or Destroyed,USGS Site Number: 302549097455501. Well destroyed.
+5834622,30.4180556,-97.7691667,Travis,218EDRDA,USGS,O,9/7/2005,100,10,,0,40,946,Yes,No,,Unused,USGS Site Number: 302505097460901. 
+5834622,30.4180556,-97.7691667,Travis,218EDRDA,USGS,O,9/7/2005,100,11,,40,100,946,Yes,No,,Unused,USGS Site Number: 302505097460901. 
+5834804,30.415556,-97.815001,Travis,218EDRDA,Jim Gleasman,S,,,,,,,783,No,Yes,,Domestic,USGS Site Number: 302456097485401. 
+5834902,30.399167,-97.750834,Travis,218EDRDA,S.D. Williams ,W,,53,,,,,902,Yes,Yes,None,Unused,
+5835201,30.459445,-97.696389,Travis,218EDRDA,H.O. Williams ,W,0/0/1939,270,10,6,0,90,904,Yes,Yes,,Unused,USGS Site Number: 302734097414601. 
+5835206,30.471389,-97.674444,Travis,218EDRDA,Joe Bailey,W,0/0/1945,700,,,,,820,Yes,Yes,None,Unused,
+5835207,30.461389,-97.689722,Travis,218EDRDA,N.J. Stramler ,W,0/0/1910,330,,,,,905,Yes,Yes,Submersible,Domestic,Well D-43 in 1957 Travis County report.
+5835208,30.468889,-97.669444,Travis,218EDRDA,A.F. McDonald ,W,0/0/1920,300,,,,,820,No,Yes,Piston,Domestic,Well D-47 in 1957 Travis County report.
+5835210,30.467778,-97.6725,Travis,218EDRDA,Vernon Turner ,W,0/0/1894,362,,,,,860,Yes,Yes,Submersible,Domestic,
+5835211,30.479444,-97.672778,Travis,218EDRDA,J.A. Pearson,W,0/0/1904,317,,,,,838,Yes,Yes,Piston,Domestic,Well D-44 in 1957 Travis County report.
+5835212,30.478055,-97.6725,Travis,218EDRDA,Stuckey Candy Co. ,W,0/0/1962,320,,,,,825,Yes,Yes,Submersible,Domestic,Reported yield 10 gal/min.
+5835216,30.478055,-97.6725,Travis,218EBFZA,Stuckey's Inc.,W,2/14/1979,385,,,,,839,No,Yes,Submersible,Public Supply,
+5835217,30.4775,-97.6725,Travis,218EBFZA,Ventana Mirror & Glass,W,2/14/1979,365,,,,,820,No,Yes,Submersible,Industrial,
+5835219,30.459167,-97.668333,Travis,218EDRDA,Vara Development Vista Park #1 ,W,0/0/1985,379,10,6,0,265,840,Yes,No,Submersible,Public Supply,Reported yield 270 GPM with 7.5 feet drawdown after pumping 24 hours in 1985. Specific capacity 36 GPM/ft.
+5835219,30.459167,-97.668333,Travis,218EDRDA,Vara Development Vista Park #1 ,W,0/0/1985,379,101,20,265,379,840,Yes,No,Submersible,Public Supply,Reported yield 270 GPM with 7.5 feet drawdown after pumping 24 hours in 1985. Specific capacity 36 GPM/ft.
+5835220,30.461112,-97.677222,Travis,218EBFZA,"Buell Mill, Inc.",W,5/1/1983,740,10,9,0,12,863,Yes,Yes,Submersible,Public Supply,"Reported yield, 30-40 gpm."
+5835221,30.476111,-97.673611,Travis,218EDRDA,Sam Botonis  Manhattans Restaurant ,W,5/5/1982,400,10,6,0,340,815,Yes,No,Submersible,Public Supply,
+5835221,30.476111,-97.673611,Travis,218EDRDA,Sam Botonis  Manhattans Restaurant ,W,5/5/1982,400,11,6,340,400,815,Yes,No,Submersible,Public Supply,
+5835222,30.467222,-97.674167,Travis,218EBFZA,Capitol Aggregates,W,4/28/1983,460,10,8,0,260,829,Yes,No,Submersible,Industrial,Casing cemented from 260 feet to surface.
+5835222,30.467222,-97.674167,Travis,218EBFZA,Capitol Aggregates,W,4/28/1983,460,101,,260,460,829,Yes,No,Submersible,Industrial,Casing cemented from 260 feet to surface.
+5835223,30.474722,-97.684167,Travis,218EDRDA,Northridge Acres Association ,W,,,10,10,,,858,No,No,,Public Supply,TCEQ Source ID: G2270211A. 
+5835301,30.470555,-97.663334,Travis,218EDRDA,Annie Jacobson Estate ,W,0/0/1903,352,,,,,810,No,Yes,Piston,Domestic,Well F-1 in 1957 Travis County report.
+5835302,30.472778,-97.641667,Travis,218EDRDA,Carl Wieland,W,0/0/1933,535,,,,,820,No,No,None,Plugged or Destroyed,Well F-2 in 1957 Travis County report.  Oil test. Destroyed.
+5835303,30.471944,-97.641111,Travis,218EDRDA,Carl Wieland,W,,552,,,,,820,No,Yes,Piston,Unused,Well F-3 in 1957 Travis County report.
+5835304,30.477778,-97.662223,Travis,218EDRDA,Paul Jones,W,0/0/1973,360,,,,,813,No,Yes,Submersible,Domestic,
+5835308,30.470833,-97.666389,Travis,218EDRDA,Manville WSC Well #1,W,6/0/1976,400,10,12,0,245,822,Yes,Yes,Turbine,Public Supply,Owner Well Number: 1. TCEQ Source ID: G2270033A. Reported yield 250 GPM with 40 feet drawdown after pumping  36 hours in July 1976. Specific capacity 8.75 GPM/ft.
+5835308,30.470833,-97.666389,Travis,218EDRDA,Manville WSC Well #1,W,6/0/1976,400,101,,245,400,822,Yes,Yes,Turbine,Public Supply,Owner Well Number: 1. TCEQ Source ID: G2270033A. Reported yield 250 GPM with 40 feet drawdown after pumping  36 hours in July 1976. Specific capacity 8.75 GPM/ft.
+5835309,30.464167,-97.662501,Travis,218EDRDA,Edward Burklund ,W,0/0/1970,515,,,,,810,Yes,No,Submersible,Domestic,
+5835311,30.481111,-97.633611,Travis,218EDRDA,Manville WSC Schultz Lane,W,4/0/1985,620,10,16,0,485,804,Yes,No,Submersible,Public Supply,Owner Well Number: Manville WSC well #12. TCEQ Source ID: G2270033Q. Reported yield 300 GPM with 20 feet drawdown after pumping 36 hours in 1985. Specific capacity 15 GPM/ft. Well originally drilled for John Lloyd.
+5835311,30.481111,-97.633611,Travis,218EDRDA,Manville WSC Schultz Lane,W,4/0/1985,620,101,20,485,490,804,Yes,No,Submersible,Public Supply,Owner Well Number: Manville WSC well #12. TCEQ Source ID: G2270033Q. Reported yield 300 GPM with 20 feet drawdown after pumping 36 hours in 1985. Specific capacity 15 GPM/ft. Well originally drilled for John Lloyd.
+5835311,30.481111,-97.633611,Travis,218EDRDA,Manville WSC Schultz Lane,W,4/0/1985,620,101,10,490,620,804,Yes,No,Submersible,Public Supply,Owner Well Number: Manville WSC well #12. TCEQ Source ID: G2270033Q. Reported yield 300 GPM with 20 feet drawdown after pumping 36 hours in 1985. Specific capacity 15 GPM/ft. Well originally drilled for John Lloyd.
+5835312,30.459445,-97.665834,Travis,218EDRDA,J.W.L. Investments,T,5/29/1985,450,101,10,0,450,839,No,No,,,Royston Park. Depth measured as 443.
+5835313,30.471667,-97.643056,Travis,218EDRDA,John Loyd ,T,10/0/1985,611,10,6,0,412,800,No,No,,,Well destroyed.
+5835313,30.471667,-97.643056,Travis,218EDRDA,John Loyd ,T,10/0/1985,611,101,6,412,611,800,No,No,,,Well destroyed.
+5835314,30.473611,-97.6425,Travis,218EDRDA,Orion Homes of Texas,W,3/3/1986,620,10,6,0,380,815,Yes,Yes,,Public Supply,
+5835314,30.473611,-97.6425,Travis,218EDRDA,Orion Homes of Texas,W,3/3/1986,620,101,,380,620,815,Yes,Yes,,Public Supply,
+5835315,30.463334,-97.625833,Travis,218EDRDA,Harris Joint Venture,T,0/0/1986,579,10,4,0,470,765,Yes,No,,Public Supply,Windermere North.
+5835316,30.462778,-97.625555,Travis,218EDRDA,Landmark Subdivision,W,4/0/1986,633,10,13,0,394,762,Yes,No,,,Reported yield 760 GPM with 266 feet drawdown after pumping 36 hours in 1986. Specific capacity 2.85 GPM/ft.
+5835316,30.462778,-97.625555,Travis,218EDRDA,Landmark Subdivision,W,4/0/1986,633,101,,394,633,762,Yes,No,,,Reported yield 760 GPM with 266 feet drawdown after pumping 36 hours in 1986. Specific capacity 2.85 GPM/ft.
+5835318,30.469722,-97.666667,Travis,218EBFZA,Pioneer Concrete Co.,W,8/20/1984,550,10,6,0,400,830,Yes,No,Submersible,Industrial,"Casing cemented from 200 feet to surface.  Estimated yield, 75 gpm."
+5835318,30.469722,-97.666667,Travis,218EBFZA,Pioneer Concrete Co.,W,8/20/1984,550,11,6,400,550,830,Yes,No,Submersible,Industrial,"Casing cemented from 200 feet to surface.  Estimated yield, 75 gpm."
+5835319,30.461389,-97.652223,Travis,218EBFZA,Word of Life Christian Center,W,11/8/1985,490,10,5,0,330,760,Yes,No,Submersible,Irrigation,
+5835319,30.461389,-97.652223,Travis,218EBFZA,Word of Life Christian Center,W,11/8/1985,490,101,,330,490,760,Yes,No,Submersible,Irrigation,
+5835320,30.461667,-97.654445,Travis,218EBFZA,Turkey Creek Farms,W,1/10/1985,462,10,6,0,400,770,Yes,No,Submersible,Irrigation,
+5835320,30.461667,-97.654445,Travis,218EBFZA,Turkey Creek Farms,W,1/10/1985,462,101,,400,462,770,Yes,No,Submersible,Irrigation,
+5835321,30.461945,-97.654167,Travis,218EBFZA,Turkey Creek Farms,W,6/0/1986,,10,4,,,770,No,No,Submersible,Domestic,
+5835322,30.464167,-97.664723,Travis,218EBFZA,Manville WSC Well #4 Tacon,W,9/29/1982,510,10,8,0,280,801,Yes,No,,Plugged or Destroyed,Owner Well Number: #4 Tacon. TCEQ Source ID: G2270033E. Reported yield 300 GPM in 1994. Well deepened to 510 feet in 1994. Cemented from 0 to 280 feet. Well reported to be plugged.
+5835322,30.464167,-97.664723,Travis,218EBFZA,Manville WSC Well #4 Tacon,W,9/29/1982,510,10,8,280,435,801,Yes,No,,Plugged or Destroyed,Owner Well Number: #4 Tacon. TCEQ Source ID: G2270033E. Reported yield 300 GPM in 1994. Well deepened to 510 feet in 1994. Cemented from 0 to 280 feet. Well reported to be plugged.
+5835323,30.459167,-97.649722,Travis,218EBFZA,Windermere Utilities,W,4/3/1985,520,10,10,0,360,760,Yes,No,Submersible,Public Supply,Casing cemented from 360 feet to surface.
+5835324,30.458889,-97.659445,Travis,218EBFZA,Manville WSC Well #4B (Tacon),W,5/15/1988,510,10,11,0,358,793,Yes,No,Submersible,Public Supply,Owner Well Number: #4B Tacon. TCEQ Source ID: G2270033G. 
+5835325,30.471944,-97.635,Travis,218EBFZA,Manville WSC Spring Brook,W,11/22/1999,680,10,13,0,463,826,No,Yes,Submersible,Public Supply,Owner Well Number: Spring Brook Well. TCEQ Source ID: G2270033U. 
+5835325,30.471944,-97.635,Travis,218EBFZA,Manville WSC Spring Brook,W,11/22/1999,680,101,12,463,680,826,No,Yes,Submersible,Public Supply,Owner Well Number: Spring Brook Well. TCEQ Source ID: G2270033U. 
+5835326,30.463889,-97.664723,Travis,218EBFZA,Manville WSC New Well #4 ,W,5/3/2003,590,,,,,805,No,No,Submersible,Public Supply,Well Report Tracking Number: 94548. Owner Well Number: New well #4. TCEQ Source ID: G2270033X. Cemented from 0 to 287 ft.
+5835401,30.445278,-97.712223,Travis,218EDRDA,Austin White Lime Co. ,W,,93,,,,,811,Yes,No,None,Unused,Well D-183 in 1957 Travis County report.
+5835402,30.454723,-97.721389,Travis,218EDRDA,Austin White Lime Co. ,W,,85,,,,,840,No,Yes,Piston,Unused,Abandoned.  Well D-35 in 1957 Tavis County report.
+5835403,30.455556,-97.721389,Travis,218EDRDA,Austin White Lime Co. ,W,,95,,,,,840,Yes,Yes,Piston,Domestic,Reported yield 75 gal/min. Well D-36 in 1957 Travis County report.
+5835405,30.455001,-97.722222,Travis,218EDRDA,Austin White Lime Co. ,W,0/0/1959,100,,,,,845,Yes,No,Unknown,Plugged or Destroyed,Destroyed.
+5835409,30.452223,-97.721944,Travis,218EDRDA,Austin White Lime Co. ,W,0/0/1963,200,,,,,835,Yes,No,Turbine,Unused,Abandoned.  Reported yield 5 gal/ min.
+5835411,30.455556,-97.717778,Travis,218EDRDA,Austin White Lime ,W,0/0/1956,990,,,,,830,Yes,No,Piston,Unused,Abandoned. Reported yield 27 gal/ min.
+5835413,30.419167,-97.746111,Travis,218EDRDA,W.F. Morrow ,W,0/0/1929,336,,,,,855,Yes,Yes,Submersible,Unused,Pump inoperative.
+5835415,30.447222,-97.7175,Travis,218EDRDA,Austin White Lime Co. ,W,,112,10,6,0,12,830,Yes,Yes,Submersible,Stock,USGS Site Number: 302652097430501. 
+5835415,30.447222,-97.7175,Travis,218EDRDA,Austin White Lime Co. ,W,,112,101,,12,112,830,Yes,Yes,Submersible,Stock,USGS Site Number: 302652097430501. 
+5835417,30.436667,-97.710278,Travis,218EDRDA,Austin White Lime Co. ,W,,94,,,,,775,No,No,Piston,Unused,Abandoned.  Well D-32 in 1957 Travis County report.
+5835418,30.435834,-97.709445,Travis,218EDRDA,Parker,W,0/0/1966,88,,,,,770,Yes,Yes,Submersible,Domestic,"Reported yield, 15 gal/min."
+5835419,30.419167,-97.738334,Travis,218EDRDA,Daniel Gibson ,S,,,,,,,817,No,Yes,None,Unused,USGS Site Number: 302510097441901. Estimated discharge 10 GPM on 11/- 13/73. Caused damage to house.
+5835420,30.432222,-97.710278,Travis,218EDRDA,Albert Paul ,W,0/0/1964,280,,,,,767,Yes,No,Submersible,Domestic,
+5835422,30.450834,-97.720555,Travis,218EBFZA,Trammel Crow,W,2/15/1985,250,10,7,0,110,820,Yes,No,,Industrial,Casing cemented from 110 feet to surface.
+5835422,30.450834,-97.720555,Travis,218EBFZA,Trammel Crow,W,2/15/1985,250,101,,110,250,820,Yes,No,,Industrial,Casing cemented from 110 feet to surface.
+5835423,30.445278,-97.710834,Travis,218EBFZA,Joe Herring  Kiddie Acres,W,10/10/1987,380,10,7,0,280,809,Yes,No,Submersible,Public Supply,TCEQ Source ID: G2270302A. 
+5835423,30.445278,-97.710834,Travis,218EBFZA,Joe Herring  Kiddie Acres,W,10/10/1987,380,11,7,280,365,809,Yes,No,Submersible,Public Supply,TCEQ Source ID: G2270302A. 
+5835423,30.445278,-97.710834,Travis,218EBFZA,Joe Herring  Kiddie Acres,W,10/10/1987,380,10,7,365,380,809,Yes,No,Submersible,Public Supply,TCEQ Source ID: G2270302A. 
+5835424,30.4269444,-97.7305556,Travis,218EDRDA,USGS,O,9/5/2005,115,10,,0,55,816,Yes,No,,Unused,USGS Site Number: 302537097435001. 
+5835424,30.4269444,-97.7305556,Travis,218EDRDA,USGS,O,9/5/2005,115,11,,55,115,816,Yes,No,,Unused,USGS Site Number: 302537097435001. 
+5835501,30.44,-97.693611,Travis,218EDRDA,L.Robinson,W,0/0/1889,276,,,,,831,Yes,Yes,Piston,Stock,
+5835502,30.440556,-97.700834,Travis,218EDRDA,Dave Dillingham ,W,,350,,,,,772,Yes,Yes,Piston,Domestic,Well D-31 in 1957 Travis County report.
+5835504,30.449722,-97.703334,Travis,218EDRDA,Dillingham Estate ,W,0/0/1939,210,,,,,845,Yes,Yes,Piston,Unused,Well D-39 in 1957 Travis County report.
+5835505,30.433055,-97.699167,Travis,218EDRDA,J.B. Ray,W,,255,,,,,770,Yes,Yes,Submersible,Domestic,Well D-29 in 1957 Travis County report.
+5835506,30.437778,-97.667778,Travis,218EDRDA,Capital Memorial Park ,W,,533,,,,,799,No,Yes,Submersible,Irrigation,Reported yield.  250 gal/min.
+5835507,30.429444,-97.668889,Travis,218EDRDA,Joe Holloway,W,0/0/1921,525,,,,,800,Yes,Yes,Submersible,Domestic,Well D-52 in 1957 Travis County report.
+5835508,30.420555,-97.674722,Travis,218EDRDA,Mrs. Karl B. Wagner ,W,0/0/1939,465,,,,,740,Yes,Yes,Submersible,Stock,
+5835509,30.448889,-97.669167,Travis,218EDRDA,Pamela Subdivision,W,0/0/1960,550,,,,,853,Yes,Yes,Submersible,Public Supply,Supplies 34 homes.
+5835511,30.448889,-97.699722,Travis,218EDRDA,Austin White Lime ,W,0/0/1963,200,,,,,822,Yes,Yes,Submersible,Domestic,Parmlee well.
+5835512,30.423055,-97.690556,Travis,218EDRDA,Lamplight Village ,W,0/0/1974,520,,,,,776,Yes,Yes,Submersible,Public Supply,Cemented from 400 ft to surface.
+5835513,30.423611,-97.691667,Travis,218EDRDA,Lamplight Village ,W,0/0/1977,540,,,,,760,No,Yes,Submersible,Public Supply,
+5835514,30.454723,-97.678611,Travis,218EDRDA,C.M. Diseker,W,0/0/1976,420,,,,,875,Yes,No,Submersible,Domestic,Water level questionable.
+5835515,30.418611,-97.706945,Travis,218EBFZA,Wallingsford,S,,,,,,,700,No,Yes,,Stock,Estimated discharge 20 GPM on 3/22- /73.
+5835517,30.421944,-97.688056,Travis,218EBFZA,Lamplight Village ,W,6/27/1980,520,10,6,0,380,760,Yes,Yes,Submersible,Public Supply,
+5835517,30.421944,-97.688056,Travis,218EBFZA,Lamplight Village ,W,6/27/1980,520,101,6,380,520,760,Yes,Yes,Submersible,Public Supply,
+5835518,30.428055,-97.691945,Travis,218EBFZA,Lamplight Village ,W,,510,,,,,775,No,Yes,Submersible,Public Supply,
+5835519,30.423889,-97.696945,Travis,218EBFZA,Lamplight Village ,W,,480,,,,,780,No,No,Submersible,Public Supply,
+5835601,30.443056,-97.654167,Travis,218EDRDA,August Hebbe,W,0/0/1912,690,,,,,848,Yes,Yes,Piston,Domestic,Well E-19 in 1957 Travis County report.
+5835604,30.419722,-97.643056,Travis,218EDRDA,C.A. Rainey ,W,0/0/1952,565,,,,,715,Yes,Yes,Jet,Unused,Well E-56 in 1957 Travis County report.
+5835607,30.445834,-97.630278,Travis,218EDRDA,William Kuempel ,W,0/0/1935,609,,,,,750,Yes,Yes,None,Unused,Supplied CCC Camp; drawdown. 130 ft when pumped at 40 gal/min.
+5835608,30.444445,-97.653889,Travis,218EDRDA,Manville WSC #3 Tacon,W,6/1/1978,680,,,,,854,Yes,No,Unknown,Public Supply,Owner Well Number: #3 Tacon Rd. TCEQ Source ID: G2270033C. Estimated yield 260 GPM.
+5835609,30.445834,-97.649445,Travis,218EBFZA,City of Pflugerville,T,1/0/1980,500,10,4,0,388,820,Yes,Yes,None,Unused,
+5835609,30.445834,-97.649445,Travis,218EBFZA,City of Pflugerville,T,1/0/1980,500,101,,388,500,820,Yes,Yes,None,Unused,
+5835610,30.458334,-97.649722,Travis,218EDRDA,Melvin Ward ,W,0/0/1978,472,10,6,0,350,706,Yes,No,,Public Supply,
+5835610,30.458334,-97.649722,Travis,218EDRDA,Melvin Ward ,W,0/0/1978,472,101,,350,472,706,Yes,No,,Public Supply,
+5835611,30.420555,-97.665278,Travis,218EDRDA,Tim's Airpark ,W,0/0/1965,459,,,,,760,Yes,Yes,Submersible,Unused,Oily water.
+5835612,30.447222,-97.635,Travis,218EDRDA,Harris Joint Venture,W,5/22/1986,660,10,13,0,496,762,Yes,No,,Public Supply,Cemented from 0 to 496 feet. Reported yield 40 GPM with 11 feet drawdown after pumping 1/2 hour in 1986. Specific capacity 3.6 GPM/ft. Windermere south.
+5835612,30.447222,-97.635,Travis,218EDRDA,Harris Joint Venture,W,5/22/1986,660,101,,496,660,762,Yes,No,,Public Supply,Cemented from 0 to 496 feet. Reported yield 40 GPM with 11 feet drawdown after pumping 1/2 hour in 1986. Specific capacity 3.6 GPM/ft. Windermere south.
+5835613,30.444445,-97.654167,Travis,218EBFZA,Manville WSC Well 3B (Tacon Rd),W,6/27/1985,600,10,8,0,420,854,Yes,No,Submersible,Public Supply,Owner Well Number: #3B Tacon Rd. TCEQ Source ID: G2270033D. Casing cemented from 420 feet to surface.
+5835614,30.458056,-97.641667,Travis,218EBFZA,Winderemere Utilities ,W,4/11/1984,500,10,8,0,380,735,Yes,No,Submersible,Public Supply,Casing cemented from 380 feet to surface.
+5835615,30.453056,-97.663334,Travis,218EBFZA,WindermereUtilities  (Doyle Hickerson) ,W,5/6/1986,580,10,8,0,403,815,Yes,No,Submersible,Public Supply,Casing cemented from 403 feet to surface.
+5835616,30.438056,-97.665278,Travis,218EBFZA,Capitol Memorial Park ,W,12/11/1979,540,10,10,0,400,795,Yes,No,,Irrigation,
+5835616,30.438056,-97.665278,Travis,218EBFZA,Capitol Memorial Park ,W,12/11/1979,540,101,,400,540,795,Yes,No,,Irrigation,
+5835617,30.445834,-97.648611,Travis,218EBFZA,City of Pflugerville Well #4 ,W,5/17/1980,580,10,8,0,397,820,Yes,Yes,Submersible,Public Supply,TCEQ Source ID: G2270014C. Casing cemented from 393 feet to surface.
+5835617,30.445834,-97.648611,Travis,218EBFZA,City of Pflugerville Well #4 ,W,5/17/1980,580,101,,397,580,820,Yes,Yes,Submersible,Public Supply,TCEQ Source ID: G2270014C. Casing cemented from 393 feet to surface.
+5835618,30.437222,-97.644722,Travis,218EBFZA,City of Pflugerville Well #5 ,W,2/18/1983,527,10,6,0,425,780,Yes,Yes,Submersible,Public Supply,TCEQ Source ID: G2270014D. Well #5. Observation well for test of 619. Test data in TWDB files.
+5835618,30.437222,-97.644722,Travis,218EBFZA,City of Pflugerville Well #5 ,W,2/18/1983,527,101,6,425,527,780,Yes,Yes,Submersible,Public Supply,TCEQ Source ID: G2270014D. Well #5. Observation well for test of 619. Test data in TWDB files.
+5835619,30.440556,-97.643334,Travis,218EBFZA,City of Pflugerville Well #6 ,W,0/0/1984,508,10,16,0,430,809,Yes,Yes,Turbine,Public Supply,"TCEQ Source ID: G2270014E. Well #6, Weber Well. Reported aver- age yield 2979 GPM with 39.37 feet drawdown after pumping 24 hours in 1985. Specific capacity 75.6 GPM/ft. Aquifer test and results in TWDB files."
+5835620,30.421389,-97.651112,Travis,218EBFZA,Dessau Mobile Home Park,W,7/4/1984,440,10,8,0,360,714,Yes,No,Submersible,Public Supply,"TCEQ Source ID: G2270232B. Reported yield, 500 gpm.  Casing cemented from 355 feet to surface."
+5835620,30.421389,-97.651112,Travis,218EBFZA,Dessau Mobile Home Park,W,7/4/1984,440,101,,360,440,714,Yes,No,Submersible,Public Supply,"TCEQ Source ID: G2270232B. Reported yield, 500 gpm.  Casing cemented from 355 feet to surface."
+5835621,30.440278,-97.659723,Travis,218EDRDA,Manville WSC HEB #2,W,8/0/1986,505,10,13,0,395,781,Yes,No,Submersible,Public Supply,Owner Well Number: HEB Well #2. TCEQ Source ID: G2270033P. Reported yield 650 GPM with 12 feet drawdown after pumping 12 hours in 1986. Specific capacity 54.17 GPM/ft. Pumping level 232 feet. Cemented from 0 to 395 feet.
+5835621,30.440278,-97.659723,Travis,218EDRDA,Manville WSC HEB #2,W,8/0/1986,505,101,12,399,460,781,Yes,No,Submersible,Public Supply,Owner Well Number: HEB Well #2. TCEQ Source ID: G2270033P. Reported yield 650 GPM with 12 feet drawdown after pumping 12 hours in 1986. Specific capacity 54.17 GPM/ft. Pumping level 232 feet. Cemented from 0 to 395 feet.
+5835621,30.440278,-97.659723,Travis,218EDRDA,Manville WSC HEB #2,W,8/0/1986,505,101,6,460,505,781,Yes,No,Submersible,Public Supply,Owner Well Number: HEB Well #2. TCEQ Source ID: G2270033P. Reported yield 650 GPM with 12 feet drawdown after pumping 12 hours in 1986. Specific capacity 54.17 GPM/ft. Pumping level 232 feet. Cemented from 0 to 395 feet.
+5835622,30.44,-97.659723,Travis,218EDRDA,Manville WSC HEB #1,W,8/30/1986,540,10,13,0,399,780,Yes,No,Submersible,Public Supply,Owner Well Number: HEB Well #1. TCEQ Source ID: G2270033O. Reported yield 188 GPM with 1.02 feet drawdown after pumping 48 hours in 1986. Specific capacity 184.31 GPM/ft. Pumping level 221.02 feet. Cemented from 0 to 399 feet.
+5835622,30.44,-97.659723,Travis,218EDRDA,Manville WSC HEB #1,W,8/30/1986,540,101,12,400,470,780,Yes,No,Submersible,Public Supply,Owner Well Number: HEB Well #1. TCEQ Source ID: G2270033O. Reported yield 188 GPM with 1.02 feet drawdown after pumping 48 hours in 1986. Specific capacity 184.31 GPM/ft. Pumping level 221.02 feet. Cemented from 0 to 399 feet.
+5835622,30.44,-97.659723,Travis,218EDRDA,Manville WSC HEB #1,W,8/30/1986,540,,8,470,540,780,Yes,No,Submersible,Public Supply,Owner Well Number: HEB Well #1. TCEQ Source ID: G2270033O. Reported yield 188 GPM with 1.02 feet drawdown after pumping 48 hours in 1986. Specific capacity 184.31 GPM/ft. Pumping level 221.02 feet. Cemented from 0 to 399 feet.
+5835623,30.460834,-97.658612,Travis,218EBFZA,Manville WSC Well 4A,W,5/18/1988,560,10,11,0,366,797,Yes,No,Submersible,Public Supply,Owner Well Number: 4A. TCEQ Source ID: G2270033F. 
+5835623,30.460834,-97.658612,Travis,218EBFZA,Manville WSC Well 4A,W,5/18/1988,560,101,10,366,560,797,Yes,No,Submersible,Public Supply,Owner Well Number: 4A. TCEQ Source ID: G2270033F. 
+5835624,30.4375,-97.644445,Travis,218EDRDA,City of Pflugerville Well # 7,W,5/20/1992,540,10,16,0,415,785,Yes,Yes,Turbine,Public Supply,TCEQ Source ID: G2270014F. Aquifer test and results in TWDB files.
+5835624,30.4375,-97.644445,Travis,218EDRDA,City of Pflugerville Well # 7,W,5/20/1992,540,101,15,415,540,785,Yes,Yes,Turbine,Public Supply,TCEQ Source ID: G2270014F. Aquifer test and results in TWDB files.
+5835625,30.445556,-97.641945,Travis,218EDRDA,Tom Arnold,W,,350,,,,,790,Yes,No,None,Unused,Recorder site.
+5835626,30.436389,-97.640556,Travis,218EDRDA,City of Pflugerville,O,0/0/1998,450,,,,,805,Yes,No,None,Unused,
+5835627,30.439167,-97.660001,Travis,218EBFZA,Manville WSC HEB Well #3,W,7/11/1999,500,10,13,0,380,781,Yes,No,Submersible,Public Supply,Owner Well Number: HEB well #3. USGS Site Number: 302621097393601. TCEQ Source ID: G2270033V. Measured yield 455 GPM with 7 feet drawdown after pumping 9 hours in 1999. Specific capacity 65 GPM/ft. Cemented from 0 to 380 feet.
+5835627,30.439167,-97.660001,Travis,218EBFZA,Manville WSC HEB Well #3,W,7/11/1999,500,101,12,380,500,781,Yes,No,Submersible,Public Supply,Owner Well Number: HEB well #3. USGS Site Number: 302621097393601. TCEQ Source ID: G2270033V. Measured yield 455 GPM with 7 feet drawdown after pumping 9 hours in 1999. Specific capacity 65 GPM/ft. Cemented from 0 to 380 feet.
+5835701,30.388056,-97.725833,Travis,218EDRDA,Balcones Research  Center,W,3/26/1942,610,10,10,0,90,793,Yes,Yes,Submersible,Public Supply,USGS Site Number: 302316097430401. Aquifer test in TWDB R-98. Specific capacity 3.0 GPM/ft. Test data in TWDB files.
+5835701,30.388056,-97.725833,Travis,218EDRDA,Balcones Research  Center,W,3/26/1942,610,10,8,0,307,793,Yes,Yes,Submersible,Public Supply,USGS Site Number: 302316097430401. Aquifer test in TWDB R-98. Specific capacity 3.0 GPM/ft. Test data in TWDB files.
+5835701,30.388056,-97.725833,Travis,218EDRDA,Balcones Research  Center,W,3/26/1942,610,101,,307,610,793,Yes,Yes,Submersible,Public Supply,USGS Site Number: 302316097430401. Aquifer test in TWDB R-98. Specific capacity 3.0 GPM/ft. Test data in TWDB files.
+5835702,30.386667,-97.745834,Travis,218EDRDA,Mrs. Tom Williams ,W,0/0/1935,49,,,,,873,Yes,Yes,None,Unused,Historical observation well.
+5835704,30.3775,-97.736111,Travis,218EDRDA,George Shafer ,W,,400,,,,,740,Yes,Yes,None,Plugged or Destroyed,Abandoned and destroyed.  Water contaminated in 1943 from magnesium plant nearby.  Well D-125 in 1957 Travis County report.
+5835705,30.414445,-97.710001,Travis,218EBFZA,A C Roberts ,W,12/0/1961,328,,,,,720,No,Yes,Submersible,Domestic,
+5835707,30.403889,-97.723333,Travis,218EDRDA,E.H. Gault,W,,304,,,,,760,Yes,Yes,Piston,Domestic,Well D-66 in 1957 Travis County report.
+5835708,30.401667,-97.730555,Travis,218EDRDA,Robinson Brothers ,W,,400,,,,,801,Yes,Yes,Piston,Domestic,Well D-73 in 1957 Travis County report.
+5835711,30.413334,-97.747222,Travis,218EDRDA,J.C. DeGress,W,,63,,,,,870,Yes,Yes,Piston,Unused,Abandoned.  Well D-24 in 1957 Travis County report.
+5835714,30.376944,-97.740556,Travis,218EDRDA,George Shafet ,W,,65,,,,,755,Yes,Yes,,Unused,Abandoned.  Contaminated by the magnesium plant in 1943.  Well D-123 in 1957 Travis County report.
+5835716,30.402778,-97.712778,Travis,218EDRDA,J.R. Gault,W,0/0/1904,307,,,,,725,No,Yes,Piston,Unused,Show of oil at 190 ft.  Well D-68 in 1957 Travis County report.
+5835718,30.393056,-97.734167,Travis,218EDRDA,University of Texas  Roger Spring,S,,,,,,,785,No,Yes,None,Unused,"USGS Site Number: 302336097440401. Rogers Spring.  Estimated flow 4 gal/min on Oct. 14,1940 and 25 gal/ min on Dec 14,1973.  Well D-74 in TBWE B-5708."
+5835719,30.386945,-97.743056,Travis,218EDRDA,Beal Stone,S,,,,,,,840,No,Yes,None,Unused,"USGS Site Number: 302314097443601. Estimated flow 5 gal/min on Dec.14, 1973.  Well D-75 in TBWE B-5708. County report."
+5835721,30.3930556,-97.7280556,Travis,218EDDT,Balcones Research  Center,T,6/0/1988,1265,10,7,0,248,791,Yes,Yes,None,Unused,Pickle Research Center test hole. Core samples from 235 to 1265 feet. Geophysical logs in TWDB files. No D-log found.
+5835721,30.3930556,-97.7280556,Travis,218EDDT,Balcones Research  Center,T,6/0/1988,1265,10,6,0,226,791,Yes,Yes,None,Unused,Pickle Research Center test hole. Core samples from 235 to 1265 feet. Geophysical logs in TWDB files. No D-log found.
+5835721,30.3930556,-97.7280556,Travis,218EDDT,Balcones Research  Center,T,6/0/1988,1265,101,7,248,1265,791,Yes,Yes,None,Unused,Pickle Research Center test hole. Core samples from 235 to 1265 feet. Geophysical logs in TWDB files. No D-log found.
+5835723,30.4119444,-97.7211111,Travis,218EDRDA,USGS,O,9/3/2005,100,10,,0,40,768,Yes,No,,Unused,USGS Site Number: 302443097431601. 
+5835723,30.4119444,-97.7211111,Travis,218EDRDA,USGS,O,9/3/2005,100,11,,40,100,768,Yes,No,,Unused,USGS Site Number: 302443097431601. 
+5835801,30.393334,-97.680278,Travis,218EDRDA,Stark ,W,,300,,,,,657,Yes,No,Piston,Unused,
+5835802,30.377222,-97.6775,Travis,218EDRDA,Anton Von Berg,W,0/0/1948,465,,,,,715,Yes,Yes,None,Unused,"Filled to 10 feet before Feb.16, 1973."
+5835803,30.402223,-97.682778,Travis,218EDDT,A.W. Cox,W,0/0/1900,1400,,,,,660,Yes,Yes,Submersible,Public Supply,Used for tourist court.  Well D-59 in 1957 Travis County Report. Historical observation well.
+5835804,30.383055,-97.706667,Travis,218EDRDA,G.F. Roberts,W,0/0/1970,416,,,,,735,Yes,Yes,Submersible,Irrigation,
+5835805,30.404167,-97.680555,Travis,218EDRDA,John Mus,W,0/0/1939,423,,,,,680,No,Yes,Piston,Domestic,Well D-56 in 1957 Travis County report.
+5835806,30.402223,-97.678055,Travis,218EDRDA,John Mus,W,0/0/1932,459,,,,,690,Yes,Yes,Submersible,Domestic,
+5835808,30.390834,-97.694445,Travis,218EDRDA,Mrs. Richard Gracy,W,0/0/1976,460,10,5,0,300,762,Yes,No,Submersible,Domestic,
+5835808,30.390834,-97.694445,Travis,218EDRDA,Mrs. Richard Gracy,W,0/0/1976,460,101,,300,460,762,Yes,No,Submersible,Domestic,
+5835809,30.391389,-97.694445,Travis,218EDRDA,Mrs. Richard Gracy,W,0/0/1933,445,,,,,772,Yes,No,None,Plugged or Destroyed,"Well destroyed June 6,1980."
+5835810,30.39,-97.68,Travis,218EBFZA,Conrad Blevins,W,7/12/1985,580,10,,0,410,665,Yes,No,Submersible,Irrigation,Water reported slightly saline.
+5835810,30.39,-97.68,Travis,218EBFZA,Conrad Blevins,W,7/12/1985,580,101,,410,580,665,Yes,No,Submersible,Irrigation,Water reported slightly saline.
+5835811,30.4038889,-97.7055556,Travis,218EBFZA,Austin Community College,O,5/26/1999,610,10,7,0,238,677,Yes,No,Submersible,Unused,Well cemented from 0 to 238 feet. Well originally drilled to 238 feet. Deepened to 610 feet in 1999. Edwards Aquifer Monitoring Well Project. Top of casing is 3 ft. above land surface. This well has a history of cycling between about 100 and 300 feet depth to water. It is pretty close to Walnut Creek and there may be some connections between the creek and the aquifer.
+5835811,30.4038889,-97.7055556,Travis,218EBFZA,Austin Community College,O,5/26/1999,610,101,6,238,610,677,Yes,No,Submersible,Unused,Well cemented from 0 to 238 feet. Well originally drilled to 238 feet. Deepened to 610 feet in 1999. Edwards Aquifer Monitoring Well Project. Top of casing is 3 ft. above land surface. This well has a history of cycling between about 100 and 300 feet depth to water. It is pretty close to Walnut Creek and there may be some connections between the creek and the aquifer.
+5835902,30.392222,-97.646389,Travis,218EDRDA,B. Hamann ,W,0/0/1920,725,,,,,728,Yes,Yes,Piston,Irrigation,Well E-37 in 1957 Travis County report.
+5835906,30.410834,-97.648889,Travis,218EDRDA,Baker ,W,4/10/1976,600,10,4,0,500,750,Yes,Yes,Submersible,Domestic,
+5835906,30.410834,-97.648889,Travis,218EDRDA,Baker ,W,4/10/1976,600,101,,500,600,750,Yes,Yes,Submersible,Domestic,
+5835909,30.416944,-97.653612,Travis,218EBFZA,Dessau Mobile Home Park,W,3/10/1984,540,10,6,0,460,758,Yes,No,Submersible,Public Supply,"TCEQ Source ID: G2270232A. Reported yield, 200-400 gpm. Casing cemented from 460 feet to surface."
+5835909,30.416944,-97.653612,Travis,218EBFZA,Dessau Mobile Home Park,W,3/10/1984,540,101,,460,540,758,Yes,No,Submersible,Public Supply,"TCEQ Source ID: G2270232A. Reported yield, 200-400 gpm. Casing cemented from 460 feet to surface."
+5836104,30.462501,-97.5975,Travis,218EDRDA,H.J. Bohls,W,0/0/1912,630,,,,,722,No,Yes,Piston,Domestic,Well E-14 in 1957 Travis County report.
+5836107,30.470833,-97.622778,Travis,218EBFZA,Manville WSC #5 Wilke Ln.,W,4/17/1985,640,10,16,0,469,736,Yes,Yes,Submersible,Public Supply,Owner Well Number: #5 Wilke Ln. TCEQ Source ID: G2270033H. Reported yield 300 GPM with 37 feet drawdown after pumping 36 hours in 1985.  Casing cemented from 469 feet to surface. Specific capacity 8.1 GPM/ft.
+5836107,30.470833,-97.622778,Travis,218EBFZA,Manville WSC #5 Wilke Ln.,W,4/17/1985,640,101,,469,640,736,Yes,Yes,Submersible,Public Supply,Owner Well Number: #5 Wilke Ln. TCEQ Source ID: G2270033H. Reported yield 300 GPM with 37 feet drawdown after pumping 36 hours in 1985.  Casing cemented from 469 feet to surface. Specific capacity 8.1 GPM/ft.
+5836202,30.499445,-97.58,Travis,218EDRDA,Robert Avant,W,0/0/1913,725,,,,,765,No,Yes,Piston,Domestic,Well E-6 in 1957 Travis County reports.
+5836205,30.479167,-97.552778,Travis,218EDRDA,G. Pruitt ,W,0/0/1950,800,,,,,652,Yes,Yes,None,Unused,"Measured flow 0.25 gal./min. on July 24, 1973."
+5836206,30.480833,-97.581111,Travis,218EDRDA,G. Pruitt ,W,0/0/1950,614,,,,,692,Yes,Yes,None,Unused,
+5836207,30.496945,-97.569444,Travis,218EDRDA,Robert Klepzig,W,0/0/1978,780,,,,,730,No,Yes,Submersible,Domestic,Pump set at 315 feet.
+5836208,30.474722,-97.580833,Travis,218EBFZA,Blackhawk Golf Course ,W,10/2/1990,680,10,8,0,540,661,Yes,No,Submersible,Irrigation,Reported yield 300 GPM with 150 feet drawdown in 1990. Specific capacity 2 GPM/ft.
+5836208,30.474722,-97.580833,Travis,218EBFZA,Blackhawk Golf Course ,W,10/2/1990,680,101,8,540,680,661,Yes,No,Submersible,Irrigation,Reported yield 300 GPM with 150 feet drawdown in 1990. Specific capacity 2 GPM/ft.
+5836401,30.4375,-97.623889,Travis,218EDRDA,Pflugerville Gin,W,0/0/1939,696,,,,,750,No,Yes,Turbine,Public Supply,Reported yield 60 gal/min. Water encountreted at 631 to 690 ft. Well E-21 in 1957 Travis County report. The 1938 water quality results are not listed in B5708.
+5836402,30.451667,-97.605278,Travis,218EDRDA,George Pfluger,W,0/0/1925,610,,,,,755,Yes,Yes,Submersible,Stock,Historical observation well.
+5836403,30.437778,-97.623611,Travis,218EDRDA,Otto Pfluger City of Pflugerville,W,12/30/1965,692,10,7,0,479,755,Yes,Yes,None,Unused,Reported yield 25 GPM with 60 feet drawdown in 1965. Specific capacity 0.4 GPM/ft.
+5836403,30.437778,-97.623611,Travis,218EDRDA,Otto Pfluger City of Pflugerville,W,12/30/1965,692,101,,479,692,755,Yes,Yes,None,Unused,Reported yield 25 GPM with 60 feet drawdown in 1965. Specific capacity 0.4 GPM/ft.
+5836404,30.437778,-97.623889,Travis,218EDRDA,Otto Pfluger,W,0/0/1968,632,,,,,755,Yes,Yes,Submersible,Public Supply,TCEQ Source ID: G2270014A. Cemented from 485 ft to surface.
+5836405,30.419167,-97.621389,Travis,218EDRDA,Fred Zwerneman,W,3/1/1965,530,,,,,690,Yes,Yes,Submersible,Domestic,Reported yield 30 gal/min.
+5836406,30.439167,-97.611112,Travis,218EDRDA,Gene Freudenberg,W,7/14/1971,619,,,,,685,Yes,Yes,Submersible,Domestic,Dug well.  Well E-12 in 1957 Travis County report.
+5836407,30.438611,-97.623611,Travis,218EBFZA,City of Pflugerville,W,1/10/1978,700,10,10,0,480,755,No,Yes,Turbine,Public Supply,TCEQ Source ID: G2270014B. Casing cemented from 480 feet to surface. Reported yield 300 GPM in 1978.
+5836407,30.438611,-97.623611,Travis,218EBFZA,City of Pflugerville,W,1/10/1978,700,101,,480,700,755,No,Yes,Turbine,Public Supply,TCEQ Source ID: G2270014B. Casing cemented from 480 feet to surface. Reported yield 300 GPM in 1978.
+5836502,30.438056,-97.581667,Travis,218EBFZA,Remington Savings ,W,,770,10,6,,,660,Yes,No,None,Unused,
+5836503,30.456112,-97.570278,Travis,218EBFZA,Ken Henderson ,W,7/7/1986,858,10,6,0,138,647,Yes,No,None,Unused,T.W.D.B. test hole.
+5836503,30.456112,-97.570278,Travis,218EBFZA,Ken Henderson ,W,7/7/1986,858,101,,138,532,647,Yes,No,None,Unused,T.W.D.B. test hole.
+5836503,30.456112,-97.570278,Travis,218EBFZA,Ken Henderson ,W,7/7/1986,858,10,6,532,714,647,Yes,No,None,Unused,T.W.D.B. test hole.
+5836503,30.456112,-97.570278,Travis,218EBFZA,Ken Henderson ,W,7/7/1986,858,101,,714,858,647,Yes,No,None,Unused,T.W.D.B. test hole.
+5836703,30.416389,-97.625,Travis,218EBFZA,Dessau Supply Co. Inc.,W,11/8/1983,580,,,,,715,No,No,,Public Supply,TCEQ Source ID: G2270014G. 
+5842308,30.361667,-97.760001,Travis,218EDRDA,James Knox,S,,,,,,,820,No,Yes,None,Unused,USGS Site Number: 302143097453701. Estimated discharge 25 GPM on 2/6- /73.
+5842310,30.357501,-97.757223,Travis,218EBFZA,M. E. Hart,W,2/14/1986,680,10,6,0,200,810,Yes,Yes,Submersible,Domestic,
+5842310,30.357501,-97.757223,Travis,218EBFZA,M. E. Hart,W,2/14/1986,680,101,,200,680,810,Yes,Yes,Submersible,Domestic,
+5842311,30.372222,-97.763612,Travis,218EDRDA,City of Austin Stillhouse Hollow Spg.,S,,,,,,,754,No,Yes,,,USGS Site Number: 302218097454901. Stillhouse Hollow Spring.
+5842602,30.330278,-97.751945,Travis,218EDRDA,Austin Memorial Park,W,0/0/1928,330,,,,,707,Yes,Yes,None,Unused,"Abandoned.  U.S.G.S. water-level recorder was operated from Sept.13, 1950, to Feb. 12,1962.  Well H-14 in 1957 Travis County report."
+5842604,30.311389,-97.768055,Travis,218EDRDA,F.A. Boyce,W,0/0/1950,143,,,,,540,No,Yes,Jet,Unused,Well H-9 in 1957 Travis County report.
+5842605,30.305834,-97.764167,Travis,218EDRDA,Austin State School ,W,,23,,,,,610,Yes,Yes,None,Unused,Dug well.  Abandoned in 1969.  Well H-11 in 1957 Travis County report.
+5842606,30.313056,-97.756389,Travis,218EDRDA,TxDOT ,W,0/0/1939,405,,,,,653,No,Yes,None,Unused,Abandoned.  Depth before 1940 was 240 ft. Well H-15 in 1957 Travis County report.
+5842607,30.301389,-97.771944,Travis,218EDRDA,Fagan Dickson ,W,0/0/1949,300,,,,,580,Yes,Yes,,Unused,Well H-32 in 1957 Travis County report.
+5842608,30.303334,-97.776389,Travis,218EDRDA,F.M. Pearce ,W,0/0/1939,145,,,,,509,Yes,Yes,Submersible,Domestic,
+5842610,30.293611,-97.785,Travis,218EDRDA,City of Austin Power House / Dam Sprg,S,,,,,,,460,No,Yes,None,Unused,"Owner Well Number: Power House or Dam Spring. USGS Site Number: 301738097470701. Power House or Dam Spring. Reported flow 0.056 cfs on Feb. 5,1973."
+5842611,30.314445,-97.775,Travis,218EDRDA,City of Austin Mt Bonnell Springs,S,,,,,,,490,No,No,None,Unused,USGS Site Number: 301853097463101. Mount Bonnell Springs (about 25 springs).  They are now nearly all inundated by Lake Austin.
+5842613,30.3175,-97.771389,Travis,218EDRDA,Mount Bonnell Terrace ,T,5/0/1971,85,10,4,,,636,Yes,No,,,Wastewater tunnel test hole No.V-13 Measured drawdown 0.22 feet after pumping for 5 hours at 29 GPM. Aquifer test results in TDWR R-276. Data in TWDB files.
+5842614,30.314723,-97.769722,Travis,218EDRDA,City of Austin,T,0/0/1971,130,,,,,547,Yes,No,,,Wastewater tunnel test hole V-8.
+5842615,30.311945,-97.763612,Travis,218EDRDA,Camp Mabry,T,0/0/1971,130,,,,,594,Yes,No,,,Destroyed.  Wastewater tunnel test hole V-12.
+5842616,30.308056,-97.761389,Travis,218EDRDA,Austin State School ,T,0/0/1971,240,,,,,616,Yes,No,,,Destroyed. Wastewater tunnel test hole V-3.
+5842617,30.305834,-97.767778,Travis,218EDRDA,L.C. Scruggs,S,,,,,,,540,No,Yes,None,Unused,USGS Site Number: 301822097460501. Measured discharge 10 GPM on 2/6/- 73.
+5842618,30.313334,-97.774722,Travis,218EDRDA,City of Austin Mormon / Taylor Spring,S,,,,,,,490,No,Yes,None,Unused,Owner Well Number: Mormon or Taylor Springs. USGS Site Number: 301849097463001. Mormon or Taylor Springs.  At least 25 springs issue from the Mount Bonnell Fault just below the normal level of Lake Austin.  Measured discharge 500 GPM on 2/6/73.
+5842619,30.297222,-97.79,Travis,218EDRDA,City of Austin part of Bee Springs ,S,,,,,,,490,No,No,None,Public Supply,USGS Site Number: 301751097472501. Part of Bee Springs. Located on the Mount Bonnell Fault.  It is now largerly beneath Lake Austin.
+5842622,30.32,-97.7533333,Travis,,Texas State Cemetary,W,1/23/2003,504,10,8,0,300,665,Yes,No,Submersible,Unused,Well Report Tracking Number: 22974. Steel cement basket set at 100 ft.
+5842622,30.32,-97.7533333,Travis,,Texas State Cemetary,W,1/23/2003,504,10,8,300,502,665,Yes,No,Submersible,Unused,Well Report Tracking Number: 22974. Steel cement basket set at 100 ft.
+5842711,30.2511111,-97.8372222,Travis,218EDRDA,USGS,W,,239,10,7,0,16,766,Yes,Yes,None,Unused,USGS Site Number: 301504097501401. 
+5842711,30.2511111,-97.8372222,Travis,218EDRDA,USGS,W,,239,10,3,0,139,766,Yes,Yes,None,Unused,USGS Site Number: 301504097501401. 
+5842711,30.2511111,-97.8372222,Travis,218EDRDA,USGS,W,,239,11,3,139,239,766,Yes,Yes,None,Unused,USGS Site Number: 301504097501401. 
+5842809,30.266112,-97.810001,Travis,218EDRDA,Carlysle Schnelle ,W,0/0/1949,340,,,,,720,Yes,Yes,Submersible,Domestic,
+5842810,30.270833,-97.809723,Travis,218EDRDA,Swenson ,W,0/0/1912,295,,,,,700,Yes,Yes,None,Unused,
+5842811,30.260001,-97.823333,Travis,218EDRDA,City of Austin Back Door Springs ,S,,,,,,,580,No,Yes,None,Recreation,"USGS Site Number: 301537097492501. Backdoor Spring.  Estimated flow 20 gal/min on July 7,1970 and 10 gal/ min in May 1972."
+5842812,30.264723,-97.813612,Travis,218EDRDA,W.F Guyton,W,7/0/1958,375,,,,,745,Yes,No,Submersible,Domestic,"Cemented from 0-140 feet slotted from 237-236 feet.  Measured draw- down 1.5 feet after pumping 1 hour at 20 gal/min on June 5,1969."
+5842813,30.274444,-97.794722,Travis,218EDRDA,Dellana Hills Water  System CO-OP,W,0/0/1947,300,10,5,0,280,654,Yes,Yes,Submersible,Public Supply,USGS Site Number: 301628097474001. TCEQ Source ID: G2270108A. This well supplies 15 families.
+5842813,30.274444,-97.794722,Travis,218EDRDA,Dellana Hills Water  System CO-OP,W,0/0/1947,300,101,,280,300,654,Yes,Yes,Submersible,Public Supply,USGS Site Number: 301628097474001. TCEQ Source ID: G2270108A. This well supplies 15 families.
+5842814,30.274444,-97.794722,Travis,218EDRDA,Dellana Hills Water  System CO-OP,W,0/0/1947,300,,,,,653,Yes,Yes,Submersible,Public Supply,TCEQ Source ID: G2270108B. This well supplies 24 families.
+5842815,30.253056,-97.8325,Travis,218EDRDA,Travis Country,W,0/0/1952,516,,,,,751,Yes,No,None,Unused,Used for golf course.
+5842816,30.2775,-97.793889,Travis,218EDRDA,Ridgewood Village ,W,0/0/1964,290,,,,,640,No,Yes,Submersible,Public Supply,TCEQ Source ID: G2270015A. Supplies 65 homes.  Reported yield 170 gal/min.
+5842817,30.265278,-97.817222,Travis,218EDRDA,USGS,W,0/0/1978,257,10,6,0,30,762,Yes,No,None,Plugged or Destroyed,U.S.G.S. test well no.1. Could not locate in 2010.
+5842817,30.265278,-97.817222,Travis,218EDRDA,USGS,W,0/0/1978,257,101,,30,257,762,Yes,No,None,Plugged or Destroyed,U.S.G.S. test well no.1. Could not locate in 2010.
+5842818,30.270833,-97.809723,Travis,218EDRDA,Swenson ,W,0/0/1953,300,,,,,700,Yes,No,Submersible,Domestic,
+5842819,30.2611111,-97.8175,Travis,218EDRDA,City of Austin Greenbelt well,W,3/0/1982,311,10,3,0,311,737,Yes,No,,Unused,Originally reported to be 420 feet deep. Barton Springs Edwards Aquifer CD recorder well. Observation well for aquifer test of 825 in 1998. Water level measurements between 9/21/1994 and 2/10/2005 originally reported from measuring point; on 3/12/2018 those measurements adjusted to subtract the measuring point (1.94 ft) to display as depth from land surface.
+5842820,30.261389,-97.816944,Travis,218EDRDA,Barton-Laredo Interest,W,4/10/1982,450,10,9,0,100,700,No,Yes,Submersible,Commercial,
+5842820,30.261389,-97.816944,Travis,218EDRDA,Barton-Laredo Interest,W,4/10/1982,450,10,7,82,212,700,No,Yes,Submersible,Commercial,
+5842820,30.261389,-97.816944,Travis,218EDRDA,Barton-Laredo Interest,W,4/10/1982,450,11,7,212,450,700,No,Yes,Submersible,Commercial,
+5842821,30.263056,-97.813889,Travis,218EDRDA,Georgian Leasing c/o Steven Courlitz ,W,4/9/1981,460,10,7,0,350,740,Yes,Yes,Submersible,Commercial,Aquifer test data and results in TWDB files. Site 84 in BSEACD Report 2010-0701. Reported yield 16 GPM with 10.4 feet drawdown after 1.5 hours in 1982. Specific capacity 1.25 GPM/- ft. Also used as observation well for test of 825 in 1998.
+5842821,30.263056,-97.813889,Travis,218EDRDA,Georgian Leasing c/o Steven Courlitz ,W,4/9/1981,460,101,,350,460,740,Yes,Yes,Submersible,Commercial,Aquifer test data and results in TWDB files. Site 84 in BSEACD Report 2010-0701. Reported yield 16 GPM with 10.4 feet drawdown after 1.5 hours in 1982. Specific capacity 1.25 GPM/- ft. Also used as observation well for test of 825 in 1998.
+5842822,30.275,-97.794167,Travis,218EDRDA,Mrs. George Hatley G & J Water District,W,0/0/1957,300,10,5,,,658,No,No,Submersible,Public Supply,TCEQ Source ID: G2270109A. 
+5842824,30.273333,-97.793611,Travis,218EDRDA,G.H. Oldenburg,W,0/0/1965,360,,,,,640,No,No,None,Unused,
+5842825,30.264167,-97.814445,Travis,218EDRDA,Rudy's Bar-B-Q,W,6/19/1998,450,10,6,0,335,743,Yes,Yes,Submersible,Commercial,Barton Springs-EACD Meter# 06680670 MP= +3.25 feet Site 85 in BSEACD Report 2010-0701. Reported yield 40 GPM with 76 feet drawdown after 36 hours in 1998. Specific capacity 0.53 GPM/ft. Partial aquifer test data and resu- lts in TWDB files.
+5842825,30.264167,-97.814445,Travis,218EDRDA,Rudy's Bar-B-Q,W,6/19/1998,450,11,6,335,355,743,Yes,Yes,Submersible,Commercial,Barton Springs-EACD Meter# 06680670 MP= +3.25 feet Site 85 in BSEACD Report 2010-0701. Reported yield 40 GPM with 76 feet drawdown after 36 hours in 1998. Specific capacity 0.53 GPM/ft. Partial aquifer test data and resu- lts in TWDB files.
+5842825,30.264167,-97.814445,Travis,218EDRDA,Rudy's Bar-B-Q,W,6/19/1998,450,101,9,355,450,743,Yes,Yes,Submersible,Commercial,Barton Springs-EACD Meter# 06680670 MP= +3.25 feet Site 85 in BSEACD Report 2010-0701. Reported yield 40 GPM with 76 feet drawdown after 36 hours in 1998. Specific capacity 0.53 GPM/ft. Partial aquifer test data and resu- lts in TWDB files.
+5842826,30.2613889,-97.7952778,Travis,218EDRDA,USGS,O,,404,10,8,,,703,Yes,No,,Unused,USGS Site Number: 301541097474301. 
+5842901,30.275,-97.78,Travis,218EDRDA,City of Rollingwood ,W,0/0/1948,244,10,0,147,,525,Yes,Yes,None,Unused,Supplied Rollingwood until 1968. Estimated yield 500 gal/min. Well H-202 in 1957 Travis County report- B5708. Well was originally drilled in 1948 but was deepened in 1955.
+5842903,30.263056,-97.771389,Travis,218EBFZA,USGS City of Austin,W,,45,,,,,461,Yes,Yes,None,Unused,BS/EACD Continuous WL observation well. Well H-62 in TBWE B-5708.
+5842910,30.2775,-97.785,Travis,218EDRDA,City of Rollingwood ,W,0/0/1955,264,,,,,570,No,No,None,Unused,Reported drawdown 2.5 ft after pumping 8 hours at 500 gal/min. Used for Rollingwood water supply until 1968.  Well H-204 in 1957 Travis County report.
+5842911,30.268889,-97.782778,Travis,218EDRDA,Bee Caves Properties,W,0/0/1920,135,,,,,584,Yes,Yes,Submersible,Domestic,Originally dug to 90 feet then drilled to 135 feet.
+5842912,30.2775,-97.785,Travis,218EDRDA,City of Rollingwood ,W,0/0/1955,245,,,,,570,Yes,No,None,Unused,Estimated yield 500 gal/min. Used for Rollingwood water supply until 1968.  Well H-203 in 1957 Travis County report.
+5842913,30.266667,-97.782222,Travis,218EDRDA,Park Hills Baptist Church,W,6/0/1969,180,10,7,0,165,532,Yes,Yes,Submersible,Public Supply,TCEQ Source ID: G2270205A. MP= +1.60 feet
+5842913,30.266667,-97.782222,Travis,218EDRDA,Park Hills Baptist Church,W,6/0/1969,180,101,,165,180,532,Yes,Yes,Submersible,Public Supply,TCEQ Source ID: G2270205A. MP= +1.60 feet
+5842914,30.263612,-97.771111,Travis,218EBFZA,City of Austin Barton Springs fault,S,,,,,,,494,No,Yes,None,Recreation,USGS Site Number: 8155500. Barton Springs main springs 1 and 2 .
+5842915,30.250834,-97.780278,Travis,218EDRDA,Genevieve Duncan Rabb well ,W,0/0/1942,295,,,,,630,Yes,Yes,Piston,Irrigation,Well H-92 in 1957 Travis County report.
+5842916,30.28,-97.78,Travis,218EBFZA,City of Austin Cold Springs,S,,,,,,,430,No,Yes,None,,"USGS Site Number: 301649097464901. Cold or Deep Eddy Springs (5 springs, of which only 2 are now above the level of Town Lake.) Discharge; Aug. 1914, 4.2 ft; Feb. 8,1941, 3.0 ft; 1972, 2.9 ft (above Town Lake surface.)"
+5842919,30.269444,-97.767778,Travis,218EDRDA,City of Austin,S,,,,,,,460,No,Yes,None,,"USGS Site Number: 301611097460501. Estimated flow 10 gal/min on Aug. 25,1972.  Supplies water in Zilker Park."
+5842920,30.2633333,-97.7741667,Travis,218EBFZA,City of Austin Upper Barton Springs,S,,,,,,,521,No,Yes,None,Recreation,"USGS Site Number: 8155395. Part of upper springs in Barton Springs.  Flow on May 11,1973 was 150 gal/min."
+5842921,30.264167,-97.770278,Travis,218EDRDA,City of Austin Eliza Springs ,S,,,,,,,450,No,Yes,None,Public Supply,USGS Site Number: 8155501. Eliza or Park Springs near bathouse
+5842922,30.2636111,-97.7680556,Travis,218EDRDA,City of Austin Old Mill Springs,S,,,,,,,432,No,Yes,None,Public Supply,USGS Site Number: 8155503. Wash or Old Mill Springs. USGS Site Number: 08155503
+5842924,30.286945,-97.77,Travis,218EDRDA,Sue Degraffenried ,W,,400,,,,,540,Yes,No,None,Unused,Well H-30 in 1957 Travis County report.
+5842925,30.2775,-97.7827778,Travis,218EDRDA,Travis Eickenhorst,W,5/0/1975,180,10,5,0,180,571,Yes,Yes,Submersible,Domestic,Observation well.
+5842926,30.276111,-97.783611,Travis,218EDRDA,Eugene Jacobs ,W,0/0/1963,190,,,,,600,Yes,Yes,Submersible,Irrigation,
+5842927,30.250556,-97.753889,Travis,218EBFZA,TWDB Texas School/Deaf ,W,3/6/1986,285,10,6,0,202,500,Yes,No,None,Unused,TWDB testhole. Dual completion well with state well number 5842929.
+5842928,30.2563889,-97.7694444,Travis,218EBFZA,Marshall Frech,W,3/5/1979,303,10,4,0,163,589,Yes,Yes,Submersible,Other,Monitoring well
+5842928,30.2563889,-97.7694444,Travis,218EBFZA,Marshall Frech,W,3/5/1979,303,101,,163,303,589,Yes,Yes,Submersible,Other,Monitoring well
+5842929,30.250556,-97.753889,Travis,218EBFZA,TWDB Texas School/Deaf ,W,3/6/1986,561,101,,202,561,500,Yes,No,None,Unused,Dual completion well with state well number 5842927.
+5842931,30.2708333,-97.7747222,Travis,218EDRDA,Austin Nature and  Science Center,W,,96,10,6,0,,505,Yes,Yes,Submersible,Irrigation,"MP= +1.00 feet. In 2023, MP was updated +1.45 based from BSEACD."
+5842932,30.276389,-97.773333,Travis,218EBFZA,City of Austin Deep Eddy Pool WW3,W,4/14/2010,60,10,11,-3,26,448,Yes,Yes,Submersible,Recreation,Well Report Tracking Number: 223129. Drilled deeper in response to 2009 drought in which 5842906 went dry. Yield: 400 GPM 2 ft drawdown 24 hrs
+5842932,30.276389,-97.773333,Travis,218EBFZA,City of Austin Deep Eddy Pool WW3,W,4/14/2010,60,101,10,26,60,448,Yes,Yes,Submersible,Recreation,Well Report Tracking Number: 223129. Drilled deeper in response to 2009 drought in which 5842906 went dry. Yield: 400 GPM 2 ft drawdown 24 hrs
+5842933,30.276111,-97.7725,Travis,218EBFZA,City of Austin Deep Eddy Pool WW4,W,7/31/2012,298,10,11,0,26,454,Yes,Yes,Submersible,Recreation,Well Report Tracking Number: 297850. Well pumps 24 hrs/day. Yield: 300 GPM 90 ft drawdown 8 hrs
+5842933,30.276111,-97.7725,Travis,218EBFZA,City of Austin Deep Eddy Pool WW4,W,7/31/2012,298,101,10,26,298,454,Yes,Yes,Submersible,Recreation,Well Report Tracking Number: 297850. Well pumps 24 hrs/day. Yield: 300 GPM 90 ft drawdown 8 hrs
+5842934,30.2763889,-97.7713889,Travis,218EBFZA,American Legion  Well #1,W,10/5/2011,120,10,8,0,80,483,Yes,Yes,Submersible,Irrigation,Well Report Tracking Number: 274370. Owner Well Number: 1. 
+5842934,30.2763889,-97.7713889,Travis,218EBFZA,American Legion  Well #1,W,10/5/2011,120,10,5,0,80,483,Yes,Yes,Submersible,Irrigation,Well Report Tracking Number: 274370. Owner Well Number: 1. 
+5842934,30.2763889,-97.7713889,Travis,218EBFZA,American Legion  Well #1,W,10/5/2011,120,11,5,80,120,483,Yes,Yes,Submersible,Irrigation,Well Report Tracking Number: 274370. Owner Well Number: 1. 
+5842935,30.257501,-97.775555,Travis,218EBFZA,Ronald K DeFord ,W,,200,,,,,635,Yes,Yes,Submersible,Irrigation,"Slightly saline: Spec. Cond. 2,320 (11/15/96), 2,250 (3/25/14) 6 inch surface steel casing."
+5842938,30.2745,-97.7792222,Travis,,Land west /Riley,W,2/28/2020,1060,10,4.5,0,1000,591,No,No,Submersible,Irrigation,Well Report Tracking Number: 539113. 
+5842938,30.2745,-97.7792222,Travis,,Land west /Riley,W,2/28/2020,1060,12,4.5,1000,1060,591,No,No,Submersible,Irrigation,Well Report Tracking Number: 539113. 
+5843101,30.338611,-97.719444,Travis,218EDRDA,Jerrerson Chemical Co.,W,10/0/1940,458,10,6,0,406,721,Yes,Yes,None,Unused,
+5843101,30.338611,-97.719444,Travis,218EDRDA,Jerrerson Chemical Co.,W,10/0/1940,458,11,6,406,458,721,Yes,Yes,None,Unused,
+5843103,30.363056,-97.748056,Travis,218EDRDA,E.L. Kendrick  Spicewood Springs ,S,,,,,,,741,No,Yes,,Domestic,Owner Well Number: Spicewood Springs. USGS Site Number: 302146097445101. Other Well Number: D-116 in B-5708. Spicewood Springs.  Reported flow 2 gpm on 10-3-1940 and measured flow 24 gpm on 3-15-72. Well D-116 in TBWE B-5708.
+5843104,30.361389,-97.716667,Travis,218EDRDA,Wrangler Cafe ,W,0/0/1965,401,,,,,750,Yes,No,,Unused,
+5843105,30.349167,-97.742778,Travis,218EDRDA,City of Austin,S,,,,,,,673,No,Yes,None,Public Supply,USGS Site Number: 302054097443301. Spring in Northwest Park.  Measured discharge 10 GPM on 2/16/73.
+5843106,30.366389,-97.717222,Travis,218EDRDA,W.F. Robinson ,W,0/0/1927,395,,,,,733,Yes,Yes,Piston,Domestic,
+5843107,30.360556,-97.750001,Travis,218EDRDA,Koger Properties,S,,,,,,,756,No,No,None,Public Supply,USGS Site Number: 302139097450101. Estimated discharge 10 GPM on 2/9/- 74.
+5843201,30.347778,-97.696389,Travis,218EDRDA,Fred Parsons,W,,409,,,,,674,Yes,Yes,Piston,Domestic,Well D-149 in 1957 Travis County report.
+5843203,30.340834,-97.689722,Travis,218EDRDA,John Teagle ,W,,484,,,,,721,Yes,Yes,None,Unused,Well D-148 in 1957 Travis County report.
+5843204,30.362501,-97.669444,Travis,218EDRDA,R.R. Sansom ,W,,750,,,,,622,Yes,No,None,Unused,Well D-144 in 1957 Travis County report.
+5843205,30.342778,-97.681111,Travis,218EDRDA,Houston Instruments ,W,0/0/1976,563,,,,,630,Yes,No,None,Unused,
+5843206,30.365001,-97.707501,Travis,218EDRDA,H.M. Reese,W,0/0/1970,400,,,,,700,Yes,Yes,Submersible,Domestic,
+5843207,30.363889,-97.695834,Travis,218EDRDA,Don Wheeles ,T,6/0/1982,480,10,4,0,282,684,Yes,No,,,
+5843207,30.363889,-97.695834,Travis,218EDRDA,Don Wheeles ,T,6/0/1982,480,101,,282,480,684,Yes,No,,,
+5843208,30.373055,-97.690834,Travis,218EDRDA,Don Wheeles ,T,6/0/1982,469,10,1,0,292,720,Yes,No,,,
+5843208,30.373055,-97.690834,Travis,218EDRDA,Don Wheeles ,T,6/0/1982,469,101,,292,469,720,Yes,No,,,
+5843311,30.346945,-97.660278,Travis,218EBFZA,"Structure Contractors, Inc.",W,6/25/1986,720,10,5,0,500,610,Yes,No,Submersible,Industrial,"Well flows.  Salty taste, bad odor. 8 inch steel casing cemented from 40 feet to surface.  Plastic liner set from surface to 500 feet."
+5843311,30.346945,-97.660278,Travis,218EBFZA,"Structure Contractors, Inc.",W,6/25/1986,720,10,8,0,40,610,Yes,No,Submersible,Industrial,"Well flows.  Salty taste, bad odor. 8 inch steel casing cemented from 40 feet to surface.  Plastic liner set from surface to 500 feet."
+5843311,30.346945,-97.660278,Travis,218EBFZA,"Structure Contractors, Inc.",W,6/25/1986,720,101,,500,720,610,Yes,No,Submersible,Industrial,"Well flows.  Salty taste, bad odor. 8 inch steel casing cemented from 40 feet to surface.  Plastic liner set from surface to 500 feet."
+5843403,30.326389,-97.724444,Travis,218EDRDA,TDPS,W,0/0/1962,353,,,,,680,Yes,Yes,Submersible,Industrial,
+5843405,30.30565,-97.7474333,Travis,218EDRDA,Austin Parks Dept. Seiders Springs,S,,,,,,,549,No,Yes,None,Unused,"Owner Well Number: Seiders Spring. USGS Site Number: 301822097445101. Seiders Springs. Discharge: 9/4/1971, 150 gpm; 6/7/1942, 30 gpm"
+5843501,30.325833,-97.703889,Travis,218EDRDA,Walling Estate,W,,442,,,,,718,Yes,Yes,Piston,Stock,Well H-24 in 1957 Travis County report.
+5843705,30.287778,-97.736667,Travis,218EDRDA,University of Texas ,W,1/24/1972,445,,,,,599,Yes,Yes,None,Unused,
+5843706,30.271667,-97.745834,Travis,218EDRDA,Austin City Library ,W,11/0/1958,480,10,8,0,205,530,Yes,Yes,None,Unused,"Abandoned.  Reported yield 130 GPM 101 feet drawdown after pumping 4.5 hours in 1958. Specific capacity 1.3 GPM/ft. Aquifer test results in TWDB R-98, unnumbered. Also in TDWR R-276. Data in TWDB files."
+5843706,30.271667,-97.745834,Travis,218EDRDA,Austin City Library ,W,11/0/1958,480,101,,205,480,530,Yes,Yes,None,Unused,"Abandoned.  Reported yield 130 GPM 101 feet drawdown after pumping 4.5 hours in 1958. Specific capacity 1.3 GPM/ft. Aquifer test results in TWDB R-98, unnumbered. Also in TDWR R-276. Data in TWDB files."
+5843707,30.2747222,-97.7397222,Travis,218EDRDA,State of Texas,W,0/0/1859,471,,,,,545,No,No,,Plugged or Destroyed,"Abandoned.  Known as old State Capitol or Austin Artesian well. Probably the first drilled well in Texas.  Deepened to 1160 ft in 1861 and plugged back to 471 ft. It was located beneath the present Capitol building.  Saline mineral water, strong in hydrogen sulfide, was encountered. Well H-68 in 1957 Travis County report."
+5843708,30.263889,-97.737222,Travis,218EDRDA,Southern Pacific Transportation Co.,W,,467,,,,,467,Yes,Yes,None,Unused,Estimated flow 6 gal/min. Strong hydrogen sulfide odor.
+5844901,30.251667,-97.539445,Travis,218EDRDA,Maggie Burleson ,W,0/0/1949,1690,,,,,420,Yes,Yes,None,Unused,Oil test.  Reported flowed until 1950.  Well G-15 in 1957 Travis County report.
+5849309,30.210556,-97.883611,Travis,218EBFZA,Jack Mann ,W,0/0/1969,260,,,,,872,Yes,Yes,,Plugged or Destroyed,Reported yield 20 GPM with 0 feet drawdown. Well destroyed.
+5849614,30.1775,-97.902778,Travis,218EDGR,Ira Yates,W,5/6/2004,620,10,5,0,620,820,No,No,Submersible,Domestic,"Well Report Tracking Number: 178032. 4 in. rubber, burlap packers at 60, 260, 540 & 560 feet."
+5849937,30.158334,-97.887778,Travis,218EDRDA,City of Austin Water/  Wastewater Dept.,W,,,,,,,778,No,No,,,
+5849940,30.1647222,-97.8788889,Travis,218EBFZA,City of Austin BSEACD monitor well,W,,324,,,,,825,Yes,Yes,Submersible,Stock,
+5849943,30.159445,-97.891389,Travis,218EDRDA,Geoff Weisbart,W,8/13/2013,220,10,5,0,160,787,Yes,No,Submersible,Stock,Well Report Tracking Number: 342479. Rubber cone burlap packer at 85 ft.
+5849943,30.159445,-97.891389,Travis,218EDRDA,Geoff Weisbart,W,8/13/2013,220,11,5,160,220,787,Yes,No,Submersible,Stock,Well Report Tracking Number: 342479. Rubber cone burlap packer at 85 ft.
+5850101,30.226111,-97.869444,Travis,218EDRDA,"T.A. Beckett, Jr",W,0/0/1921,217,,,,,868,Yes,No,Centrifugal Pump,Domestic,
+5850102,30.221389,-97.860556,Travis,218EDRDA,T.A. Beckett Jr ,W,0/0/1902,250,,,,,850,Yes,Yes,Submersible,Stock,
+5850103,30.236111,-97.857501,Travis,218EDRDA,Erlene Patton ,W,0/0/1885,45,10,60,,,800,Yes,Yes,Bucket,Domestic,Dug well.  Well J-61 in 1957 Travis County report. Originally dug to 45' but may have caved to about 40'.
+5850104,30.235278,-97.844167,Travis,218EDRDA,Barge Renoe ,W,0/0/1927,234,,,,,760,Yes,No,Piston,Unused,Well 508.  Well J-66 in 1957 Travis County report.
+5850105,30.233889,-97.849722,Travis,218EDRDA,L.L. Hart ,W,,325,,,,,810,Yes,Yes,Piston,Unused,
+5850108,30.210834,-97.834445,Travis,218EDRDA,J.P. Hanley ,W,,235,,,,,715,Yes,Yes,Submersible,Domestic,Well J-68 in 1957 Travis County report.
+5850109,30.225833,-97.869722,Travis,218EDDT,W.E. McCullough ,W,0/0/1956,607,,,,,868,No,Yes,Submersible,Domestic,
+5850110,30.214445,-97.850834,Travis,218EDRDA,Will Beckett,W,0/0/1901,217,,,,,755,Yes,Yes,Submersible,Unused,
+5850111,30.215834,-97.842778,Travis,218EDRDA,T.V. Bryant ,W,,200,,,,,750,No,Yes,Piston,Unused,Abandoned.  Well J-67 in 1957 Travis County report.
+5850112,30.208889,-97.842778,Travis,218EDRDA,J.W. Eskew,W,0/0/1910,300,,,,,760,Yes,Yes,Submersible,Domestic,Depth before 1937 was 225 ft. Well J-69 in 1957 Travis County report.
+5850122,30.238611,-97.838334,Travis,218EBFZA,"AAW Oak Hill , Ltd. ",W,,420,10,9,0,,743,Yes,Yes,,Unused,MP= 2.80 feet Plugged monitor well 11/21/2007.
+5850123,30.2325,-97.863334,Travis,218EBFZA,New Forest Oaks ,W,,295,,,,,840,Yes,Yes,Submersible,Public Supply,MP= +1.35 feet
+5850124,30.212223,-97.874722,Travis,218EDGRU,Lumberman's Assoc. Western Oaks,W,7/22/1993,910,10,8,0,210,830,Yes,No,None,Irrigation,Reported jetted 125 GPM in 1993. Logged to 903 feet in 2000.
+5850124,30.212223,-97.874722,Travis,218EDGRU,Lumberman's Assoc. Western Oaks,W,7/22/1993,910,10,6,0,715,830,Yes,No,None,Irrigation,Reported jetted 125 GPM in 1993. Logged to 903 feet in 2000.
+5850124,30.212223,-97.874722,Travis,218EDGRU,Lumberman's Assoc. Western Oaks,W,7/22/1993,910,101,,715,910,830,Yes,No,None,Irrigation,Reported jetted 125 GPM in 1993. Logged to 903 feet in 2000.
+5850127,30.2205556,-97.8705556,Travis,218EDRDA,USGS,W,,217,10,7,0,19,834,Yes,Yes,None,Unused,USGS Site Number: 301314097521401. 
+5850127,30.2205556,-97.8705556,Travis,218EDRDA,USGS,W,,217,10,3,0,117,834,Yes,Yes,None,Unused,USGS Site Number: 301314097521401. 
+5850127,30.2205556,-97.8705556,Travis,218EDRDA,USGS,W,,217,11,3,117,217,834,Yes,Yes,None,Unused,USGS Site Number: 301314097521401. 
+5850128,30.2155556,-97.8472222,Travis,218EDRDA,USGS,W,,178,10,6,0,20,741,Yes,No,None,Unused,USGS Site Number: 301256097505001. 
+5850128,30.2155556,-97.8472222,Travis,218EDRDA,USGS,W,,178,10,3,0,97,741,Yes,No,None,Unused,USGS Site Number: 301256097505001. 
+5850128,30.2155556,-97.8472222,Travis,218EDRDA,USGS,W,,178,11,3,97,177,741,Yes,No,None,Unused,USGS Site Number: 301256097505001. 
+5850132,30.2263889,-97.8413889,Travis,218EBFZA,City of Austin,W,3/1/1986,187,,,,,744,Yes,No,,,
+5850201,30.219167,-97.793611,Travis,218EDRDA,John Noell,W,0/0/1917,290,10,10,0,,655,Yes,Yes,Submersible,Domestic,Old Jentsch well  MP= +0.00 feet
+5850204,30.212223,-97.823889,Travis,218EDRDA,McAlmeyer ,W,,283,,,,,720,Yes,Yes,Piston,Domestic,Well H-150 in 1957 Travis County report.
+5850205,30.231389,-97.805834,Travis,218EDRDA,S.N. Allred ,W,0/0/1887,265,,,,,685,Yes,Yes,Piston,Domestic,Well H-103 in 1957 Travis County report.
+5850206,30.237222,-97.810001,Travis,218EDRDA,Kenneth Wingfield ,W,0/0/1968,257,,,,,680,Yes,No,Submersible,Domestic,"Reported yield, 10 gal/min. Cemented from 0-53 feet."
+5850207,30.217222,-97.823055,Travis,218EDRDA,Paul Beck ,W,0/0/1950,307,,,,,705,Yes,Yes,Piston,Domestic,Well H-101 in 1957 Travis County report.
+5850208,30.219444,-97.824722,Travis,218EDRDA,Earl Chase,W,0/0/1955,317,,,,,705,Yes,Yes,Submersible,Domestic,Slotted from 260 to 284 ft. Reported yield 11 gal/min.  Well H- 220 in 1957 Travis County report.
+5850209,30.236945,-97.794167,Travis,218EDRDA,H.E. Brodie ,W,0/0/1915,330,,,,,710,Yes,Yes,Submersible,Domestic,
+5850211,30.2447222,-97.8275,Travis,218EDRDA,Travis Country Estates,W,9/17/1973,282,10,7,0,265,751,Yes,Yes,Submersible,Irrigation,USGS Site Number: 301423097495901. 
+5850211,30.2447222,-97.8275,Travis,218EDRDA,Travis Country Estates,W,9/17/1973,282,101,,265,282,751,Yes,Yes,Submersible,Irrigation,USGS Site Number: 301423097495901. 
+5850212,30.2255556,-97.8063889,Travis,218EDRDA,City of Sunset Valley  Well #2,W,0/0/1955,336,,,,,672,Yes,Yes,Submersible,Public Supply,"TCEQ Source ID: G2270004A. Reported yield, 70 gal/min. Barton Springs Edwards Aquifer CD recorder well."
+5850213,30.2175,-97.8225,Travis,218EDRDA,Bill Ashbaugh ,W,,300,,,,,705,Yes,Yes,Submersible,Domestic,
+5850214,30.211389,-97.803612,Travis,218EDRDA,Ray Brownlea,W,0/0/1935,302,,,,,710,Yes,No,Submersible,Unused,Observation well for test of 234 in 2007.
+5850215,30.2276389,-97.8103611,Travis,218EBFZA,City of Sunset Valley  Well #3,W,10/14/1976,360,10,6,0,200,675,Yes,Yes,Submersible,Irrigation,USGS Site Number: 301339097483701. TCEQ Source ID: G2270004C. Duplicate well data from 1998-2002 as 5850223 changed in June 2002. Historical observation well. Aquifer test data in TWDB files. Site 72 in BSEACD Report 2010-0701. Converted to an irrigation well 2019.
+5850215,30.2276389,-97.8103611,Travis,218EBFZA,City of Sunset Valley  Well #3,W,10/14/1976,360,101,,200,360,675,Yes,Yes,Submersible,Irrigation,USGS Site Number: 301339097483701. TCEQ Source ID: G2270004C. Duplicate well data from 1998-2002 as 5850223 changed in June 2002. Historical observation well. Aquifer test data in TWDB files. Site 72 in BSEACD Report 2010-0701. Converted to an irrigation well 2019.
+5850216,30.2322222,-97.7927778,Travis,218EDRDA,USGS,O,9/0/1978,582,10,6,0,116,692,Yes,Yes,None,Unused,USGS Site Number: 301356097473301. U.S.G.S. test well no 3.
+5850216,30.2322222,-97.7927778,Travis,218EDRDA,USGS,O,9/0/1978,582,10,4,0,180,692,Yes,Yes,None,Unused,USGS Site Number: 301356097473301. U.S.G.S. test well no 3.
+5850216,30.2322222,-97.7927778,Travis,218EDRDA,USGS,O,9/0/1978,582,11,4,180,480,692,Yes,Yes,None,Unused,USGS Site Number: 301356097473301. U.S.G.S. test well no 3.
+5850216,30.2322222,-97.7927778,Travis,218EDRDA,USGS,O,9/0/1978,582,10,4,480,580,692,Yes,Yes,None,Unused,USGS Site Number: 301356097473301. U.S.G.S. test well no 3.
+5850217,30.2427778,-97.8002778,Travis,218EDRDA,USGS,O,0/0/1978,214,,,,,567,Yes,Yes,None,Unused,USGS Site Number: 301432097480001. U.S.G.S. test well no.2a.
+5850218,30.242778,-97.800278,Travis,218EDRDA,USGS,W,0/0/1978,214,,,,,567,Yes,Yes,None,Unused,U.S.G.S. test well no 2.
+5850219,30.24,-97.833055,Travis,218EDRDA,Travis Country Estates ,W,,252,,,,,732,Yes,No,None,Unused,
+5850221,30.225833,-97.806112,Travis,218EDRDA,City of Sunset Valley  Well #1 ,W,5/0/1977,292,11,6,0,200,675,No,Yes,Submersible,Public Supply,TCEQ Source ID: G2270004B. 
+5850222,30.217222,-97.818611,Travis,218EBFZA,Helen Besse ,W,4/18/1980,440,10,4,0,340,694,Yes,Yes,Submersible,Domestic,
+5850222,30.217222,-97.818611,Travis,218EBFZA,Helen Besse ,W,4/18/1980,440,11,4,340,440,694,Yes,Yes,Submersible,Domestic,
+5850224,30.238611,-97.830833,Travis,218EBFZA,Safeway Rental,W,,,,,,,731,Yes,Yes,Submersible,Commercial,
+5850225,30.238889,-97.808056,Travis,218EBFZA,Ed Maxey,W,,,,,,,529,Yes,Yes,Submersible,Domestic,
+5850226,30.236389,-97.800001,Travis,218EDRDA,FDIC c/o AMRESCO ,T,5/6/1985,442,10,7,0,160,625,Yes,No,None,Unused,Test hole. Logged to 432 feet in 1993. Reported yield 145 GPM with no drawdown after pumping 24 hours in 1985. To be plugged.
+5850226,30.236389,-97.800001,Travis,218EDRDA,FDIC c/o AMRESCO ,T,5/6/1985,442,11,7,160,442,625,Yes,No,None,Unused,Test hole. Logged to 432 feet in 1993. Reported yield 145 GPM with no drawdown after pumping 24 hours in 1985. To be plugged.
+5850227,30.2375,-97.801667,Travis,218EDRDA,FDIC c/o AMRESCO ,T,5/6/1985,325,10,7,0,170,595,Yes,No,None,Unused,Test hole. Logged to 167 feet in 1993. Reported yield 272 GPM with no drawdown after pumping 15 hours in 1985. To be plugged.
+5850227,30.2375,-97.801667,Travis,218EDRDA,FDIC c/o AMRESCO ,T,5/6/1985,325,101,,170,325,595,Yes,No,None,Unused,Test hole. Logged to 167 feet in 1993. Reported yield 272 GPM with no drawdown after pumping 15 hours in 1985. To be plugged.
+5850228,30.238889,-97.801945,Travis,218EDRDA,FDIC c/o AMRESCO ,T,5/7/1985,323,10,7,0,191,590,Yes,No,None,Unused,Test hole. Reported yield 272 GPM with no drawdown after pumping 15 hours in 1985. To be plugged.
+5850228,30.238889,-97.801945,Travis,218EDRDA,FDIC c/o AMRESCO ,T,5/7/1985,323,101,,191,323,590,Yes,No,None,Unused,Test hole. Reported yield 272 GPM with no drawdown after pumping 15 hours in 1985. To be plugged.
+5850229,30.240556,-97.803889,Travis,218EDRDA,Tramel Crow (Brodie),T,5/8/1985,350,10,7,0,175,645,Yes,No,None,Unused,Test hole. Reported yield 104 GPM with 8 feet drawdown after pumping 24 hours in 1985. Specific capacity 13 GPM/ft. Logged to 342 feet in 1973.
+5850229,30.240556,-97.803889,Travis,218EDRDA,Tramel Crow (Brodie),T,5/8/1985,350,11,7,175,350,645,Yes,No,None,Unused,Test hole. Reported yield 104 GPM with 8 feet drawdown after pumping 24 hours in 1985. Specific capacity 13 GPM/ft. Logged to 342 feet in 1973.
+5850230,30.226667,-97.809167,Travis,218EBFZA,Susan Durso &  Tom Picard,W,7/19/1971,256,10,6,0,,667,Yes,Yes,Submersible,Domestic,Estimated yield 10 GPM in 1999. MP= +0.15 feet
+5850231,30.2097222,-97.7925,Travis,218EBFZA,Capital Soccer Club,W,6/2/2003,540,10,14,0,8,665,Yes,Yes,Submersible,Plugged or Destroyed,Well Report Tracking Number: 23457. Plugging Report Tracking Number: 98527. Site 69 in BSEACD Report 2010-0701. Reported yield 300 GPM after 27.5 hours in 2003. Aquifer test results in TWDB files.
+5850231,30.2097222,-97.7925,Travis,218EBFZA,Capital Soccer Club,W,6/2/2003,540,10,9,0,257,665,Yes,Yes,Submersible,Plugged or Destroyed,Well Report Tracking Number: 23457. Plugging Report Tracking Number: 98527. Site 69 in BSEACD Report 2010-0701. Reported yield 300 GPM after 27.5 hours in 2003. Aquifer test results in TWDB files.
+5850231,30.2097222,-97.7925,Travis,218EBFZA,Capital Soccer Club,W,6/2/2003,540,101,8,257,540,665,Yes,Yes,Submersible,Plugged or Destroyed,Well Report Tracking Number: 23457. Plugging Report Tracking Number: 98527. Site 69 in BSEACD Report 2010-0701. Reported yield 300 GPM after 27.5 hours in 2003. Aquifer test results in TWDB files.
+5850233,30.226944,-97.811945,Travis,218EDRDA,USGS,W,,188,10,6,0,20,672,No,No,None,Unused,
+5850233,30.226944,-97.811945,Travis,218EDRDA,USGS,W,,188,10,3,0,127,672,No,No,None,Unused,
+5850233,30.226944,-97.811945,Travis,218EDRDA,USGS,W,,188,11,3,127,187,672,No,No,None,Unused,
+5850234,30.212778,-97.802501,Travis,218EDRDA,"Independence Park  Austin, TX",W,4/28/2007,442,10,4,0,342,698,Yes,Yes,Submersible,Irrigation,Well Report Tracking Number: 115803. Site 71 in BSEACD Report 2010-0701. Reported yield 48.5 GPM with 29.7 feet drawdown after 42.5 hours in 2007. Specific capacity 1.6 GPM/ft. Aquifer test data and results in TWDB files.
+5850234,30.212778,-97.802501,Travis,218EDRDA,"Independence Park  Austin, TX",W,4/28/2007,442,11,4,342,442,698,Yes,Yes,Submersible,Irrigation,Well Report Tracking Number: 115803. Site 71 in BSEACD Report 2010-0701. Reported yield 48.5 GPM with 29.7 feet drawdown after 42.5 hours in 2007. Specific capacity 1.6 GPM/ft. Aquifer test data and results in TWDB files.
+5850235,30.2355556,-97.8130556,Travis,218EDRDA,USGS,O,,400,10,6,,,623,Yes,No,,Unused,
+5850236,30.216944,-97.817778,Travis,218EDRDA,Jenkins ,W,,,10,5,,,727,No,No,Submersible,Domestic,This well was sampled by BSEACD on 10/17/13 (WQ field sheet in scanned images) but we haven't received any results.
+5850301,30.2102778,-97.7816667,Travis,218EDRDA,Texas Middle School  Association - Lovelady,W,0/0/1949,388,10,6,0,,653,Yes,Yes,None,Unused,"Owner Well Number: Lovelady. USGS Site Number: 301237097464801. BS/EACD Continuous WL observation well  MP= +1.30 feet Barton Springs Edwards Aquifer CD and USGS recorder well. Water quality sample from 1948 reported in B5708, along with the drill date of 1949."
+5850402,30.178333,-97.847778,Travis,218EDRDA,John Rehm ,W,0/0/1967,355,10,7,0,198,750,Yes,Yes,Submersible,Unused,"Reported drawdown 60 feet, when bailed for 1 hour at 45 gal/min."
+5850402,30.178333,-97.847778,Travis,218EDRDA,John Rehm ,W,0/0/1967,355,101,7,198,335,750,Yes,Yes,Submersible,Unused,"Reported drawdown 60 feet, when bailed for 1 hour at 45 gal/min."
+5850403,30.175,-97.863334,Travis,218EDRDA,William Bethea,W,0/0/1968,264,,,,,750,Yes,Yes,,Domestic,Reported drawdown 0 ft after bail- ing 20 gal/min for 1 hour on Mar.17 1968.  Cemented from 154 to 134 ft.
+5850405,30.195278,-97.838334,Travis,218EDRDA,Adie Morrison ,W,,365,,,,,850,Yes,Yes,Piston,Unused,Well J-89 in 1957 Travis County report.
+5850406,30.196945,-97.843334,Travis,218EDRDA,Brian Gantt ,W,0/0/1946,360,10,5,0,100,820,Yes,Yes,Submersible,Domestic,USGS Site Number: 301148097503501. 
+5850406,30.196945,-97.843334,Travis,218EDRDA,Brian Gantt ,W,0/0/1946,360,101,,100,360,820,Yes,Yes,Submersible,Domestic,USGS Site Number: 301148097503501. 
+5850407,30.175555,-97.868611,Travis,218EDRDA,John Wood ,W,0/0/1970,320,,,,,775,Yes,Yes,Submersible,Domestic,Reported drawdown 0 ft after bail- ing 50 gal/min.
+5850408,30.175555,-97.866389,Travis,218EDRDA,Buchanan,W,3/18/1971,439,10,7,0,125,772,Yes,Yes,Submersible,Domestic,Reported no drawdown when pumped at 25 gpm for 1 hour when drilled.
+5850408,30.175555,-97.866389,Travis,218EDRDA,Buchanan,W,3/18/1971,439,101,,125,439,772,Yes,Yes,Submersible,Domestic,Reported no drawdown when pumped at 25 gpm for 1 hour when drilled.
+5850410,30.178333,-97.875278,Travis,218EBFZA,City of Austin J-17 Barn ,W,0/0/1950,,,,,,783,Yes,Yes,Submersible,Stock,
+5850413,30.1763889,-97.8638889,Travis,218EBFZA,Brian & Sandra McMinn,W,6/3/1980,475,10,6,0,155,764,Yes,No,Submersible,Domestic,
+5850413,30.1763889,-97.8638889,Travis,218EBFZA,Brian & Sandra McMinn,W,6/3/1980,475,101,,155,475,764,Yes,No,Submersible,Domestic,
+5850414,30.179722,-97.840834,Travis,218EDRDA,Circle C Ranch,W,10/30/1986,425,10,9,0,150,760,No,Yes,Submersible,Irrigation,
+5850414,30.179722,-97.840834,Travis,218EDRDA,Circle C Ranch,W,10/30/1986,425,10,5,0,230,760,No,Yes,Submersible,Irrigation,
+5850414,30.179722,-97.840834,Travis,218EDRDA,Circle C Ranch,W,10/30/1986,425,11,5,230,425,760,No,Yes,Submersible,Irrigation,
+5850416,30.176389,-97.867222,Travis,218EBFZA,Linda Wetzel,W,,,,,,,775,Yes,Yes,Submersible,Domestic,
+5850417,30.1955556,-97.8463889,Travis,218EDRDA,City of Austin BSEACD monitor well,W,4/6/1938,350,,,,,803,Yes,Yes,Submersible,Other,USGS Site Number: 301142097504701. Well 499 in Travis Co. Report 1941 Zumwald Monitor Well.
+5850418,30.198611,-97.837778,Travis,218EDRDA,Adie Morrison ,W,,,,,,,779,No,No,,,
+5850419,30.1730556,-97.8502778,Travis,218EDRDA,USGS,W,,210,10,6,0,19,754,Yes,No,None,Unused,USGS Site Number: 301023097510101. 
+5850419,30.1730556,-97.8502778,Travis,218EDRDA,USGS,W,,210,10,3,0,150,754,Yes,No,None,Unused,USGS Site Number: 301023097510101. 
+5850419,30.1730556,-97.8502778,Travis,218EDRDA,USGS,W,,210,11,3,150,209,754,Yes,No,None,Unused,USGS Site Number: 301023097510101. 
+5850420,30.1863889,-97.8611111,Travis,218EDRDA,USGS,W,,216,10,7,0,20,781,Yes,No,None,Unused,
+5850420,30.1863889,-97.8611111,Travis,218EDRDA,USGS,W,,216,10,3,0,135,781,Yes,No,None,Unused,
+5850420,30.1863889,-97.8611111,Travis,218EDRDA,USGS,W,,216,11,3,135,216,781,Yes,No,None,Unused,
+5850421,30.1772222,-97.87,Travis,218EDRDA,USGS,O,9/21/2005,194,10,,0,134,772,Yes,Yes,,Unused,USGS Site Number: 301037097521201. 
+5850421,30.1772222,-97.87,Travis,218EDRDA,USGS,O,9/21/2005,194,11,,134,194,772,Yes,Yes,,Unused,USGS Site Number: 301037097521201. 
+5850423,30.1772222,-97.8677778,Travis,,Ricardo & Laurel Casas,W,8/12/2013,340,,,,,772,No,No,Submersible,Domestic,Well Report Tracking Number: 342476. This well was sampled by BSEACD on 1/15/14 (WQ field data sheet in scanned images) but we have not received any results.
+5850425,30.1752778,-97.8613889,Travis,218EBFZA,Dwane and Carol Ideker,W,3/13/2015,311,10,5,-3,251,757,Yes,Yes,Submersible,Domestic,Well Report Tracking Number: 392295. Est. yield 13 GPM 36 ft. drawdown after one hr.
+5850425,30.1752778,-97.8613889,Travis,218EBFZA,Dwane and Carol Ideker,W,3/13/2015,311,11,5,251,311,757,Yes,Yes,Submersible,Domestic,Well Report Tracking Number: 392295. Est. yield 13 GPM 36 ft. drawdown after one hr.
+5850426,30.1673278,-97.8343139,Travis,218EBFZA,Deborah Bates,W,2/9/2017,366,10,4.5,0,250,719,No,No,Submersible,Plugged or Destroyed,Well Report Tracking Number: 446191. Plugging Report Tracking Number: 228787. 
+5850426,30.1673278,-97.8343139,Travis,218EBFZA,Deborah Bates,W,2/9/2017,366,12,4.5,250,350,719,No,No,Submersible,Plugged or Destroyed,Well Report Tracking Number: 446191. Plugging Report Tracking Number: 228787. 
+5850427,30.1770333,-97.8675333,Travis,,Jason Nguyen,W,6/23/2020,310,10,4.5,-3,250,780,Yes,No,Submersible,Domestic,Well Report Tracking Number: 547396. 
+5850427,30.1770333,-97.8675333,Travis,,Jason Nguyen,W,6/23/2020,310,11,4.5,250,310,780,Yes,No,Submersible,Domestic,Well Report Tracking Number: 547396. 
+5850428,30.1757333,-97.8606833,Travis,,Brian Carter,W,5/26/2021,315,10,4.5,-3,255,775,No,No,Submersible,Domestic,Well Report Tracking Number: 576001. 
+5850428,30.1757333,-97.8606833,Travis,,Brian Carter,W,5/26/2021,315,11,4.5,255,315,775,No,No,Submersible,Domestic,Well Report Tracking Number: 576001. 
+5850501,30.173333,-97.830555,Travis,218EBFZA,L.J. Garner ,W,,,,,,,726,Yes,No,,Unused,Well H-156 in 1957 Travis County report.
+5850502,30.1869444,-97.8152778,Travis,218EDRDA,Mrs. R.W. Herndon,W,0/0/1937,350,,,,,740,Yes,Yes,Submersible,Irrigation,
+5850503,30.173055,-97.816667,Travis,218EDRDA,Otto Schwartz ,W,0/0/1926,451,,,,,705,Yes,Yes,Piston,Domestic,Measured yield 3 gal/min. Well H-169 in 1957 TRavis County report.
+5850504,30.207778,-97.833055,Travis,218EDRDA,W.H. Perlitz,W,,238,,,,,720,Yes,Yes,Submersible,Unused,
+5850505,30.175278,-97.814445,Travis,218EDRDA,Ted Swanson Jr. ,W,0/0/1963,390,10,4,0,290,710,Yes,Yes,Submersible,Domestic,"Reported drawdown, 50 feet after bailing at 8 gal/min on February 9, 1963."
+5850505,30.175278,-97.814445,Travis,218EDRDA,Ted Swanson Jr. ,W,0/0/1963,390,101,4,290,390,710,Yes,Yes,Submersible,Domestic,"Reported drawdown, 50 feet after bailing at 8 gal/min on February 9, 1963."
+5850506,30.17,-97.815556,Travis,218EDRDA,C.E. Stroman,W,0/0/1970,385,10,7,0,278,690,Yes,No,Submersible,Domestic,Reported drawdown 20 ft after pump- ing 25 gal/min for 2 hours. Cemented from 278 ft to surface.
+5850506,30.17,-97.815556,Travis,218EDRDA,C.E. Stroman,W,0/0/1970,385,101,7,278,385,690,Yes,No,Submersible,Domestic,Reported drawdown 20 ft after pump- ing 25 gal/min for 2 hours. Cemented from 278 ft to surface.
+5850507,30.168611,-97.826944,Travis,218EDRDA,Eugene Wissen ,W,0/0/1970,273,,,,,690,Yes,No,,Domestic,
+5850508,30.1975,-97.801389,Travis,218EDRDA,C.F. Meredith ,W,,120,,,,,720,No,Yes,Jet,Unused,Abandoned.  Well H-146 in 1957 Travis County report.
+5850509,30.196945,-97.794167,Travis,218EDRDA,Dayton Carrell,W,0/0/1933,425,,,,,740,No,Yes,Piston,Unused,Well H-145 in 1957 Travis County report.
+5850510,30.173055,-97.825278,Travis,218EDRDA,Russell Roberson,W,,277,,,,,712,Yes,Yes,Submersible,Domestic,
+5850511,30.1716667,-97.8258333,Travis,218EDRDA,Rodney Johnson,W,0/0/1956,285,,,,,723,Yes,Yes,Submersible,Domestic,
+5850512,30.171944,-97.825278,Travis,218EDRDA,Lee Galloway,W,0/0/1958,295,,,,,700,No,Yes,Submersible,Domestic,
+5850513,30.182222,-97.819444,Travis,218EDRDA,Arthur Eatman ,W,0/0/1940,323,,,,,750,No,Yes,Submersible,Domestic,
+5850514,30.169722,-97.829722,Travis,218EDRDA,Henry Sanders ,W,0/0/1964,335,,,,,711,Yes,Yes,Submersible,Domestic,
+5850515,30.171667,-97.828889,Travis,218EDRDA,Arnold Holden ,W,0/0/1953,,,,,,705,Yes,No,None,Plugged or Destroyed,Destroyed.
+5850516,30.172778,-97.830278,Travis,218EDRDA,Country Corner Store,W,0/0/1966,,,,,,718,No,No,None,Unused,"Well dry on Dec. 30,1966."
+5850517,30.174722,-97.8175,Travis,218EDRDA,Ted Swanson Jr,W,0/0/1973,430,,,,,695,Yes,No,Submersible,Irrigation,"Reported yield, 300 gal/min."
+5850518,30.200278,-97.801389,Travis,218EDRDA,NHS Homes ,W,0/0/1951,431,,,,,725,Yes,No,None,Unused,
+5850519,30.1725,-97.801945,Travis,218EDRDA,Donald L. West,W,0/0/1972,410,,,,,675,No,No,,Domestic,
+5850520,30.2075,-97.8022222,Travis,218EDRDA,Herb Mendieta,W,,315,,,,,715,Yes,Yes,Submersible,Irrigation,USGS Site Number: 301226097480701. Observation well for aquifer test of 234 in 2007.
+5850521,30.192222,-97.797778,Travis,218EDRDA,Sherwood Point Venture Jerry Powers,W,,,10,4,0,,691,No,Yes,Submersible,Unused,MP= +1.85 feet
+5850602,30.203056,-97.789445,Travis,218EDRDA,H.T. Speer,W,0/0/1943,690,,,,,690,Yes,Yes,Submersible,Domestic,Well H-142 in 1957 Travis County report.
+5850603,30.168611,-97.786111,Travis,218EBFZA,TxDOT ,T,1/6/1986,799,10,6,0,308,650,Yes,No,None,Plugged or Destroyed,Could not locate in 2010.
+5850604,30.177778,-97.785556,Travis,218EBFZA,Chris Clark ,W,,163,,,,,672,Yes,No,,Unused,
+5850701,30.1375,-97.848056,Travis,218EDRDA,W.A. Meredith ,W,0/0/1946,205,,,,,685,Yes,No,Piston,Domestic,Well L-74 in 1957 Travis County report.
+5850702,30.148056,-97.873611,Travis,218EDRDA,C.R. Charles,W,0/0/1945,190,,,,,765,Yes,No,Piston,Domestic,Well L-70 in 1957 Travis County report.
+5850703,30.138334,-97.855278,Travis,218EDRDA,Marbridge Foundation,W,12/20/1966,455,10,7,0,232,725,Yes,Yes,Submersible,Public Supply,Reported 0 drawdown when bailed at 15 gal/min.
+5850703,30.138334,-97.855278,Travis,218EDRDA,Marbridge Foundation,W,12/20/1966,455,101,6,232,455,725,Yes,Yes,Submersible,Public Supply,Reported 0 drawdown when bailed at 15 gal/min.
+5850704,30.137222,-97.855834,Travis,218EDRDA,Marbridge Foundation,W,2/5/1968,345,10,16,0,68,720,Yes,Yes,Submersible,Irrigation,"Measured drawdown 12 feet after pumping 72 hours at 942 gpm, 2 feet at 578 gpm, and 1 foot at 473 gpm in 1973. Tested at 1150 gpm with 31 feet drawdown when drilled. Historical observation well."
+5850704,30.137222,-97.855834,Travis,218EDRDA,Marbridge Foundation,W,2/5/1968,345,10,14,14,140,720,Yes,Yes,Submersible,Irrigation,"Measured drawdown 12 feet after pumping 72 hours at 942 gpm, 2 feet at 578 gpm, and 1 foot at 473 gpm in 1973. Tested at 1150 gpm with 31 feet drawdown when drilled. Historical observation well."
+5850704,30.137222,-97.855834,Travis,218EDRDA,Marbridge Foundation,W,2/5/1968,345,101,,140,345,720,Yes,Yes,Submersible,Irrigation,"Measured drawdown 12 feet after pumping 72 hours at 942 gpm, 2 feet at 578 gpm, and 1 foot at 473 gpm in 1973. Tested at 1150 gpm with 31 feet drawdown when drilled. Historical observation well."
+5850705,30.142222,-97.842222,Travis,218EDRDA,Peter Sprouse ,O,0/0/1965,200,,,,,660,Yes,Yes,Submersible,Other,Reported drawdown 0 ft after bail- ing 20 gal/min. Scientific monitoring well.
+5850706,30.136667,-97.836389,Travis,218EDRDA,R.W. Wallace,W,0/0/1962,305,,,,,700,Yes,Yes,None,,Reported yield 10 gpm.
+5850707,30.1405556,-97.8391667,Travis,218EDRDA,McCoy,W,0/0/1960,260,,,,,676,Yes,Yes,Submersible,Domestic,
+5850708,30.141667,-97.835,Travis,218EDRDA,S.H. Dodson ,W,0/0/1941,370,,,,,705,Yes,No,Piston,Domestic,Well L-64 in 1957 Travis County report.
+5850709,30.164167,-97.870278,Travis,218EDRDA,R. E. Barker,W,0/0/1949,334,,,,,780,Yes,No,Piston,Unused,Well L-1 in 1957 Travis County report.
+5850710,30.164723,-97.866112,Travis,218EDRDA,R. E. Baker ,W,0/0/1945,315,,,,,770,Yes,No,Piston,Unused,Well L-2 in 1957 Travis County report.
+5850711,30.142222,-97.842222,Travis,218EDRDA,Ted Swanson ,W,0/0/1967,230,,,,,660,No,Yes,Submersible,Domestic,
+5850712,30.139722,-97.8475,Travis,218EDRDA,Ted Swanson ,W,0/0/1967,227,,,,,660,No,No,,Unused,
+5850713,30.151389,-97.848056,Travis,218EDRDA,B.F. Swank,W,0/0/1935,,,,,,750,Yes,Yes,Submersible,Domestic,"Well L-6 in 1957 Travis County report. Well depth of 178 feet was reported in Bulletin 5708, but note on well schedule from 1970 says well deepen ed. No new depth reported, but water level taken at time was 191.8 feet. Deleted well depth."
+5850714,30.148611,-97.845556,Travis,218EDRDA,T.T. Denham ,W,0/0/1969,190,,,,,710,Yes,No,Submersible,Domestic,Cemented from 0-120 feet.
+5850715,30.133611,-97.836111,Travis,218EDRDA,W.T. Lowden ,W,0/0/1967,351,,,,,670,Yes,Yes,Submersible,Domestic,
+5850716,30.145,-97.845,Travis,218EDRDA,J.J. McCuan ,W,0/0/1969,220,,,,,720,Yes,Yes,Submersible,Domestic,
+5850717,30.134167,-97.837778,Travis,218EDRDA,Fred Meredith ,W,0/0/1970,300,,,,,660,Yes,Yes,Submersible,Domestic,Reported drawdown 40 ft after pump- ing 25 gal/min.
+5850718,30.136945,-97.845278,Travis,218EDRDA,Bear Creek Park Water  Systems ,W,10/6/1970,312,,,,,696,Yes,Yes,Submersible,Public Supply,TCEQ Source ID: G2270043A. Bear Creek Park subdivision. Well was also numbered 5850732.
+5850719,30.138889,-97.858334,Travis,218EDRDA,Marbridge Foundation,W,5/7/1974,400,10,6,0,400,710,Yes,Yes,Submersible,Public Supply,Owner Well Number: 1 - ADMIN BLDG. TCEQ Source ID: G2270039A. 
+5850720,30.143611,-97.862223,Travis,218EDRDA,Robert Hejl ,W,0/0/1968,230,,,,,714,Yes,No,Submersible,Stock,
+5850722,30.152223,-97.834445,Travis,218EDRDA,Jackie's Dance and Gym,W,6/9/1983,380,,,,,693,No,No,,Commercial,
+5850723,30.147778,-97.834167,Travis,218EDRDA,Travis South Mobil Home Park(Harold Hicks,W,5/4/1982,415,10,7,0,272,709,No,Yes,Submersible,Public Supply,TCEQ Source ID: G2270187A. 
+5850723,30.147778,-97.834167,Travis,218EDRDA,Travis South Mobil Home Park(Harold Hicks,W,5/4/1982,415,101,6,272,415,709,No,Yes,Submersible,Public Supply,TCEQ Source ID: G2270187A. 
+5850724,30.141111,-97.838056,Travis,218EDRDA,Manchaca Volunteer Fire Department ,W,0/0/1976,220,10,5,0,200,692,Yes,Yes,Submersible,Commercial,TCEQ Source ID: G2270216A. MP= +1.15 feet
+5850725,30.138056,-97.853889,Travis,218EDRDA,Marbridge Foundation,W,0/0/1955,475,,,,,673,No,Yes,Submersible,Public Supply,
+5850726,30.152501,-97.833334,Travis,218EDRDA,Diamondscape Robin Bissette,W,2/20/1983,300,10,5,0,220,690,No,Yes,Submersible,Domestic,
+5850726,30.152501,-97.833334,Travis,218EDRDA,Diamondscape Robin Bissette,W,2/20/1983,300,11,,220,280,690,No,Yes,Submersible,Domestic,
+5850726,30.152501,-97.833334,Travis,218EDRDA,Diamondscape Robin Bissette,W,2/20/1983,300,10,5,280,300,690,No,Yes,Submersible,Domestic,
+5850727,30.138334,-97.857223,Travis,218EDRDA,Marbridge Foundation,W,0/0/1980,500,,,,,720,No,No,,Public Supply,Owner Well Number: 3 - VILLA. TCEQ Source ID: G2270039C. 
+5850728,30.141389,-97.849722,Travis,218EDRDA,Marbridge Foundation,W,8/2/1984,400,10,7,0,400,696,No,Yes,Submersible,Public Supply,TCEQ Source ID: G2270039B. 
+5850729,30.13,-97.834722,Travis,218EDRDA,VFW Post No. 3377 ,W,10/20/1984,320,10,9,0,50,647,No,No,Submersible,Domestic,TCEQ Source ID: G2270237A. 
+5850729,30.13,-97.834722,Travis,218EDRDA,VFW Post No. 3377 ,W,10/20/1984,320,10,5,0,240,647,No,No,Submersible,Domestic,TCEQ Source ID: G2270237A. 
+5850729,30.13,-97.834722,Travis,218EDRDA,VFW Post No. 3377 ,W,10/20/1984,320,101,,240,320,647,No,No,Submersible,Domestic,TCEQ Source ID: G2270237A. 
+5850730,30.14,-97.838334,Travis,218EDRDA,McCoy Corporation ,W,7/22/1985,360,10,4,,,685,Yes,Yes,Submersible,Commercial,Master Meter #101478   MP= +0.85 ft
+5850731,30.149722,-97.860556,Travis,218EDRDA,Shady Hollow Estates WSC ,W,7/1/1983,438,,,,,746,Yes,Yes,Submersible,Public Supply,TCEQ Source ID: G2270212A. Aquifer test and results in TWDB files. Site 57 in BSEACD Report 2010-0701.
+5850732,30.143056,-97.848056,Travis,218EBFZA,St. John's Presbyterian Church ,W,4/10/2002,315,10,10,0,5,676,Yes,Yes,Submersible,Public Supply,Reported yield 27 GPM with 1 foot drawdown after pumping 36 hours in 2002. Pumping level 280 feet. Neoprene packer at 168 feet.
+5850732,30.143056,-97.848056,Travis,218EBFZA,St. John's Presbyterian Church ,W,4/10/2002,315,10,5,0,200,676,Yes,Yes,Submersible,Public Supply,Reported yield 27 GPM with 1 foot drawdown after pumping 36 hours in 2002. Pumping level 280 feet. Neoprene packer at 168 feet.
+5850732,30.143056,-97.848056,Travis,218EBFZA,St. John's Presbyterian Church ,W,4/10/2002,315,11,5,200,315,676,Yes,Yes,Submersible,Public Supply,Reported yield 27 GPM with 1 foot drawdown after pumping 36 hours in 2002. Pumping level 280 feet. Neoprene packer at 168 feet.
+5850733,30.136667,-97.845,Travis,218EDRDA,Suburban Austin Water  Bear Crk #2/Aquasource,W,0/0/1972,260,10,8,0,24,683,Yes,Yes,Submersible,Public Supply,
+5850733,30.136667,-97.845,Travis,218EDRDA,Suburban Austin Water  Bear Crk #2/Aquasource,W,0/0/1972,260,10,5,24,150,683,Yes,Yes,Submersible,Public Supply,
+5850733,30.136667,-97.845,Travis,218EDRDA,Suburban Austin Water  Bear Crk #2/Aquasource,W,0/0/1972,260,11,5,150,250,683,Yes,Yes,Submersible,Public Supply,
+5850734,30.133889,-97.850556,Travis,218EDRDA,Randolph Austin Co. ,W,7/29/1980,450,10,7,0,425,714,Yes,No,Submersible,Industrial,Owners well #1.
+5850735,30.134445,-97.850556,Travis,218EDRDA,Randolph Austin Co. ,W,12/16/1977,300,10,7,0,125,715,Yes,No,Submersible,Industrial,Standby well.
+5850736,30.165556,-97.835278,Travis,218EDRDA,Robert Glenn,W,0/0/1967,358,,,,,740,Yes,Yes,Submersible,Domestic,
+5850737,30.136111,-97.833889,Travis,218EDRDA,Manchaca Bible Fellowship Church ,W,4/9/1984,400,10,5,,,685,Yes,Yes,Submersible,Public Supply,Data from Barton Springs-Edwards Aquifer Conservation District. MP= +1.75 feet
+5850738,30.134167,-97.853889,Travis,218EDRDA,Stripes-Susser,W,10/24/1985,325,10,5,0,150,710,Yes,No,Submersible,Public Supply,TCEQ Source ID: G2270249A. Data from Barton Springs-Edwards Aquifer Conservation District.
+5850738,30.134167,-97.853889,Travis,218EDRDA,Stripes-Susser,W,10/24/1985,325,11,5,150,220,710,Yes,No,Submersible,Public Supply,TCEQ Source ID: G2270249A. Data from Barton Springs-Edwards Aquifer Conservation District.
+5850738,30.134167,-97.853889,Travis,218EDRDA,Stripes-Susser,W,10/24/1985,325,101,6,220,325,710,Yes,No,Submersible,Public Supply,TCEQ Source ID: G2270249A. Data from Barton Springs-Edwards Aquifer Conservation District.
+5850739,30.141667,-97.850001,Travis,218EDRDA,Marbridge Foundation,W,8/2/1984,400,10,6,0,400,696,No,No,None,Unused,TCEQ Source ID: G2270039D. 
+5850740,30.138334,-97.855834,Travis,218EDRDA,Marbridge Foundation,W,4/23/1980,350,10,4,0,350,720,No,No,Submersible,Fire,
+5850741,30.166112,-97.866944,Travis,218EDRDA,Steve Wiley ,W,5/0/1990,400,,,,,777,No,No,,Domestic,
+5850742,30.155001,-97.841389,Travis,218EDRDA,Stan Humber ,W,,,,,,,740,No,No,,,
+5850743,30.154445,-97.858889,Travis,218EDRDA,Aquasource Shady Hollow Estates,W,6/3/1997,575,10,12,0,161,734,Yes,Yes,Submersible,Public Supply,Reported yield 200 GPM in 2003. MP= +1.95 feet Pump setting 399 feet.
+5850743,30.154445,-97.858889,Travis,218EDRDA,Aquasource Shady Hollow Estates,W,6/3/1997,575,10,8,0,206,734,Yes,Yes,Submersible,Public Supply,Reported yield 200 GPM in 2003. MP= +1.95 feet Pump setting 399 feet.
+5850743,30.154445,-97.858889,Travis,218EDRDA,Aquasource Shady Hollow Estates,W,6/3/1997,575,11,8,206,437,734,Yes,Yes,Submersible,Public Supply,Reported yield 200 GPM in 2003. MP= +1.95 feet Pump setting 399 feet.
+5850744,30.142222,-97.842778,Travis,218EBFZA,Bear Creek Office Park James O'Neal,W,,,10,6,0,,705,No,Yes,Submersible,Commercial,
+5850745,30.142222,-97.853612,Travis,218EDRDA,Willy Conrad,W,,340,10,5,0,,699,Yes,Yes,Submersible,Domestic,MP= +1.90 feet  Pump setting is 320 feet.
+5850746,30.128611,-97.835278,Travis,218EDRDA,Associated Drilling ,W,10/6/1986,320,10,7,0,160,639,Yes,Yes,Submersible,Domestic,MP= +1.60 feet    Badge # 1691798
+5850746,30.128611,-97.835278,Travis,218EDRDA,Associated Drilling ,W,10/6/1986,320,11,5,0,300,639,Yes,Yes,Submersible,Domestic,MP= +1.60 feet    Badge # 1691798
+5850747,30.1608333,-97.8747222,Travis,218EDRDA,USGS,W,,216,10,7,0,20,798,Yes,No,None,Unused,USGS Site Number: 300939097522901. 
+5850747,30.1608333,-97.8747222,Travis,218EDRDA,USGS,W,,216,10,3,0,136,798,Yes,No,None,Unused,USGS Site Number: 300939097522901. 
+5850747,30.1608333,-97.8747222,Travis,218EDRDA,USGS,W,,216,11,3,136,216,798,Yes,No,None,Unused,USGS Site Number: 300939097522901. 
+5850748,30.1458333,-97.8597222,Travis,218EDRDA,USGS,O,9/17/2005,180,10,,0,120,721,Yes,No,,Unused,
+5850748,30.1458333,-97.8597222,Travis,218EDRDA,USGS,O,9/17/2005,180,11,,120,180,721,Yes,No,,Unused,
+5850749,30.148056,-97.860001,Travis,218EDRDA,Stephen Bell,W,,400,,,,,760,Yes,Yes,Submersible,Domestic,
+5850750,30.1483333,-97.8438889,Travis,218EBFZA,Debbie Figuero,W,,,,,,,728,Yes,No,,Domestic,USGS Site Number: 300854097503801. 
+5850751,30.146945,-97.845278,Travis,218EBFZA,Danny & Connie Gomez,W,,190,,,,,710,No,No,,Domestic,
+5850752,30.131667,-97.836667,Travis,218EDRD,Vern Dalbeck,W,,265,10,5,,,660,Yes,Yes,Submersible,Domestic,
+5850753,30.149167,-97.860834,Travis,218EBFZA,Olga Guerra,W,11/25/2011,400,10,5,0,340,754,Yes,No,Submersible,Domestic,"Well Report Tracking Number: 277137. Drilled to 500, plugged back to 400."
+5850753,30.149167,-97.860834,Travis,218EBFZA,Olga Guerra,W,11/25/2011,400,11,5,340,400,754,Yes,No,Submersible,Domestic,"Well Report Tracking Number: 277137. Drilled to 500, plugged back to 400."
+5850754,30.1341556,-97.8343333,Travis,,"Eskew Place, LLC",W,0/0/1985,412,10,8,-2,155,672,No,No,,Commercial,
+5850756,30.1491389,-97.8596944,Travis,,Patrick Muyshondt,W,5/7/2020,400,10,4.5,-2,318,713,Yes,No,,Domestic,Well Report Tracking Number: 546120. 
+5850756,30.1491389,-97.8596944,Travis,,Patrick Muyshondt,W,5/7/2020,400,11,4.5,318,338,713,Yes,No,,Domestic,Well Report Tracking Number: 546120. 
+5850758,30.1367389,-97.8608,Travis,,Jose Luis Melchor,W,3/6/2023,380,10,4.5,0,340,715,Yes,No,Submersible,Domestic,Well Report Tracking Number: 637891. 
+5850758,30.1367389,-97.8608,Travis,,Jose Luis Melchor,W,3/6/2023,380,11,4.5,340,380,715,Yes,No,Submersible,Domestic,Well Report Tracking Number: 637891. 
+5850801,30.1427778,-97.8108333,Travis,218EDRDA,Caroline Dowell,W,0/0/1939,266,,,,,662,Yes,Yes,None,Unused,Reported yield 10 gal/min. BS/EACD Continuous WL observation well
+5850803,30.144445,-97.815834,Travis,218EDRDA,Loyd Arnold ,W,0/0/1922,283,,,,,686,Yes,Yes,Piston,Domestic,Measured yield 12 gal/min. Well L-59 in 1957 Travis County report.
+5850804,30.161945,-97.829167,Travis,218EDRDA,H.A. Townsley ,W,,390,,,,,713,Yes,Yes,Piston,Domestic,
+5850805,30.157501,-97.829167,Travis,218EDRDA,F.B. Polk ,W,0/0/1913,244,,,,,670,Yes,Yes,Piston,Domestic,Well L-8 in 1957 Travis County report.
+5850807,30.142222,-97.793334,Travis,218EDRDA,Jim McCoy ,W,0/0/1925,300,,,,,628,Yes,Yes,None,Unused,Well L-45 in 1957 Travis County report.
+5850808,30.125833,-97.800001,Travis,218EDRDA,John Darrouzet Estate ,W,,341,,,,,708,Yes,Yes,None,Unused,Well L-84 in 1957 Travis County report.
+5850809,30.14,-97.8275,Travis,218EDRDA,Earl Jones,W,0/0/1966,281,,,,,690,Yes,Yes,Submersible,Domestic,Reported yield 18 gal/min.
+5850810,30.133889,-97.810556,Travis,218EDRDA,A.L. Wunneburger,W,0/0/1969,359,10,7,0,205,625,Yes,Yes,Submersible,Domestic,"Reported drawdown, 20 feet after bailing 1 hour at 40 gal/min."
+5850810,30.133889,-97.810556,Travis,218EDRDA,A.L. Wunneburger,W,0/0/1969,359,101,7,205,359,625,Yes,Yes,Submersible,Domestic,"Reported drawdown, 20 feet after bailing 1 hour at 40 gal/min."
+5850811,30.135556,-97.832778,Travis,218EDRDA,Gordon Wallace,W,0/0/1963,246,,,,,683,Yes,Yes,Submersible,Domestic,Reported yield 10 gal/min.
+5850812,30.140278,-97.826944,Travis,218EDRDA,Frank Acosta,W,0/0/1965,300,,,,,690,Yes,Yes,Submersible,Domestic,Reported yield 7 gal/min.
+5850814,30.140834,-97.797222,Travis,218EDRDA,Rex Kitchens,W,0/0/1948,399,,,,,630,Yes,Yes,Piston,Unused,Poor quality water; has a sulfur taste.  Well L-48 in 1957 Travis County report.
+5850817,30.140278,-97.8325,Travis,218EDRDA,Manchaca Methodist Church,W,0/0/1956,400,,,,,700,Yes,Yes,Submersible,Domestic,Reported yield 30 gal/min.
+5850818,30.140278,-97.829722,Travis,218EDRDA,W.D. Jones,W,0/0/1944,268,,,,,690,Yes,Yes,Piston,Domestic,Well L-62 in 1957 Travis County report.
+5850819,30.134445,-97.82,Travis,218EDRDA,L. Powell ,W,0/0/1946,266,,,,,650,Yes,Yes,Submersible,Domestic,Well L-78 in 1957 Travis County report.
+5850820,30.131944,-97.820555,Travis,218EDRDA,L. Powell ,W,0/0/1946,201,,,,,650,No,No,Jet,Unused,Well L-79 in 1957 Travis County report.
+5850821,30.133889,-97.810001,Travis,218EDRDA,A.L. Wunneburger,W,,327,,,,,625,Yes,Yes,None,Unused,
+5850822,30.153334,-97.822778,Travis,218EDRDA,Max Ladusch ,W,0/0/1970,356,10,7,0,187,655,Yes,Yes,Submersible,Unused,Reported drawdown 70 feet when bailed at 40 GPM in 1970. Geophys- ical log Q-59.
+5850822,30.153334,-97.822778,Travis,218EDRDA,Max Ladusch ,W,0/0/1970,356,101,,187,356,655,Yes,Yes,Submersible,Unused,Reported drawdown 70 feet when bailed at 40 GPM in 1970. Geophys- ical log Q-59.
+5850824,30.138889,-97.804167,Travis,218EDRDA,Live Oak Cemetery ,W,0/0/1965,175,,,,,640,No,Yes,Submersible,Irrigation,
+5850825,30.14,-97.804445,Travis,218EDRDA,Jarrel Thomas ,W,0/0/1968,315,,,,,633,Yes,Yes,Submersible,Domestic,Reported drawdown 130 ft after bailing 20 gal/min for 2 hours. Cemented from 184 to 160 ft.
+5850826,30.145278,-97.825,Travis,218EDRDA,Jim Bruch ,W,0/0/1969,308,,,,,690,Yes,Yes,Submersible,Domestic,Cemented from 135 ft to surface.
+5850827,30.144167,-97.818889,Travis,218EDRDA,San Leanna Water Well #3 ,W,8/0/1967,473,,,,,680,Yes,Yes,Submersible,Public Supply,TCEQ Source ID: G2270017C. Estimated yield 50 gal/min.
+5850828,30.135278,-97.825555,Travis,218EDRDA,Twin Creek Park  Ted Swanson ,W,5/8/1972,358,10,7,0,170,665,Yes,Yes,Submersible,Public Supply,Owner Well Number: #2. TCEQ Source ID: G2270064B. Reported yield 50 gal/min. Cemented from 170 ft to surface. Water quality analysis from 1971 was taken prior to well completion.
+5850828,30.135278,-97.825555,Travis,218EDRDA,Twin Creek Park  Ted Swanson ,W,5/8/1972,358,101,6,170,358,665,Yes,Yes,Submersible,Public Supply,Owner Well Number: #2. TCEQ Source ID: G2270064B. Reported yield 50 gal/min. Cemented from 170 ft to surface. Water quality analysis from 1971 was taken prior to well completion.
+5850829,30.156945,-97.82,Travis,218EDRDA,Slaughter Creek Acres ,W,0/0/1971,420,,,,,685,Yes,Yes,Submersible,Public Supply,TCEQ Source ID: G2270042B. Reported yield 70 gal/min.
+5850830,30.160556,-97.817778,Travis,218EDRDA,Slaughter Creek Acres ,W,0/0/1971,420,,,,,685,Yes,Yes,Submersible,Public Supply,TCEQ Source ID: G2270042A. Reported drawdown 160 ft after pumping 45 gal/min for 1 hour.
+5850832,30.145834,-97.824722,Travis,218EDRDA,Jim Bruch ,W,,20,,,,,680,No,Yes,None,Stock,"Estimated flow 50 gal/min on Apr. 27,1973."
+5850833,30.143056,-97.810834,Travis,218EDRDA,Caroline Dowell ,W,0/0/1973,400,,,,,655,Yes,Yes,Submersible,Domestic,Estimated yield 100 gal/min.
+5850835,30.146389,-97.812501,Travis,218EDRDA,Onion Creek Golf Course,W,0/0/1969,510,,,,,614,Yes,No,Submersible,Irrigation,Measured drawdown 12 ft after pump- ing 270 gal/min for 2 hours.
+5850836,30.145,-97.813056,Travis,218EDRDA,Onion Creek Golf Course,W,0/0/1973,500,10,8,0,,660,Yes,Yes,Submersible,Irrigation,Estimated yield 220 gal/min. MP= +1.80 feet
+5850837,30.147222,-97.819167,Travis,218EDRDA,San Leanna Water Corp ,W,0/0/1960,475,10,7,0,78,640,Yes,Yes,None,Plugged or Destroyed,Estimated yield 50 gal/min. Plugged and abandoned.
+5850837,30.147222,-97.819167,Travis,218EDRDA,San Leanna Water Corp ,W,0/0/1960,475,10,6,78,192,640,Yes,Yes,None,Plugged or Destroyed,Estimated yield 50 gal/min. Plugged and abandoned.
+5850837,30.147222,-97.819167,Travis,218EDRDA,San Leanna Water Corp ,W,0/0/1960,475,101,6,192,475,640,Yes,Yes,None,Plugged or Destroyed,Estimated yield 50 gal/min. Plugged and abandoned.
+5850838,30.139167,-97.821111,Travis,218EDRDA,San Leanna Water Corp ,W,8/0/1967,475,10,7,0,275,670,Yes,Yes,Submersible,Public Supply,Owner Well Number: 2 - SLEEPY HOLLOW. TCEQ Source ID: G2270017B. Estimated yield 50 gal/min.
+5850838,30.139167,-97.821111,Travis,218EDRDA,San Leanna Water Corp ,W,8/0/1967,475,101,,275,475,670,Yes,Yes,Submersible,Public Supply,Owner Well Number: 2 - SLEEPY HOLLOW. TCEQ Source ID: G2270017B. Estimated yield 50 gal/min.
+5850839,30.13,-97.821944,Travis,218EDRDA,Creedmoor-Maha Water Supply Corp.,W,0/0/1977,450,,,,,625,Yes,Yes,Turbine,Public Supply,TCEQ Source ID: G2270008B. 
+5850840,30.129722,-97.798334,Travis,218EDRDA,St. Albans Episcopal Church,W,5/3/1985,498,10,6,0,20,610,Yes,Yes,Submersible,Domestic,TCEQ Source ID: G2270281A. 
+5850840,30.129722,-97.798334,Travis,218EDRDA,St. Albans Episcopal Church,W,5/3/1985,498,10,4,0,350,610,Yes,Yes,Submersible,Domestic,TCEQ Source ID: G2270281A. 
+5850840,30.129722,-97.798334,Travis,218EDRDA,St. Albans Episcopal Church,W,5/3/1985,498,101,,350,498,610,Yes,Yes,Submersible,Domestic,TCEQ Source ID: G2270281A. 
+5850842,30.140278,-97.833055,Travis,218EDRDA,B.A. Whitehead & W.O.  Moreland,W,12/1/1952,285,,,,,700,No,No,,Domestic,
+5850843,30.143334,-97.825,Travis,218EDRDA,Forest Oaks Mobil Home Community ,W,12/4/1982,450,10,9,0,20,692,No,Yes,Submersible,Stock,
+5850843,30.143334,-97.825,Travis,218EDRDA,Forest Oaks Mobil Home Community ,W,12/4/1982,450,10,7,0,390,692,No,Yes,Submersible,Stock,
+5850843,30.143334,-97.825,Travis,218EDRDA,Forest Oaks Mobil Home Community ,W,12/4/1982,450,11,7,390,450,692,No,Yes,Submersible,Stock,
+5850844,30.143334,-97.825,Travis,218EDRDA,Forest Oaks Mobil Home Community ,W,2/18/1986,450,10,9,0,20,692,No,No,None,Unused,
+5850844,30.143334,-97.825,Travis,218EDRDA,Forest Oaks Mobil Home Community ,W,2/18/1986,450,10,7,0,250,692,No,No,None,Unused,
+5850844,30.143334,-97.825,Travis,218EDRDA,Forest Oaks Mobil Home Community ,W,2/18/1986,450,10,5,0,290,692,No,No,None,Unused,
+5850844,30.143334,-97.825,Travis,218EDRDA,Forest Oaks Mobil Home Community ,W,2/18/1986,450,11,,290,450,692,No,No,None,Unused,
+5850845,30.136111,-97.830278,Travis,218EDRDA,"Arroyo Doble Water System, Inc.",W,3/9/1979,435,10,9,0,160,683,No,Yes,,Public Supply,Owner Well Number:  2 - MOURNING DOVE CV. TCEQ Source ID: G2270069B. 
+5850845,30.136111,-97.830278,Travis,218EDRDA,"Arroyo Doble Water System, Inc.",W,3/9/1979,435,101,,160,435,683,No,Yes,,Public Supply,Owner Well Number:  2 - MOURNING DOVE CV. TCEQ Source ID: G2270069B. 
+5850846,30.130278,-97.821944,Travis,218EDRDA,Creedmoor-Maha WSC,W,9/1/1977,535,10,13,0,,625,Yes,Yes,Turbine,Public Supply,TCEQ Source ID: G2270008A. BS-EACD meter # 472029000
+5850847,30.130278,-97.822222,Travis,218EDRDA,Creedmoor-Maha WSC,W,,,,,,,630,Yes,Yes,Turbine,Public Supply,MP= +2.30 feet
+5850848,30.13,-97.821944,Travis,218EDRDA,Creedmoor-Maha WSC,W,1/3/1983,450,,,,,624,No,No,Turbine,Public Supply,TCEQ Source ID: G2270008D. 
+5850849,30.126111,-97.816389,Travis,218EDRDA,Creedmoor-Maha WSC,W,7/1/1984,550,,,,,631,Yes,Yes,,Public Supply,TCEQ Source ID: G2270008C. 
+5850850,30.125833,-97.815556,Travis,218EDRDA,Creedmoor-Maha WSC,W,7/1/1984,550,,,,,629,No,No,,Public Supply,TCEQ Source ID: G2270008E. 
+5850851,30.125555,-97.815001,Travis,218EDRDA,Creedmoor-Maha WSC,W,7/1/1984,550,,,,,633,No,No,,Public Supply,TCEQ Source ID: G2270008F. 
+5850852,30.161667,-97.818333,Travis,218EDRDA,J. D. Malone,W,5/16/1984,420,10,7,0,20,690,Yes,Yes,Submersible,Public Supply,TCEQ Source ID: G2270110A. Badge #17148728   MP= +1.50 feet
+5850852,30.161667,-97.818333,Travis,218EDRDA,J. D. Malone,W,5/16/1984,420,10,5,0,260,690,Yes,Yes,Submersible,Public Supply,TCEQ Source ID: G2270110A. Badge #17148728   MP= +1.50 feet
+5850852,30.161667,-97.818333,Travis,218EDRDA,J. D. Malone,W,5/16/1984,420,101,,260,420,690,Yes,Yes,Submersible,Public Supply,TCEQ Source ID: G2270110A. Badge #17148728   MP= +1.50 feet
+5850853,30.145556,-97.812501,Travis,218EDRDA,Onion Creek Country  Club,W,8/12/1977,490,10,9,0,220,660,No,No,Submersible,Irrigation,
+5850853,30.145556,-97.812501,Travis,218EDRDA,Onion Creek Country  Club,W,8/12/1977,490,101,,220,490,660,No,No,Submersible,Irrigation,
+5850855,30.146111,-97.819444,Travis,218EDRDA,Village of San Leanna  #1,W,5/1/1979,500,10,10,0,200,650,Yes,Yes,Submersible,Public Supply,TCEQ Source ID: G2270017A. MP= +2.40 feet
+5850855,30.146111,-97.819444,Travis,218EDRDA,Village of San Leanna  #1,W,5/1/1979,500,10,6,0,300,650,Yes,Yes,Submersible,Public Supply,TCEQ Source ID: G2270017A. MP= +2.40 feet
+5850855,30.146111,-97.819444,Travis,218EDRDA,Village of San Leanna  #1,W,5/1/1979,500,101,6,300,500,650,Yes,Yes,Submersible,Public Supply,TCEQ Source ID: G2270017A. MP= +2.40 feet
+5850857,30.135278,-97.825555,Travis,218EDRDA,Twin Creek Park  Ted Swanson ,W,0/0/1972,400,,,,,665,No,No,Submersible,Public Supply,TCEQ Source ID: G2270064C. 
+5850858,30.131111,-97.822222,Travis,218EDRDA,Twin Creek Park  Ted Swanson ,W,1/27/1973,380,10,7,0,160,630,No,Yes,Submersible,Public Supply,TCEQ Source ID: G2270064A. 
+5850858,30.131111,-97.822222,Travis,218EDRDA,Twin Creek Park  Ted Swanson ,W,1/27/1973,380,101,,160,380,630,No,Yes,Submersible,Public Supply,TCEQ Source ID: G2270064A. 
+5850859,30.143056,-97.823055,Travis,218EDRDA,Onion Creek Memorial Park,W,6/5/1989,,,,,,688,No,No,Submersible,Irrigation,
+5850860,30.154167,-97.822778,Travis,218EDRDA,Native Texas Nursery,W,6/26/1990,500,10,5,0,360,661,Yes,Yes,Submersible,Irrigation,Aquifer test and results in TWDB files.
+5850860,30.154167,-97.822778,Travis,218EDRDA,Native Texas Nursery,W,6/26/1990,500,11,5,360,480,661,Yes,Yes,Submersible,Irrigation,Aquifer test and results in TWDB files.
+5850860,30.154167,-97.822778,Travis,218EDRDA,Native Texas Nursery,W,6/26/1990,500,10,5,480,500,661,Yes,Yes,Submersible,Irrigation,Aquifer test and results in TWDB files.
+5850861,30.144445,-97.831389,Travis,218EDRDA,Earl Hunt ,W,0/0/1973,,10,8,0,,704,Yes,Yes,Submersible,Irrigation,Data from Barton Springs-Edwards Aquifer Conservation District.
+5850862,30.138611,-97.826111,Travis,218EDRDA,Diane Barnes,W,3/0/1989,250,10,4,,,678,No,No,Submersible,Irrigation,Data from Barton Springs-Edwards Aquifer Conservation District.
+5850863,30.150556,-97.833055,Travis,218EDRDA,Moorland Water Supply ,W,,408,,,,,702,No,No,Submersible,Public Supply,
+5850865,30.128333,-97.814445,Travis,218EDRDA,Sarah & Andy Edgerton ,W,11/1/2013,420,10,5,0,380,644,Yes,Yes,Submersible,Domestic,Well Report Tracking Number: 354631. Est. yield: 20+ GPM.
+5850868,30.1394444,-97.8236111,Travis,,Manchaca Fire & Rescue,W,4/21/2020,445,10,4.5,0,345,669,No,No,Submersible,Extraction,Well Report Tracking Number: 543505. 
+5850868,30.1394444,-97.8236111,Travis,,Manchaca Fire & Rescue,W,4/21/2020,445,12,4.5,345,445,669,No,No,Submersible,Extraction,Well Report Tracking Number: 543505. 
+5850902,30.141667,-97.758056,Travis,218EDRDA,Joe Carrington,W,0/0/1948,651,,,,,680,Yes,Yes,None,Unused,Abandoned.  Well L-42 in 1957 Travis County report.
+5850903,30.147778,-97.790278,Travis,218EDRDA,R.B. Gault,W,,302,,,,,631,Yes,No,Piston,Irrigation,
+5850904,30.140834,-97.782778,Travis,218EBFZA,Onion Creek  Development ,W,,300,10,8,,,580,Yes,No,None,Unused,Sulphur odor.  Well to be plugged.
+5858141,30.1214167,-97.8366111,Travis,,Rosa Yeotonalcuauhtil,W,12/30/2016,420,10,4.5,-2,378,727,No,No,,Domestic,Well Report Tracking Number: 439972. 
+5858202,30.124444,-97.813334,Travis,218EDRDA,Mystic Oaks W.S.C. Well #1 ,W,4/26/1969,405,10,7,0,310,654,Yes,Yes,Submersible,Public Supply,TCEQ Source ID: G2270044A. Reported yield 42 gpm with 185 feet drawdown when drilled. Owners #1.
+5858202,30.124444,-97.813334,Travis,218EDRDA,Mystic Oaks W.S.C. Well #1 ,W,4/26/1969,405,101,,310,405,654,Yes,Yes,Submersible,Public Supply,TCEQ Source ID: G2270044A. Reported yield 42 gpm with 185 feet drawdown when drilled. Owners #1.
+5858203,30.123333,-97.820278,Travis,218EDRDA,Raynond Canion,W,0/0/1967,263,,,,,630,Yes,No,Submersible,Domestic,Estimated flow 10 gal/min on Apr.27 1973.
+5858204,30.124722,-97.824722,Travis,218EDRDA,Dan Chance,W,0/0/1962,175,,,,,630,Yes,Yes,Submersible,Domestic,"Reported drawdown 18 ft after bail- ing 24 gal/min for 30 minutes on Oct. 18,1962."
+5858205,30.1022222,-97.815,Travis,218EDRDA,Homer Heep,S,,,,,,,650,No,Yes,None,Domestic,"USGS Site Number: 300608097485501. Manchaca Springs. Reported flow 18 gal/min in 1941 and 5 gal/min in 1955.  Measured flow 23 gal./min on Sept.3,1973, and 200 gal/min on Apr 27,1973.  Well L-82 in TBWE B-5708."
+5858207,30.120555,-97.820278,Travis,218EDRDA,Onion Creek Meadows ,W,0/0/1971,460,,,,,650,No,Yes,Submersible,Public Supply,TCEQ Source ID: G2270059A. Estimated yield 50 GPM. Deepened from 340 feet to 460 feet in 1989.
+5858208,30.116112,-97.82,Travis,218EDRDA,Onion Creek Meadows ,W,0/0/1971,520,,,,,680,Yes,Yes,Submersible,Public Supply,TCEQ Source ID: G2270059B. Estimated yield 70 gal/min. Well deepened to 520 ft 5-1-1989.
+5858209,30.119167,-97.816112,Travis,218EDRDA,Water Suppliers  Corp. ,W,0/0/1975,400,,,,,661,Yes,Yes,Submersible,Public Supply,TCEQ Source ID: G2270059C. 
+5858213,30.112223,-97.798889,Travis,218EBFZA,TxDOT ,T,2/18/1986,1010,,,,,740,Yes,Yes,None,Plugged or Destroyed,T.W.D.B. test hole. Could not locate in 2010.
+5858215,30.123611,-97.826667,Travis,218EDRDA,"Arroyo Doble Water System, Inc.",W,6/3/1972,380,10,9,0,163,655,Yes,Yes,Submersible,Public Supply,TCEQ Source ID: G2270069A. Reported yield 200 gpm when drilled
+5858215,30.123611,-97.826667,Travis,218EDRDA,"Arroyo Doble Water System, Inc.",W,6/3/1972,380,101,8,163,380,655,Yes,Yes,Submersible,Public Supply,TCEQ Source ID: G2270069A. Reported yield 200 gpm when drilled
+5858216,30.122778,-97.815001,Travis,218EDRDA,Mystic Oaks W.S.C.,W,,400,,,,,670,Yes,Yes,Submersible,Public Supply,TCEQ Source ID: G2270044B. 
+5858222,30.1013889,-97.8105556,Travis,218EDRD,Adkins well #4,W,10/19/2007,520,10,6,0,110,681,Yes,Yes,Submersible,Domestic,Well Report Tracking Number: 128977. 
+5858222,30.1013889,-97.8105556,Travis,218EDRD,Adkins well #4,W,10/19/2007,520,10,5,1,470,681,Yes,Yes,Submersible,Domestic,Well Report Tracking Number: 128977. 
+5858222,30.1013889,-97.8105556,Travis,218EDRD,Adkins well #4,W,10/19/2007,520,11,5,470,500,681,Yes,Yes,Submersible,Domestic,Well Report Tracking Number: 128977. 
+5858223,30.1088889,-97.8058333,Travis,218EDRDA,Adkins Well #1,W,1/25/2008,600,10,5,0,560,735,Yes,Yes,Submersible,Irrigation,Well Report Tracking Number: 135225. Owner Well Number: 1. 
+5858223,30.1088889,-97.8058333,Travis,218EDRDA,Adkins Well #1,W,1/25/2008,600,11,5,560,580,735,Yes,Yes,Submersible,Irrigation,Well Report Tracking Number: 135225. Owner Well Number: 1. 
+5858301,30.0922222,-97.7894444,Travis,218EDRDA,2428 Partners  Sunfield MUD #2,W,0/0/1943,643,10,6,0,639,734,Yes,No,None,Unused,Owner Well Number: L-102. Old USGS observation well. Borehole video taken on 5/6/2011. BSEACD intalled transducer in August 2011.
+5858304,30.123333,-97.752223,Travis,218EDRDA,R.C. Brown,W,0/0/1947,720,,,,,660,Yes,Yes,Submersible,Unused,
+5859105,30.104723,-97.738611,Travis,218EDRDA,Arthur Johnson,W,0/0/1925,745,,,,,655,No,No,None,Unused,Abandoned oil test.
+
+LookupAquiferCode,LookupAquiferCodeDescription
+218EBFZA,Edwards and Associated Limestones - (Balcones Fault Zone Aquifer)
+218EDDT,Edwards and Associated Limestones and Trinity Group
+218EDGR,Edwards and Associated Limestones and Glen Rose Limestone
+218EDGRU,Edwards and Associated Limestones and Upper Mbr of Glen Rose Limestone
+218EDRD,Edwards Limestone
+218EDRDA,Edwards and Associated Limestones
+
+LookupWellTypeCode,LookupWellTypeDescription
+O,Observation
+S,Spring
+T,Test Hole
+W,Withdrawal of Water
+
+LookupCasingId,LookupCasingTypeDescription
+10,Blank
+11,Screen
+12,Perforated or Slotted
+101,Open Hole
+
