@@ -9,28 +9,52 @@ output: pdf_document
 
 ### John Reid, Helene LaVire, Asia Cavazos, Derris Dabbs, and Dustin Smith
 
-## *Goal*
+## Goal
+The goal of our project is to determine the association, if any, between climate data and chosen ground- and surfacewater sites in San Anotnio, Texas, between 1990 and 2020. 
 
-## *Introduction*
-In recent years we have seen a dramatic change in global weather patterns, with increased intensity of storms, constant record-breaking heat indexes, unpredictability, and in some cases extreme cold fronts reaching well below their normal longitudes. With these changes, we have seen increased fears of food and water supply shortages. For example in 2011 - 2012 Lake Meredith (a major supplier of fresh water for the West Texas plains) reached a low less than 100,000 acre-feet, more than 700,000 acre-feet less then its max storage of 800,000 feet. The goal of this study is to analyze time series data to assess the changes in water levels in our local reservoirs, lakes, and aquifers. We will begin by specifically addressing the Edwards aquifer (a major source of water for the "Hill Country" of Texas i.e. Austin, San Antonio, and their surrounding communities). We will look at explanatory variables such as temperature (average highs and lows), humidity, precipitation, population density, water demands, "snow pack" along the watershed's recharge, and other climate activities.
+## Introduction
+In recent years we have seen a dramatic change in global weather patterns, with increased intensity of storms, constant record-breaking heat indexes, unpredictability, and in some cases extreme cold fronts reaching well below their normal longitudes. With these changes, we have seen increased fears of food and water supply shortages. For example, in 2011 - 2012 Lake Meredith (a major supplier of fresh water for the West Texas plains) reached a low less than 100,000 acre-feet, more than 700,000 acre-feet less then its max storage of 800,000 acre-feet. The goal of this study is to analyze time series data to assess the changes in water levels in our local reservoirs, lakes, and aquifers. We will begin by specifically addressing the Edwards aquifer (a major source of water for the "Hill Country" of Texas i.e. Austin, San Antonio, and their surrounding communities). We will look at explanatory variables such as temperature (average highs and lows), humidity, precipitation, population density, water demands, "snow pack" along the watershed's recharge, and other climate activities.
 
 Our group has chosen this topic out of a mutual interest in the topic of climate change. We are hoping to learn whether parameters such as increasing temeprature, and increasing variability in precipitation are having a negative effect on the availability of drinking water in the San Antonio area. At 30.19 inches of precipitation annually, San Antonio has the lowest precipitation of any major Texas city, with the exception of desert-bound El Paso. There are several other arid major cities in the U.S. that have had well-publicized water availability concerns, including Las Vegas and Phoenix. However, those cities rely primarily on Colorado River water being delivered to them via Colorado and Utah, stored in dams and funneled in via canals. Colorado River water levels depend largely on precipitation amounts at its headwaters in Colorado. Essentially, water supplies in these cities are imported via the Colorado River from wetter locales.
 
-San Antonio, by contrast, relies on water from both the Edwards Aquifer immediately to its northwest in the Texas Hill Country, and a number of artifical reservoirs around the city, including Canyon and Medina Lakes. These water sources are filled only by local precipitation, and any variability in local precipitation can negatively affect local water availability. As of the beginning of our project in early June, San Antonio is experiencing Exceptional Drought, the highest possible level. It is probably not a coincidence that the Edwards Aquifer J-17 well readings are currently at historic lows (https://www.tpr.org/environment/2025-05-23/san-antonios-edwards-aquifer-nears-lowest-level-ever-stage-5-declared), and Canyon Lake is currently at a "percent full" level of 45.4% (https://www.ksat.com/weather/2025/06/05/how-recent-rain-has-impacted-rivers-lakes-and-reservoirs-in-new-braunfels-san-antonio-area/), the loweest level observed since the lake was initially filled in 1962. 
+San Antonio, by contrast, relies on water from both the Edwards Aquifer immediately to its northwest in the Texas Hill Country, and a number of artifical reservoirs around the city, including Canyon and Medina Lakes. These water sources are filled only by local precipitation, and any variability in local precipitation can negatively affect local water availability. As of the beginning of our project in early June, San Antonio is experiencing Exceptional Drought, the highest possible level. It is probably not a coincidence that the Edwards Aquifer J-17 well readings are currently at historic lows (https://www.tpr.org/environment/2025-05-23/san-antonios-edwards-aquifer-nears-lowest-level-ever-stage-5-declared), and Canyon Lake is currently at a "percent full" level of 45.4% (https://www.ksat.com/weather/2025/06/05/how-recent-rain-has-impacted-rivers-lakes-and-reservoirs-in-new-braunfels-san-antonio-area/), the lowest level observed since the lake was initially filled in 1962. 
 
-San Antonio, always growing and located in a semi-arid zone, has faced water scarcity several times in its history. We hope to uncover whether water scarcity is becoming more or less common.
+San Antonio, always growing and located in a semi-arid zone, has faced water scarcity several times in its history. We hope to uncover whether or not water scarcity is becoming more common.
 
 At the same time, San Antonio is part of the "Texas Triangle" group of major cities all recently experiencing tremendous population growth. These cities include Fort Worth, Dallas, Austin, San Antonio, and Houston, and their associated metropolitan areas. San Antonio, before figuring in suburban populations, is the 7th largest city in the United States. Its size, continued growth, and location adjacent to the arid expanse of West Texas could, we hypothesize, leave San Antonio water more and more vulnerable to climatic changes. Through our project, we hope to evaluate this hypothesis further.
 
-## Discuss water scarcity and effect of climate change parameters
-
-## Define variables
-
 ## *The data*
-* Where we got our data, parameter of measurement, describe trend, cycle, volatility, plot(s)
+
+To study possible associations between climate and water availability, we selected average temperature and daily precipitation measured at San Antonio International Airport as possible indicator variables. The J-17 index well water elevation and the daily percentage Canyon Lake Reservoir filled were chosen as response variables for groundwater and surface water, respectively. The date range of 01-01-2990 to 12-31-2020 suggested by NOAA for recent climate change sutdies was accepted.
+
 ## Average Temperature and Precipitation
 
-## Canyon Lake Reservoir was chosen as an appropriate surface water location due to its proximity to the J17 Index Well in northeast San Antonio. Daily reservoir information for this reservoir is available beginning in August 1962 through June 2025. Canyon Lake Reservoir data was obtained from waterdatafortexas.org, a product of the Texas Water Development Board (TWDB). The parameter "percent full" during the time period of interest (01 January 1991 to 31 December 2020) was extracted from the dataset for Canyon Lake Reservoir. This parameter is calculated as the ratio of Conservation Storage (the amount of water the reservoir is holding under normal operations) to Conversation Capacity (the useable capacity of the reservoir, which is the total storage capacity of the reservoir less flood storage and dead pool volumes). 
+## Canyon Lake Reservoir 
+
+```{r Canyon Lake}
+
+knitr::opts_chunk$set(echo = FALSE)
+
+library(readr)
+library(dplyr)
+library(lubridate)
+library(astsa)
+library(ggplot2)
+
+CLData <- read.table("CanyonLakeRev.txt", header=TRUE, sep=",")%>%
+  select(date, percent_full)  %>% filter(date >= as.Date("1991-01-01") & date <= as.Date("2020-12-31"))
+
+CLData$date <- as.Date(CLData$date)
+
+CanyonPlot <- ggplot(CLData, aes(x=date, y=percent_full)) +
+  geom_line() + 
+  scale_x_date(date_breaks = "5 years", date_labels = "%Y", date_minor_breaks = "1 year")+
+  ylab("Percent")+
+  xlab("Year")+
+  ggtitle("1990-2020 Canyon Lake Reservoir - Percent Full")
+CanyonPlot
+```
+Some observations from this data are that there appears to be a change in the frequency of local minima throughout the date range. Additionally, the width of the peaks, or the time the reservoir is below 100% capacity appears to be increasing throughout the date range. Thus, variablility in the deviation from a full capacity appears to be increasing.
 
 ## Edwards Plateau J-17 Plot JAR 6-7-25
 ```{r echo=TRUE, eval=TRUE}
