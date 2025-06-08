@@ -82,7 +82,4 @@ tsplot(moving_prcp,
        col = "blue",
        cex = .5, cex.main = .8)
 
-#write.csv(new.data,file = paste(path,type,"San Antonio Airport (SAT) climate data (1948 to 2025)rev.csv"))
-
-
-
+write.csv(new.data,file = paste(path,type,"San Antonio Airport (SAT) climate data (1948 to 2025)rev.csv"))
