@@ -9,12 +9,19 @@ output: pdf_document
 
 ### John Reid, Helene LaVire, Asia Cavazos, Derris Dabbs, and Dustin Smith
 
-## *Abstract*
+## *Goal*
+
+## *Introduction*
     In recent years we have seen a dramatic change in global weather patterns, with increased intensity of storms, constant record
 breaking heat indexes, unpredictability, and in some cases extreme cold fronts reaching well below their normal longitudes. With these changes, we have seen increased fears of food and water supply shortages. For example in 2011 - 2012 Lake Meredith (a major supplier of fresh water for the West Texas plains) reached a low less than 100,000 acre-feet, more than 700,000 acre-feet less then its max storage of 800,000 feet. The goal of this study is to analyze time series data to assess the changes in water levels in our local reservoirs, lakes, and aquifers. We will begin by specifically addressing the Edwards aquifer (a major source of water for the "Hill Country" of Texas i.e. Austin, San Antonio, and their surrounding communities). We will look at explanatory variables such as temperature (average highs and lows), humidity, precipitation, population density, water demands, "snow pack" along the watershed's recharge, and other climate activities.
+* Discuss water scarcity and effect of climate change parameters
+* Define variables
 
 ## *The data*
-Canyon Lake Reservoir was chosen as an appropriate surface water location due to its proximity to the J17 Index Well in northeast San Antonio. Daily reservoir information for this reservoir is available beginning in August 1962 through June 2025. Canyon Lake Reservoir data was obtained from waterdatafortexas.org, a product of the Texas Water Development Board (TWDB). The parameter "percent full" during the time period of interest (01 January 1991 to 31 December 2020) was extracted from the dataset for Canyon Lake Reservoir. This parameter is calculated as the ratio of Conservation Storage (the amount of water the reservoir is holding under normal operations) to Conversation Capacity (the useable capacity of the reservoir, which is the total storage capacity of the reservoir less flood storage and dead pool volumes). 
+* Where we got our data, parameter of measurement, describe trend, cycle, volatility, plot(s)
+## Average Temperature and Precipitation
+
+## Canyon Lake Reservoir was chosen as an appropriate surface water location due to its proximity to the J17 Index Well in northeast San Antonio. Daily reservoir information for this reservoir is available beginning in August 1962 through June 2025. Canyon Lake Reservoir data was obtained from waterdatafortexas.org, a product of the Texas Water Development Board (TWDB). The parameter "percent full" during the time period of interest (01 January 1991 to 31 December 2020) was extracted from the dataset for Canyon Lake Reservoir. This parameter is calculated as the ratio of Conservation Storage (the amount of water the reservoir is holding under normal operations) to Conversation Capacity (the useable capacity of the reservoir, which is the total storage capacity of the reservoir less flood storage and dead pool volumes). 
 
 ## Edwards Plateau J-17 Plot JAR 6-7-25
 
