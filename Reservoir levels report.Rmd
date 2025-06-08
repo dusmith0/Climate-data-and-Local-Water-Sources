@@ -15,3 +15,22 @@ breaking heat indexes, unpredictability, and in some cases extreme cold fronts r
 
 ## *The data*
 Canyon Lake Reservoir was chosen as an appropriate surface water location due to its proximity to the J17 Index Well in northeast San Antonio. Daily reservoir information for this reservoir is available beginning in August 1962 through June 2025. Canyon Lake Reservoir data was obtained from waterdatafortexas.org, a product of the Texas Water Development Board (TWDB). The parameter "percent full" during the time period of interest (01 January 1991 to 31 December 2020) was extracted from the dataset for Canyon Lake Reservoir. This parameter is calculated as the ratio of Conservation Storage (the amount of water the reservoir is holding under normal operations) to Conversation Capacity (the useable capacity of the reservoir, which is the total storage capacity of the reservoir less flood storage and dead pool volumes). 
+
+## Edwards Plateau J-17 Plot
+
+library(readr)
+library(dplyr)
+library(lubridate)
+
+data <- read_csv("j17waterlevelsrev.csv", col_select = c(Date, WaterElevation)) %>%
+  mutate(Date = as.Date(Date, format = "%m/%d/%Y")) %>%
+  filter(Date >= as.Date("1991-01-01") & Date <= as.Date("2020-12-31"))
+
+ggplot(data, aes(x = Date, y = WaterElevation)) +
+  geom_line(color = "blue") +
+  labs(
+    title = "Water Elevation Over Time (1991–2020)",
+    x = "Date",
+    y = "Water Elevation (ft)"
+  ) +
+  theme_minimal()
