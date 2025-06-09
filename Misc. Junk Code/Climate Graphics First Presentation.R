@@ -55,23 +55,23 @@ tsplot(filter_data,
        cex = .5, cex.main = .8)
 
 ## plotting the precipitation data
-par(mfrow = c(3,1))
+par(mfrow = c(2,1))
 prcp <- ts(new.data$PRCP,frequency = 365, start = 1991, end = 2020)
 tsplot(prcp,
        xlab = "Time 1991 to 2020",
        ylab = "Daily Precipitation",
-       main = "Daily Percipitation",
+       main = "Daily Precipitation",
        col = "blue",
        cex = .5, cex.main = .8)
 
 ## Moving over a month
-moving_prcp <- stats::filter(prcp, filter = rep(1/30,30), sides = 1)
-tsplot(moving_prcp,
-       xlab = "Time 1991 to 2020",
-       ylab = "Daily Precipitation",
-       main = "Moving (Monthly) Daily Percipitation",
-       col = "blue",
-       cex = .5, cex.main = .8)
+#moving_prcp <- stats::filter(prcp, filter = rep(1/30,30), sides = 1)
+#tsplot(moving_prcp,
+#       xlab = "Time 1991 to 2020",
+#       ylab = "Daily Precipitation",
+#       main = "Moving (Monthly) Daily Precipitation",
+#       col = "blue",
+#       cex = .5, cex.main = .8)
 
 ## Moving over a year
 moving_prcp <- stats::filter(Prcp, filter = rep(1/365,365), sides = 1)
