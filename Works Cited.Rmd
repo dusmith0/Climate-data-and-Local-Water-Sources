@@ -4,7 +4,32 @@ author: "Dustin Smith"
 date: "2025-06-05"
 output: pdf_document
 ---
+## NOAA Citation
 
+Templete:
+
+NOAA National Centers for Environmental Information.(2013): VIIRS Climate Raw Data Record (C-RDR) from Suomi NPP, Version 1. [indicate subset used]. NOAA National Centers for Environmental Information. doi:10.7289/V57P8W90 [access date]
+
+
+## Actual Citations
+
+*NOAA National Centers for Environmental Information.(2013): VIIRS Climate Raw Data Record (C-RDR) from Suomi NPP, Version 1. Climate Summary Data, (Station USW00013904) Austin International Airport (1948-03-01 to 2025-01-01). NOAA National Centers for Environmental Information. doi:10.7289/V57P8W90 , 2025-06-06*
+
+*NOAA National Centers for Environmental Information.(2013): VIIRS Climate Raw Data Record (C-RDR) from Suomi NPP, Version 1. Climate Summary Data, (Station USW00012921) San Antonio International Airport (SAT) (1948-01-01 to 2025-01-01). NOAA National Centers for Environmental Information. doi:10.7289/V57P8W90 , 2025-06-06*
+
+*NOAA National Centers for Environmental Information.(2013): VIIRS Climate Raw Data Record (C-RDR) from Suomi NPP, Version 1. Climate Summary Data, (Station USW00012921) San Antonio International Airport (SAT) (1997-01-01 to 2025-01-01). NOAA National Centers for Environmental Information. doi:10.7289/V57P8W90 , 2025-06-06*
+
+*NOAA National Centers for Environmental Information.(2013): VIIRS Climate Raw Data Record (C-RDR) from Suomi NPP, Version 1. Climate Summary Data, (Station USW00012970) San Antonio Stinson Municipal Airport (1998-11-05 to 2025-01-01). NOAA National Centers for Environmental Information. doi:10.7289/V57P8W90 , 2025-06-06*
+
+*NOAA National Centers for Environmental Information.(2013): VIIRS Climate Raw Data Record (C-RDR) from Suomi NPP, Version 1. Climate Summary Data, (Station USW00012970) San Antonio Stinson Municipal Airport (1998-11-05 to 2025-01-01). NOAA National Centers for Environmental Information. doi:10.7289/V57P8W90 , 2025-06-06*
+
+*NOAA National Centers for Environmental Information.(2013): VIIRS Climate Raw Data Record (C-RDR) from Suomi NPP, Version 1. Climate Summary Data, (Station USW00012979) San Marcos Municipal Airport (2017-16-08 to 2025-01-01). NOAA National Centers for Environmental Information. doi:10.7289/V57P8W90 , 2025-06-06*
+
+*Texas Water Development Board (TWDB). Groundwater Database (GWDB), Well Information Report for State Well Number 68-37-203. https://www3.twdb.texas.gov/apps/reports/GWDB/WellData. 2025 - 06 - 06*
+
+*Texas Water Development Board (TWDB). Water Data for Texas, Surface Water, Canyon Lake, Historical Data. https://waterdatafortexas.org/reservoirs/individual/canyon. 2025 - 06 - 06*
+
+NOAA National Centers for Environmental Information.(2013): VIIRS Climate Raw Data Record (C-RDR) from Suomi NPP, Version 1. Climate Summary Data, Austin Bergstrom Airport (1948-03-01 to 2025-01-01). NOAA National Centers for Environmental Information. doi:10.7289/V57P8W90 , 2025-06-06
 
 ### This definetly needs a lot of work 
 
@@ -18,7 +43,14 @@ https://experience.arcgis.com/experience/fbd266a3fbce4adc83e890480ac7b135
 Lake Resiviour data -- "https://waterdatafortexas.org/reservoirs/individual/meredith"
 
 
+I have not found specific citation methods on their webpage -- here is a generic one
+
+
+
 Climate Data NOAA -- "https://www.ncei.noaa.gov/cdo-web/datasets/GHCND/stations/GHCND:USW00012921/detail"
 
 Well Data -- 
 "https://www.twdb.texas.gov/groundwater/data/gwdbrpt.asp"
+
+
+
