@@ -23,7 +23,7 @@ data <- as.data.frame(data)
 
 new.data <- data %>%
             select(DATE, TAVG, PRCP,TMAX,TMIN) %>%
-            filter(DATE >= as.Date("1991-1-1") & DATE <= as.Date("2020-12-12"))
+            filter(DATE >= as.Date("1991-1-1") & DATE <= as.Date("2020-12-31"))
 
 
 ## Filtering in TAVG if it is not present
@@ -74,7 +74,7 @@ tsplot(prcp,
 #       cex = .5, cex.main = .8)
 
 ## Moving over a year
-moving_prcp <- stats::filter(Prcp, filter = rep(1/365,365), sides = 1)
+moving_prcp <- stats::filter(prcp, filter = rep(1/365,365), sides = 1)
 tsplot(moving_prcp,
        xlab = "Time 1991 to 2020",
        ylab = "Average Temp.",

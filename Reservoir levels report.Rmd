@@ -5,6 +5,16 @@ date: "2025-06-05"
 output: pdf_document
 ---
 
+```{r results = "hide"}
+### Libraries can go here (Maybe that can make the loading more streamlined?)
+library("astsa")
+library("ggplot2")
+library("dplyr")
+library("readr")
+library("lubridate")
+```
+
+
 ## **Impact on Climate Change on Local Water Sources** 
 
 ### John Reid, Helene LaVire, Asia Cavazos, Derris Dabbs, and Dustin Smith
@@ -15,9 +25,9 @@ The goal of our project is to determine the association, if any, between climate
 ## Introduction
 In recent years we have seen a dramatic change in global weather patterns, with increased intensity of storms, constant record-breaking heat indexes, unpredictability, and in some cases extreme cold fronts reaching well below their normal longitudes. With these changes, we have seen increased fears of food and water supply shortages. For example, in 2011 - 2012 Lake Meredith (a major supplier of fresh water for the West Texas plains) reached a low less than 100,000 acre-feet, more than 700,000 acre-feet less then its max storage of 800,000 acre-feet. The goal of this study is to analyze time series data to assess the changes in water levels in our local reservoirs, lakes, and aquifers. We will begin by specifically addressing the Edwards aquifer (a major source of water for the "Hill Country" of Texas i.e. Austin, San Antonio, and their surrounding communities). We will look at explanatory variables such as temperature (average highs and lows), humidity, precipitation, population density, water demands, "snow pack" along the watershed's recharge, and other climate activities.
 
-Our group has chosen this topic out of a mutual interest in the topic of climate change. We are hoping to learn whether parameters such as increasing temeprature, and increasing variability in precipitation are having a negative effect on the availability of drinking water in the San Antonio area. At 30.19 inches of precipitation annually, San Antonio has the lowest precipitation of any major Texas city, with the exception of desert-bound El Paso. There are several other arid major cities in the U.S. that have had well-publicized water availability concerns, including Las Vegas and Phoenix. However, those cities rely primarily on Colorado River water being delivered to them via Colorado and Utah, stored in dams and funneled in via canals. Colorado River water levels depend largely on precipitation amounts at its headwaters in Colorado. Essentially, water supplies in these cities are imported via the Colorado River from wetter locales.
+Our group has chosen this topic out of a mutual interest in the topic of climate change. We are hoping to learn whether parameters such as increasing temperature, and increasing variability in precipitation are having a negative effect on the availability of drinking water in the San Antonio area. At 30.19 inches of precipitation annually, San Antonio has the lowest precipitation of any major Texas city, with the exception of desert-bound El Paso. There are several other arid major cities in the U.S. that have had well-publicized water availability concerns, including Las Vegas and Phoenix. However, those cities rely primarily on Colorado River water being delivered to them via Colorado and Utah, stored in dams and funneled in via canals. Colorado River water levels depend largely on precipitation amounts at its headwaters in Colorado. Essentially, water supplies in these cities are imported via the Colorado River from wetter locales.
 
-San Antonio, by contrast, relies on water from both the Edwards Aquifer immediately to its northwest in the Texas Hill Country, and a number of artifical reservoirs around the city, including Canyon and Medina Lakes. These water sources are filled only by local precipitation, and any variability in local precipitation can negatively affect local water availability. As of the beginning of our project in early June, San Antonio is experiencing Exceptional Drought, the highest possible level. It is probably not a coincidence that the Edwards Aquifer J-17 well readings are currently at historic lows (https://www.tpr.org/environment/2025-05-23/san-antonios-edwards-aquifer-nears-lowest-level-ever-stage-5-declared), and Canyon Lake is currently at a "percent full" level of 45.4% (https://www.ksat.com/weather/2025/06/05/how-recent-rain-has-impacted-rivers-lakes-and-reservoirs-in-new-braunfels-san-antonio-area/), the lowest level observed since the lake was initially filled in 1962. 
+San Antonio, by contrast, relies on water from both the Edwards Aquifer immediately to its northwest in the Texas Hill Country, and a number of artificial reservoirs around the city, including Canyon and Medina Lakes. These water sources are filled only by local precipitation, and any variability in local precipitation can negatively affect local water availability. As of the beginning of our project in early June, San Antonio is experiencing Exceptional Drought, the highest possible level. It is probably not a coincidence that the Edwards Aquifer J-17 well readings are currently at historic lows (https://www.tpr.org/environment/2025-05-23/san-antonios-edwards-aquifer-nears-lowest-level-ever-stage-5-declared), and Canyon Lake is currently at a "percent full" level of 45.4% (https://www.ksat.com/weather/2025/06/05/how-recent-rain-has-impacted-rivers-lakes-and-reservoirs-in-new-braunfels-san-antonio-area/), the lowest level observed since the lake was initially filled in 1962. 
 
 San Antonio, always growing and located in a semi-arid zone, has faced water scarcity several times in its history. We hope to uncover whether or not water scarcity is becoming more common.
 
@@ -25,9 +35,74 @@ At the same time, San Antonio is part of the "Texas Triangle" group of major cit
 
 ## *The data*
 
-To study possible associations between climate and water availability, we selected average temperature and daily precipitation measured at San Antonio International Airport as possible indicator variables. The J-17 index well water elevation and the daily percentage Canyon Lake Reservoir filled were chosen as response variables for groundwater and surface water, respectively. The date range of 01-01-2990 to 12-31-2020 suggested by NOAA for recent climate change sutdies was accepted.
+To study possible associations between climate and water availability, we selected average temperature and daily precipitation measured at San Antonio International Airport as possible indicator variables. The J-17 index well water elevation and the daily percentage Canyon Lake Reservoir filled were chosen as response variables for groundwater and surface water, respectively. The date range of 01-01-1990 to 12-31-2020 suggested by NOAA for recent climate change sutdies was accepted.
 
 ## Average Temperature and Precipitation
+
+```{r include = TRUE}
+## Getting the data
+  path <- file.path("C:", "Users", "dustin.smith", "OneDrive - Lubbock Independent School District",
+                    "Documents","Codes","R","Climate data and Water Levels","Original Data Sets",
+                    fsep =   "\\")
+  type <- file.path("Climate Data",fsep = "\\")
+  data <- read.csv(paste(path,type,"San Antonio Airport (SAT) climate data (1948 to 2025).csv",
+                   sep = "\\"))
+
+## Extracting the data from 1991 to 2020
+data <- as.data.frame(data)
+
+new.data <- data %>%
+            select(DATE, TAVG, PRCP,TMAX,TMIN) %>%
+            filter(DATE >= as.Date("1991-1-1") & DATE <= as.Date("2020-12-31"))
+
+
+## Filtering in TAVG if it is not present
+
+for(i in 1:length(new.data$TAVG)){
+  if(is.na(new.data$TAVG[i]) == TRUE){
+    new.data$TAVG[i] = (new.data$TMAX[i] + new.data$TMIN[i])/2
+  }
+}
+
+## Plotting the time series data
+par(mfrow = c(2,1), cex.lab = .7)
+Tavg <- ts(new.data$TAVG,frequency = 365, start = 1991, end = 2020)
+tsplot(Tavg,
+       xlab = "Time 1991 to 2020",
+       ylab = "Average Temp.",
+       main = "Daily Average Tempurature",
+       col = "blue",
+       cex = .5, cex.main = .8)
+
+## Moving over years to try to remove the seasonal cycles.
+filter_data <- stats::filter(Tavg, filter = rep(1/365,365), sides = 1)
+tsplot(filter_data,
+       xlab = "Time 1991 to 2020",
+       ylab = "Average Temp.",
+       main = "Moving (Yearly) Average Tempurature",
+       col = "blue",
+       cex = .5, cex.main = .8)
+
+## plotting the precipitation data
+par(mfrow = c(2,1))
+prcp <- ts(new.data$PRCP,frequency = 365, start = 1991, end = 2020)
+tsplot(prcp,
+       xlab = "Time 1991 to 2020",
+       ylab = "Daily Precipitation",
+       main = "Daily Precipitation",
+       col = "blue",
+       cex = .5, cex.main = .8)
+
+## Moving over a year
+moving_prcp <- stats::filter(prcp, filter = rep(1/365,365), sides = 1)
+tsplot(moving_prcp,
+       xlab = "Time 1991 to 2020",
+       ylab = "Average Temp.",
+       main = "Moving (Yeary) Daily Percipitation",
+       col = "blue",
+       cex = .5, cex.main = .8)
+
+```
 
 ## Canyon Lake Reservoir 
 
@@ -35,11 +110,6 @@ To study possible associations between climate and water availability, we select
 
 knitr::opts_chunk$set(echo = FALSE)
 
-library(readr)
-library(dplyr)
-library(lubridate)
-library(astsa)
-library(ggplot2)
 
 CLData <- read.table("CanyonLakeRev.txt", header=TRUE, sep=",")%>%
   select(date, percent_full)  %>% filter(date >= as.Date("1991-01-01") & date <= as.Date("2020-12-31"))
