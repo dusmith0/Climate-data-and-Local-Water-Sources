@@ -19,7 +19,6 @@ NOAA National Centers for Environmental Information.(2013): VIIRS Climate Raw Da
 
 *NOAA National Centers for Environmental Information.(2013): VIIRS Climate Raw Data Record (C-RDR) from Suomi NPP, Version 1. Climate Summary Data, (Station USW00012921) San Antonio International Airport (SAT) (1997-01-01 to 2025-01-01). NOAA National Centers for Environmental Information. doi:10.7289/V57P8W90 , 2025-06-06*
 
-*NOAA National Centers for Environmental Information.(2013): VIIRS Climate Raw Data Record (C-RDR) from Suomi NPP, Version 1. Climate Summary Data, (Station USW00012970) San Antonio Stinson Municipal Airport (1998-11-05 to 2025-01-01). NOAA National Centers for Environmental Information. doi:10.7289/V57P8W90 , 2025-06-06*
 
 *NOAA National Centers for Environmental Information.(2013): VIIRS Climate Raw Data Record (C-RDR) from Suomi NPP, Version 1. Climate Summary Data, (Station USW00012970) San Antonio Stinson Municipal Airport (1998-11-05 to 2025-01-01). NOAA National Centers for Environmental Information. doi:10.7289/V57P8W90 , 2025-06-06*
 
