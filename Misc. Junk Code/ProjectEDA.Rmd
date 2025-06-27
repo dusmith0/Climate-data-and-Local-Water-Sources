@@ -1,0 +1,153 @@
+---
+title: "ProjectEDA"
+author: "Helene LaVire hmlavire@tamu.edu"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(astsa)
+```
+
+
+``` {r import dataframe}
+data <- read.csv("Water_all.csv")
+data$DATE <- as.Date(data$DATE)
+
+
+library(dplyr)
+library(lubridate)
+library(zoo)
+library(tidyverse)
+
+# Convert the date column to Date class if it's not already
+data$DATE <- as.Date(data$DATE)
+
+#Water Elevation Monthly Averages
+WELLmonthly_averages <- data %>%
+  group_by(year = year(DATE), month = month(DATE)) %>%
+  summarise(avg_value = mean(WaterElevation, na.rm = TRUE)) %>%  # Calculate mean, handling NAs
+  ungroup() # Remove grouping
+
+wellMonthly <- as.data.frame(WELLmonthly_averages)
+print(wellMonthly)
+print(class(wellMonthly))
+
+#Temperature Monthly Averages
+TEMPmonthly_averages<- data %>%
+  group_by(year = year(DATE), month = month(DATE)) %>%
+  summarise(avg_value = mean(TAVG, na.rm = TRUE)) %>%  # Calculate mean, handling NAs
+  ungroup() # Remove grouping
+
+tempMonthly <- as.data.frame(TEMPmonthly_averages)
+print(tempMonthly)
+print(class(tempMonthly))
+
+#Precipitation Monthly Accumulation
+PRCPmonthly_sums<- data %>%
+  group_by(year = year(DATE), month = month(DATE)) %>%
+  summarise(sum_value = sum(PRCP, na.rm = TRUE)) %>%  # Sum each month, handling NAs
+  ungroup() # Remove grouping
+
+prcpMonthly <- as.data.frame(PRCPmonthly_sums)
+print(prcpMonthly)
+print(class(prcpMonthly))
+
+#Original Population Data
+dataWithPop <- read.csv("water_data_with_population.csv")
+dataWithPop$DATE <- as.Date(dataWithPop$DATE,  format = "%m/%d/%Y")
+POPmonthly_averages<- dataWithPop %>%
+  group_by(year = year(DATE), month = month(DATE)) %>%
+  summarise(avg_value = mean(population, na.rm = TRUE)) %>%  # Calculate mean, handling NAs
+  ungroup() # Remove grouping
+
+popMonthly <- as.data.frame(POPmonthly_averages)
+print(popMonthly)
+print(class(popMonthly))
+
+pop_average = data.frame(popMonthly$year, popMonthly$month, popMonthly$avg_value)
+
+colnames(pop_average) = c("year", "month", "population")
+
+pop_average$Date <- as.yearmon(paste(pop_average$year, pop_average$month), "%Y %m")
+
+pop_average <-pop_average[ , !(names(monthly_averages) %in% drops)]
+
+#missing information for population
+missingYear = c(rep(2002,2), rep(2005,3), rep(2006,3))
+missingMonth = c(10,11,9,11,12,5,7,9)
+missingPop = c(rep(1414000,2),rep(1538000,3),rep(1582000,3))
+missingDate = as.yearmon(paste(missingYear,missingMonth), "%Y %m")
+
+missingPopDF = data.frame(missingYear,missingMonth,missingPop,missingDate) 
+names(missingPopDF) = c("year", "month", "population", "Date")
+
+#Merge original population DF and missing info DF
+pop_averageDF = rbind(pop_average,missingPopDF)
+sort(pop_averageDF,)
+
+pop_averageDF <- pop_averageDF[order(pop_averageDF$Date),]
+
+monthly_averages = data.frame(wellMonthly$year, wellMonthly$month, wellMonthly$avg_value, tempMonthly$avg_value, prcpMonthly$sum_value, pop_averageDF$population)
+
+colnames(monthly_averages) = c("year", "month", "WaterElevation","Temp","Precipitation","Population")
+
+#add date column
+monthly_averages$Date <- as.yearmon(paste(monthly_averages$year, monthly_averages$month), "%Y %m")
+
+#Get rid of separate year and month columns
+drops <- c("year","month")
+monthly_averages <- monthly_averages[ , !(names(monthly_averages) %in% drops)]
+
+
+write.csv(monthly_averages,"MonthlyData.csv", row.names = TRUE)
+
+```
+
+
+
+
+
+``` {r scatterplot matrix of daily data}
+##NOT USEFUL - MOVING TO MONTHLY AVERAGES
+#panel.cor calculates correlations between all values
+panel.cor <-function(x,y,...){
+  usr <- par("usr"); on.exit(par(usr))
+  par(usr=c(0,1,0,1))
+  r <- round(cor(x,y),2)
+  text(0.5,0.5,r,cex=1.75)
+}
+
+#scatterplot matrix
+pairs(cbind(Water=data$WaterElevation, Temperature=data$TAVG,Precipitation=data$PRCP),col="dodgerblue3", lower.panel=panel.cor)
+
+```
+
+
+
+
+
+Meeting notes June 25, 2025
+
+Use monthly averages for temperature, precipitation, population
+Interpolate well data
+
+``` {r scatterplot matrix of monthly data}
+##Correlations NOT WORKING YET##
+panel.cor <-function(x,y,...){
+  usr <- par("usr"); on.exit(par(usr))
+  par(usr=c(0,1,0,1))
+  r <- round(cor(x,y),2)
+  text(0.5,0.5,r,cex=1.75)
+}
+
+#scatterplot matrix
+pairs(cbind(Temperature=monthly_averages$Temp, WaterElevation=monthly_averages$WaterElevation, Precipitation=monthly_averages$Precipitation, Population = monthly_averages$Population,col="dodgerblue3", lower.panel=panel.cor))
+
+```
+
+```{r basic linear model}
+fit = lm(monthly_averages$WaterElevation ~ monthly_averages$Temp + monthly_averages$Precipitation + monthly_averages$Population)
+
+```
