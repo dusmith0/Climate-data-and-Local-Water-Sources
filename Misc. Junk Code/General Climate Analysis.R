@@ -2,6 +2,9 @@
 ## Group 4 (Da Dream Team!!!)
 ## libraries:
 
+## Data that the group is interested in..
+##----  Waterelevation, Average temp, percipitation, population
+
 #install.packages("corrplot")
 library("astsa")
 library("ggplot2")
@@ -17,7 +20,6 @@ well.data <- read.csv("Original Data Sets/Well Depth Data/j17waterlevels.csv", s
 lake.data <- read.csv("Original Data Sets/Surface water level data/CanyonLakeRev.txt")
 pop.data <- read.csv("Original Data Sets/MonthlyPop.csv")[,-c(1)]
 
-helene <- read.csv("Original Data Sets/MonthlyData.csv")[,-c(1)]
 
 ## Extracting the data from 1991 to 2020
 climate <- climate.data %>%
@@ -57,12 +59,20 @@ missingDate = as.yearmon(paste(missingYear,missingMonth), "%Y %m")
 missingPopDF = data.frame(missingYear,missingMonth,missingPop,missingDate)
 names(missingPopDF) = c("year", "month", "population", "Date")
 
-str(pop.data)
+#Handling Missing WaterElevation data
+water[which(is.na(water$WaterElevation)),]
+
+missing <- which(is.na(water$WaterElevation))
+for(i in missing){
+  water$WaterElevation[i] <- mean(water$WaterElevation[c(i-2,i+2)],na.rm = TRUE)
+}
+
+water[missing,]
+
 #Merge original population DF and missing info DF
 pop_averageDF = rbind(pop.data,missingPopDF)
 pop <- pop_averageDF %>%
   arrange(year, month)
-
 
 # Merging the Data
 water <- merge(climate, lake, by.climate = "DATE", by.lake = "DATE", all = TRUE) %>%
@@ -93,6 +103,7 @@ water <- water[ , !(names(water) %in% drops)]
 
 View(water)
 
+
 ##--## Trying to figure out why the DATE section is not working.
 #water[which(is.na(water$percentfull_lake) & is.na(water$waterlevel_lake)),]
     ## 26 missing data sets
@@ -107,13 +118,61 @@ View(water)
 #  merge(well, by.well = "DATE", all = FALSE)
 
 
-## Building a correlation matrix
-str(water)
+## Building a correlation matrices to see if any significances can be found.
+names(water)
 correlation = cor(water[,-c(7)],use = "complete.obs") ## note: this removes all missing values
 
-View(correlation)
-
 corrplot(correlation, method = 'square', order = 'FPC', type = 'lower', diag = FALSE)
+
+panel.cor <-function(x,y,...){
+  par(usr=c(0,1,0,1))
+  r <- round(cor(x,y, use = "complete.obs"),2)
+  text(0.5,0.5,r,cex=1.25)
+}
+
+pairs(water, lower.panel= panel.cor, col = "steelblue")
+
+## attempting some lags
+
+## lake data
+as.ts(water)
+## This short version does not quite work
+names <- names(water)
+for(i in colnames(water)){
+  lag2.plot(water$percentfull_lake, water[[i]] , 5, col = "steelblue")
+}
+
+
+lag1.plot(water$percentfull_lake, 12, col = "steelblue")
+lag2.plot(water$percentfull_lake, water$TAVG , 12, col = "steelblue")
+lag2.plot(water$percentfull_lake, water$TSUN , 5, col = "steelblue")
+lag2.plot(water$percentfull_lake, water$PRCP , 12, col = "steelblue")
+lag2.plot(water$percentfull_lake, water$population , 5, col = "steelblue")
+lag2.plot(water$percentfull_lake, water$Date , 5, col = "steelblue")
+
+
+as.ts(water)
+lag1.plot(water$WaterElevation, 12, col = "steelblue")
+lag2.plot(water$WaterElevation, water$TAVG , 12, col = "steelblue")
+lag2.plot(water$WaterElevation, water$TSUN , 12, col = "steelblue")
+lag2.plot(water$WaterElevation, water$PRCP , 12, col = "steelblue")
+lag2.plot(water$WaterElevation, water$population , 12, col = "steelblue")
+lag2.plot(water$WaterElevation, water$Date , 12, col = "steelblue")
+
+
+## Trying some lowess fitting for the data
+par(mfrow = c(3,2))
+names <- names(water)
+for(i in colnames(water)){
+  ts.plot(water[[i]], col = "steelblue2", lwd = 2, main = as.character(i))
+  lines(lowess(water[[i]], f = .4), col = "red3", lwd = 2)
+}
+
+
+
+
+
+
 
 
 
@@ -133,13 +192,14 @@ fit <- lm(water$percentfull_lake ~ water$DATE)
 plot(water$percentfull_lake ~ water$DATE)
 abline(fit)
 
+cor(water$PRCP, water$TAVG)
 ## Simple Regression
 names(water)
 fit <- lm(waterlevel_lake ~ TAVG + TMAX + TSUN + ACSH + AWND + PGTM + PRCP, data = water)
 summary(fit) ##TMAX fails as it is a transformation of TAVG and TMIN
 plot(fit)
 
-fit <- lm(percetnfull_lake  ~ TAVG + TMAX + TSUN + ACSH + AWND + PGTM + PRCP, data = water)
+fit <- lm(percentfull_lake  ~ TAVG + PRCP + population, data = water)
 summary(fit)
 
 fit <- lm(WaterLevel  ~ TAVG + TMAX + TSUN + ACSH + AWND + PGTM + PRCP, data = water)
