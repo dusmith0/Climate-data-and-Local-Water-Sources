@@ -1,0 +1,30 @@
+```{r exponential and quadratic pop model before and after 2000}
+## Figure out how to do a dummy variable to replace splitting data into two sets##
+before2000 = monthly_averages[1:120,]
+timeB = time(before2000$Population)
+timeB2 = timeB^2
+after2000 = monthly_averages[121:360,]
+timeA = time(after2000$Population)
+timeA2 = timeA^2
+
+## I tried an exponential model first:
+popB2000 <- lm(log(before2000$Population)~time(before2000$Population))
+
+summary(popB2000)
+
+popA2000 <- lm(log(after2000$Population)~time(after2000$Population))
+
+summary(popA2000)
+
+## I tried a quadratic model next
+popFitQuadB2000 <- lm(before2000$Population~timeB2+timeB, na.action=NULL)
+
+summary(popFitQuadB2000)
+
+popFitQuadA2000 <- lm(after2000$Population~timeA2+timeA, na.action=NULL)
+
+summary(popFitQuadA2000)
+
+## Both models fit. I think the quadratic may be easier to use to detrend, but I'm not sure.
+
+```
