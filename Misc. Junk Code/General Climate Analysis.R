@@ -3,9 +3,11 @@
 ## libraries:
 
 ## Data that the group is interested in..
-##----  Waterelevation, Average temp, percipitation, population
+##----  Waterelevation, Average temp, precipitation, population
 
 #install.packages("corrplot")
+#install.packages("aTSA")
+#install.packages("EnvStats")
 library("astsa")
 library("ggplot2")
 library("dplyr")
@@ -13,13 +15,17 @@ library("corrplot")
 library("lubridate")
 library("tidyverse")
 library("zoo")
+library("aTSA")
+library("EnvStats")
 
+###--------------------------------###
 ## Getting the data
+
 climate.data <- read.csv("Original Data Sets/Climate Data/San Antonio Airport (SAT) climate data (1948 to 2025).csv")
 well.data <- read.csv("Original Data Sets/Well Depth Data/j17waterlevels.csv", skip = 6)
 lake.data <- read.csv("Original Data Sets/Surface water level data/CanyonLakeRev.txt")
 pop.data <- read.csv("Original Data Sets/MonthlyPop.csv")[,-c(1)]
-
+helene <- read.csv("Original Data Sets/MonthlyData.csv")
 
 ## Extracting the data from 1991 to 2020
 climate <- climate.data %>%
@@ -50,6 +56,10 @@ lake <- lake.data %>%
 # Renaming some fo the columns to avoid naming issues with the well data.
 colnames(lake) <- c("DATE","waterlevel_lake","percentfull_lake")
 
+
+###---------------------------------------###
+##  Handling Missing Data
+
 #missing information for population
 missingYear = c(rep(2002,2), rep(2005,3), rep(2006,3))
 missingMonth = c(10,11,9,11,12,5,7,9)
@@ -59,15 +69,6 @@ missingDate = as.yearmon(paste(missingYear,missingMonth), "%Y %m")
 missingPopDF = data.frame(missingYear,missingMonth,missingPop,missingDate)
 names(missingPopDF) = c("year", "month", "population", "Date")
 
-#Handling Missing WaterElevation data
-water[which(is.na(water$WaterElevation)),]
-
-missing <- which(is.na(water$WaterElevation))
-for(i in missing){
-  water$WaterElevation[i] <- mean(water$WaterElevation[c(i-2,i+2)],na.rm = TRUE)
-}
-
-water[missing,]
 
 #Merge original population DF and missing info DF
 pop_averageDF = rbind(pop.data,missingPopDF)
@@ -79,19 +80,19 @@ water <- merge(climate, lake, by.climate = "DATE", by.lake = "DATE", all = TRUE)
          merge(well, by.well = "DATE", all = TRUE)
 
 
-### Attempting to coerce the data into a more useable format.
-# stationary.test
-# Monthly Average for temp, monthly total for pcrp, average the data points for well height data,
-# do something with the lake data
+### Attempting to coerce the data into a more usable format, by averaging over months.
+
 names(water)
 monthly_averages <- water %>%
-  select(DATE, TAVG, TSUN, PRCP, percentfull_lake, WaterElevation) %>%
+  select(DATE, TAVG, PRCP, percentfull_lake, WaterElevation) %>%
   group_by(year = year(DATE), month = month(DATE)) %>%
   summarise(TAVG = mean(TAVG, na.rm = TRUE),
-            TSUN = mean(TSUN, na.rm = TRUE),
             PRCP = sum(PRCP),
             percentfull_lake = mean(percentfull_lake, na.rm = TRUE),
             WaterElevation = mean(WaterElevation, na.rm = TRUE))
+            #TSUN = mean(TSUN, na.rm = TRUE), #TSUN has been removed due to excessive missing data
+
+
 
 water <- cbind(monthly_averages,population = pop$population)
 
@@ -101,7 +102,30 @@ water$Date <- as.yearmon(paste(water$year, water$month), "%Y %m")
 drops <- c("year","month")
 water <- water[ , !(names(water) %in% drops)]
 
+#View(water)
+
+#Handling Missing WaterElevation data
+water[which(is.na(water$WaterElevation)),]
+
+missing <- which(is.na(water$WaterElevation))
+for(i in missing){
+  water$WaterElevation[i] <- mean(water$WaterElevation[c(i-2,i+2)],na.rm = TRUE)
+}
+
+water[missing,]
 View(water)
+
+
+## Possible Alternative for handling population data
+for(i in seq(12,360,by=12)){
+          if(!is.na(water$population[i + 1])){
+            step <- (water$population[(i) + 1] - water$population[(i)])/12
+          }else{
+            step <- (2400000 - water$population[(i)])/12 #imputing upper bound from https://fred.stlouisfed.org/series/SATPOP
+          }
+          stepup <- cumsum(rep(step,11))
+          water$population[(i - 10):(i)] <-  water$population[(i - 10):(i)] + stepup
+}
 
 
 ##--## Trying to figure out why the DATE section is not working.
@@ -118,7 +142,11 @@ View(water)
 #  merge(well, by.well = "DATE", all = FALSE)
 
 
-## Building a correlation matrices to see if any significances can be found.
+###-------------------------------------###
+## Plotting the data sets ##
+
+##--- Untransformed Data --- ##
+## Building a correlation matrices to see if any significance can be found.
 names(water)
 correlation = cor(water[,-c(7)],use = "complete.obs") ## note: this removes all missing values
 
@@ -132,10 +160,19 @@ panel.cor <-function(x,y,...){
 
 pairs(water, lower.panel= panel.cor, col = "steelblue")
 
+## lowess fitting for the data This fails for TSUN
+par(mfrow = c(3,2))
+names <- names(water)
+for(i in colnames(water)){
+  ts.plot(water[[i]], col = "steelblue2", lwd = 2, main = as.character(i))
+  lines(lowess(water[[i]], f = .4), col = "red3", lwd = 2)
+}
+
 ## attempting some lags
 
 ## lake data
 as.ts(water)
+
 ## This short version does not quite work
 names <- names(water)
 for(i in colnames(water)){
@@ -160,13 +197,8 @@ lag2.plot(water$WaterElevation, water$population , 12, col = "steelblue")
 lag2.plot(water$WaterElevation, water$Date , 12, col = "steelblue")
 
 
-## Trying some lowess fitting for the data
-par(mfrow = c(3,2))
-names <- names(water)
-for(i in colnames(water)){
-  ts.plot(water[[i]], col = "steelblue2", lwd = 2, main = as.character(i))
-  lines(lowess(water[[i]], f = .4), col = "red3", lwd = 2)
-}
+
+###--- Transformed data
 
 
 
@@ -179,20 +211,6 @@ for(i in colnames(water)){
 
 
 
-
-
-
-
-
-
-
-
-
-fit <- lm(water$percentfull_lake ~ water$DATE)
-plot(water$percentfull_lake ~ water$DATE)
-abline(fit)
-
-cor(water$PRCP, water$TAVG)
 ## Simple Regression
 names(water)
 fit <- lm(waterlevel_lake ~ TAVG + TMAX + TSUN + ACSH + AWND + PGTM + PRCP, data = water)
