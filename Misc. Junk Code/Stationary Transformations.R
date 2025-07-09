@@ -1,14 +1,19 @@
 ## Transforming the data to stationary
 ##
 ##
-## Transformations on the Population data
-tsplot(water2$population)
+## Data of interest:  Water: TAVG, PRCP, Percentfull-lake, waterElevation, population
+
+### Working with population data
+names(water)
+
+tsplot(water$population)
 par(mfrow = c(2,2))
 
 
 # Dummy non adjusted fit
 dummy <- ifelse(format(water$Date, "%Y") <= 2000 , 0, 1)
-fit.dummy.noadjust  <- lm((population) ~ dummy*(time(population)) + dummy*time(population)^2,
+
+fit.dummy.noadjust  <- lm(log((population)) ~ dummy*(time(population)) + dummy*time(population)^2,
                           data = water)
 summary(fit.dummy.noadjust)
 plot(fit.dummy.noadjust)
@@ -18,11 +23,12 @@ plot(fit.dummy.noadjust)
 
 dummy <- ifelse(format(water$Date, "%Y") <= 2000 , 0, 1)
 time2 <- (time(water$population) - mean(time(water$population)))^2
-fit.dummy  <- lm((population) ~ dummy*(time(population)) + dummy*time2,
+fit.dummy  <- lm(log(population) ~ dummy*(time(population)) + dummy*(time2),
                  data = water)
 summary(fit.dummy)
 plot(fit.dummy)
 
+acf(resid(fit))
 
 
 ## Attempting Detreading of the data
@@ -33,55 +39,43 @@ acf1(resid(fit.dummy))
 adf.test(resid(fit.dummy))
 
 
-###----- Reattempting with new water$population transformation
-
-## Possible Alternative for handling population data
-for(i in seq(12,360,by=12)){
-  if(!is.na(water$population[i + 1])){
-    step <- (water$population[(i) + 1] - water$population[(i)])/12
-  }else{
-    step <- (2400000 - water$population[(i)])/12 #imputing upper bound from https://fred.stlouisfed.org/series/SATPOP
-  }
-  stepup <- cumsum(rep(step,11))
-  water2$population[(i - 10):(i)] <-  water$population[(i - 10):(i)] + stepup
-}
-
-## Transformations on the Population data
-tsplot(water2$population)
-
-#Trying to fit a dummy variable for it
-fit <- lm(population ~ time(population),
-          data = water2)
-summary(fit)
-plot(fit)
-
 
 #### working on transforming lake data if needed.
 ###*** This worked really well.
 names(water)
 stationary.test(diff(water$percentfull_lake))
-fit <- lm(percentfull_lake ~ time(percentfull_lake),
-          data = water)
 
-plot(diff(water$percentfull_lake))
-acf(diff(water$percentfull_lake))
+tsplot((water$percentfull_lake), )
+acf(water$percentfull_lake)
 
-percentfull_lake_detrend <- diff()
+tsplot(diff(water$percentfull_lake, lag = 1))
+acf(diff(water$percentfull_lake, lag = 1))
+
 
 
 #### working on transforming well data
+par(mfrow = c(2,1))
 stationary.test(water$WaterElevation)
 tsplot(water$WaterElevation)
+acf(water$WaterElevation)
 
 tsplot(diff(water$WaterElevation))
+acf(diff(water$WaterElevation, lag = 1))
 
 
 #### working on precipitation data
 stationary.test(water$PRCP)
 tsplot(water$PRCP)
+acf(water$PRCP)
+
 tsplot(diff(water$PRCP))
+acf(diff(water$PRCP))
+
+tsplot(diff(water$PRCP ^ (1/2)))
+acf(diff(water$PRCP ^ (1/2)))
 
 
+### Working with TAVG data
 par(mfrow = c(2,3))
 
 tsplot(water$percentfull_lake, main = "lake Data")

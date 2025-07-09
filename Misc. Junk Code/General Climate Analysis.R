@@ -17,6 +17,7 @@ library("tidyverse")
 library("zoo")
 library("aTSA")
 library("EnvStats")
+library("APStatTools")
 
 ###--------------------------------###
 ## Getting the data
@@ -142,6 +143,8 @@ for(i in seq(12,360,by=12)){
 #  merge(well, by.well = "DATE", all = FALSE)
 
 
+
+
 ###-------------------------------------###
 ## Plotting the data sets ##
 
@@ -198,18 +201,74 @@ lag2.plot(water$WaterElevation, water$Date , 12, col = "steelblue")
 
 
 
-###--- Transformed data
+###--- Transforming the Data to stationary
+
+# Initial ACF plots
+par(mfrow = c(3,2))
+acf(water$population, main = "Population", lwd = 1.5, col = "steelblue")
+acf(water$percentfull_lake, main = "Percent full", lwd = 1.5, col = "steelblue")
+acf(water$WaterElevation, main = "Water Elevation", col = "steelblue", lwd = 1.5)
+acf(water$PRCP, main = "Preciptation", lwd = 1.5, col = "steelblue")
+acf(water$TAVG, main = "Average Temp.", lwd = 1.5, col = "steelblue")
+
+### Population data
+tsplot(water$population, main = "Population of the San Antonio Region",
+     ylab = "Population", col = "steelblue", lwd = 3)
+acf(water$population, main = "Population", lwd = 1.5, col = "steelblue")
+
+#### working on transforming lake data if needed.
+###*** This worked really well.
+par(mfrow = c(2,1))
+stationary.test(diff(water$percentfull_lake))
+
+tsplot((water$percentfull_lake),
+       main = "Original Lake Percentage", xlab = "Percent Full",
+       col = "steelblue")
+acf(water$percentfull_lake, main = "Percent full", lwd = 1.5, col = "steelblue")
+
+tsplot(diff(water$percentfull_lake, lag = 1),
+       main = "Differenced Lake Percentage", ylab = "Percent Full",
+       col = "steelblue")
+acf(diff(water$percentfull_lake, lag = 1),lwd = 1.5, col = "steelblue")
 
 
 
+#### working on transforming well data
+par(mfrow = c(2,1))
+stationary.test(water$WaterElevation)
+
+tsplot(water$WaterElevation,
+       main = "Original WaterElevation", xlab = "WaterElevation",
+       col = "steelblue")
+acf(water$WaterElevation, main = "Water Elevation", col = "steelblue", lwd = 1.5)
+
+tsplot(diff(water$WaterElevation),
+       main = "Differenced WaterElevation", xlab = "WaterElevation",
+       col = "steelblue")
+
+acf(diff(water$WaterElevation, lag = 1), lwd = 1.5)
 
 
+#### working on precipitation data
+par(mfrow = c(2,2), bg = "white")
+stationary.test(water$PRCP)
+tsplot(water$PRCP,
+       main = "Original Precipitation", ylab = "Precipitation",
+       col = "steelblue")
+acf(water$PRCP, main = "Preciptation", lwd = 1.5, col = "steelblue")
 
+tsplot(diff(water$PRCP),
+       main = "Differenced Precipitation", ylab = "Precipitation",
+       col = "steelblue")
+acf(diff(water$PRCP))
 
-
-
-
-
+tsplot(diff(water$PRCP ^ (1/2)),
+       main = "Differenced and Transformed", ylab = "Precipitation",
+       col = "steelblue")
+acf(diff(water$PRCP ^ (1/2)))
+qqnorm(diff(water$PRCP ^ (1/2)))
+build_QQ(water$PRCP)
+build_QQ(diff(water$PRCP ^ (1/2)))
 
 ## Simple Regression
 names(water)
