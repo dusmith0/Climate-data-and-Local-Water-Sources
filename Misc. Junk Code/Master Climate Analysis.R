@@ -283,7 +283,7 @@ acf(diff(water$PRCP ^ (1/2)))
 qqnorm(diff(water$PRCP ^ (1/2)))
 
 
-### Working with the Temperature data. (I stole this straigh off of John's branch)
+### Working with the Temperature data. (I stole this straight off of John's branch)
 
 
 
