@@ -515,12 +515,121 @@ tsplot(resid(fit.dummy))
 acf2(resid(fit.dummy))
 adf.test(resid(fit.dummy), alternative = "stationary")
 
+## HELENE: CCF plots
+
+#water elevation (Y) v population (X)
+
+par(mfrow = c(3,1), mar=c(3,3,3,2))
+ccf(diff(water_stationary$population), diff(well$WaterElevation), lag.max=30, main = "CCF Differenced Population and Differenced Water Elevation")
+
+#water elevation (Y) v temperature average
+par(mar=c(3,3,3,2))
+ccf(diff(well$TAVG), diff(well$WaterElevation), lag.max=30, main = "CCF Temperature and Differenced Water Elevation")
+
+
+#water elevation (Y) v precipitation
+
+par(mar=c(3,3,3,2))
+ccf(well$PRCP, diff(well$WaterElevation), lag.max=30, main = "CCF Precipitation and Differenced Water Elevation")
+
+#########From Helene, population segmentation#######
+
+## Figure out how to do a dummy variable to replace splitting data into two sets##
+before2000 = df$Population[1:120] # Jan 1991 to Dec 2000
+timeB = 1:length(before2000)
+timeB2 = timeB^2
+after2000 = df$Population[121:360] # Jan 2001 to Dec 2020
+timeA = 1:length(after2000)
+timeA2 = timeA^2
+
+## I tried an exponential model first:
+popB2000 <- lm(log(before2000)~before2000)
+
+summary(popB2000)
+
+popA2000 <- lm(log(after2000)~after2000)
+
+summary(popA2000)
+
+## I tried a quadratic model next
+popFitQuadB2000 <- lm(before2000~timeB2+timeB, na.action=NULL)
+
+summary(popFitQuadB2000)
+
+popFitQuadA2000 <- lm(after2000~timeA2+timeA, na.action=NULL)
+
+summary(popFitQuadA2000)
+
+## Both models fit. I think the quadratic may be easier to use to detrend, but I'm not sure.
+
+# Combine into original dataframe
+df$time_before      <- c(timeB, rep(0, length(after2000)))
+# - `timeB`: sequence from 1 to 120 (for the first 120 months: Jan 1991 to Dec 2000)
+# - `rep(0, length(after2000))`: fills the remaining 240 months (2001–2020) with 0s
+# - So:
+#   - `time_before = 1, 2, ..., 120, 0, 0, ..., 0`
+#
+# This vector **tracks time within the "before 2000" group** and is zero elsewhere.
+df$time_before_sq   <- c(timeB2, rep(0, length(after2000)))
+
+df$time_after       <- c(rep(0, length(before2000)), timeA)
+# - `rep(0, length(before2000))`: 120 zeros for pre-2001
+# - `timeA`: 1 to 240 for Jan 2001 to Dec 2020
+# - So:
+#   - `time_after = 0, 0, ..., 0, 1, 2, ..., 240`
+#
+# This activates the time trend **only after 2000**.
+df$time_after_sq    <- c(rep(0, length(before2000)), timeA2)
+
+#Regression of all dummys against data
+popDummy <- lm(Population ~ time_before + time_before_sq + time_after + time_after_sq, data = df)
+summary(popDummy)
+
+#Regression of all dummys against data WITHOUT square after 2000
+popDummyLinA2000 <- lm(Population ~ time_before + time_before_sq + time_after, data = df)
+summary(popDummyLinA2000)
+
+#Check for stationarity of popDummyLinA2000
+#Extract residuals
+resids <- resid(popDummyLinA2000)
+#ADF test
+adf.test(resids, alternative = "stationary")
+
+#Check for stationarity of pop Dummy (with square)
+#Extract residuals
+residsSq <- resid(popDummyLinA2000)
+adf.test(residsSq, alternative = "stationary")
+
+
 
 ### ---- ###
 ## We probably need to take all of the stationary data and create a new data set based on that?
-water_stationary <- df()
 
+##HELENE: added everything but temperature.
+water_stationary <- data.frame(precipitation = diff(water$PRCP), well = diff(water$WaterElevation), population = water$population[-360], temperature = diff(water$TAVG))
 
+#all three predictors
+fit <- lm(well ~ precipitation + population + temperature, water_stationary)
+summary(fit)
+AIC(fit)
+BIC(fit)
+summary(fit)$r.squared
+
+#PRCP and TEMP only
+fit2 <- lm(well ~ precipitation + temperature, water_stationary)
+summary(fit2)
+AIC(fit2)
+BIC(fit2)
+summary(fit2)$r.squared
+
+##population^2?
+population2 = water_stationary$population^2
+
+fitPopSq <- lm(well ~ precipitation + population2 + temperature, water_stationary)
+summary(fitPopSq)
+AIC(fitPopSq)
+BIC(fitPopSq)
+summary(fitPopSq)$r.squared
 
 
 
