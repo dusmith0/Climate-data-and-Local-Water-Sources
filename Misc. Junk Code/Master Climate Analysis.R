@@ -18,9 +18,8 @@
 #install.packages("corrplot")
 #install.packages("aTSA")
 #install.packages("EnvStats")
-
-#install.packages("tseries")
-#install.packages("GGally")
+install.packages("tseries")
+install.packages("GGally")
 library("astsa") #General Times Series Plot
 library("ggplot2") #Better Graphics
 library("GGally") #extends ggplot2
@@ -51,13 +50,13 @@ climate <- climate.data %>%
   select(DATE, TAVG, TMAX, TMIN, TSUN, ACSH, AWND, PGTM, PRCP) %>%
   mutate(DATE = as.Date(DATE))
 
-## Filtering in TAVG if it is not present, would probably be better as an apply statement.
+    ## Filtering in TAVG if it is not present, would probably be better as an apply statement.
 
-for(i in 1:length(climate$TAVG)){
-  if(is.na(climate$TAVG[i]) == TRUE){
-    climate$TAVG[i] = (climate$TMAX[i] + climate$TMIN[i])/2
-  }
-}
+      for(i in 1:length(climate$TAVG)){
+        if(is.na(climate$TAVG[i]) == TRUE){
+          climate$TAVG[i] = (climate$TMAX[i] + climate$TMIN[i])/2
+        }
+      }
 
 
 well <- well.data %>%
@@ -98,7 +97,7 @@ pop <- pop_averageDF %>%
 
 # Merging the Data
 water <- merge(climate, lake, by.climate = "DATE", by.lake = "DATE", all = TRUE) %>%
-  merge(well, by.well = "DATE", all = TRUE)
+         merge(well, by.well = "DATE", all = TRUE)
 
 
 ### Attempting to coerce the data into a more usable format, by averaging over months.
@@ -111,7 +110,7 @@ monthly_averages <- water %>%
             PRCP = sum(PRCP),
             percentfull_lake = mean(percentfull_lake, na.rm = TRUE),
             WaterElevation = mean(WaterElevation, na.rm = TRUE))
-#TSUN = mean(TSUN, na.rm = TRUE), #TSUN has been removed due to excessive missing data
+            #TSUN = mean(TSUN, na.rm = TRUE), #TSUN has been removed due to excessive missing data
 
 
 
@@ -154,21 +153,17 @@ for(i in missing){
 
 ##--## Trying to figure out why the DATE section is not working.
 #water[which(is.na(water$percentfull_lake) & is.na(water$waterlevel_lake)),]
-## 26 missing data sets
+    ## 26 missing data sets
 
 
 #View((water[which(is.na(water$WaterLevel) & is.na(water$Change) & is.na(water$WaterElevation)),]))
-## 10975 - 2009 = 8966 missing data
+    ## 10975 - 2009 = 8966 missing data
 
 
 ## Possible Solution is to remove the data...
 #water <- merge(climate, lake, by.climate = "DATE", by.lake = "DATE", all = FALSE) %>%
 #  merge(well, by.well = "DATE", all = FALSE)
 
-
-#HELENE: remove create well dataframe with everything in water except for the lake data
-df <- subset(df, select = -c(a, c))
-well <- water[,-3]
 
 
 
@@ -190,21 +185,6 @@ panel.cor <-function(x,y,...){
 }
 
 pairs(water, lower.panel= panel.cor, col = "steelblue")
-
-##HELENE: plotting well dataframe correlations##
-names(well)
-correlationWell = cor(well[,-c(5)],use = "complete.obs") ## note: this removes the date column and all missing values
-correlationWell
-
-corrplot(correlationWell, method = 'square', order = 'FPC', type = 'lower', diag = FALSE)
-
-panel.cor <-function(x,y,...){
-  par(usr=c(0,1,0,1))
-  r <- round(cor(x,y, use = "complete.obs"),2)
-  text(0.5,0.5,r,cex=1.25)
-}
-
-pairs(well, lower.panel= panel.cor, col = "steelblue")
 
 ## lowess fitting for the data This fails for TSUN
 par(mfrow = c(3,2))
@@ -233,8 +213,6 @@ lag2.plot(water$percentfull_lake, water$Date , 5, col = "steelblue")
 
 
 as.ts(water)
-
-par(mar=c(3,3,3,3))
 lag1.plot(water$WaterElevation, 12, col = "steelblue")
 lag2.plot(water$WaterElevation, water$TAVG , 12, col = "steelblue")
 #lag2.plot(water$WaterElevation, water$TSUN , 12, col = "steelblue")
@@ -243,14 +221,6 @@ lag2.plot(water$WaterElevation, water$population , 12, col = "steelblue")
 lag2.plot(water$WaterElevation, water$Date , 12, col = "steelblue")
 
 
-##HELENE: repeat lag plots for well data
-
-as.ts(well)
-
-names <- names(well)
-for(i in colnames(well)){
-  lag2.plot(well$WaterElevation, water[[i]] , 5, col = "steelblue")
-}
 
 ###--------------------------------------------------------------------------###
 ##  Transforming the Data to stationary
@@ -261,63 +231,15 @@ acf(water$population, main = "Population", lwd = 1.5, col = "steelblue")
 acf(water$percentfull_lake, main = "Percent full", lwd = 1.5, col = "steelblue")
 acf(water$WaterElevation, main = "Water Elevation", col = "steelblue", lwd = 1.5)
 acf(water$PRCP, main = "Preciptation", lwd = 1.5, col = "steelblue")
-acf(water$TAVG, main = "Average Temp.", lwd= 1.5, col = "steelblue")
-
-
-##HELENE: Initial PACF plots
-par(mfrow = c(3,2), mar=c(1.2,3,2.75,2) + 0.1)
-pacf(water$population, main = "Population", lwd = 1.5, col = "steelblue")
-pacf(water$WaterElevation, main = "Water Elevation", col = "steelblue", lwd = 1.5)
-pacf(water$PRCP, main = "Preciptation", lwd = 1.5, col = "steelblue")
-pacf(water$TAVG, main = "Average Temp.", lwd = 1.5, col = "steelblue")
-
-
-### Population data
-par(mfrow = c(3,1))
-tsplot(water$population, main = "Population of the San Antonio Region",
-       ylab = "Population", col = "steelblue", lwd = 3)
-acf(water$population, main = "ACF Population", lwd = 1.5, col = "steelblue")
-pacf(water$population, main = "PACF Population")
-adf.test(diff(water$population))
-
-##HELENE: Water Elevation
-
-par(mfrow = c(3,1))
-tsplot(water$WaterElevation, main = "Water Elevation of J17 Well",
-       ylab = "Population", col = "steelblue", lwd = 3)
-acf(water$WaterElevation, main = "Water Elevation ACF")
-pacf(water$WaterElevation, main = "Water Elevation PACF")
-
-adf.test(water$WaterElevation)
-adf.test(diff(water$WaterElevation))
-
-##HELENE: Average Temperature
-par(mfrow = c(3,1))
-tsplot(water$TAVG, main = "Average Temperature",
-       ylab = "Population", col = "steelblue", lwd = 3)
-acf(water$TAVG, main = "Average Temperature ACF")
-pacf(water$TAVG, main = "Average Temperature PACF")
-
-adf.test(water$TAVG)
-adf.test(diff(water$TAVG))
-
-##HELENE: Precipitation
-par(mfrow = c(3,1))
-tsplot(water$PRCP, main = "Precipitation",
-       ylab = "Population", col = "steelblue", lwd = 3)
-acf(water$PRCP, main = "Precipitation ACF")
-pacf(water$PRCP, main = "Precipitation PACF")
-
-adf.test(water$PRCP)
-adf.test(diff(water$PRCP))
-=======
 acf(water$TAVG, main = "Average Temp.", lwd = 1.5, col = "steelblue")
 
 ### Population data
 par(mfrow = c(2,1))
 tsplot(water$population, main = "Population of the San Antonio Region",
-       ylab = "Population", col = "steelblue", lwd = 3)
+     ylab = "Population", col = "steelblue", lwd = 3)
 acf(water$population, main = "Population", lwd = 1.5, col = "steelblue")
+
+
 
 ### working on transforming lake data if needed.
 ### This seemed worked really well.
