@@ -18,9 +18,8 @@
 #install.packages("corrplot")
 #install.packages("aTSA")
 #install.packages("EnvStats")
-
-#install.packages("tseries")
-#install.packages("GGally")
+install.packages("tseries")
+install.packages("GGally")
 library("astsa") #General Times Series Plot
 library("ggplot2") #Better Graphics
 library("GGally") #extends ggplot2
@@ -51,13 +50,13 @@ climate <- climate.data %>%
   select(DATE, TAVG, TMAX, TMIN, TSUN, ACSH, AWND, PGTM, PRCP) %>%
   mutate(DATE = as.Date(DATE))
 
-## Filtering in TAVG if it is not present, would probably be better as an apply statement.
+    ## Filtering in TAVG if it is not present, would probably be better as an apply statement.
 
-for(i in 1:length(climate$TAVG)){
-  if(is.na(climate$TAVG[i]) == TRUE){
-    climate$TAVG[i] = (climate$TMAX[i] + climate$TMIN[i])/2
-  }
-}
+      for(i in 1:length(climate$TAVG)){
+        if(is.na(climate$TAVG[i]) == TRUE){
+          climate$TAVG[i] = (climate$TMAX[i] + climate$TMIN[i])/2
+        }
+      }
 
 
 well <- well.data %>%
@@ -98,7 +97,7 @@ pop <- pop_averageDF %>%
 
 # Merging the Data
 water <- merge(climate, lake, by.climate = "DATE", by.lake = "DATE", all = TRUE) %>%
-  merge(well, by.well = "DATE", all = TRUE)
+         merge(well, by.well = "DATE", all = TRUE)
 
 
 ### Attempting to coerce the data into a more usable format, by averaging over months.
@@ -111,7 +110,7 @@ monthly_averages <- water %>%
             PRCP = sum(PRCP),
             percentfull_lake = mean(percentfull_lake, na.rm = TRUE),
             WaterElevation = mean(WaterElevation, na.rm = TRUE))
-#TSUN = mean(TSUN, na.rm = TRUE), #TSUN has been removed due to excessive missing data
+            #TSUN = mean(TSUN, na.rm = TRUE), #TSUN has been removed due to excessive missing data
 
 
 
@@ -154,21 +153,17 @@ for(i in missing){
 
 ##--## Trying to figure out why the DATE section is not working.
 #water[which(is.na(water$percentfull_lake) & is.na(water$waterlevel_lake)),]
-## 26 missing data sets
+    ## 26 missing data sets
 
 
 #View((water[which(is.na(water$WaterLevel) & is.na(water$Change) & is.na(water$WaterElevation)),]))
-## 10975 - 2009 = 8966 missing data
+    ## 10975 - 2009 = 8966 missing data
 
 
 ## Possible Solution is to remove the data...
 #water <- merge(climate, lake, by.climate = "DATE", by.lake = "DATE", all = FALSE) %>%
 #  merge(well, by.well = "DATE", all = FALSE)
 
-
-#HELENE: remove create well dataframe with everything in water except for the lake data
-df <- subset(df, select = -c(a, c))
-well <- water[,-3]
 
 
 
@@ -190,21 +185,6 @@ panel.cor <-function(x,y,...){
 }
 
 pairs(water, lower.panel= panel.cor, col = "steelblue")
-
-##HELENE: plotting well dataframe correlations##
-names(well)
-correlationWell = cor(well[,-c(5)],use = "complete.obs") ## note: this removes the date column and all missing values
-correlationWell
-
-corrplot(correlationWell, method = 'square', order = 'FPC', type = 'lower', diag = FALSE)
-
-panel.cor <-function(x,y,...){
-  par(usr=c(0,1,0,1))
-  r <- round(cor(x,y, use = "complete.obs"),2)
-  text(0.5,0.5,r,cex=1.25)
-}
-
-pairs(well, lower.panel= panel.cor, col = "steelblue")
 
 ## lowess fitting for the data This fails for TSUN
 par(mfrow = c(3,2))
@@ -233,8 +213,6 @@ lag2.plot(water$percentfull_lake, water$Date , 5, col = "steelblue")
 
 
 as.ts(water)
-
-par(mar=c(3,3,3,3))
 lag1.plot(water$WaterElevation, 12, col = "steelblue")
 lag2.plot(water$WaterElevation, water$TAVG , 12, col = "steelblue")
 #lag2.plot(water$WaterElevation, water$TSUN , 12, col = "steelblue")
@@ -243,14 +221,6 @@ lag2.plot(water$WaterElevation, water$population , 12, col = "steelblue")
 lag2.plot(water$WaterElevation, water$Date , 12, col = "steelblue")
 
 
-##HELENE: repeat lag plots for well data
-
-as.ts(well)
-
-names <- names(well)
-for(i in colnames(well)){
-  lag2.plot(well$WaterElevation, water[[i]] , 5, col = "steelblue")
-}
 
 ###--------------------------------------------------------------------------###
 ##  Transforming the Data to stationary
@@ -261,63 +231,15 @@ acf(water$population, main = "Population", lwd = 1.5, col = "steelblue")
 acf(water$percentfull_lake, main = "Percent full", lwd = 1.5, col = "steelblue")
 acf(water$WaterElevation, main = "Water Elevation", col = "steelblue", lwd = 1.5)
 acf(water$PRCP, main = "Preciptation", lwd = 1.5, col = "steelblue")
-acf(water$TAVG, main = "Average Temp.", lwd= 1.5, col = "steelblue")
-
-
-##HELENE: Initial PACF plots
-par(mfrow = c(3,2), mar=c(1.2,3,2.75,2) + 0.1)
-pacf(water$population, main = "Population", lwd = 1.5, col = "steelblue")
-pacf(water$WaterElevation, main = "Water Elevation", col = "steelblue", lwd = 1.5)
-pacf(water$PRCP, main = "Preciptation", lwd = 1.5, col = "steelblue")
-pacf(water$TAVG, main = "Average Temp.", lwd = 1.5, col = "steelblue")
-
-
-### Population data
-par(mfrow = c(3,1))
-tsplot(water$population, main = "Population of the San Antonio Region",
-       ylab = "Population", col = "steelblue", lwd = 3)
-acf(water$population, main = "ACF Population", lwd = 1.5, col = "steelblue")
-pacf(water$population, main = "PACF Population")
-adf.test(diff(water$population))
-
-##HELENE: Water Elevation
-
-par(mfrow = c(3,1))
-tsplot(water$WaterElevation, main = "Water Elevation of J17 Well",
-       ylab = "Population", col = "steelblue", lwd = 3)
-acf(water$WaterElevation, main = "Water Elevation ACF")
-pacf(water$WaterElevation, main = "Water Elevation PACF")
-
-adf.test(water$WaterElevation)
-adf.test(diff(water$WaterElevation))
-
-##HELENE: Average Temperature
-par(mfrow = c(3,1))
-tsplot(water$TAVG, main = "Average Temperature",
-       ylab = "Population", col = "steelblue", lwd = 3)
-acf(water$TAVG, main = "Average Temperature ACF")
-pacf(water$TAVG, main = "Average Temperature PACF")
-
-adf.test(water$TAVG)
-adf.test(diff(water$TAVG))
-
-##HELENE: Precipitation
-par(mfrow = c(3,1))
-tsplot(water$PRCP, main = "Precipitation",
-       ylab = "Population", col = "steelblue", lwd = 3)
-acf(water$PRCP, main = "Precipitation ACF")
-pacf(water$PRCP, main = "Precipitation PACF")
-
-adf.test(water$PRCP)
-adf.test(diff(water$PRCP))
-=======
 acf(water$TAVG, main = "Average Temp.", lwd = 1.5, col = "steelblue")
 
 ### Population data
 par(mfrow = c(2,1))
 tsplot(water$population, main = "Population of the San Antonio Region",
-       ylab = "Population", col = "steelblue", lwd = 3)
+     ylab = "Population", col = "steelblue", lwd = 3)
 acf(water$population, main = "Population", lwd = 1.5, col = "steelblue")
+
+
 
 ### working on transforming lake data if needed.
 ### This seemed worked really well.
@@ -524,121 +446,12 @@ tsplot(resid(fit.dummy))
 acf2(resid(fit.dummy))
 adf.test(resid(fit.dummy), alternative = "stationary")
 
-## HELENE: CCF plots
-
-#water elevation (Y) v population (X)
-
-par(mfrow = c(3,1), mar=c(3,3,3,2))
-ccf(diff(water_stationary$population), diff(well$WaterElevation), lag.max=30, main = "CCF Differenced Population and Differenced Water Elevation")
-
-#water elevation (Y) v temperature average
-par(mar=c(3,3,3,2))
-ccf(diff(well$TAVG), diff(well$WaterElevation), lag.max=30, main = "CCF Temperature and Differenced Water Elevation")
-
-
-#water elevation (Y) v precipitation
-
-par(mar=c(3,3,3,2))
-ccf(well$PRCP, diff(well$WaterElevation), lag.max=30, main = "CCF Precipitation and Differenced Water Elevation")
-
-#########From Helene, population segmentation#######
-
-## Figure out how to do a dummy variable to replace splitting data into two sets##
-before2000 = df$Population[1:120] # Jan 1991 to Dec 2000
-timeB = 1:length(before2000)
-timeB2 = timeB^2
-after2000 = df$Population[121:360] # Jan 2001 to Dec 2020
-timeA = 1:length(after2000)
-timeA2 = timeA^2
-
-## I tried an exponential model first:
-popB2000 <- lm(log(before2000)~before2000)
-
-summary(popB2000)
-
-popA2000 <- lm(log(after2000)~after2000)
-
-summary(popA2000)
-
-## I tried a quadratic model next
-popFitQuadB2000 <- lm(before2000~timeB2+timeB, na.action=NULL)
-
-summary(popFitQuadB2000)
-
-popFitQuadA2000 <- lm(after2000~timeA2+timeA, na.action=NULL)
-
-summary(popFitQuadA2000)
-
-## Both models fit. I think the quadratic may be easier to use to detrend, but I'm not sure.
-
-# Combine into original dataframe
-df$time_before      <- c(timeB, rep(0, length(after2000)))
-# - `timeB`: sequence from 1 to 120 (for the first 120 months: Jan 1991 to Dec 2000)
-# - `rep(0, length(after2000))`: fills the remaining 240 months (2001–2020) with 0s
-# - So:
-#   - `time_before = 1, 2, ..., 120, 0, 0, ..., 0`
-#
-# This vector **tracks time within the "before 2000" group** and is zero elsewhere.
-df$time_before_sq   <- c(timeB2, rep(0, length(after2000)))
-
-df$time_after       <- c(rep(0, length(before2000)), timeA)
-# - `rep(0, length(before2000))`: 120 zeros for pre-2001
-# - `timeA`: 1 to 240 for Jan 2001 to Dec 2020
-# - So:
-#   - `time_after = 0, 0, ..., 0, 1, 2, ..., 240`
-#
-# This activates the time trend **only after 2000**.
-df$time_after_sq    <- c(rep(0, length(before2000)), timeA2)
-
-#Regression of all dummys against data
-popDummy <- lm(Population ~ time_before + time_before_sq + time_after + time_after_sq, data = df)
-summary(popDummy)
-
-#Regression of all dummys against data WITHOUT square after 2000
-popDummyLinA2000 <- lm(Population ~ time_before + time_before_sq + time_after, data = df)
-summary(popDummyLinA2000)
-
-#Check for stationarity of popDummyLinA2000
-#Extract residuals
-resids <- resid(popDummyLinA2000)
-#ADF test
-adf.test(resids, alternative = "stationary")
-
-#Check for stationarity of pop Dummy (with square)
-#Extract residuals
-residsSq <- resid(popDummyLinA2000)
-adf.test(residsSq, alternative = "stationary")
-
-
 
 ### ---- ###
 ## We probably need to take all of the stationary data and create a new data set based on that?
+water_stationary <- df()
 
-##HELENE: added everything but temperature.
-water_stationary <- data.frame(precipitation = diff(water$PRCP), well = diff(water$WaterElevation), population = water$population[-360], temperature = diff(water$TAVG))
 
-#all three predictors
-fit <- lm(well ~ precipitation + population + temperature, water_stationary)
-summary(fit)
-AIC(fit)
-BIC(fit)
-summary(fit)$r.squared
-
-#PRCP and TEMP only
-fit2 <- lm(well ~ precipitation + temperature, water_stationary)
-summary(fit2)
-AIC(fit2)
-BIC(fit2)
-summary(fit2)$r.squared
-
-##population^2?
-population2 = water_stationary$population^2
-
-fitPopSq <- lm(well ~ precipitation + population2 + temperature, water_stationary)
-summary(fitPopSq)
-AIC(fitPopSq)
-BIC(fitPopSq)
-summary(fitPopSq)$r.squared
 
 
 
