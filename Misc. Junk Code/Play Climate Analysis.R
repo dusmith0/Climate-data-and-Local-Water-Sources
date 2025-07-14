@@ -529,11 +529,11 @@ adf.test(resid(fit.dummy), alternative = "stationary")
 #water elevation (Y) v population (X)
 
 par(mfrow = c(3,1), mar=c(3,3,3,2))
-ccf(diff(water_stationary$population), diff(well$WaterElevation), lag.max=30, main = "CCF Differenced Population and Differenced Water Elevation")
+ccf(water_stationary$population, diff(well$WaterElevation), lag.max=30, main = "CCF Population and Differenced Water Elevation")
 
 #water elevation (Y) v temperature average
 par(mar=c(3,3,3,2))
-ccf(diff(well$TAVG), diff(well$WaterElevation), lag.max=30, main = "CCF Temperature and Differenced Water Elevation")
+ccf(well$TAVG, diff(well$WaterElevation), lag.max=30, main = "CCF Temperature and Differenced Water Elevation")
 
 
 #water elevation (Y) v precipitation
@@ -544,10 +544,10 @@ ccf(well$PRCP, diff(well$WaterElevation), lag.max=30, main = "CCF Precipitation 
 #########From Helene, population segmentation#######
 
 ## Figure out how to do a dummy variable to replace splitting data into two sets##
-before2000 = df$Population[1:120] # Jan 1991 to Dec 2000
+before2000 = water$population[1:120] # Jan 1991 to Dec 2000
 timeB = 1:length(before2000)
 timeB2 = timeB^2
-after2000 = df$Population[121:360] # Jan 2001 to Dec 2020
+after2000 = water$population[121:360] # Jan 2001 to Dec 2020
 timeA = 1:length(after2000)
 timeA2 = timeA^2
 
@@ -591,11 +591,21 @@ df$time_after       <- c(rep(0, length(before2000)), timeA)
 df$time_after_sq    <- c(rep(0, length(before2000)), timeA2)
 
 #Regression of all dummys against data
-popDummy <- lm(Population ~ time_before + time_before_sq + time_after + time_after_sq, data = df)
+popDummy <- lm(population ~ time_before + time_before_sq + time_after + time_after_sq, data = df)
 summary(popDummy)
 
+popInt = popDummy$coefficients[1]
+popThetaTB = popDummy$coefficients[2]
+popThetaTB2 = popDummy$coefficients[3]
+popThetaTA = popDummy$coefficients[4]
+popThetaTA2 = popDummy$coefficients[5]
+
+## HELENE: Detrend population data based on popDummy Linear Regression
+
+popDetrend = water$population - popInt - popThetaTB*df$time_before-popThetaTB2*df$time_before_sq-popThetaTA*df$time_after-popThetaTA2*df$time_after_sq
+
 #Regression of all dummys against data WITHOUT square after 2000
-popDummyLinA2000 <- lm(Population ~ time_before + time_before_sq + time_after, data = df)
+popDummyLinA2000 <- lm(population ~ time_before + time_before_sq + time_after, data = df)
 summary(popDummyLinA2000)
 
 #Check for stationarity of popDummyLinA2000
@@ -607,15 +617,14 @@ adf.test(resids, alternative = "stationary")
 #Check for stationarity of pop Dummy (with square)
 #Extract residuals
 residsSq <- resid(popDummyLinA2000)
-adf.test(residsSq, alternative = "stationary")
-
+adf.test(residsSq)
 
 
 ### ---- ###
 ## We probably need to take all of the stationary data and create a new data set based on that?
 
 ##HELENE: added everything but temperature.
-water_stationary <- data.frame(precipitation = diff(water$PRCP), well = diff(water$WaterElevation), population = water$population[-360], temperature = diff(water$TAVG))
+water_stationary <- data.frame(precipitation = diff(water$PRCP), well = diff(log(water$WaterElevation)), population = water$population[-360], popDetrend= popDetrend[-360], temperature = diff(water$TAVG))
 
 #all three predictors
 fit <- lm(well ~ precipitation + population + temperature, water_stationary)
@@ -640,6 +649,44 @@ AIC(fitPopSq)
 BIC(fitPopSq)
 summary(fitPopSq)$r.squared
 
+##HELENE: Model Estimation
+#AR model estimation for individual predictors. Need to work on population
+
+popAR = sarima(diff(water$population), p=1, d=0, q=0, no.constant=F)
+
+wellAR = sarima(water_stationary$well, p=1, d=0, q=0, no.constant=T)
+
+precipAR = sarima(water_stationary$precipitation, p=1, d=0, q=0, no.constant=T)
+
+tempARMA = sarima(water_stationary$temperature, p=1, d=0, q=1, no.constant=T)
+tempAR = sarima(water_stationary$temperature, p=1, d=0, q=0, no.constant=T)## lower AIC,BIC
+
+##Lagged predictor variables
+laggedPrecip <- lag(water_stationary$precipitation)
+laggedTemp <- lag(water_stationary$temperature)
+laggedWell<- lag(water_stationary$well)
+
+phiPrecip <- as.numeric(precipAR$fit[1])
+phiTemp<- as.numeric(tempAR$fit[1])
+phiWell<- as.numeric(wellAR$fit[1])
+
+phiXlaggedPrecip <- phiPrecip*laggedPrecip
+phiXlaggedTemp <- phiTemp*laggedTemp
+phiXlaggedWell<- phiWell*laggedWell
+
+fit <- lm(well ~ temperature + laggedPrecip + population + popDetrend, water_stationary)
+fit2<- lm(well ~ temperature + laggedPrecip + popDetrend, water_stationary)
+fit3<- lm(well ~ temperature + laggedPrecip + population, water_stationary)
+fit4 <- lm(well ~ temperature + laggedPrecip, water_stationary)
+
+fitLagged <- lm(water_stationary$well ~ phiXlaggedPrecip + phiXlaggedTemp + popDetrend[-360])
+plot(resid(fitLagged))
+
+plot(resid(fit))
+plot(resid(fit2))
+plot(resid(fit3))
+plot(resid(fit4))
+plot(resid(fitLagged))
 
 
 ###--------------------------------------------------------------------------###
