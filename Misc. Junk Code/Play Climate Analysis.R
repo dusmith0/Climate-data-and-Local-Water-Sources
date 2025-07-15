@@ -709,15 +709,38 @@ waterElevation310$ttable #coefficients
 waterElevation310$ICs #BIC,AIC
 
 ##HELENE: Population model; Data: popDummyLinA2000 ?????
+par(mfrow=c(3,1))
+tsplot(pop.data$population)
+acf(pop.data$population, 360)
+pacf(pop.data$population, 360)
+adf.test(pop.data$population) #NOT stationary
 
-tsplot(popDetrend)
+par(mfrow=c(3,1))
+tsplot(diff(pop.data$population))
+acf(diff(pop.data$population), 360)
+pacf(diff(pop.data$population), 360)
+adf.test(diff(pop.data$population)) #NOT stationary
+
+par(mfrow=c(3,1))
+tsplot(log(pop.data$population))
+acf(log(pop.data$population, 360))
+pacf(log(pop.data$population, 360))
+adf.test(log(pop.data$population, 360)) #NOT stationary
+
+par(mfrow=c(3,1))
+tsplot(diff(log(pop.data$population)))
+acf(diff(log(pop.data$population, 360)))
+pacf(diff(log(pop.data$population, 360)))
+adf.test(diff(log(pop.data$population, 360)))#Stationary
+
+par(mfrow=c(3,1))
 tsplot(diff(popDetrend))
-
-par(mfrow=c(2,1))
 acf(diff(popDetrend), 360)
 pacf(diff(popDetrend), 360)
+adf.test(diff(popDetrend)) #stationary
 
 pop111 = sarima(popDetrend, 1,1,1) ## BEST MODEL???
+logPop111 = sarima(log(pop.data$population),1,1,1) ##???
 
 ##HELENE: Temperature model; Data: df_clean$Temp_seasonal
 
@@ -742,7 +765,7 @@ par(mfrow=c(2,1))
 acf(water$PRCP)
 pacf(water$PRCP) #truncates after lag 1
 
-prcp100 = sarima(water$PRCP, 1,0,0) ## SUGGSETED MODEL AR!
+prcp100 = sarima(water$PRCP, 1,0,0) ## SUGGSETED MODEL AR1
 
 prcp100$ttable #coefficients
 prcp100$ICs #BIC,AIC
