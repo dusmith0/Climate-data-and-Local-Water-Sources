@@ -166,7 +166,7 @@ for(i in missing){
 #  merge(well, by.well = "DATE", all = FALSE)
 
 
-#HELENE: remove create well dataframe with everything in water except for the lake data
+#HELENE: create well dataframe with everything in water except for the lake data
 df <- subset(df, select = -c(a, c))
 well <- water[,-3]
 
@@ -310,14 +310,15 @@ pacf(water$PRCP, main = "Precipitation PACF")
 
 adf.test(water$PRCP)
 adf.test(diff(water$PRCP))
-=======
+
 acf(water$TAVG, main = "Average Temp.", lwd = 1.5, col = "steelblue")
 
 ### Population data
-par(mfrow = c(2,1))
-tsplot(water$population, main = "Population of the San Antonio Region",
-       ylab = "Population", col = "steelblue", lwd = 3)
-acf(water$population, main = "Population", lwd = 1.5, col = "steelblue")
+par(mfrow = c(3,1))
+tsplot(diff(water$population), main = "Population of the San Antonio Region",
+       ylab = "Population", col = "steelblue")
+acf(diff(water$population), 360,main = "Population",col = "steelblue")
+pacf(diff(water$population), main = "PACF", 360)
 
 ### working on transforming lake data if needed.
 ### This seemed worked really well.
@@ -692,19 +693,59 @@ plot(resid(fitLagged))
 ###--------------------------------------------------------------------------###
 ##  Selecting Models for AR(p), MA(q), and ARMA(p,q)
 
+##HELENE: Water elevation model; Data: water$WaterElevation
 
 
+tsplot(water$WaterElevation)
+tsplot(log(water$WaterElevation)) #varianc stable; log transformation not needed
+tsplot(diff(water$WaterElevation)) #improved stationarity; USE DIFFERENCE
 
+par(mfrow=c(2,1))
+acf(diff(water$WaterElevation)) #quickly decays
+pacf(diff(water$WaterElevation)) #truncates after lag 3
 
+waterElevation310 = sarima(water$WaterElevation, 3,1,0)##SUGGESTED MODEL: Arima(3,1,0)
+waterElevation310$ttable #coefficients
+waterElevation310$ICs #BIC,AIC
 
+##HELENE: Population model; Data: popDummyLinA2000 ?????
 
+tsplot(popDetrend)
+tsplot(diff(popDetrend))
 
+par(mfrow=c(2,1))
+acf(diff(popDetrend), 360)
+pacf(diff(popDetrend), 360)
 
+pop111 = sarima(popDetrend, 1,1,1) ## BEST MODEL???
 
+##HELENE: Temperature model; Data: df_clean$Temp_seasonal
 
+tsplot(df_clean$Temp_seasonal)
+tsplot(log(df_clean$Temp_seasonal)) #variance stable; log transformation not needed
+tsplot(diff(df_clean$Temp_seasonal)) #improved stationarity; USE DIFFERENCE
 
+par(mfrow=c(2,1))
+acf(diff(df_clean$Temp_seasonal)) #truncates after lag 1
+pacf(diff(df_clean$Temp_seasonal)) #truncates after lag 3
 
+tempSeasonal311 = sarima(df_clean$Temp_seasonal, 3,1,1)##AR 2 and 3 coeff not signif
+tempSeasonal111 = sarima(df_clean$Temp_seasonal, 1,1,1)## SUGGESTED MODEL Arima(1,1,1)
+tempSeasonal111$ttable #coefficients
+tempSeasonal111$ICs #BIC,AIC
 
+##HELENE: Precipitation: data: water$PRCP
+
+tsplot(water$PRCP)
+
+par(mfrow=c(2,1))
+acf(water$PRCP)
+pacf(water$PRCP) #truncates after lag 1
+
+prcp100 = sarima(water$PRCP, 1,0,0) ## SUGGSETED MODEL AR!
+
+prcp100$ttable #coefficients
+prcp100$ICs #BIC,AIC
 
 
 
