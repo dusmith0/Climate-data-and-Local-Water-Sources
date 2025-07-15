@@ -748,14 +748,18 @@ tsplot(df_clean$Temp_seasonal)
 tsplot(log(df_clean$Temp_seasonal)) #variance stable; log transformation not needed
 tsplot(diff(df_clean$Temp_seasonal)) #improved stationarity; USE DIFFERENCE
 
-par(mfrow=c(2,1))
-acf(diff(df_clean$Temp_seasonal)) #truncates after lag 1
-pacf(diff(df_clean$Temp_seasonal)) #truncates after lag 3
+par(mfrow=c(2,1), mar=c(2,2,2,21))
+acf(diff(df_clean$Temp_seasonal), 36) #truncates after lag 1
+pacf(diff(df_clean$Temp_seasonal),360) #truncates after lag 3
 
 tempSeasonal311 = sarima(df_clean$Temp_seasonal, 3,1,1)##AR 2 and 3 coeff not signif
 tempSeasonal111 = sarima(df_clean$Temp_seasonal, 1,1,1)## SUGGESTED MODEL Arima(1,1,1)
 tempSeasonal111$ttable #coefficients
 tempSeasonal111$ICs #BIC,AIC
+
+tempSeasonal111S = sarima(df_clean$Temp_seasonal, 1,1,1, S=-6)## SUGGESTED MODEL Arima(1,1,1)
+
+
 
 ##HELENE: Precipitation: data: water$PRCP
 
