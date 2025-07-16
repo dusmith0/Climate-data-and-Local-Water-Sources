@@ -7,8 +7,116 @@ This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute
 
 Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
 
-```{r}
+```{r Libraries}
 #libraries to load
+library("astsa") #General Times Series Plot
+library("ggplot2") #Better Graphics
+library("GGally") #extends ggplot2
+library("dplyr") #filter(), select(), mutate(), group_by(), summarize(), arrange()
+library("readr") #for reading in csv's
+library("tseries") #Augmented Dickey-Fuller (ADF) test for stationary
+library("corrplot") #Allows for building pretty Correlation plots
+library("lubridate") #date and time handling
+library("tidyverse")
+library("zoo") #For clean time series models.
+library("aTSA")
+library("EnvStats")
+```
+
+```{r Creating the dataset}
+climate.data <- read.csv("Original Data Sets/Climate Data/San Antonio Airport (SAT) climate data (1948 to 2025).csv")
+well.data <- read.csv("Original Data Sets/Well Depth Data/j17waterlevels.csv", skip = 6)
+lake.data <- read.csv("Original Data Sets/Surface water level data/CanyonLakeRev.txt")
+pop.data <- read.csv("Original Data Sets/MonthlyPop.csv")[,-c(1)]
+# I used this to make sure I correctly matched what Helene did
+helene <- read.csv("Original Data Sets/MonthlyData.csv")
+
+## Extracting the data from 1991 to 2020
+climate <- climate.data %>%
+  filter(DATE >= as.Date("1991-1-1") & DATE <= as.Date("2020-12-31")) %>%
+  select(DATE, TAVG, TMAX, TMIN, TSUN, ACSH, AWND, PGTM, PRCP) %>%
+  mutate(DATE = as.Date(DATE))
+
+    ## Filtering in TAVG if it is not present, would probably be better as an apply statement.
+
+      for(i in 1:length(climate$TAVG)){
+        if(is.na(climate$TAVG[i]) == TRUE){
+          climate$TAVG[i] = (climate$TMAX[i] + climate$TMIN[i])/2
+        }
+      }
+
+
+well <- well.data %>%
+  mutate(DATE = as.Date(Date, format = "%m/%d/%Y")) %>%
+  filter(DATE >= as.Date("1991-1-1") & DATE <= as.Date("2020-12-31")) %>%
+  select(DATE, WaterLevel, Change, WaterElevation)
+
+
+lake <- lake.data %>%
+  mutate(DATE = as.Date(date)) %>%
+  filter(date >= as.Date("1991-1-1") & date <= as.Date("2020-12-31")) %>%
+  select(DATE, water_level, percent_full)
+
+# Renaming some fo the columns to avoid naming issues with the well data.
+colnames(lake) <- c("DATE","waterlevel_lake","percentfull_lake")
+
+
+
+
+###--------------------------------------------------------------------------###
+##  Handling Missing Data
+
+#missing information for population
+######### From Helene handling the population data #######
+missingYear = c(rep(2002,2), rep(2005,3), rep(2006,3))
+missingMonth = c(10,11,9,11,12,5,7,9)
+missingPop = c(rep(1414000,2),rep(1538000,3),rep(1582000,3))
+missingDate = as.yearmon(paste(missingYear,missingMonth), "%Y %m")
+
+missingPopDF = data.frame(missingYear,missingMonth,missingPop,missingDate)
+names(missingPopDF) = c("year", "month", "population", "Date")
+
+
+#Merge original population DF and missing info DF
+pop_averageDF = rbind(pop.data,missingPopDF)
+pop <- pop_averageDF %>%
+  arrange(year, month)
+
+# Merging the Data
+water <- merge(climate, lake, by.climate = "DATE", by.lake = "DATE", all = TRUE) %>%
+         merge(well, by.well = "DATE", all = TRUE)
+
+
+### Attempting to coerce the data into a more usable format, by averaging over months.
+
+names(water)
+monthly_averages <- water %>%
+  select(DATE, TAVG, PRCP, percentfull_lake, WaterElevation) %>%
+  group_by(year = year(DATE), month = month(DATE)) %>%
+  summarise(TAVG = mean(TAVG, na.rm = TRUE),
+            PRCP = sum(PRCP),
+            percentfull_lake = mean(percentfull_lake, na.rm = TRUE),
+            WaterElevation = mean(WaterElevation, na.rm = TRUE))
+            #TSUN = mean(TSUN, na.rm = TRUE), #TSUN has been removed due to excessive missing data
+
+
+
+water <- cbind(monthly_averages,population = pop$population)
+
+#Getting rid of separate year and month columns
+water$Date <- as.yearmon(paste(water$year, water$month), "%Y %m")
+
+drops <- c("year","month")
+water <- water[ , !(names(water) %in% drops)]
+
+#View(water)
+
+#Handling Missing WaterElevation data
+missing <- which(is.na(water$WaterElevation))
+for(i in missing){
+  water$WaterElevation[i] <- mean(water$WaterElevation[c(i-2,i+2)],na.rm = TRUE)
+  
+}
 ```
 
 Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
@@ -21,10 +129,33 @@ The preview shows you a rendered HTML copy of the contents of the editor. Conseq
 ```{r Well Water Elevation}
 
 ## STATIONARITY
+par(mfrow = c(2,1))
+adf.test(water$WaterElevation)
+
+#Checking the original data to compare with the differenced data
+tsplot(water$WaterElevation,
+       main = "Original WaterElevation", xlab = "WaterElevation",
+       col = "steelblue")
+
+#Plotting the differenced data
+tsplot(diff(water$WaterElevation),
+       main = "Differenced WaterElevation", xlab = "WaterElevation",
+       col = "steelblue")
+
 
 ## ACF AND PACF
+par(mfrow = c(3,1))
+tsplot(diff(water$WaterElevation), main = "Water Elevation of J17 Well",
+       ylab = "Population", col = "steelblue", lwd = 3)
+acf(diff(water$WaterElevation), main = "Water Elevation ACF")
+pacf(diff(water$WaterElevation), main = "Water Elevation PACF")
 
 ## MODEL ESTIMATION
+fit <- sarima(water$WaterElevation, p = 3, d = 1, q = 0)
+fit$ICs
+# I can get a much lower BIC, AIC with the 1/3 transformation with similar significance. 
+fit2 <- sarima((water$WaterElevation) ^ (1/3), p = 3, d = 1, q = 0)
+(fit2$ICs)
 
 ## FORECASTING
 
