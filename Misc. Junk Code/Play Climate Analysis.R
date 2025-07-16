@@ -249,7 +249,7 @@ as.ts(well)
 
 names <- names(well)
 for(i in colnames(well)){
-  lag2.plot(well$WaterElevation, water[[i]] , 5, col = "steelblue")
+  lag2.plot(well$WaterElevation, well[[i]] , 5, col = "steelblue")
 }
 
 ###--------------------------------------------------------------------------###
@@ -742,6 +742,7 @@ adf.test(diff(popDetrend)) #stationary
 pop111 = sarima(popDetrend, 1,1,1) ## BEST MODEL???
 logPop111 = sarima(log(pop.data$population),1,1,1) ##???
 
+
 ##HELENE: Temperature model; Data: df_clean$Temp_seasonal
 
 tsplot(df_clean$Temp_seasonal)
@@ -758,7 +759,6 @@ tempSeasonal111$ttable #coefficients
 tempSeasonal111$ICs #BIC,AIC
 
 tempSeasonal111S = sarima(df_clean$Temp_seasonal, 1,1,1, S=-6)## SUGGESTED MODEL Arima(1,1,1)
-
 
 
 ##HELENE: Precipitation: data: water$PRCP
