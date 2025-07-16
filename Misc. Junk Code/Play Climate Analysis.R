@@ -166,7 +166,7 @@ for(i in missing){
 #  merge(well, by.well = "DATE", all = FALSE)
 
 
-#HELENE: remove create well dataframe with everything in water except for the lake data
+#HELENE: create well dataframe with everything in water except for the lake data
 df <- subset(df, select = -c(a, c))
 well <- water[,-3]
 
@@ -249,7 +249,7 @@ as.ts(well)
 
 names <- names(well)
 for(i in colnames(well)){
-  lag2.plot(well$WaterElevation, water[[i]] , 5, col = "steelblue")
+  lag2.plot(well$WaterElevation, well[[i]] , 5, col = "steelblue")
 }
 
 ###--------------------------------------------------------------------------###
@@ -310,14 +310,15 @@ pacf(water$PRCP, main = "Precipitation PACF")
 
 adf.test(water$PRCP)
 adf.test(diff(water$PRCP))
-=======
+
 acf(water$TAVG, main = "Average Temp.", lwd = 1.5, col = "steelblue")
 
 ### Population data
-par(mfrow = c(2,1))
-tsplot(water$population, main = "Population of the San Antonio Region",
-       ylab = "Population", col = "steelblue", lwd = 3)
-acf(water$population, main = "Population", lwd = 1.5, col = "steelblue")
+par(mfrow = c(3,1))
+tsplot(diff(water$population), main = "Population of the San Antonio Region",
+       ylab = "Population", col = "steelblue")
+acf(diff(water$population), 360,main = "Population",col = "steelblue")
+pacf(diff(water$population), main = "PACF", 360)
 
 ### working on transforming lake data if needed.
 ### This seemed worked really well.
@@ -529,11 +530,11 @@ adf.test(resid(fit.dummy), alternative = "stationary")
 #water elevation (Y) v population (X)
 
 par(mfrow = c(3,1), mar=c(3,3,3,2))
-ccf(diff(water_stationary$population), diff(well$WaterElevation), lag.max=30, main = "CCF Differenced Population and Differenced Water Elevation")
+ccf(water_stationary$population, diff(well$WaterElevation), lag.max=30, main = "CCF Population and Differenced Water Elevation")
 
 #water elevation (Y) v temperature average
 par(mar=c(3,3,3,2))
-ccf(diff(well$TAVG), diff(well$WaterElevation), lag.max=30, main = "CCF Temperature and Differenced Water Elevation")
+ccf(well$TAVG, diff(well$WaterElevation), lag.max=30, main = "CCF Temperature and Differenced Water Elevation")
 
 
 #water elevation (Y) v precipitation
@@ -544,10 +545,10 @@ ccf(well$PRCP, diff(well$WaterElevation), lag.max=30, main = "CCF Precipitation 
 #########From Helene, population segmentation#######
 
 ## Figure out how to do a dummy variable to replace splitting data into two sets##
-before2000 = df$Population[1:120] # Jan 1991 to Dec 2000
+before2000 = water$population[1:120] # Jan 1991 to Dec 2000
 timeB = 1:length(before2000)
 timeB2 = timeB^2
-after2000 = df$Population[121:360] # Jan 2001 to Dec 2020
+after2000 = water$population[121:360] # Jan 2001 to Dec 2020
 timeA = 1:length(after2000)
 timeA2 = timeA^2
 
@@ -591,11 +592,21 @@ df$time_after       <- c(rep(0, length(before2000)), timeA)
 df$time_after_sq    <- c(rep(0, length(before2000)), timeA2)
 
 #Regression of all dummys against data
-popDummy <- lm(Population ~ time_before + time_before_sq + time_after + time_after_sq, data = df)
+popDummy <- lm(population ~ time_before + time_before_sq + time_after + time_after_sq, data = df)
 summary(popDummy)
 
+popInt = popDummy$coefficients[1]
+popThetaTB = popDummy$coefficients[2]
+popThetaTB2 = popDummy$coefficients[3]
+popThetaTA = popDummy$coefficients[4]
+popThetaTA2 = popDummy$coefficients[5]
+
+## HELENE: Detrend population data based on popDummy Linear Regression
+
+popDetrend = water$population - popInt - popThetaTB*df$time_before-popThetaTB2*df$time_before_sq-popThetaTA*df$time_after-popThetaTA2*df$time_after_sq
+
 #Regression of all dummys against data WITHOUT square after 2000
-popDummyLinA2000 <- lm(Population ~ time_before + time_before_sq + time_after, data = df)
+popDummyLinA2000 <- lm(population ~ time_before + time_before_sq + time_after, data = df)
 summary(popDummyLinA2000)
 
 #Check for stationarity of popDummyLinA2000
@@ -607,15 +618,14 @@ adf.test(resids, alternative = "stationary")
 #Check for stationarity of pop Dummy (with square)
 #Extract residuals
 residsSq <- resid(popDummyLinA2000)
-adf.test(residsSq, alternative = "stationary")
-
+adf.test(residsSq)
 
 
 ### ---- ###
 ## We probably need to take all of the stationary data and create a new data set based on that?
 
 ##HELENE: added everything but temperature.
-water_stationary <- data.frame(precipitation = diff(water$PRCP), well = diff(water$WaterElevation), population = water$population[-360], temperature = diff(water$TAVG))
+water_stationary <- data.frame(precipitation = diff(water$PRCP), well = diff(log(water$WaterElevation)), population = water$population[-360], popDetrend= popDetrend[-360], temperature = diff(water$TAVG))
 
 #all three predictors
 fit <- lm(well ~ precipitation + population + temperature, water_stationary)
@@ -640,24 +650,129 @@ AIC(fitPopSq)
 BIC(fitPopSq)
 summary(fitPopSq)$r.squared
 
+##HELENE: Model Estimation
+#AR model estimation for individual predictors. Need to work on population
+
+popAR = sarima(diff(water$population), p=1, d=0, q=0, no.constant=F)
+
+wellAR = sarima(water_stationary$well, p=1, d=0, q=0, no.constant=T)
+
+precipAR = sarima(water_stationary$precipitation, p=1, d=0, q=0, no.constant=T)
+
+tempARMA = sarima(water_stationary$temperature, p=1, d=0, q=1, no.constant=T)
+tempAR = sarima(water_stationary$temperature, p=1, d=0, q=0, no.constant=T)## lower AIC,BIC
+
+##Lagged predictor variables
+laggedPrecip <- lag(water_stationary$precipitation)
+laggedTemp <- lag(water_stationary$temperature)
+laggedWell<- lag(water_stationary$well)
+
+phiPrecip <- as.numeric(precipAR$fit[1])
+phiTemp<- as.numeric(tempAR$fit[1])
+phiWell<- as.numeric(wellAR$fit[1])
+
+phiXlaggedPrecip <- phiPrecip*laggedPrecip
+phiXlaggedTemp <- phiTemp*laggedTemp
+phiXlaggedWell<- phiWell*laggedWell
+
+fit <- lm(well ~ temperature + laggedPrecip + population + popDetrend, water_stationary)
+fit2<- lm(well ~ temperature + laggedPrecip + popDetrend, water_stationary)
+fit3<- lm(well ~ temperature + laggedPrecip + population, water_stationary)
+fit4 <- lm(well ~ temperature + laggedPrecip, water_stationary)
+
+fitLagged <- lm(water_stationary$well ~ phiXlaggedPrecip + phiXlaggedTemp + popDetrend[-360])
+plot(resid(fitLagged))
+
+plot(resid(fit))
+plot(resid(fit2))
+plot(resid(fit3))
+plot(resid(fit4))
+plot(resid(fitLagged))
 
 
 ###--------------------------------------------------------------------------###
 ##  Selecting Models for AR(p), MA(q), and ARMA(p,q)
 
+##HELENE: Water elevation model; Data: water$WaterElevation
 
 
+tsplot(water$WaterElevation)
+tsplot(log(water$WaterElevation)) #varianc stable; log transformation not needed
+tsplot(diff(water$WaterElevation)) #improved stationarity; USE DIFFERENCE
+
+par(mfrow=c(2,1))
+acf(diff(water$WaterElevation)) #quickly decays
+pacf(diff(water$WaterElevation)) #truncates after lag 3
+
+waterElevation310 = sarima(water$WaterElevation, 3,1,0)##SUGGESTED MODEL: Arima(3,1,0)
+waterElevation310$ttable #coefficients
+waterElevation310$ICs #BIC,AIC
+
+##HELENE: Population model; Data: popDummyLinA2000 ?????
+par(mfrow=c(3,1))
+tsplot(pop.data$population)
+acf(pop.data$population, 360)
+pacf(pop.data$population, 360)
+adf.test(pop.data$population) #NOT stationary
+
+par(mfrow=c(3,1))
+tsplot(diff(pop.data$population))
+acf(diff(pop.data$population), 360)
+pacf(diff(pop.data$population), 360)
+adf.test(diff(pop.data$population)) #NOT stationary
+
+par(mfrow=c(3,1))
+tsplot(log(pop.data$population))
+acf(log(pop.data$population, 360))
+pacf(log(pop.data$population, 360))
+adf.test(log(pop.data$population, 360)) #NOT stationary
+
+par(mfrow=c(3,1))
+tsplot(diff(log(pop.data$population)))
+acf(diff(log(pop.data$population, 360)))
+pacf(diff(log(pop.data$population, 360)))
+adf.test(diff(log(pop.data$population, 360)))#Stationary
+
+par(mfrow=c(3,1))
+tsplot(diff(popDetrend))
+acf(diff(popDetrend), 360)
+pacf(diff(popDetrend), 360)
+adf.test(diff(popDetrend)) #stationary
+
+pop111 = sarima(popDetrend, 1,1,1) ## BEST MODEL???
+logPop111 = sarima(log(pop.data$population),1,1,1) ##???
 
 
+##HELENE: Temperature model; Data: df_clean$Temp_seasonal
+
+tsplot(df_clean$Temp_seasonal)
+tsplot(log(df_clean$Temp_seasonal)) #variance stable; log transformation not needed
+tsplot(diff(df_clean$Temp_seasonal)) #improved stationarity; USE DIFFERENCE
+
+par(mfrow=c(2,1), mar=c(2,2,2,21))
+acf(diff(df_clean$Temp_seasonal), 36) #truncates after lag 1
+pacf(diff(df_clean$Temp_seasonal),360) #truncates after lag 3
+
+tempSeasonal311 = sarima(df_clean$Temp_seasonal, 3,1,1)##AR 2 and 3 coeff not signif
+tempSeasonal111 = sarima(df_clean$Temp_seasonal, 1,1,1)## SUGGESTED MODEL Arima(1,1,1)
+tempSeasonal111$ttable #coefficients
+tempSeasonal111$ICs #BIC,AIC
+
+tempSeasonal111S = sarima(df_clean$Temp_seasonal, 1,1,1, S=-6)## SUGGESTED MODEL Arima(1,1,1)
 
 
+##HELENE: Precipitation: data: water$PRCP
 
+tsplot(water$PRCP)
 
+par(mfrow=c(2,1))
+acf(water$PRCP)
+pacf(water$PRCP) #truncates after lag 1
 
+prcp100 = sarima(water$PRCP, 1,0,0) ## SUGGSETED MODEL AR1
 
-
-
-
+prcp100$ttable #coefficients
+prcp100$ICs #BIC,AIC
 
 
 
