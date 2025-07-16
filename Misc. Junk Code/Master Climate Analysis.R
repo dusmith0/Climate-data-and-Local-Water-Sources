@@ -132,38 +132,6 @@ for(i in missing){
   water$WaterElevation[i] <- mean(water$WaterElevation[c(i-2,i+2)],na.rm = TRUE)
 }
 
-#water[missing,]
-#View(water)
-
-
-## Possible Alternative for handling population data
-## It will run through the dates an "smooth" the data to a consistent increase
-## between each month, as opposed to keeping the same value for each month. I do not
-## Think it helped though. I think it actually made it much worse.
-#for(i in seq(12,360,by=12)){
-#          if(!is.na(water$population[i + 1])){
-#            step <- (water$population[(i) + 1] - water$population[(i)])/12
-#          }else{
-#            step <- (2400000 - water$population[(i)])/12 #imputing upper bound from https://fred.stlouisfed.org/series/SATPOP
-#          }
-#          stepup <- cumsum(rep(step,11))
-#          water$population[(i - 10):(i)] <-  water$population[(i - 10):(i)] + stepup
-#}
-
-
-##--## Trying to figure out why the DATE section is not working.
-#water[which(is.na(water$percentfull_lake) & is.na(water$waterlevel_lake)),]
-    ## 26 missing data sets
-
-
-#View((water[which(is.na(water$WaterLevel) & is.na(water$Change) & is.na(water$WaterElevation)),]))
-    ## 10975 - 2009 = 8966 missing data
-
-
-## Possible Solution is to remove the data...
-#water <- merge(climate, lake, by.climate = "DATE", by.lake = "DATE", all = FALSE) %>%
-#  merge(well, by.well = "DATE", all = FALSE)
-
 
 
 
