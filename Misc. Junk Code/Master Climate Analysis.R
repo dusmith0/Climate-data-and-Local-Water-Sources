@@ -414,13 +414,11 @@ tsplot(resid(fit.dummy))
 acf2(resid(fit.dummy))
 adf.test(resid(fit.dummy), alternative = "stationary")
 
+resids <- resid(fit.dummy)
+
 
 ### ---- ###
 ## We probably need to take all of the stationary data and create a new data set based on that?
-water_stationary <- df()
-
-
-
 
 
 ###--------------------------------------------------------------------------###

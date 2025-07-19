@@ -280,18 +280,17 @@ pop <- pop_averageDF %>%
   arrange(year, month)
 
 # Merging the Data
-water <- merge(climate, lake, by.climate = "DATE", by.lake = "DATE", all = TRUE) %>%
-  merge(well, by.well = "DATE", all = TRUE)
+### Dustin I removed the lake to allow the water df to work. 
+water <- merge(climate, well, by.climate = "DATE", by.lake = "DATE", all = TRUE)
 
 
 ### Attempting to coerce the data into a more usable format, by averaging over months.
-
+### Dustin I removed the percent_full
 monthly_averages <- water %>%
-  select(DATE, TAVG, PRCP, percentfull_lake, WaterElevation) %>%
+  select(DATE, TAVG, PRCP, WaterElevation) %>%
   group_by(year = year(DATE), month = month(DATE)) %>%
   summarise(TAVG = mean(TAVG, na.rm = TRUE),
             PRCP = sum(PRCP),
-            percentfull_lake = mean(percentfull_lake, na.rm = TRUE),
             WaterElevation = mean(WaterElevation, na.rm = TRUE))
 
 water <- cbind(monthly_averages,population = pop$population)
@@ -406,7 +405,11 @@ waterElevation011$ttable #coefficients
 waterElevation011$ICs #BIC,AIC
 
 #Conclusion: Choose between 310 and 110? Other suggestions?
-
+## Dustin I think that both MA and AR tail off when differenced. 
+## What about an AR(3) with no differencing?
+waterElevation300 <- sarima(water$WaterElevation, 3,0,0)
+waterElevation300$ttable
+waterElevation300$ICs
 
 ## FORECASTING
 
@@ -439,7 +442,7 @@ par(mfrow=c(2,1))
 acf(diff(water$PRCP), main = "Precipitation ACF") #lag 1
 pacf(diff(water$PRCP), main = "Precipitation PACF") #decays
 #Conclusion: MA(1) with differencing
-
+acf2(diff(water$PRCP))
 ## MODEL ESTIMATION
 
 prcp011 = sarima(water$PRCP, 0,1,1) 
@@ -773,6 +776,10 @@ adf.test(diff(popDetrend)) #stationary
 
 pop111 = sarima(popDetrend, 1,1,1) ## BEST MODEL???
 logPop111 = sarima(log(pop.data$population),1,1,1) ##???
+
+## Dustin Attempting a seasonal fit. 
+sarima(popDetrend, p = 1, d = 0, q = 0, P = 1, D = 1, Q = 0, S = 12)
+# originally used resids
 
 ## FORECASTING
 
