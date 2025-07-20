@@ -413,10 +413,35 @@ waterElevation300$ICs
 
 ## FORECASTING
 ### Dustin 
-sarima.for(as.ts(water$WaterElevation), 
-           n.ahead = 12, p = 3, d = 0, q = 0)
-sarima.for(as.ts(water$WaterElevation), 
-           n.ahead = 12, p = 3, d = 1, q = 0)
+fitwell <- sarima((water$WaterElevation), p = 3, d = 0, q = 0)
+
+model <- (fitwell$ttable[1]*(lag(water$WaterElevation,1) - fitwell$ttable[4]) +
+          fitwell$ttable[3]*(lag(water$WaterElevation,3) - fitwell$ttable[4]) +
+          fitwell$ttable[4])
+
+tsplot(water$WaterElevation[260:361], ylab = "Water Elevation", lwd = 1.5)
+lines(x = c(260:361) - 260, y = model[260:361],
+      col = "purple", lwd = 1.5, lty = "dashed")
+legend("topleft",legend = c("Original Data", "Model"),
+       col = c("black","purple"),
+       cex = .8, lwd = 2, lty = c(1,2))
+
+
+fit <- sarima.for(as.ts(water$WaterElevation),
+           n.ahead = 12, p = 3, d = 0, q = 0,)
+lines(x = c(361:372), y = water.test$WaterElevation,
+      col = "purple", lwd = 1.5)
+legend("topleft",legend = c("Original Data","forecast","2021 observed data"),
+       col = c("black","red","purple"),
+       cex = .8, lwd = 2, lty = c(1,1))
+
+
+names(fit)
+str(fit$pred)
+
+error <- ((water.test$WaterElevation - fit$pred[1:12])^2)
+mse <- 1/length(error) * sum(error)
+mse
 
 ```
 
@@ -455,7 +480,7 @@ prcp011$ttable #coefficients
 prcp011$ICs #BIC,AIC
 
 ## FORECASTING
-## Dustin -- This on is no good
+## Dustin -- This one is no good
 sarima.for(as.ts(water$PRCP), n.ahead = 12, 0,1,1)
 
 
