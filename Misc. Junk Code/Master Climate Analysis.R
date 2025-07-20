@@ -18,8 +18,8 @@
 #install.packages("corrplot")
 #install.packages("aTSA")
 #install.packages("EnvStats")
-install.packages("tseries")
-install.packages("GGally")
+#install.packages("tseries")
+#install.packages("GGally")
 library("astsa") #General Times Series Plot
 library("ggplot2") #Better Graphics
 library("GGally") #extends ggplot2
@@ -132,6 +132,57 @@ for(i in missing){
   water$WaterElevation[i] <- mean(water$WaterElevation[c(i-2,i+2)],na.rm = TRUE)
 }
 
+
+###--------------------------------------------------------------------------###
+## Building a simple test data set
+## Extracting the data from 1991 to 2020
+climate <- climate.data %>%
+  filter(DATE >= as.Date("2021-1-1") & DATE <= as.Date("2021-12-31")) %>%
+  select(DATE, TAVG, TMAX, TMIN, TSUN, ACSH, AWND, PGTM, PRCP) %>%
+  mutate(DATE = as.Date(DATE))
+
+## Filtering in TAVG if it is not present, would probably be better as an apply statement.
+
+for(i in 1:length(climate$TAVG)){
+  if(is.na(climate$TAVG[i]) == TRUE){
+    climate$TAVG[i] = (climate$TMAX[i] + climate$TMIN[i])/2
+  }
+}
+
+
+well <- well.data %>%
+  mutate(DATE = as.Date(Date, format = "%m/%d/%Y")) %>%
+  filter(DATE >= as.Date("2021-1-1") & DATE <= as.Date("2021-12-31")) %>%
+  select(DATE, WaterLevel, Change, WaterElevation)
+
+
+lake <- lake.data %>%
+  mutate(DATE = as.Date(date)) %>%
+  filter(date >= as.Date("2021-1-1") & DATE <= as.Date("2021-12-31")) %>%
+  select(DATE, water_level, percent_full)
+
+# Renaming some fo the columns to avoid naming issues with the well data.
+colnames(lake) <- c("DATE","waterlevel_lake","percentfull_lake")
+
+
+# Merging the Data
+water.test <- merge(climate, lake, by.climate = "DATE", by.lake = "DATE", all = TRUE) %>%
+  merge(well, by.well = "DATE", all = TRUE)
+
+
+### Attempting to coerce the data into a more usable format, by averaging over months.
+
+names(water.test)
+water.test <- water.test %>%
+  select(DATE, TAVG, PRCP, percentfull_lake, WaterElevation) %>%
+  group_by(year = year(DATE), month = month(DATE)) %>%
+  summarise(TAVG = mean(TAVG, na.rm = TRUE),
+            PRCP = sum(PRCP),
+            percentfull_lake = mean(percentfull_lake, na.rm = TRUE),
+            WaterElevation = mean(WaterElevation, na.rm = TRUE))
+#TSUN = mean(TSUN, na.rm = TRUE), #TSUN has been removed due to excessive missing data
+
+str(water.test)
 
 
 
@@ -415,24 +466,44 @@ acf2(resid(fit.dummy))
 adf.test(resid(fit.dummy), alternative = "stationary")
 
 resids <- resid(fit.dummy)
-
+plot(resids)
 
 ### ---- ###
 ## We probably need to take all of the stationary data and create a new data set based on that?
+water_stationary <- data.frame(precipitation = diff(water$PRCP),
+                               well = diff(water$WaterElevation),
+                               population = water$population[-360],
+                               temperature = diff(water$TAVG))
 
 
 ###--------------------------------------------------------------------------###
 ##  Selecting Models for AR(p), MA(q), and ARMA(p,q)
 
+## Population
+
+predict.glm(fitcrab,newdata = data.frame(weight = 2.44), type = "prediction")
+y <- predict(fit.dummy, type = "response")
+y <- exp(y)
+head(y)
+
+tsplot(water$population, main = "Population", ylab = "Population",
+       col = "steelblue", lwd = 1.5)
+lines(x = 1:length(y), y = y, type = "l",
+      col = "firebrick", lwd = 1.5)
 
 
+## Water Elevation
+fit <- sarima.for(as.ts(water$WaterElevation),
+           n.ahead = 12, p = 3, d = 0, q = 0)
+lines(x = c(361:372), y = water.test$WaterElevation,
+      col = "purple", lwd = 1.5)
+names(fit)
+str(fit$pred)
 
-
-
-
-
-
-
+error <- ((water.test$WaterElevation - fit$pred[1:12])^2)
+mse <- 1/length(error) * sum(error)
+mse
+#
 
 
 

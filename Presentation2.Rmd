@@ -412,6 +412,11 @@ waterElevation300$ttable
 waterElevation300$ICs
 
 ## FORECASTING
+### Dustin 
+sarima.for(as.ts(water$WaterElevation), 
+           n.ahead = 12, p = 3, d = 0, q = 0)
+sarima.for(as.ts(water$WaterElevation), 
+           n.ahead = 12, p = 3, d = 1, q = 0)
 
 ```
 
@@ -450,7 +455,8 @@ prcp011$ttable #coefficients
 prcp011$ICs #BIC,AIC
 
 ## FORECASTING
-
+## Dustin -- This on is no good
+sarima.for(as.ts(water$PRCP), n.ahead = 12, 0,1,1)
 
 
 ```
@@ -659,6 +665,7 @@ adf.test(resid(fit.dummy), alternative = "stationary")
 #########From Helene, population segmentation#######
 
 ## Figure out how to do a dummy variable to replace splitting data into two sets##
+df <- water
 before2000 = water$population[1:120] # Jan 1991 to Dec 2000
 timeB = 1:length(before2000)
 timeB2 = timeB^2
@@ -782,6 +789,9 @@ sarima(popDetrend, p = 1, d = 0, q = 0, P = 1, D = 1, Q = 0, S = 12)
 # originally used resids
 
 ## FORECASTING
+sarima.for(as.ts(popDetrend), n.ahead = 12, 1, 1, 1)
+sarima.for(as.ts(popDetrend), n.ahead = 12, p = 1, d = 0, q = 0, P = 1, D = 1, Q = 0, S = 12)
+
 
 ```
 
