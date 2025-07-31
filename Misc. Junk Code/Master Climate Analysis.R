@@ -135,9 +135,9 @@ for(i in missing){
 
 ###--------------------------------------------------------------------------###
 ## Building a simple test data set
-## Extracting the data from 1991 to 2020
+## Extracting the data for 2021
 climate <- climate.data %>%
-  filter(DATE >= as.Date("2021-1-1") & DATE <= as.Date("2021-12-31")) %>%
+  filter(DATE >= as.Date("2021-1-1") & DATE <= as.Date("2024-12-31")) %>%
   select(DATE, TAVG, TMAX, TMIN, TSUN, ACSH, AWND, PGTM, PRCP) %>%
   mutate(DATE = as.Date(DATE))
 
@@ -152,13 +152,13 @@ for(i in 1:length(climate$TAVG)){
 
 well <- well.data %>%
   mutate(DATE = as.Date(Date, format = "%m/%d/%Y")) %>%
-  filter(DATE >= as.Date("2021-1-1") & DATE <= as.Date("2021-12-31")) %>%
+  filter(DATE >= as.Date("2021-1-1") & DATE <= as.Date("2024-12-31")) %>%
   select(DATE, WaterLevel, Change, WaterElevation)
 
 
 lake <- lake.data %>%
   mutate(DATE = as.Date(date)) %>%
-  filter(date >= as.Date("2021-1-1") & DATE <= as.Date("2021-12-31")) %>%
+  filter(date >= as.Date("2021-1-1") & DATE <= as.Date("2024-12-31")) %>%
   select(DATE, water_level, percent_full)
 
 # Renaming some fo the columns to avoid naming issues with the well data.
@@ -461,6 +461,7 @@ time2 <- (time(water$population) - mean(time(water$population)))^2
 fit.dummy  <- lm(log(population) ~ dummy*(time(population)) + dummy*(time2),
                  data = water)
 tsplot(resid(fit.dummy))
+summary(fit.dummy)
 
 acf2(resid(fit.dummy))
 adf.test(resid(fit.dummy), alternative = "stationary")
@@ -479,6 +480,48 @@ water_stationary <- data.frame(precipitation = diff(water$PRCP),
 ###--------------------------------------------------------------------------###
 ##  Selecting Models for AR(p), MA(q), and ARMA(p,q)
 
+## Temp model
+
+
+## Precipitation model
+par(mfrow = c(4,1))
+tsplot(water$PRCP, main = "Precipitation",
+       ylab = "Population", col = "steelblue")
+
+tsplot(log(water$PRCP), main = "Precipitation",
+       ylab = "Population", col = "steelblue")
+
+tsplot(diff(water$PRCP), main = "Precipitation",
+       ylab = "Population", col = "steelblue")
+
+tsplot(diff(log(water$PRCP)), main = "Precipitation",
+       ylab = "Population", col = "steelblue") #this looks the most like noise to me, but has missing values
+
+adf.test(water$PRCP, alternative = "stationary")
+adf.test(diff(water$PRCP))
+
+## ACF AND PACF
+
+par(mfrow=c(2,1))
+acf(diff(water$PRCP), main = "Precipitation ACF") #lag 1
+pacf(diff(water$PRCP), main = "Precipitation PACF") #decays
+#Conclusion: MA(1) with differencing
+acf2(diff(water$PRCP))
+## MODEL ESTIMATION
+
+prcp011 = sarima(water$PRCP, 1,0,0)
+prcp011$ttable #coefficients
+prcp011$ICs #BIC,AIC
+
+## FORECASTING
+par(mfrow = c(1,1))
+sarima.for(as.ts(water$PRCP), n.ahead = 12, 1,0,0,
+           main = "Monthly Precipitation Acculmulation")
+
+
+
+
+
 ## Population General Regression Model
 
 y <- predict(fit.dummy, type = "response")
@@ -494,10 +537,21 @@ legend("topleft",legend = c("Original","Model"),
        cex = .8, lwd = 2, lty = c(1,1))
 
 
-## Water Elevation
+
+
+## Water Elevation Model
 fitwell <- sarima((water$WaterElevation), p = 3, d = 0, q = 0)
 
+sarima((water$WaterElevation), p = 3, d = 1, q = 0) 6.42
+sarima((water$WaterElevation), p = 2, d = 1, q = 0) 6.43
+sarima((water$WaterElevation), p = 1, d = 1, q = 0) 6.44
+sarima((water$WaterElevation), p = 3, d = 0, q = 0) 6.38
+sarima((water$WaterElevation), p = 2, d = 0, q = 0) 6.4
+sarima((water$WaterElevation), p = 1, d = 0, q = 0) 6.42
+
+
 model <- (fitwell$ttable[1]*(lag(water$WaterElevation,1) - fitwell$ttable[4]) +
+          #fitwell$ttable[2]*(lag(water$WaterElevation,2) - fitwell$ttable[4]) +
           fitwell$ttable[3]*(lag(water$WaterElevation,3) - fitwell$ttable[4]) +
           fitwell$ttable[4])
 
@@ -508,6 +562,7 @@ legend("topleft",legend = c("Original Data", "Model"),
        col = c("black","purple"),
        cex = .8, lwd = 2, lty = c(1,2))
 
+water$Date[260:360]
 
 fit <- sarima.for(as.ts(water$WaterElevation),
            n.ahead = 12, p = 3, d = 0, q = 0,)
@@ -525,7 +580,7 @@ error <- ((water.test$WaterElevation - fit$pred[1:12])^2)
 mse <- 1/length(error) * sum(error)
 mse
 sqrt(mse)
-#
+
 
 
 
@@ -534,7 +589,14 @@ sqrt(mse)
 
 
 ###--------------------------------------------------------------------------###
-## Forcasting and Model Evaluation
+## Multivariate Modeling
+##
+##
+##
+##
+##
+##
+##
 
 
 
