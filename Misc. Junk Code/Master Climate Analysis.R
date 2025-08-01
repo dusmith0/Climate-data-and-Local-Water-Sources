@@ -2,14 +2,14 @@
 ## Group 4 (Da Dream Team!!!)
 ##
 ## Color themes:
-##
-##
+## col <-  c("steelblue", "firebrick", "purple", "black")
 ##
 ##
 ## Naming Schemes:
+## water <- train data set
+## water.test <- test data set (running through 2024)
 ##
-##
-##
+## Temp, WaterElevation, PRCP, Date (These are the same for both data sets)
 ##
 ##
 ##----------------------------------------------------------------------------##
@@ -20,6 +20,7 @@
 #install.packages("EnvStats")
 #install.packages("tseries")
 #install.packages("GGally")
+install.packages("urca")
 library("astsa") #General Times Series Plot
 library("ggplot2") #Better Graphics
 library("GGally") #extends ggplot2
@@ -32,6 +33,8 @@ library("tidyverse")
 library("zoo") #For clean time series models.
 library("aTSA")
 library("EnvStats")
+library("fGarch")
+library("urca")
 
 
 ###--------------------------------------------------------------------------###
@@ -181,6 +184,11 @@ water.test <- water.test %>%
             percentfull_lake = mean(percentfull_lake, na.rm = TRUE),
             WaterElevation = mean(WaterElevation, na.rm = TRUE))
 #TSUN = mean(TSUN, na.rm = TRUE), #TSUN has been removed due to excessive missing data
+
+water.test <- water.test %>%
+  select(-percentfull_lake) %>%
+  rename(Temp = TAVG)
+
 
 str(water.test)
 
@@ -469,21 +477,130 @@ adf.test(resid(fit.dummy), alternative = "stationary")
 resids <- resid(fit.dummy)
 plot(resids)
 
-### ---- ###
-## We probably need to take all of the stationary data and create a new data set based on that?
-water_stationary <- data.frame(precipitation = diff(water$PRCP),
-                               well = diff(water$WaterElevation),
-                               population = water$population[-360],
-                               temperature = diff(water$TAVG))
+
+
 
 
 ###--------------------------------------------------------------------------###
 ##  Selecting Models for AR(p), MA(q), and ARMA(p,q)
+## Changing TAVG to Temp and Removing Percent full
+water <- water %>%
+         select(-percentfull_lake) %>%
+         rename(Temp = TAVG)
+names(water)
 
-## Temp model
+
+##-- Temp model --## John's
+
+plot(water$Temp)
+acf(water$Temp)
+pacf(water$Temp)
+
+par(mfrow = c(3,1))
+tsplot(water$Temp, main = "Average Temperature Raw Data",
+       ylab = "Population", col = "steelblue", lwd = 3)
+acf(water$Temp, main = "Average Temperature ACF")
+pacf(water$Temp, main = "Average Temperature PACF")
+
+# library(urca)
+#
+# # 12-month differenced series
+# diff_temp <- diff(water$Temp, lag = 12)
+#
+# # Run ADF test with drift and 0 lag
+# adf_model <- ur.df(diff_temp, type = "drift", lags = 0)
+#
+# # View the full regression summary
+# summary(adf_model)
+
+adf.test(water$Temp)
+adf.test(diff(water$Temp, lag = 12))
+
+library(urca)
+
+# Define lags and types
+lags <- 0:5
+types <- c("none", "drift", "trend")
+
+# Function to run ADF and extract test statistic + p-value
+run_adf <- function(data, type) {
+  sapply(lags, function(lag) {
+    test <- ur.df(data, type = type, lags = lag)
+    stat <- test@teststat[1]  # first row is the tau statistic
+    pval <- if (abs(stat) > abs(test@cval[1, "1pct"])) {
+      0.01
+    } else if (abs(stat) > abs(test@cval[1, "5pct"])) {
+      0.05
+    } else if (abs(stat) > abs(test@cval[1, "10pct"])) {
+      0.10
+    } else {
+      1.00
+    }
+    c(stat = round(stat, 2), p.value = pval)
+  })
+}
+
+# Run all three types
+for (type in types) {
+  result <- run_adf(water$Temp, type)
+  cat("\nType:", match(type, types), ":",
+      if (type == "none") "no drift no trend" else if (type == "drift") "with drift no trend" else "with drift and trend", "\n")
+  print(t(result))
+}
 
 
-## Precipitation model
+plot(water$Temp, col = "gray", main = "Lowess Trend on Temperature")
+lines(lowess(water$Temp), col = "steelblue", lwd = 2)
+
+temp_diff <- (diff(water$Temp, lag = 12))
+plot(temp_diff, main="Differenced Series", ylab="Diff Temp")
+acf(temp_diff, main="ACF of Differenced Series")
+pacf(temp_diff, main="PACF of Differenced Series")
+
+fit <- auto.arima(temp_diff, d = 0, D = 0, seasonal = FALSE)
+summary(fit)
+
+sarima(water$Temp, p=1, d=1, q=0)
+sarima(water$Temp, p=1, d=1, q=1)
+sarima(water$Temp, p=1, d=1, q=1, P=1, D=1, Q=1, S=12)
+sarima(water$Temp, p=1, d=1, q=1, P=1, D=0, Q=1, S=12)
+sarima(water$Temp, p=1, d=0, q=1, P=1, D=0, Q=1, S=12) #best
+
+sarima(water$Temp, p=1, d=1, q=0, P=1, D=1, Q=0, S=12)
+sarima(water$Temp, p=1, d=0, q=0, P=1, D=0, Q=0, S=12)
+sarima(water$Temp, p=1, d=1, q=0, P=1, D=0, Q=0, S=12)
+
+temp_ts <- ts(water$Temp, start = c(1991, 1), frequency = 12)
+
+sarima.for(temp_ts, n.ahead = 24, p=1, d=1, q=1, P=1, D=1, Q=1, S=12)
+
+# Fit linear trend to full series
+trend_model <- lm(as.numeric(temp_ts) ~ time_vals)
+
+# Create extended time axis
+future_times <- seq(from = as.numeric(tail(time_vals, 1)) + 1/12,
+                    by = 1/12, length.out = 24)
+full_times <- c(time_vals, future_times)
+
+# Predict trend across historical + forecasted time
+trend_line <- predict(trend_model, newdata = data.frame(time_vals = full_times))
+
+# Re-run forecast plot
+sarima.for(temp_ts, n.ahead = 24, p=1, d=1, q=1, P=1, D=1, Q=1, S=12)
+
+# Overlay trend line
+lines(full_times, trend_line, col = "red", lwd = 2)
+
+
+# temp_ts <- ts(water$Temp, start = c(1991, 1), frequency = 12)
+# time_values <- time(temp_ts)
+#
+# trend_model <- lm(water$Temp ~ time_values)
+# summary(trend_model)
+
+
+
+###-- Precipitation model --## Darres's
 par(mfrow = c(4,1))
 tsplot(water$PRCP, main = "Precipitation",
        ylab = "Population", col = "steelblue")
@@ -522,7 +639,7 @@ sarima.for(as.ts(water$PRCP), n.ahead = 12, 1,0,0,
 
 
 
-## Population General Regression Model
+##-- Population General Regression Model --## Who knows now
 
 y <- predict(fit.dummy, type = "response")
 y <- exp(y)
@@ -539,15 +656,15 @@ legend("topleft",legend = c("Original","Model"),
 
 
 
-## Water Elevation Model
+##-- Water Elevation Model --## Dustin
 fitwell <- sarima((water$WaterElevation), p = 3, d = 0, q = 0)
 
-sarima((water$WaterElevation), p = 3, d = 1, q = 0) 6.42
-sarima((water$WaterElevation), p = 2, d = 1, q = 0) 6.43
-sarima((water$WaterElevation), p = 1, d = 1, q = 0) 6.44
-sarima((water$WaterElevation), p = 3, d = 0, q = 0) 6.38
-sarima((water$WaterElevation), p = 2, d = 0, q = 0) 6.4
-sarima((water$WaterElevation), p = 1, d = 0, q = 0) 6.42
+sarima((water$WaterElevation), p = 3, d = 1, q = 0) #6.42
+sarima((water$WaterElevation), p = 2, d = 1, q = 0) #6.43
+sarima((water$WaterElevation), p = 1, d = 1, q = 0) #6.44
+sarima((water$WaterElevation), p = 3, d = 0, q = 0) #6.38
+sarima((water$WaterElevation), p = 2, d = 0, q = 0) #6.4
+sarima((water$WaterElevation), p = 1, d = 0, q = 0) #6.42
 
 
 model <- (fitwell$ttable[1]*(lag(water$WaterElevation,1) - fitwell$ttable[4]) +
@@ -566,10 +683,10 @@ water$Date[260:360]
 
 fit <- sarima.for(as.ts(water$WaterElevation),
            n.ahead = 12, p = 3, d = 0, q = 0,)
-lines(x = c(361:372), y = water.test$WaterElevation,
+lines(x = c(361:372), y = water.test$WaterElevation[1:12],
       col = "purple", lwd = 1.5)
 legend("topleft",legend = c("Original Data","forecast","2021 observed data"),
-       col = c("black","red","purple"),
+       col = c("black","firebrick","purple"),
        cex = .8, lwd = 2, lty = c(1,1))
 
 
@@ -581,7 +698,19 @@ mse <- 1/length(error) * sum(error)
 mse
 sqrt(mse)
 
+## Attempting GARCH???
+ret.well <- (diff(log(water$WaterElevation)))
+tsplot(ret.well)
 
+acf2(ret.well, main = "Well Returns", col = "steelblue", lwd = 1.5)
+fit <- sarima(diff(log(water$WaterElevation)), p = 1, d = 0, q = 1)
+resids <- resid(fit$fit)^2
+
+acf2(resids)
+fitg <- garchFit(~arma(3,0) + garch(1,1), data = ret.well)
+summary(fitg)
+
+plot(fitg)
 
 
 
