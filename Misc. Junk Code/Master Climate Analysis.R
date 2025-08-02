@@ -768,7 +768,7 @@ lines(backmodel1, col = "steelblue", lwd = 1.5, lty = 2)
 #lines(backmodel2, col = "firebrick", lwd = 1.5)
 legend("topright",legend = c("Original", "AR(1)-ARCH(1)"),
        col = c("black","steelblue"),
-       cex = .8, lwd = 2, lty = c(1,2))
+       cex = .8, lwd = 2, lty = c(1,1))
 
 ## Fitting new forecasts
 forecast_mod1 <- predict(fitg1, n.ahead = 12)
@@ -785,7 +785,7 @@ for(i in 2:12){
 # to begin at 1 again.
 
 # genreating confidence intervals
-par(mfrow = c(1,2))
+par(mfrow = c(1,1))
 forecast_mod1 <- predict(fitg1, n.ahead = 12)
 forecast_mod2 <- predict(fitg1, n.ahead = 12)
 interval1 <- cbind(forecast_mod1$meanForecast + 1*1.96*forecast_mod1$meanError,
@@ -793,14 +793,25 @@ interval1 <- cbind(forecast_mod1$meanForecast + 1*1.96*forecast_mod1$meanError,
 interval2 <- cbind(forecast_mod2$meanForecast + 1*1.96*forecast_mod2$meanError,
                    forecast_mod2$meanForecast - 1*1.96*forecast_mod2$meanError)
 
+intforbackmodel1 <- matrix(nrow = 12, ncol = 2)
+intforbackmodel2 <- matrix(nrow = 12, ncol = 2)
+intforbackmodel1[1,] <- exp(interval1[1,] + log(water$WaterElevation[360]))
+intforbackmodel2[1,] <- exp(interval2[1,] + log(water$WaterElevation[360]))
+#This bit is necessary as the first forecast begins with the last known value
+for(i in 2:12){
+  intforbackmodel1[i,1] <- exp(interval1[i,1] + log(forbackmodel1[i - 1]))
+  intforbackmodel1[i,2] <- exp(interval1[i,2] + log(forbackmodel1[i - 1]))
+  intforbackmodel2[i,] <- exp(interval2[i] + log(water$WaterElevation[360]))
+}
+
 
 tsplot(c(water$WaterElevation[200:360],water.test$WaterElevation[1:12]),
-       main = "Forecast AR(1)-ARCH(1) Water Elevation Data", ylab = "Elevation")
+       main = "Forecast AR(1)-ARCH(1) Water Elevation Data", ylab = "Elevation", lwd = 1.5)
 lines(x = c(162:173),water.test$WaterElevation[1:12], col = "purple", lwd = 1.5)
 lines(x = c(161:172), y = forbackmodel1, col = "steelblue", lwd = 1.5)
 #lines(x = c(161:172), y = forbackmodel1, col = "firebrick", lwd = 1.5)
-polygon(c(161:172,rev(161:172)), c(intforbackmodel1[,1],intforbackmodel1[,2]),
-        col = "steelblue", density = 100)
+polygon(c(161:172,rev(161:172)), c(intforbackmodel1[,1],rev(intforbackmodel1[,2])),
+        col = "steelblue", density = 50)
 #polygon(c(161:172,rev(161:172)), c(intforbackmodel2[,1],intforbackmodel2[,2]),
 #        col = "firebrick", density = 100)
 legend("topright",legend = c("Original", "Observed Future", "Predicted Future"),
@@ -815,7 +826,7 @@ ret.wellfut <- diff(log(water.test$WaterElevation))
 
 # Checking the tsplot and for centeral means
 tsplot(c(ret.well[200:359], ret.wellfut[1:12]), type = 'l', ylab = "Variance on Return", xlab = "time",
-       main = "Variation Forecast for AR(1)-ARCH(1)", col = "black", lwd = 1.5)
+        col = "black", lwd = 1.5)
 lines(sd1[200:361], lwd = 1.5, col = "steelblue")
 lines(x = c(161:172), y = ret.wellfut[1:12], col = "purple", lwd = 1.5)
 lines(x = c(161:172), forecast_mod1$standardDeviation, lwd = 1.5,
