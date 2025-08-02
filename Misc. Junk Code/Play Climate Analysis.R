@@ -862,6 +862,134 @@ mse <- 1/length(error) * sum(error)
 mse
 sqrt(mse)
 
+## Attempting GARCH with returns  ## Dustin Again
+par(mfrow = c(1,1))
+ret.well <- (diff(log(water$WaterElevation)))
+
+# Checking the tsplot and for centeral means
+par(mfrow = c(2,1))
+tsplot(water$WaterElevation, ylab = "Elevation", main = "Well Elevation")
+
+tsplot(ret.well, ylab = "Returns", main = "Returns on Well Variance")
+mean(ret.well) ## Very close to zero
+
+# Checking ACF and PACF
+acf2(ret.well, main = "Well Returns", col = "steelblue", lwd = 1.5)
+fit <- sarima(diff(log(water$WaterElevation)), p = 3, d = 0, q = 0)
+
+resids <- resid(fit$fit)^2
+acf2(resids)
+
+# Trying AR(1)-ARCH(1)
+fitg1 <- garchFit(~arma(1,0) + garch(1,0), data = ret.well, include.mean = FALSE)
+summary(fitg1)
+fitg2 <- garchFit(~arma(3,0) + garch(1,0), data = ret.well, include.mean = FALSE)
+summary(fitg2)
+
+model1 <- (.2118*lag(ret.well,1))
+model2 <- (-.2586*lag(ret.well, 1) + -.04887*lag(ret.well, 2) + -.08054*lag(ret.well, 3))
+
+sd1 <- volatility(fitg1)
+sd2 <- volatility(fitg2)
+
+tsplot(ret.well, ylab = "Returns", main = "Returns on Well data mean estimates", lwd = 1.25)
+lines(model1, col = "steelblue", lwd = 1.5)
+lines(model2, col = "firebrick", lwd = 1.5)
+legend("topleft",legend = c("AR(3)-ARCH(1)", "AR(1)-ARCH(1)"),
+       col = c("firebrick","steelblue"),
+       cex = .5, lwd = 2, lty = c(1,1))
+
+tsplot(ret.well, ylab = "Returns",
+       main = "Returns on Well Variance estimates", lwd = 1.25)
+lines(model1 + (sd1) - .001, col = "steelblue", lty = "dashed", lwd = 1.5)
+lines(model2 - (sd2) + .001, col = "firebrick", lty = "dashed", lwd = 1.5)
+legend("topleft",legend = c("AR(3)-ARCH(1)", "AR(1)-ARCH(1)"),
+       col = c("firebrick","steelblue"),
+       cex = .5, lwd = 2, lty = c(2,2))
+
+plot(sd1, type = 'l', ylab = "Variance Return", xlab = "time",
+     main = "Variation AR(1)-ARCH(1)", col = "steelblue", lwd = 1.5)
+plot(sd2, type = 'l', ylab = "Variance Return", xlab = "time",
+     main = "Variation AR(3)-ARCH(1)", col = "firebrick")
+
+
+## Back Transforming the model
+par(mfrow = c(1,1))
+backmodel1 <- c(0)
+backmodel2 <- c(0)
+for(i in 1:length(model2)){
+  backmodel1[i] <- exp(model1[i] + c(1,log(water$WaterElevation))[i])
+  backmodel2[i] <- exp(model2[i] + c(1,log(water$WaterElevation))[i])
+}
+
+par(mfrow = c(1,1))
+tsplot(c(water$WaterElevation), ylab = "Elevation", lwd = 1.5,
+       main = "Well Elevation with AR-ARCH mean estimates")
+lines(backmodel1, col = "steelblue", lwd = 1.5, lty = 2)
+#lines(backmodel2, col = "firebrick", lwd = 1.5)
+legend("topright",legend = c("Original", "AR(1)-ARCH(1)"),
+       col = c("black","steelblue"),
+       cex = .8, lwd = 2, lty = c(1,2))
+
+## Fitting new forecasts
+forecast_mod1 <- predict(fitg1, n.ahead = 12)
+forecast_mod2 <- predict(fitg1, n.ahead = 12)
+names(forecast_mod1)
+forbackmodel1 <- exp(forecast_mod1$meanForecast[1] + log(water$WaterElevation)[360])
+forbackmodel2 <- exp(forecast_mod2$meanForecast[1] + log(water$WaterElevation)[360])
+#This bit is necessary as the first forecast begins with the last known value
+for(i in 2:12){
+  forbackmodel1[i] <- exp(forecast_mod1$meanForecast[i] + log(forbackmodel1)[i - 1])
+  forbackmodel2[i] <- exp(forecast_mod2$meanForecast[i] + log(forbackmodel2)[i - 1])
+}
+# Indexing by 2 to avoid the pre-forecaster value, then the summed previouse value gets i - 1
+# to begin at 1 again.
+
+# genreating confidence intervals
+par(mfrow = c(1,2))
+forecast_mod1 <- predict(fitg1, n.ahead = 12)
+forecast_mod2 <- predict(fitg1, n.ahead = 12)
+interval1 <- cbind(forecast_mod1$meanForecast + 1*1.96*forecast_mod1$meanError,
+                   forecast_mod1$meanForecast - 1*1.96*forecast_mod1$meanError)
+interval2 <- cbind(forecast_mod2$meanForecast + 1*1.96*forecast_mod2$meanError,
+                   forecast_mod2$meanForecast - 1*1.96*forecast_mod2$meanError)
+
+
+tsplot(c(water$WaterElevation[200:360],water.test$WaterElevation[1:12]),
+       main = "Forecast AR(1)-ARCH(1) Water Elevation Data", ylab = "Elevation")
+lines(x = c(162:173),water.test$WaterElevation[1:12], col = "purple", lwd = 1.5)
+lines(x = c(161:172), y = forbackmodel1, col = "steelblue", lwd = 1.5)
+#lines(x = c(161:172), y = forbackmodel1, col = "firebrick", lwd = 1.5)
+polygon(c(161:172,rev(161:172)), c(intforbackmodel1[,1],intforbackmodel1[,2]),
+        col = "steelblue", density = 100)
+#polygon(c(161:172,rev(161:172)), c(intforbackmodel2[,1],intforbackmodel2[,2]),
+#        col = "firebrick", density = 100)
+legend("topright",legend = c("Original", "Observed Future", "Predicted Future"),
+       col = c("black","purple","steelblue"),
+       cex = .5, lwd = 2, lty = c(1))
+
+
+## forecasting on the Variance
+forecast_mod1$standardDeviation
+#forecaste_mod2
+ret.wellfut <- diff(log(water.test$WaterElevation))
+
+# Checking the tsplot and for centeral means
+tsplot(c(ret.well[200:359], ret.wellfut[1:12]), type = 'l', ylab = "Variance on Return", xlab = "time",
+       main = "Variation Forecast for AR(1)-ARCH(1)", col = "black", lwd = 1.5)
+lines(sd1[200:361], lwd = 1.5, col = "steelblue")
+lines(x = c(161:172), y = ret.wellfut[1:12], col = "purple", lwd = 1.5)
+lines(x = c(161:172), forecast_mod1$standardDeviation, lwd = 1.5,
+      col = "firebrick")
+#lines(x = c(161:172), -1*forecast_mod1$standardDeviation, lwd = 1.5,
+#col = "firebrick")
+#polygon(c(161:172,rev(161:172)),
+#        c(forecast_mod1$standardDeviation,rev(-1*forecast_mod1$standardDeviation)),
+#        col = "firebrick", density = 100)
+legend("topleft",legend = c("Original", "Observed Future", "Predicted Future", "Model Estimate"),
+       col = c("black","purple", "firebrick","steelblue"),
+       cex = .5, lwd = 2, lty = c(1))
+
 
 
 
@@ -877,7 +1005,7 @@ sqrt(mse)
 
 
 ###--------------------------------------------------------------------------###
-##### HELENE MULTIVARIATE 
+##### HELENE MULTIVARIATE
 
 #all three predictors CHECK FOR AUTOCORRELATED ERRORS
 well <- as.ts(well)
