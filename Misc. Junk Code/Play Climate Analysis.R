@@ -21,6 +21,9 @@
 
 #install.packages("tseries")
 #install.packages("GGally")
+#install.packages("forecast")
+#install.packages("fGarch")
+#install.packages("FinTS")
 library("astsa") #General Times Series Plot
 library("ggplot2") #Better Graphics
 library("GGally") #extends ggplot2
@@ -33,7 +36,9 @@ library("tidyverse")
 library("zoo") #For clean time series models.
 library("aTSA")
 library("EnvStats")
-
+library("forecast")
+library("fGarch")
+library("FinTS")
 
 ###--------------------------------------------------------------------------###
 ## Getting the data
@@ -729,6 +734,16 @@ sarima(water$Temp, p=1, d=1, q=1)
 sarima(water$Temp, p=1, d=1, q=1, P=1, D=1, Q=1, S=12)
 sarima(water$Temp, p=1, d=1, q=1, P=1, D=0, Q=1, S=12)
 sarima(water$Temp, p=1, d=0, q=1, P=1, D=0, Q=1, S=12) #best
+model <- sarima(water$Temp, p=1, d=0, q=1, P=1, D=0, Q=1, S=12) #best
+res <- residuals(model$fit)
+
+#Test for ARCH/GARCH
+acf2(res^2, 20)
+# Add a main title across both plots
+mtext("ACF and PACF of Squared Residuals for Temperature SARIMA(1,0,1) × (1,0,1)[12]",
+      outer = TRUE, cex = 1.2, line = 1, font = 2)
+library(FinTS)
+ArchTest(res, lags = 12) #ARCH not present
 
 sarima(water$Temp, p=1, d=1, q=0, P=1, D=1, Q=0, S=12)
 sarima(water$Temp, p=1, d=0, q=0, P=1, D=0, Q=0, S=12)
