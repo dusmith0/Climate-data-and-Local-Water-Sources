@@ -877,8 +877,85 @@ sqrt(mse)
 
 
 ###--------------------------------------------------------------------------###
-## Forcasting and Model Evaluation
+##### HELENE MULTIVARIATE 
+
+#all three predictors CHECK FOR AUTOCORRELATED ERRORS
+well <- as.ts(well)
+fit <- lm(well ~ precipitation + population + temperature, water_stationary)
+summary(fit)
+AIC(fit)
+BIC(fit)
+summary(fit)$r.squared
+resid <- fit$residuals
+resid2 <- resid^2
+tsplot(resid2)
+acf(resid2, 360)
+pacf(resid2, 360)
+sarima(resid2,1,0,1)
+
+#all three predictors with interactions CHECK FOR AUTOCORRELATED ERRORS
+temp <- water_stationary$temperature - mean(water_stationary$temperature)
+well <- as.ts(well)
+fitInt <- lm(well ~ precipitation * population * temperature, water_stationary)
+summary(fit)
+AIC(fit)
+BIC(fit)
+summary(fit)$r.squared
+resid <- fit$residuals
+resid2 <- resid^2
+tsplot(resid2)
+acf(resid2, 360)
+pacf(resid2, 360)
+sarima(resid2,1,0,1)
 
 
+#####PRCP and TEMP only BEST MODEL
+fit2 <- lm(well ~ precipitation + temperature, water_stationary)
+summary(fit2)
+AIC(fit2)
+BIC(fit2)
+summary(fit2)$r.squared
+fit2resid2 <- fit2$residuals^2
+
+par(mfrow=c(1,1))
+tsplot(fit2resid2, main="Linear Regression Residuals")
+acf2(fit2resid2, main="P/ACF of Linear Regression Residuals") #Possible AR2 Model
+
+
+sarima(fit2resid2,1,0,0)
+sarima(fit2resid2,2,0,0)
+
+##### Autocorrelated error linear regression:
+sarima(water_stationary$well, 2,0,0, xreg=cbind(water_stationary$precipitation, water_stationary$temperature))
+
+
+#PRCP and TEMP with interaction
+fit3 <- lm(well ~ precipitation * temperature, water_stationary)
+summary(fit3)
+AIC(fit3)
+BIC(fit3)
+summary(fit3)$r.squared
+fit3resid2 <- fit3$residuals^2
+
+ccf(water$TAVG, water$WaterElevation, na.action=na.pass, main="Cross Correlation Function of Well Water Elevation and Average Temperature", type="correlation") #lag 1
+ccf(water$PRCP, water$WaterElevation, na.action=na.pass, main="Cross Correlation Function of Well Water Elevation and Cumulative Precipitation", type="correlation") #lag1
+
+fit4 <- dynlm(well ~ L(temperature,-1) + L(precipitation,-1), data=water_stationary)
+
+
+##### Multivariate time series using VARS
+
+multi = cbind(well=water_stationary$well, temp=water_stationary$temperature, prcp=water_stationary$precipitation)
+multiFit = VAR(multi, p=12, type="both")
+summary(multiFit)
+
+VARselect(multi, lag.max=20, type="both")
+
+tsplot(resid(multiFit))
+acf(resid(multiFit))
+
+## prediction
+fit.pr = predict(multiFit, n.ahead = 24, ci = 0.95) # 4 weeks ahead
+fanchart(fit.pr) # plot prediction + error
 
 
