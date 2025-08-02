@@ -770,13 +770,52 @@ sarima.for(temp_ts, n.ahead = 24, p=1, d=1, q=1, P=1, D=1, Q=1, S=12)
 # Overlay trend line
 lines(full_times, trend_line, col = "red", lwd = 2)
 
+###########Modifying raw data from 2021-22 to use in forecast graph for temp
+library(dplyr)
+library(lubridate)
+library(readr)
+
+# Step 1: Load the daily data
+daily_data <- read_csv("San Antonio Airport (SAT) climate data (1948 to 2025).csv")
+
+# Step 2: Compute TAVG
+daily_data <- daily_data %>%
+  mutate(
+    TAVG = (TMAX + TMIN) / 2,
+    Date = ymd(DATE),               # convert to Date type if not already
+    Year = year(DATE),
+    Month = month(DATE)
+  )
+
+# Step 3: Filter for 2021 and 2022 only
+filtered_data <- daily_data %>%
+  filter(Year %in% c(2021, 2022))
+
+# Step 4: Group by Year and Month, compute average TAVG
+monthly_avg <- filtered_data %>%
+  group_by(Year, Month) %>%
+  summarise(Temp = mean(TAVG, na.rm = TRUE), .groups = "drop")
+
+# Step 5: Save result to CSV
+write_csv(monthly_avg, "MonthlyTemps_2021_2022.csv")
+monthly_actual <- read_csv("MonthlyTemps_2021_2022.csv")
+# Create ts object: start = Jan 2021, frequency = 12 (monthly)
+actual_ts <- ts(monthly_actual$Temp, start = c(2021, 1), frequency = 12)
+# Assuming you've already created this:
+temp_ts <- ts(water$Temp, start = c(1991, 1), frequency = 12)
+
+# Forecasting 24 months
+sarima.for(temp_ts, n.ahead = 24, p=1, d=1, q=1, P=1, D=1, Q=1, S=12)
+# Add actual values in red
+points(actual_ts, col = "blue", pch = 16)
+
 
 # temp_ts <- ts(water$Temp, start = c(1991, 1), frequency = 12)
 # time_values <- time(temp_ts)
 #
 # trend_model <- lm(water$Temp ~ time_values)
 # summary(trend_model)
-
+######END TEMP#########
 
 
 ###-- Precipitation model --## Darres's
